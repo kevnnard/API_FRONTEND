@@ -371,8 +371,8 @@ function VentaManualId(){
             { nuPedidoSho }
           );
          setAlerta({ msg: data.msg });
-         setTimeout(() => {
-           navigate("/dashboard/ventas-manuales");
+         navigate("/dashboard/ventas-manuales/despachos");
+         setTimeout(() => { 
            setAlerta({});
         }, 4000);
         } catch (error) {
@@ -389,8 +389,8 @@ function VentaManualId(){
             { numeroVenta }
           );
            setAlerta({ msg: data.msg });
+           navigate("/dashboard/ventas-manuales/despachos");
            setTimeout(() => {
-             navigate("/dashboard/ventas-manuales");
              setAlerta({});
            }, 4000);
           } catch (error) {
@@ -693,7 +693,7 @@ function VentaManualId(){
                           <input
                             style={{
                               color: "#fff",
-                              background: "#222d32 !important",
+                              background: "#1F0",
                               margin: "1rem auto",
                             }}
                             type="button"
@@ -705,7 +705,7 @@ function VentaManualId(){
                           <button
                             style={{
                               color: "#fff",
-                              background: "#1f0",
+                              background: "#f00",
                               margin: "1rem auto",
                             }}
                             type="button"
@@ -846,17 +846,41 @@ function VentaManualId(){
                   <option value="solicitado">Solicitado </option>
                   <option value="novedad">Novedad </option>
                   <option value="enviado">Enviado </option>
+                  <option value="cambio">Cambio </option>
                   <option value="cancelado">Venta Cancelada </option>
                   <option value="fallido">Venta Fallida </option>
                 </select>
               </div>
+              <div className="envio_datos_finales">
+                <h1>Datos de Envio finales: </h1>
+                <div>
+                  <h2>
+                    #De guia:{" "}
+                    <span>
+                      {venta.data.envio_pedido
+                        ? venta.data.envio_pedido.numGuia
+                        : "AUN NO SE A GENERADO"}
+                    </span>
+                  </h2>
+                  <h2>
+                    #Transportadora:{" "}
+                    <span>
+                      {venta.data.envio_pedido
+                        ? venta.data.envio_pedido.transportadora
+                        : "AUN NO SE A ENVIADO"}
+                    </span>
+                  </h2>
+                </div>
+              </div>
               {msg && <Alerta alerta={alerta} />}
               {!estado_pedidoo == "" ? (
-                <div>
+                <div style={{ gridColumn: "1 / 3" }}>
                   <input
                     style={{
                       background: "#f00",
                       color: "#fff",
+                      width: "100%",
+                      margin: "auto",
                     }}
                     className="btnn"
                     type="button"
@@ -1036,7 +1060,7 @@ function VentaManualId(){
                                     <input
                                       style={{
                                         color: "#fff",
-                                        background: "#222d32 !important",
+                                        background: "#1f0",
                                         margin: "1rem auto",
                                       }}
                                       type="button"

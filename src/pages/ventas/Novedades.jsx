@@ -95,11 +95,16 @@ function Novedades() {
               {ventass == true
                 ? ventas.data.docs.map((item) => (
                     <>
-                      {item.estado_pedido != "novedad" ? (
+                      {item.estado_pedido != "novedad" &&
+                      item.estado_pedido != "cambio" ? (
                         ""
                       ) : (
                         <tr
-                          style={{ background: "#f91", color: "#fff" }}
+                          style={
+                            item.estado_pedido == "novedad"
+                              ? { background: "#f91", color: "#fff" }
+                              : { background: "#09a", color: "#fff" }
+                          }
                           key={item._id}
                         >
                           <td>{cont++}</td>

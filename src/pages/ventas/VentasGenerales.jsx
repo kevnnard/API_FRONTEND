@@ -201,6 +201,9 @@ function VentasGenerale() {
                         : { background: "#f00", color: "#fff" } &&
                           item.estado_pedido == "novedad"
                         ? { background: "#f91", color: "#FFF" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "cambio"
+                        ? { background: "#09a", color: "#FFF" }
                         : { background: "#f00", color: "#fff" }
                     }
                     key={item._id}
@@ -269,99 +272,98 @@ function VentasGenerale() {
               ))
             : null}
           {ventaProvicionalState == true ? (
-            <>  
-                <tr
-                  style={
-                    ventaProvicional.data.estado_pedido == "solicitado"
-                      ? { background: "#ff0", color: "#000" }
-                      : { background: "#f00", color: "#fff" } &&
-                        ventaProvicional.data.estado_pedido == "enviado"
-                      ? { background: "#1f0", color: "#fff" }
-                      : { background: "#f00", color: "#fff" } &&
-                        ventaProvicional.data.estado_pedido == "cancelado"
-                      ? { background: "#ccc", color: "#000" }
-                      : { background: "#f00", color: "#fff" } &&
-                        ventaProvicional.data.estado_pedido == "fallido"
-                      ? { background: "#ccc", color: "#000" }
-                      : { background: "#f00", color: "#fff" } &&
-                        ventaProvicional.data.estado_pedido == "novedad"
-                      ? { background: "#f91", color: "#FFF" }
-                      : { background: "#f00", color: "#fff" }
-                  }
-                  key={ventaProvicional.data._id}
-                >
-                  <td>{cont++}</td>
+            <>
+              <tr
+                style={
+                  ventaProvicional.data.estado_pedido == "solicitado"
+                    ? { background: "#ff0", color: "#000" }
+                    : { background: "#f00", color: "#fff" } &&
+                      ventaProvicional.data.estado_pedido == "enviado"
+                    ? { background: "#1f0", color: "#fff" }
+                    : { background: "#f00", color: "#fff" } &&
+                      ventaProvicional.data.estado_pedido == "cancelado"
+                    ? { background: "#ccc", color: "#000" }
+                    : { background: "#f00", color: "#fff" } &&
+                      ventaProvicional.data.estado_pedido == "fallido"
+                    ? { background: "#ccc", color: "#000" }
+                    : { background: "#f00", color: "#fff" } &&
+                      ventaProvicional.data.estado_pedido == "novedad"
+                    ? { background: "#f91", color: "#FFF" }
+                    : { background: "#f00", color: "#fff" } &&
+                      ventaProvicional.data.estado_pedido == "cambio"
+                    ? { background: "#09a", color: "#FFF" }
+                    : { background: "#f00", color: "#fff" }
+                }
+                key={ventaProvicional.data._id}
+              >
+                <td>{cont++}</td>
+                {ventaProvicional.data.tienda == "Shopify" ? (
+                  <td>
+                    {new Date(
+                      ventaProvicional.data.fechaShopify
+                    ).toLocaleDateString()}{" "}
+                    A las{" "}
+                    {new Date(
+                      ventaProvicional.data.fechaShopify
+                    ).toLocaleTimeString()}
+                  </td>
+                ) : (
+                  <td>
+                    {new Date(ventaProvicional.data.fecha).toLocaleDateString()}{" "}
+                    A las{" "}
+                    {new Date(ventaProvicional.data.fecha).toLocaleTimeString()}
+                  </td>
+                )}
+                <td>{`${ventaProvicional.data.nuVenta}`}</td>
+                <td>{ventaProvicional.data.cliente.nombre}</td>
+                <td>{ventaProvicional.data.cliente.ciudad}</td>
+                <td>{ventaProvicional.data.cliente.telefono}</td>
+                <td>
+                  {ventaProvicional.data.pago.metodo_pago ==
+                  "Cash on Delivery (COD)"
+                    ? "Pago Contra entrega"
+                    : ventaProvicional.data.pago.metodo_pago &&
+                      ventaProvicional.data.pago.metodo_pago ==
+                        "addi stating payment app"
+                    ? "Credito Addi"
+                    : ventaProvicional.data.pago.metodo_pago}
+                </td>
+                <td>
                   {ventaProvicional.data.tienda == "Shopify" ? (
-                    <td>
-                      {new Date(
-                        ventaProvicional.data.fechaShopify
-                      ).toLocaleDateString()}{" "}
-                      A las{" "}
-                      {new Date(
-                        ventaProvicional.data.fechaShopify
-                      ).toLocaleTimeString()}
-                    </td>
+                    <>
+                      {"$" +
+                        Intl.NumberFormat("es-ES", {
+                          style: "currency",
+                          currency: "COP",
+                          minimumFractionDigits: 0,
+                        }).format(ventaProvicional.data.ventaTotalShopify)}
+                    </>
                   ) : (
-                    <td>
-                      {new Date(
-                        ventaProvicional.data.fecha
-                      ).toLocaleDateString()}{" "}
-                      A las{" "}
-                      {new Date(
-                        ventaProvicional.data.fecha
-                      ).toLocaleTimeString()}
-                    </td>
+                    <>
+                      {"$" +
+                        Intl.NumberFormat("es-ES", {
+                          style: "currency",
+                          currency: "COP",
+                          minimumFractionDigits: 0,
+                        }).format(ventaProvicional.data.precio)}
+                    </>
                   )}
-                  <td>{`${ventaProvicional.data.nuVenta}`}</td>
-                  <td>{ventaProvicional.data.cliente.nombre}</td>
-                  <td>{ventaProvicional.data.cliente.ciudad}</td>
-                  <td>{ventaProvicional.data.cliente.telefono}</td>
-                  <td>
-                    {ventaProvicional.data.pago.metodo_pago ==
-                    "Cash on Delivery (COD)"
-                      ? "Pago Contra entrega"
-                      : ventaProvicional.data.pago.metodo_pago &&
-                        ventaProvicional.data.pago.metodo_pago ==
-                          "addi stating payment app"
-                      ? "Credito Addi"
-                      : ventaProvicional.data.pago.metodo_pago}
-                  </td>
-                  <td>
-                    {ventaProvicional.data.tienda == "Shopify" ? (
-                      <>
-                        {"$" +
-                          Intl.NumberFormat("es-ES", {
-                            style: "currency",
-                            currency: "COP",
-                            minimumFractionDigits: 0,
-                          }).format(ventaProvicional.data.ventaTotalShopify)}
-                      </>
-                    ) : (
-                      <>
-                        {"$" +
-                          Intl.NumberFormat("es-ES", {
-                            style: "currency",
-                            currency: "COP",
-                            minimumFractionDigits: 0,
-                          }).format(ventaProvicional.data.precio)}
-                      </>
-                    )}
-                  </td>
-                  <td>
-                    <Link
-                      style={{
-                        fontSize: "1rem",
-                        background: "#fff",
-                        color: "#000",
-                        padding: "5px",
-                        borderRadius: "5px",
-                      }}
-                      to={`/dashboard/ventas-manuales/${ventaProvicional.data._id}`}
-                    >
-                      Editar
-                    </Link>
-                  </td>
-                </tr>
+                </td>
+                <td>
+                  <Link
+                    style={{
+                      fontSize: "1rem",
+                      background: "#fff",
+                      color: "#000",
+                      padding: "5px",
+                      borderRadius: "5px",
+                    }}
+                    to={`/dashboard/ventas-manuales/${ventaProvicional.data._id}`}
+                  >
+                    Editar
+                  </Link>
+                </td>
+              </tr>
             </>
           ) : null}
         </table>

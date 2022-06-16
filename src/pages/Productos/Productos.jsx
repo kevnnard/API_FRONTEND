@@ -352,7 +352,7 @@ function Productos() {
 
               {btnProducto == false ? (
                 <input
-                  style={{ color: "#fff", gridColumn: "2 / 3", margin: "2rem" }}
+                  style={{ background:"#1f0", color: "#fff", gridColumn: "2 / 3", margin: "2rem" }}
                   type="button"
                   className="btnn"
                   value="Subir Producto"

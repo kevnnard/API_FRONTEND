@@ -214,6 +214,8 @@ console.log(ventaProvicional)
                         ""
                       ) : "" || item.estado_pedido == "fallido" ? (
                         ""
+                      ) : "" || item.estado_pedido == "cambio" ? (
+                        ""
                       ) : (
                         <tr
                           style={
@@ -307,6 +309,9 @@ console.log(ventaProvicional)
                         : { background: "#f00", color: "#fff" } &&
                           ventaProvicional.data.estado_pedido == "novedad"
                         ? { background: "#f91", color: "#FFF" }
+                        : { background: "#f00", color: "#fff" } &&
+                          ventaProvicional.data.estado_pedido == "cambio"
+                        ? { background: "#09a", color: "#FFF" }
                         : { background: "#f00", color: "#fff" }
                     }
                     key={ventaProvicional.data._id}
@@ -406,7 +411,7 @@ console.log(ventaProvicional)
         </>
       ) : (
         navigate("/dashboard")
-      ) }
+      )}
     </>
   );
 }

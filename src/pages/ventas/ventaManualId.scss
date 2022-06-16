@@ -228,3 +228,52 @@
     }
     
 }
+.envio_datos_finales {
+    grid-column: 3 / 5;
+    grid-row: 10 / 15;
+    border: 1px solid #ccc;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    h1 {
+        width: max-content;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 1.8rem;
+
+        span {
+            font-weight: normal;
+            font-size: 1.6rem;
+            text-transform: capitalize;
+
+        }
+    }
+}
+.total_venta_sumatoria {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    div {
+        border: 1px solid #ccc;
+        padding: 2rem;
+        h2 {
+            font-size: 2rem;
+
+            span {
+                color: #f00;
+                font-weight: bold;
+            }
+        }
+    }
+}

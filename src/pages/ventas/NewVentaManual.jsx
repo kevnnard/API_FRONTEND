@@ -321,7 +321,7 @@ function NewVentaManual() {
               value={tienda}
               onChange={(e) => setTienda(e.target.value)}
             >
-              <option selected disabled>
+              <option selected value="" disabled>
                 Selecciona una Tienda
               </option>
               <option value="FOX">FOX</option>
@@ -692,7 +692,7 @@ function NewVentaManual() {
                                         <td>
                                           <input
                                             type="number"
-                                            placeholder="Indica un % en numero"
+                                            placeholder="Indica el valor final / unidad"
                                             value={
                                               precioVenta === undefined
                                                 ? ""
