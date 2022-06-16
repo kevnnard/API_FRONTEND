@@ -1,0 +1,5597 @@
+[
+    {
+        "ciduad": "ABEJORRAL",
+        "departamento": "Antioquia",
+        "codigo": "05002"
+    },
+    {
+        "ciduad": "ABREGO",
+        "departamento": "Norte de Santander",
+        "codigo": "54003"
+    },
+    {
+        "ciduad": "ABRIAQUÍ",
+        "departamento": "Antioquia",
+        "codigo": "05004"
+    },
+    {
+        "ciduad": "ACACÍAS",
+        "departamento": "Meta",
+        "codigo": "50006"
+    },
+    {
+        "ciduad": "ACANDÍ",
+        "departamento": "Chocó",
+        "codigo": "27006"
+    },
+    {
+        "ciduad": "ACEVEDO",
+        "departamento": "Huila",
+        "codigo": "41006"
+    },
+    {
+        "ciduad": "ACHÍ",
+        "departamento": "Bolívar",
+        "codigo": "13006"
+    },
+    {
+        "ciduad": "AGRADO",
+        "departamento": "Huila",
+        "codigo": "41013"
+    },
+    {
+        "ciduad": "AGUA DE DIOS",
+        "departamento": "Cundinamarca",
+        "codigo": "25001"
+    },
+    {
+        "ciduad": "AGUACHICA",
+        "departamento": "Cesar",
+        "codigo": "20011"
+    },
+    {
+        "ciduad": "AGUADA",
+        "departamento": "Santander",
+        "codigo": "68013"
+    },
+    {
+        "ciduad": "AGUADAS",
+        "departamento": "Caldas",
+        "codigo": "17013"
+    },
+    {
+        "ciduad": "AGUAZUL",
+        "departamento": "Casanare",
+        "codigo": "85010"
+    },
+    {
+        "ciduad": "AGUSTÍN CODAZZI",
+        "departamento": "Cesar",
+        "codigo": "20013"
+    },
+    {
+        "ciduad": "AIPE",
+        "departamento": "Huila",
+        "codigo": "41016"
+    },
+    {
+        "ciduad": "ALBÁN",
+        "departamento": "Cundinamarca",
+        "codigo": "25019"
+    },
+    {
+        "ciduad": "ALBÁN",
+        "departamento": "Nariño",
+        "codigo": "52019"
+    },
+    {
+        "ciduad": "ALBANIA",
+        "departamento": "Caquetá",
+        "codigo": "18029"
+    },
+    {
+        "ciduad": "ALBANIA",
+        "departamento": "La Guajira",
+        "codigo": "44035"
+    },
+    {
+        "ciduad": "ALBANIA",
+        "departamento": "Santander",
+        "codigo": "68020"
+    },
+    {
+        "ciduad": "ALCALÁ",
+        "departamento": "Valle del Cauca",
+        "codigo": "76020"
+    },
+    {
+        "ciduad": "ALDANA",
+        "departamento": "Nariño",
+        "codigo": "52022"
+    },
+    {
+        "ciduad": "ALEJANDRÍA",
+        "departamento": "Antioquia",
+        "codigo": "05021"
+    },
+    {
+        "ciduad": "ALGARROBO",
+        "departamento": "Magdalena",
+        "codigo": "47030"
+    },
+    {
+        "ciduad": "ALGECIRAS",
+        "departamento": "Huila",
+        "codigo": "41020"
+    },
+    {
+        "ciduad": "ALMAGUER",
+        "departamento": "Cauca",
+        "codigo": "19022"
+    },
+    {
+        "ciduad": "ALMEIDA",
+        "departamento": "Boyacá",
+        "codigo": "15022"
+    },
+    {
+        "ciduad": "ALPUJARRA",
+        "departamento": "Tolima",
+        "codigo": "73024"
+    },
+    {
+        "ciduad": "ALTAMIRA",
+        "departamento": "Huila",
+        "codigo": "41026"
+    },
+    {
+        "ciduad": "ALTO BAUDO",
+        "departamento": "Chocó",
+        "codigo": "27025"
+    },
+    {
+        "ciduad": "ALTOS DEL ROSARIO",
+        "departamento": "Bolívar",
+        "codigo": "13030"
+    },
+    {
+        "ciduad": "ALVARADO",
+        "departamento": "Tolima",
+        "codigo": "73026"
+    },
+    {
+        "ciduad": "AMAGÁ",
+        "departamento": "Antioquia",
+        "codigo": "05030"
+    },
+    {
+        "ciduad": "AMALFI",
+        "departamento": "Antioquia",
+        "codigo": "05031"
+    },
+    {
+        "ciduad": "AMBALEMA",
+        "departamento": "Tolima",
+        "codigo": "73030"
+    },
+    {
+        "ciduad": "ANAPOIMA",
+        "departamento": "Cundinamarca",
+        "codigo": "25035"
+    },
+    {
+        "ciduad": "ANCUYÁ",
+        "departamento": "Nariño",
+        "codigo": "52036"
+    },
+    {
+        "ciduad": "ANDALUCÍA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76036"
+    },
+    {
+        "ciduad": "ANDES",
+        "departamento": "Antioquia",
+        "codigo": "05034"
+    },
+    {
+        "ciduad": "ANGELÓPOLIS",
+        "departamento": "Antioquia",
+        "codigo": "05036"
+    },
+    {
+        "ciduad": "ANGOSTURA",
+        "departamento": "Antioquia",
+        "codigo": "05038"
+    },
+    {
+        "ciduad": "ANOLAIMA",
+        "departamento": "Cundinamarca",
+        "codigo": "25040"
+    },
+    {
+        "ciduad": "ANORÍ",
+        "departamento": "Antioquia",
+        "codigo": "05040"
+    },
+    {
+        "ciduad": "ANSERMA",
+        "departamento": "Caldas",
+        "codigo": "17042"
+    },
+    {
+        "ciduad": "ANSERMANUEVO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76041"
+    },
+    {
+        "ciduad": "ANZA",
+        "departamento": "Antioquia",
+        "codigo": "05044"
+    },
+    {
+        "ciduad": "ANZOÁTEGUI",
+        "departamento": "Tolima",
+        "codigo": "73043"
+    },
+    {
+        "ciduad": "APARTADÓ",
+        "departamento": "Antioquia",
+        "codigo": "05045"
+    },
+    {
+        "ciduad": "APÍA",
+        "departamento": "Risaralda",
+        "codigo": "66045"
+    },
+    {
+        "ciduad": "APULO",
+        "departamento": "Cundinamarca",
+        "codigo": "25599"
+    },
+    {
+        "ciduad": "AQUITANIA",
+        "departamento": "Boyacá",
+        "codigo": "15047"
+    },
+    {
+        "ciduad": "ARACATACA",
+        "departamento": "Magdalena",
+        "codigo": "47053"
+    },
+    {
+        "ciduad": "ARANZAZU",
+        "departamento": "Caldas",
+        "codigo": "17050"
+    },
+    {
+        "ciduad": "ARATOCA",
+        "departamento": "Santander",
+        "codigo": "68051"
+    },
+    {
+        "ciduad": "ARAUCA",
+        "departamento": "Arauca",
+        "codigo": "81001"
+    },
+    {
+        "ciduad": "ARAUQUITA",
+        "departamento": "Arauca",
+        "codigo": "81065"
+    },
+    {
+        "ciduad": "ARBELÁEZ",
+        "departamento": "Cundinamarca",
+        "codigo": "25053"
+    },
+    {
+        "ciduad": "ARBOLEDA",
+        "departamento": "Nariño",
+        "codigo": "52051"
+    },
+    {
+        "ciduad": "ARBOLEDAS",
+        "departamento": "Norte de Santander",
+        "codigo": "54051"
+    },
+    {
+        "ciduad": "ARBOLETES",
+        "departamento": "Antioquia",
+        "codigo": "05051"
+    },
+    {
+        "ciduad": "ARCABUCO",
+        "departamento": "Boyacá",
+        "codigo": "15051"
+    },
+    {
+        "ciduad": "ARENAL",
+        "departamento": "Bolívar",
+        "codigo": "13042"
+    },
+    {
+        "ciduad": "ARGELIA",
+        "departamento": "Antioquia",
+        "codigo": "05055"
+    },
+    {
+        "ciduad": "ARGELIA",
+        "departamento": "Cauca",
+        "codigo": "19050"
+    },
+    {
+        "ciduad": "ARGELIA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76054"
+    },
+    {
+        "ciduad": "ARIGUANÍ",
+        "departamento": "Magdalena",
+        "codigo": "47058"
+    },
+    {
+        "ciduad": "ARJONA",
+        "departamento": "Bolívar",
+        "codigo": "13052"
+    },
+    {
+        "ciduad": "ARMENIA",
+        "departamento": "Antioquia",
+        "codigo": "05059"
+    },
+    {
+        "ciduad": "ARMENIA",
+        "departamento": "Quindio",
+        "codigo": "63001"
+    },
+    {
+        "ciduad": "ARMERO",
+        "departamento": "Tolima",
+        "codigo": "73055"
+    },
+    {
+        "ciduad": "ARROYOHONDO",
+        "departamento": "Bolívar",
+        "codigo": "13062"
+    },
+    {
+        "ciduad": "ASTREA",
+        "departamento": "Cesar",
+        "codigo": "20032"
+    },
+    {
+        "ciduad": "ATACO",
+        "departamento": "Tolima",
+        "codigo": "73067"
+    },
+    {
+        "ciduad": "ATRATO",
+        "departamento": "Chocó",
+        "codigo": "27050"
+    },
+    {
+        "ciduad": "AYAPEL",
+        "departamento": "Córdoba",
+        "codigo": "23068"
+    },
+    {
+        "ciduad": "BAGADÓ",
+        "departamento": "Chocó",
+        "codigo": "27073"
+    },
+    {
+        "ciduad": "BAHÍA SOLANO",
+        "departamento": "Chocó",
+        "codigo": "27075"
+    },
+    {
+        "ciduad": "BAJO BAUDÓ",
+        "departamento": "Chocó",
+        "codigo": "27077"
+    },
+    {
+        "ciduad": "BALBOA",
+        "departamento": "Cauca",
+        "codigo": "19075"
+    },
+    {
+        "ciduad": "BALBOA",
+        "departamento": "Risaralda",
+        "codigo": "66075"
+    },
+    {
+        "ciduad": "BARANOA",
+        "departamento": "Atlántico",
+        "codigo": "08078"
+    },
+    {
+        "ciduad": "BARAYA",
+        "departamento": "Huila",
+        "codigo": "41078"
+    },
+    {
+        "ciduad": "BARBACOAS",
+        "departamento": "Nariño",
+        "codigo": "52079"
+    },
+    {
+        "ciduad": "BARBOSA",
+        "departamento": "Antioquia",
+        "codigo": "05079"
+    },
+    {
+        "ciduad": "BARBOSA",
+        "departamento": "Santander",
+        "codigo": "68077"
+    },
+    {
+        "ciduad": "BARICHARA",
+        "departamento": "Santander",
+        "codigo": "68079"
+    },
+    {
+        "ciduad": "BARRANCA DE UPÍA",
+        "departamento": "Meta",
+        "codigo": "50110"
+    },
+    {
+        "ciduad": "BARRANCABERMEJA",
+        "departamento": "Santander",
+        "codigo": "68081"
+    },
+    {
+        "ciduad": "BARRANCAS",
+        "departamento": "La Guajira",
+        "codigo": "44078"
+    },
+    {
+        "ciduad": "BARRANCO DE LOBA",
+        "departamento": "Bolívar",
+        "codigo": "13074"
+    },
+    {
+        "ciduad": "BARRANCO MINAS",
+        "departamento": "Guainía",
+        "codigo": "94343"
+    },
+    {
+        "ciduad": "BARRANQUILLA",
+        "departamento": "Atlántico",
+        "codigo": "08001"
+    },
+    {
+        "ciduad": "BECERRIL",
+        "departamento": "Cesar",
+        "codigo": "20045"
+    },
+    {
+        "ciduad": "BELALCÁZAR",
+        "departamento": "Caldas",
+        "codigo": "17088"
+    },
+    {
+        "ciduad": "BELÉN",
+        "departamento": "Boyacá",
+        "codigo": "15087"
+    },
+    {
+        "ciduad": "BELÉN",
+        "departamento": "Nariño",
+        "codigo": "52083"
+    },
+    {
+        "ciduad": "BELÉN DE BAJIRÁ",
+        "departamento": "Chocó",
+        "codigo": "27086"
+    },
+    {
+        "ciduad": "BELÉN DE LOS ANDAQUIES",
+        "departamento": "Caquetá",
+        "codigo": "18094"
+    },
+    {
+        "ciduad": "BELÉN DE UMBRÍA",
+        "departamento": "Risaralda",
+        "codigo": "66088"
+    },
+    {
+        "ciduad": "BELLO",
+        "departamento": "Antioquia",
+        "codigo": "05088"
+    },
+    {
+        "ciduad": "BELMIRA",
+        "departamento": "Antioquia",
+        "codigo": "05086"
+    },
+    {
+        "ciduad": "BELTRÁN",
+        "departamento": "Cundinamarca",
+        "codigo": "25086"
+    },
+    {
+        "ciduad": "BERBEO",
+        "departamento": "Boyacá",
+        "codigo": "15090"
+    },
+    {
+        "ciduad": "BETANIA",
+        "departamento": "Antioquia",
+        "codigo": "05091"
+    },
+    {
+        "ciduad": "BETÉITIVA",
+        "departamento": "Boyacá",
+        "codigo": "15092"
+    },
+    {
+        "ciduad": "BETULIA",
+        "departamento": "Antioquia",
+        "codigo": "05093"
+    },
+    {
+        "ciduad": "BETULIA",
+        "departamento": "Santander",
+        "codigo": "68092"
+    },
+    {
+        "ciduad": "BITUIMA",
+        "departamento": "Cundinamarca",
+        "codigo": "25095"
+    },
+    {
+        "ciduad": "BOAVITA",
+        "departamento": "Boyacá",
+        "codigo": "15097"
+    },
+    {
+        "ciduad": "BOCHALEMA",
+        "departamento": "Norte de Santander",
+        "codigo": "54099"
+    },
+    {
+        "ciduad": "BOGOTÁ",
+        "departamento": "Bogotá D.C",
+        "codigo": "11001"
+    },
+    {
+        "ciduad": "BOJACÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25099"
+    },
+    {
+        "ciduad": "BOJAYA",
+        "departamento": "Chocó",
+        "codigo": "27099"
+    },
+    {
+        "ciduad": "BOLÍVAR",
+        "departamento": "Cauca",
+        "codigo": "19100"
+    },
+    {
+        "ciduad": "BOLÍVAR",
+        "departamento": "Santander",
+        "codigo": "68101"
+    },
+    {
+        "ciduad": "BOLÍVAR",
+        "departamento": "Valle del Cauca",
+        "codigo": "76100"
+    },
+    {
+        "ciduad": "BOSCONIA",
+        "departamento": "Cesar",
+        "codigo": "20060"
+    },
+    {
+        "ciduad": "BOYACÁ",
+        "departamento": "Boyacá",
+        "codigo": "15104"
+    },
+    {
+        "ciduad": "BRICEÑO",
+        "departamento": "Antioquia",
+        "codigo": "05107"
+    },
+    {
+        "ciduad": "BRICEÑO",
+        "departamento": "Boyacá",
+        "codigo": "15106"
+    },
+    {
+        "ciduad": "BUCARAMANGA",
+        "departamento": "Santander",
+        "codigo": "68001"
+    },
+    {
+        "ciduad": "BUCARASICA",
+        "departamento": "Norte de Santander",
+        "codigo": "54109"
+    },
+    {
+        "ciduad": "BUENAVENTURA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76109"
+    },
+    {
+        "ciduad": "BUENAVISTA",
+        "departamento": "Boyacá",
+        "codigo": "15109"
+    },
+    {
+        "ciduad": "BUENAVISTA",
+        "departamento": "Córdoba",
+        "codigo": "23079"
+    },
+    {
+        "ciduad": "BUENAVISTA",
+        "departamento": "Quindio",
+        "codigo": "63111"
+    },
+    {
+        "ciduad": "BUENAVISTA",
+        "departamento": "Sucre",
+        "codigo": "70110"
+    },
+    {
+        "ciduad": "BUENOS AIRES",
+        "departamento": "Cauca",
+        "codigo": "19110"
+    },
+    {
+        "ciduad": "BUESACO",
+        "departamento": "Nariño",
+        "codigo": "52110"
+    },
+    {
+        "ciduad": "BUGALAGRANDE",
+        "departamento": "Valle del Cauca",
+        "codigo": "76113"
+    },
+    {
+        "ciduad": "BURITICÁ",
+        "departamento": "Antioquia",
+        "codigo": "05113"
+    },
+    {
+        "ciduad": "BUSBANZÁ",
+        "departamento": "Boyacá",
+        "codigo": "15114"
+    },
+    {
+        "ciduad": "CABRERA",
+        "departamento": "Cundinamarca",
+        "codigo": "25120"
+    },
+    {
+        "ciduad": "CABRERA",
+        "departamento": "Santander",
+        "codigo": "68121"
+    },
+    {
+        "ciduad": "CABUYARO",
+        "departamento": "Meta",
+        "codigo": "50124"
+    },
+    {
+        "ciduad": "CACAHUAL",
+        "departamento": "Guainía",
+        "codigo": "94886"
+    },
+    {
+        "ciduad": "CÁCERES",
+        "departamento": "Antioquia",
+        "codigo": "05120"
+    },
+    {
+        "ciduad": "CACHIPAY",
+        "departamento": "Cundinamarca",
+        "codigo": "25123"
+    },
+    {
+        "ciduad": "CACHIRÁ",
+        "departamento": "Norte de Santander",
+        "codigo": "54128"
+    },
+    {
+        "ciduad": "CÁCOTA",
+        "departamento": "Norte de Santander",
+        "codigo": "54125"
+    },
+    {
+        "ciduad": "CAICEDO",
+        "departamento": "Antioquia",
+        "codigo": "05125"
+    },
+    {
+        "ciduad": "CAICEDONIA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76122"
+    },
+    {
+        "ciduad": "CAIMITO",
+        "departamento": "Sucre",
+        "codigo": "70124"
+    },
+    {
+        "ciduad": "CAJAMARCA",
+        "departamento": "Tolima",
+        "codigo": "73124"
+    },
+    {
+        "ciduad": "CAJIBÍO",
+        "departamento": "Cauca",
+        "codigo": "19130"
+    },
+    {
+        "ciduad": "CAJICÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25126"
+    },
+    {
+        "ciduad": "CALAMAR",
+        "departamento": "Bolívar",
+        "codigo": "13140"
+    },
+    {
+        "ciduad": "CALAMAR",
+        "departamento": "Guaviare",
+        "codigo": "95015"
+    },
+    {
+        "ciduad": "CALARCA",
+        "departamento": "Quindio",
+        "codigo": "63130"
+    },
+    {
+        "ciduad": "CALDAS",
+        "departamento": "Antioquia",
+        "codigo": "05129"
+    },
+    {
+        "ciduad": "CALDAS",
+        "departamento": "Boyacá",
+        "codigo": "15131"
+    },
+    {
+        "ciduad": "CALDONO",
+        "departamento": "Cauca",
+        "codigo": "19137"
+    },
+    {
+        "ciduad": "CALI",
+        "departamento": "Valle del Cauca",
+        "codigo": "76001"
+    },
+    {
+        "ciduad": "CALIFORNIA",
+        "departamento": "Santander",
+        "codigo": "68132"
+    },
+    {
+        "ciduad": "CALIMA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76126"
+    },
+    {
+        "ciduad": "CALOTO",
+        "departamento": "Cauca",
+        "codigo": "19142"
+    },
+    {
+        "ciduad": "CAMPAMENTO",
+        "departamento": "Antioquia",
+        "codigo": "05134"
+    },
+    {
+        "ciduad": "CAMPO DE LA CRUZ",
+        "departamento": "Atlántico",
+        "codigo": "08137"
+    },
+    {
+        "ciduad": "CAMPOALEGRE",
+        "departamento": "Huila",
+        "codigo": "41132"
+    },
+    {
+        "ciduad": "CAMPOHERMOSO",
+        "departamento": "Boyacá",
+        "codigo": "15135"
+    },
+    {
+        "ciduad": "CANALETE",
+        "departamento": "Córdoba",
+        "codigo": "23090"
+    },
+    {
+        "ciduad": "CANDELARIA",
+        "departamento": "Atlántico",
+        "codigo": "08141"
+    },
+    {
+        "ciduad": "CANDELARIA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76130"
+    },
+    {
+        "ciduad": "CANTAGALLO",
+        "departamento": "Bolívar",
+        "codigo": "13160"
+    },
+    {
+        "ciduad": "CAÑASGORDAS",
+        "departamento": "Antioquia",
+        "codigo": "05138"
+    },
+    {
+        "ciduad": "CAPARRAPÍ",
+        "departamento": "Cundinamarca",
+        "codigo": "25148"
+    },
+    {
+        "ciduad": "CAPITANEJO",
+        "departamento": "Santander",
+        "codigo": "68147"
+    },
+    {
+        "ciduad": "CAQUEZA",
+        "departamento": "Cundinamarca",
+        "codigo": "25151"
+    },
+    {
+        "ciduad": "CARACOLÍ",
+        "departamento": "Antioquia",
+        "codigo": "05142"
+    },
+    {
+        "ciduad": "CARAMANTA",
+        "departamento": "Antioquia",
+        "codigo": "05145"
+    },
+    {
+        "ciduad": "CARCASÍ",
+        "departamento": "Santander",
+        "codigo": "68152"
+    },
+    {
+        "ciduad": "CAREPA",
+        "departamento": "Antioquia",
+        "codigo": "05147"
+    },
+    {
+        "ciduad": "CARMEN DE APICALÁ",
+        "departamento": "Tolima",
+        "codigo": "73148"
+    },
+    {
+        "ciduad": "CARMEN DE CARUPA",
+        "departamento": "Cundinamarca",
+        "codigo": "25154"
+    },
+    {
+        "ciduad": "CARMEN DEL DARIEN",
+        "departamento": "Chocó",
+        "codigo": "27150"
+    },
+    {
+        "ciduad": "CAROLINA",
+        "departamento": "Antioquia",
+        "codigo": "05150"
+    },
+    {
+        "ciduad": "CARTAGENA",
+        "departamento": "Bolívar",
+        "codigo": "13001"
+    },
+    {
+        "ciduad": "CARTAGENA DEL CHAIRÁ",
+        "departamento": "Caquetá",
+        "codigo": "18150"
+    },
+    {
+        "ciduad": "CARTAGO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76147"
+    },
+    {
+        "ciduad": "CARURU",
+        "departamento": "Vaupés",
+        "codigo": "97161"
+    },
+    {
+        "ciduad": "CASABIANCA",
+        "departamento": "Tolima",
+        "codigo": "73152"
+    },
+    {
+        "ciduad": "CASTILLA LA NUEVA",
+        "departamento": "Meta",
+        "codigo": "50150"
+    },
+    {
+        "ciduad": "CAUCASIA",
+        "departamento": "Antioquia",
+        "codigo": "05154"
+    },
+    {
+        "ciduad": "CEPITÁ",
+        "departamento": "Santander",
+        "codigo": "68160"
+    },
+    {
+        "ciduad": "CERETÉ",
+        "departamento": "Córdoba",
+        "codigo": "23162"
+    },
+    {
+        "ciduad": "CERINZA",
+        "departamento": "Boyacá",
+        "codigo": "15162"
+    },
+    {
+        "ciduad": "CERRITO",
+        "departamento": "Santander",
+        "codigo": "68162"
+    },
+    {
+        "ciduad": "CERRO SAN ANTONIO",
+        "departamento": "Magdalena",
+        "codigo": "47161"
+    },
+    {
+        "ciduad": "CÉRTEGUI",
+        "departamento": "Chocó",
+        "codigo": "27160"
+    },
+    {
+        "ciduad": "CHACHAGÜÍ",
+        "departamento": "Nariño",
+        "codigo": "52240"
+    },
+    {
+        "ciduad": "CHAGUANÍ",
+        "departamento": "Cundinamarca",
+        "codigo": "25168"
+    },
+    {
+        "ciduad": "CHALÁN",
+        "departamento": "Sucre",
+        "codigo": "70230"
+    },
+    {
+        "ciduad": "CHAMEZA",
+        "departamento": "Casanare",
+        "codigo": "85015"
+    },
+    {
+        "ciduad": "CHAPARRAL",
+        "departamento": "Tolima",
+        "codigo": "73168"
+    },
+    {
+        "ciduad": "CHARALÁ",
+        "departamento": "Santander",
+        "codigo": "68167"
+    },
+    {
+        "ciduad": "CHARTA",
+        "departamento": "Santander",
+        "codigo": "68169"
+    },
+    {
+        "ciduad": "CHÍA",
+        "departamento": "Cundinamarca",
+        "codigo": "25175"
+    },
+    {
+        "ciduad": "CHIBOLO",
+        "departamento": "Magdalena",
+        "codigo": "47170"
+    },
+    {
+        "ciduad": "CHIGORODÓ",
+        "departamento": "Antioquia",
+        "codigo": "05172"
+    },
+    {
+        "ciduad": "CHIMA",
+        "departamento": "Santander",
+        "codigo": "68176"
+    },
+    {
+        "ciduad": "CHIMÁ",
+        "departamento": "Córdoba",
+        "codigo": "23168"
+    },
+    {
+        "ciduad": "CHIMICHAGUA",
+        "departamento": "Cesar",
+        "codigo": "20175"
+    },
+    {
+        "ciduad": "CHINÁCOTA",
+        "departamento": "Norte de Santander",
+        "codigo": "54172"
+    },
+    {
+        "ciduad": "CHINAVITA",
+        "departamento": "Boyacá",
+        "codigo": "15172"
+    },
+    {
+        "ciduad": "CHINCHINÁ",
+        "departamento": "Caldas",
+        "codigo": "17174"
+    },
+    {
+        "ciduad": "CHINÚ",
+        "departamento": "Córdoba",
+        "codigo": "23182"
+    },
+    {
+        "ciduad": "CHIPAQUE",
+        "departamento": "Cundinamarca",
+        "codigo": "25178"
+    },
+    {
+        "ciduad": "CHIPATÁ",
+        "departamento": "Santander",
+        "codigo": "68179"
+    },
+    {
+        "ciduad": "CHIQUINQUIRÁ",
+        "departamento": "Boyacá",
+        "codigo": "15176"
+    },
+    {
+        "ciduad": "CHÍQUIZA",
+        "departamento": "Boyacá",
+        "codigo": "15232"
+    },
+    {
+        "ciduad": "CHIRIGUANÁ",
+        "departamento": "Cesar",
+        "codigo": "20178"
+    },
+    {
+        "ciduad": "CHISCAS",
+        "departamento": "Boyacá",
+        "codigo": "15180"
+    },
+    {
+        "ciduad": "CHITA",
+        "departamento": "Boyacá",
+        "codigo": "15183"
+    },
+    {
+        "ciduad": "CHITAGÁ",
+        "departamento": "Norte de Santander",
+        "codigo": "54174"
+    },
+    {
+        "ciduad": "CHITARAQUE",
+        "departamento": "Boyacá",
+        "codigo": "15185"
+    },
+    {
+        "ciduad": "CHIVATÁ",
+        "departamento": "Boyacá",
+        "codigo": "15187"
+    },
+    {
+        "ciduad": "CHIVOR",
+        "departamento": "Boyacá",
+        "codigo": "15236"
+    },
+    {
+        "ciduad": "CHOACHÍ",
+        "departamento": "Cundinamarca",
+        "codigo": "25181"
+    },
+    {
+        "ciduad": "CHOCONTÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25183"
+    },
+    {
+        "ciduad": "CICUCO",
+        "departamento": "Bolívar",
+        "codigo": "13188"
+    },
+    {
+        "ciduad": "CIÉNAGA",
+        "departamento": "Magdalena",
+        "codigo": "47189"
+    },
+    {
+        "ciduad": "CIÉNAGA DE ORO",
+        "departamento": "Córdoba",
+        "codigo": "23189"
+    },
+    {
+        "ciduad": "CIÉNEGA",
+        "departamento": "Boyacá",
+        "codigo": "15189"
+    },
+    {
+        "ciduad": "CIMITARRA",
+        "departamento": "Santander",
+        "codigo": "68190"
+    },
+    {
+        "ciduad": "CIRCASIA",
+        "departamento": "Quindio",
+        "codigo": "63190"
+    },
+    {
+        "ciduad": "CISNEROS",
+        "departamento": "Antioquia",
+        "codigo": "05190"
+    },
+    {
+        "ciduad": "CIUDAD BOLÍVAR",
+        "departamento": "Antioquia",
+        "codigo": "05101"
+    },
+    {
+        "ciduad": "CLEMENCIA",
+        "departamento": "Bolívar",
+        "codigo": "13222"
+    },
+    {
+        "ciduad": "COCORNÁ",
+        "departamento": "Antioquia",
+        "codigo": "05197"
+    },
+    {
+        "ciduad": "COELLO",
+        "departamento": "Tolima",
+        "codigo": "73200"
+    },
+    {
+        "ciduad": "COGUA",
+        "departamento": "Cundinamarca",
+        "codigo": "25200"
+    },
+    {
+        "ciduad": "COLOMBIA",
+        "departamento": "Huila",
+        "codigo": "41206"
+    },
+    {
+        "ciduad": "COLÓN",
+        "departamento": "Nariño",
+        "codigo": "52203"
+    },
+    {
+        "ciduad": "COLÓN",
+        "departamento": "Putumayo",
+        "codigo": "86219"
+    },
+    {
+        "ciduad": "COLOSO",
+        "departamento": "Sucre",
+        "codigo": "70204"
+    },
+    {
+        "ciduad": "CÓMBITA",
+        "departamento": "Boyacá",
+        "codigo": "15204"
+    },
+    {
+        "ciduad": "CONCEPCIÓN",
+        "departamento": "Antioquia",
+        "codigo": "05206"
+    },
+    {
+        "ciduad": "CONCEPCIÓN",
+        "departamento": "Santander",
+        "codigo": "68207"
+    },
+    {
+        "ciduad": "CONCORDIA",
+        "departamento": "Antioquia",
+        "codigo": "05209"
+    },
+    {
+        "ciduad": "CONCORDIA",
+        "departamento": "Magdalena",
+        "codigo": "47205"
+    },
+    {
+        "ciduad": "CONDOTO",
+        "departamento": "Chocó",
+        "codigo": "27205"
+    },
+    {
+        "ciduad": "CONFINES",
+        "departamento": "Santander",
+        "codigo": "68209"
+    },
+    {
+        "ciduad": "CONSACA",
+        "departamento": "Nariño",
+        "codigo": "52207"
+    },
+    {
+        "ciduad": "CONTADERO",
+        "departamento": "Nariño",
+        "codigo": "52210"
+    },
+    {
+        "ciduad": "CONTRATACIÓN",
+        "departamento": "Santander",
+        "codigo": "68211"
+    },
+    {
+        "ciduad": "CONVENCIÓN",
+        "departamento": "Norte de Santander",
+        "codigo": "54206"
+    },
+    {
+        "ciduad": "COPACABANA",
+        "departamento": "Antioquia",
+        "codigo": "05212"
+    },
+    {
+        "ciduad": "COPER",
+        "departamento": "Boyacá",
+        "codigo": "15212"
+    },
+    {
+        "ciduad": "CÓRDOBA",
+        "departamento": "Bolívar",
+        "codigo": "13212"
+    },
+    {
+        "ciduad": "CÓRDOBA",
+        "departamento": "Nariño",
+        "codigo": "52215"
+    },
+    {
+        "ciduad": "CÓRDOBA",
+        "departamento": "Quindio",
+        "codigo": "63212"
+    },
+    {
+        "ciduad": "CORINTO",
+        "departamento": "Cauca",
+        "codigo": "19212"
+    },
+    {
+        "ciduad": "COROMORO",
+        "departamento": "Santander",
+        "codigo": "68217"
+    },
+    {
+        "ciduad": "COROZAL",
+        "departamento": "Sucre",
+        "codigo": "70215"
+    },
+    {
+        "ciduad": "CORRALES",
+        "departamento": "Boyacá",
+        "codigo": "15215"
+    },
+    {
+        "ciduad": "COTA",
+        "departamento": "Cundinamarca",
+        "codigo": "25214"
+    },
+    {
+        "ciduad": "COTORRA",
+        "departamento": "Córdoba",
+        "codigo": "23300"
+    },
+    {
+        "ciduad": "COVARACHÍA",
+        "departamento": "Boyacá",
+        "codigo": "15218"
+    },
+    {
+        "ciduad": "COVEÑAS",
+        "departamento": "Sucre",
+        "codigo": "70221"
+    },
+    {
+        "ciduad": "COYAIMA",
+        "departamento": "Tolima",
+        "codigo": "73217"
+    },
+    {
+        "ciduad": "CRAVO NORTE",
+        "departamento": "Arauca",
+        "codigo": "81220"
+    },
+    {
+        "ciduad": "CUASPUD",
+        "departamento": "Nariño",
+        "codigo": "52224"
+    },
+    {
+        "ciduad": "CUBARÁ",
+        "departamento": "Boyacá",
+        "codigo": "15223"
+    },
+    {
+        "ciduad": "CUBARRAL",
+        "departamento": "Meta",
+        "codigo": "50223"
+    },
+    {
+        "ciduad": "CUCAITA",
+        "departamento": "Boyacá",
+        "codigo": "15224"
+    },
+    {
+        "ciduad": "CUCUNUBÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25224"
+    },
+    {
+        "ciduad": "CÚCUTA",
+        "departamento": "Norte de Santander",
+        "codigo": "54001"
+    },
+    {
+        "ciduad": "CUCUTILLA",
+        "departamento": "Norte de Santander",
+        "codigo": "54223"
+    },
+    {
+        "ciduad": "CUÍTIVA",
+        "departamento": "Boyacá",
+        "codigo": "15226"
+    },
+    {
+        "ciduad": "CUMARAL",
+        "departamento": "Meta",
+        "codigo": "50226"
+    },
+    {
+        "ciduad": "CUMARIBO",
+        "departamento": "Vichada",
+        "codigo": "99773"
+    },
+    {
+        "ciduad": "CUMBAL",
+        "departamento": "Nariño",
+        "codigo": "52227"
+    },
+    {
+        "ciduad": "CUMBITARA",
+        "departamento": "Nariño",
+        "codigo": "52233"
+    },
+    {
+        "ciduad": "CUNDAY",
+        "departamento": "Tolima",
+        "codigo": "73226"
+    },
+    {
+        "ciduad": "CURILLO",
+        "departamento": "Caquetá",
+        "codigo": "18205"
+    },
+    {
+        "ciduad": "CURITÍ",
+        "departamento": "Santander",
+        "codigo": "68229"
+    },
+    {
+        "ciduad": "CURUMANÍ",
+        "departamento": "Cesar",
+        "codigo": "20228"
+    },
+    {
+        "ciduad": "DABEIBA",
+        "departamento": "Antioquia",
+        "codigo": "05234"
+    },
+    {
+        "ciduad": "DAGUA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76233"
+    },
+    {
+        "ciduad": "DIBULLA",
+        "departamento": "La Guajira",
+        "codigo": "44090"
+    },
+    {
+        "ciduad": "DISTRACCIÓN",
+        "departamento": "La Guajira",
+        "codigo": "44098"
+    },
+    {
+        "ciduad": "DOLORES",
+        "departamento": "Tolima",
+        "codigo": "73236"
+    },
+    {
+        "ciduad": "DON MATÍAS",
+        "departamento": "Antioquia",
+        "codigo": "05237"
+    },
+    {
+        "ciduad": "DOSQUEBRADAS",
+        "departamento": "Risaralda",
+        "codigo": "66170"
+    },
+    {
+        "ciduad": "DUITAMA",
+        "departamento": "Boyacá",
+        "codigo": "15238"
+    },
+    {
+        "ciduad": "DURANIA",
+        "departamento": "Norte de Santander",
+        "codigo": "54239"
+    },
+    {
+        "ciduad": "EBÉJICO",
+        "departamento": "Antioquia",
+        "codigo": "05240"
+    },
+    {
+        "ciduad": "EL ÁGUILA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76243"
+    },
+    {
+        "ciduad": "EL BAGRE",
+        "departamento": "Antioquia",
+        "codigo": "05250"
+    },
+    {
+        "ciduad": "EL BANCO",
+        "departamento": "Magdalena",
+        "codigo": "47245"
+    },
+    {
+        "ciduad": "EL CAIRO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76246"
+    },
+    {
+        "ciduad": "EL CALVARIO",
+        "departamento": "Meta",
+        "codigo": "50245"
+    },
+    {
+        "ciduad": "EL CANTÓN DEL SAN PABLO",
+        "departamento": "Chocó",
+        "codigo": "27135"
+    },
+    {
+        "ciduad": "EL CARMEN",
+        "departamento": "Norte de Santander",
+        "codigo": "54245"
+    },
+    {
+        "ciduad": "EL CARMEN DE ATRATO",
+        "departamento": "Chocó",
+        "codigo": "27245"
+    },
+    {
+        "ciduad": "EL CARMEN DE BOLÍVAR",
+        "departamento": "Bolívar",
+        "codigo": "13244"
+    },
+    {
+        "ciduad": "EL CARMEN DE CHUCURÍ",
+        "departamento": "Santander",
+        "codigo": "68235"
+    },
+    {
+        "ciduad": "EL CARMEN DE VIBORAL",
+        "departamento": "Antioquia",
+        "codigo": "05148"
+    },
+    {
+        "ciduad": "EL CASTILLO",
+        "departamento": "Meta",
+        "codigo": "50251"
+    },
+    {
+        "ciduad": "EL CERRITO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76248"
+    },
+    {
+        "ciduad": "EL CHARCO",
+        "departamento": "Nariño",
+        "codigo": "52250"
+    },
+    {
+        "ciduad": "EL COCUY",
+        "departamento": "Boyacá",
+        "codigo": "15244"
+    },
+    {
+        "ciduad": "EL COLEGIO",
+        "departamento": "Cundinamarca",
+        "codigo": "25245"
+    },
+    {
+        "ciduad": "EL COPEY",
+        "departamento": "Cesar",
+        "codigo": "20238"
+    },
+    {
+        "ciduad": "EL DONCELLO",
+        "departamento": "Caquetá",
+        "codigo": "18247"
+    },
+    {
+        "ciduad": "EL DORADO",
+        "departamento": "Meta",
+        "codigo": "50270"
+    },
+    {
+        "ciduad": "EL DOVIO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76250"
+    },
+    {
+        "ciduad": "EL ENCANTO",
+        "departamento": "Amazonas",
+        "codigo": "91263"
+    },
+    {
+        "ciduad": "EL ESPINO",
+        "departamento": "Boyacá",
+        "codigo": "15248"
+    },
+    {
+        "ciduad": "EL GUACAMAYO",
+        "departamento": "Santander",
+        "codigo": "68245"
+    },
+    {
+        "ciduad": "EL GUAMO",
+        "departamento": "Bolívar",
+        "codigo": "13248"
+    },
+    {
+        "ciduad": "EL LITORAL DEL SAN JUAN",
+        "departamento": "Chocó",
+        "codigo": "27250"
+    },
+    {
+        "ciduad": "EL MOLINO",
+        "departamento": "La Guajira",
+        "codigo": "44110"
+    },
+    {
+        "ciduad": "EL PASO",
+        "departamento": "Cesar",
+        "codigo": "20250"
+    },
+    {
+        "ciduad": "EL PAUJIL",
+        "departamento": "Caquetá",
+        "codigo": "18256"
+    },
+    {
+        "ciduad": "EL PEÑOL",
+        "departamento": "Nariño",
+        "codigo": "52254"
+    },
+    {
+        "ciduad": "EL PEÑÓN",
+        "departamento": "Bolívar",
+        "codigo": "13268"
+    },
+    {
+        "ciduad": "EL PEÑÓN",
+        "departamento": "Cundinamarca",
+        "codigo": "25258"
+    },
+    {
+        "ciduad": "EL PEÑÓN",
+        "departamento": "Santander",
+        "codigo": "68250"
+    },
+    {
+        "ciduad": "EL PIÑON",
+        "departamento": "Magdalena",
+        "codigo": "47258"
+    },
+    {
+        "ciduad": "EL PLAYÓN",
+        "departamento": "Santander",
+        "codigo": "68255"
+    },
+    {
+        "ciduad": "EL RETÉN",
+        "departamento": "Magdalena",
+        "codigo": "47268"
+    },
+    {
+        "ciduad": "EL RETORNO",
+        "departamento": "Guaviare",
+        "codigo": "95025"
+    },
+    {
+        "ciduad": "EL ROBLE",
+        "departamento": "Sucre",
+        "codigo": "70233"
+    },
+    {
+        "ciduad": "EL ROSAL",
+        "departamento": "Cundinamarca",
+        "codigo": "25260"
+    },
+    {
+        "ciduad": "EL ROSARIO",
+        "departamento": "Nariño",
+        "codigo": "52256"
+    },
+    {
+        "ciduad": "EL SANTUARIO",
+        "departamento": "Antioquia",
+        "codigo": "05697"
+    },
+    {
+        "ciduad": "EL TABLÓN DE GÓMEZ",
+        "departamento": "Nariño",
+        "codigo": "52258"
+    },
+    {
+        "ciduad": "EL TAMBO",
+        "departamento": "Cauca",
+        "codigo": "19256"
+    },
+    {
+        "ciduad": "EL TAMBO",
+        "departamento": "Nariño",
+        "codigo": "52260"
+    },
+    {
+        "ciduad": "EL TARRA",
+        "departamento": "Norte de Santander",
+        "codigo": "54250"
+    },
+    {
+        "ciduad": "EL ZULIA",
+        "departamento": "Norte de Santander",
+        "codigo": "54261"
+    },
+    {
+        "ciduad": "ELÍAS",
+        "departamento": "Huila",
+        "codigo": "41244"
+    },
+    {
+        "ciduad": "ENCINO",
+        "departamento": "Santander",
+        "codigo": "68264"
+    },
+    {
+        "ciduad": "ENCISO",
+        "departamento": "Santander",
+        "codigo": "68266"
+    },
+    {
+        "ciduad": "ENTRERRIOS",
+        "departamento": "Antioquia",
+        "codigo": "05264"
+    },
+    {
+        "ciduad": "ENVIGADO",
+        "departamento": "Antioquia",
+        "codigo": "05266"
+    },
+    {
+        "ciduad": "ESPINAL",
+        "departamento": "Tolima",
+        "codigo": "73268"
+    },
+    {
+        "ciduad": "FACATATIVÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25269"
+    },
+    {
+        "ciduad": "FALAN",
+        "departamento": "Tolima",
+        "codigo": "73270"
+    },
+    {
+        "ciduad": "FILADELFIA",
+        "departamento": "Caldas",
+        "codigo": "17272"
+    },
+    {
+        "ciduad": "FILANDIA",
+        "departamento": "Quindio",
+        "codigo": "63272"
+    },
+    {
+        "ciduad": "FIRAVITOBA",
+        "departamento": "Boyacá",
+        "codigo": "15272"
+    },
+    {
+        "ciduad": "FLANDES",
+        "departamento": "Tolima",
+        "codigo": "73275"
+    },
+    {
+        "ciduad": "FLORENCIA",
+        "departamento": "Caquetá",
+        "codigo": "18001"
+    },
+    {
+        "ciduad": "FLORENCIA",
+        "departamento": "Cauca",
+        "codigo": "19290"
+    },
+    {
+        "ciduad": "FLORESTA",
+        "departamento": "Boyacá",
+        "codigo": "15276"
+    },
+    {
+        "ciduad": "FLORIÁN",
+        "departamento": "Santander",
+        "codigo": "68271"
+    },
+    {
+        "ciduad": "FLORIDA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76275"
+    },
+    {
+        "ciduad": "FLORIDABLANCA",
+        "departamento": "Santander",
+        "codigo": "68276"
+    },
+    {
+        "ciduad": "FOMEQUE",
+        "departamento": "Cundinamarca",
+        "codigo": "25279"
+    },
+    {
+        "ciduad": "FONSECA",
+        "departamento": "La Guajira",
+        "codigo": "44279"
+    },
+    {
+        "ciduad": "FORTUL",
+        "departamento": "Arauca",
+        "codigo": "81300"
+    },
+    {
+        "ciduad": "FOSCA",
+        "departamento": "Cundinamarca",
+        "codigo": "25281"
+    },
+    {
+        "ciduad": "FRANCISCO PIZARRO",
+        "departamento": "Nariño",
+        "codigo": "52520"
+    },
+    {
+        "ciduad": "FREDONIA",
+        "departamento": "Antioquia",
+        "codigo": "05282"
+    },
+    {
+        "ciduad": "FRESNO",
+        "departamento": "Tolima",
+        "codigo": "73283"
+    },
+    {
+        "ciduad": "FRONTINO",
+        "departamento": "Antioquia",
+        "codigo": "05284"
+    },
+    {
+        "ciduad": "FUENTE DE ORO",
+        "departamento": "Meta",
+        "codigo": "50287"
+    },
+    {
+        "ciduad": "FUNDACIÓN",
+        "departamento": "Magdalena",
+        "codigo": "47288"
+    },
+    {
+        "ciduad": "FUNES",
+        "departamento": "Nariño",
+        "codigo": "52287"
+    },
+    {
+        "ciduad": "FUNZA",
+        "departamento": "Cundinamarca",
+        "codigo": "25286"
+    },
+    {
+        "ciduad": "FÚQUENE",
+        "departamento": "Cundinamarca",
+        "codigo": "25288"
+    },
+    {
+        "ciduad": "FUSAGASUGÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25290"
+    },
+    {
+        "ciduad": "GACHALA",
+        "departamento": "Cundinamarca",
+        "codigo": "25293"
+    },
+    {
+        "ciduad": "GACHANCIPÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25295"
+    },
+    {
+        "ciduad": "GACHANTIVÁ",
+        "departamento": "Boyacá",
+        "codigo": "15293"
+    },
+    {
+        "ciduad": "GACHETÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25297"
+    },
+    {
+        "ciduad": "GALÁN",
+        "departamento": "Santander",
+        "codigo": "68296"
+    },
+    {
+        "ciduad": "GALAPA",
+        "departamento": "Atlántico",
+        "codigo": "08296"
+    },
+    {
+        "ciduad": "GALERAS",
+        "departamento": "Sucre",
+        "codigo": "70235"
+    },
+    {
+        "ciduad": "GAMA",
+        "departamento": "Cundinamarca",
+        "codigo": "25299"
+    },
+    {
+        "ciduad": "GAMARRA",
+        "departamento": "Cesar",
+        "codigo": "20295"
+    },
+    {
+        "ciduad": "GAMBITA",
+        "departamento": "Santander",
+        "codigo": "68298"
+    },
+    {
+        "ciduad": "GAMEZA",
+        "departamento": "Boyacá",
+        "codigo": "15296"
+    },
+    {
+        "ciduad": "GARAGOA",
+        "departamento": "Boyacá",
+        "codigo": "15299"
+    },
+    {
+        "ciduad": "GARZÓN",
+        "departamento": "Huila",
+        "codigo": "41298"
+    },
+    {
+        "ciduad": "GÉNOVA",
+        "departamento": "Quindio",
+        "codigo": "63302"
+    },
+    {
+        "ciduad": "GIGANTE",
+        "departamento": "Huila",
+        "codigo": "41306"
+    },
+    {
+        "ciduad": "GINEBRA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76306"
+    },
+    {
+        "ciduad": "GIRALDO",
+        "departamento": "Antioquia",
+        "codigo": "05306"
+    },
+    {
+        "ciduad": "GIRARDOT",
+        "departamento": "Cundinamarca",
+        "codigo": "25307"
+    },
+    {
+        "ciduad": "GIRARDOTA",
+        "departamento": "Antioquia",
+        "codigo": "05308"
+    },
+    {
+        "ciduad": "GIRÓN",
+        "departamento": "Santander",
+        "codigo": "68307"
+    },
+    {
+        "ciduad": "GÓMEZ PLATA",
+        "departamento": "Antioquia",
+        "codigo": "05310"
+    },
+    {
+        "ciduad": "GONZÁLEZ",
+        "departamento": "Cesar",
+        "codigo": "20310"
+    },
+    {
+        "ciduad": "GRAMALOTE",
+        "departamento": "Norte de Santander",
+        "codigo": "54313"
+    },
+    {
+        "ciduad": "GRANADA",
+        "departamento": "Antioquia",
+        "codigo": "05313"
+    },
+    {
+        "ciduad": "GRANADA",
+        "departamento": "Cundinamarca",
+        "codigo": "25312"
+    },
+    {
+        "ciduad": "GRANADA",
+        "departamento": "Meta",
+        "codigo": "50313"
+    },
+    {
+        "ciduad": "GUACA",
+        "departamento": "Santander",
+        "codigo": "68318"
+    },
+    {
+        "ciduad": "GUACAMAYAS",
+        "departamento": "Boyacá",
+        "codigo": "15317"
+    },
+    {
+        "ciduad": "GUACARÍ",
+        "departamento": "Valle del Cauca",
+        "codigo": "76318"
+    },
+    {
+        "ciduad": "GUACHETÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25317"
+    },
+    {
+        "ciduad": "GUACHUCAL",
+        "departamento": "Nariño",
+        "codigo": "52317"
+    },
+    {
+        "ciduad": "GUADALAJARA DE BUGA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76111"
+    },
+    {
+        "ciduad": "GUADALUPE",
+        "departamento": "Antioquia",
+        "codigo": "05315"
+    },
+    {
+        "ciduad": "GUADALUPE",
+        "departamento": "Huila",
+        "codigo": "41319"
+    },
+    {
+        "ciduad": "GUADALUPE",
+        "departamento": "Santander",
+        "codigo": "68320"
+    },
+    {
+        "ciduad": "GUADUAS",
+        "departamento": "Cundinamarca",
+        "codigo": "25320"
+    },
+    {
+        "ciduad": "GUAITARILLA",
+        "departamento": "Nariño",
+        "codigo": "52320"
+    },
+    {
+        "ciduad": "GUALMATÁN",
+        "departamento": "Nariño",
+        "codigo": "52323"
+    },
+    {
+        "ciduad": "GUAMAL",
+        "departamento": "Magdalena",
+        "codigo": "47318"
+    },
+    {
+        "ciduad": "GUAMAL",
+        "departamento": "Meta",
+        "codigo": "50318"
+    },
+    {
+        "ciduad": "GUAMO",
+        "departamento": "Tolima",
+        "codigo": "73319"
+    },
+    {
+        "ciduad": "GUAPI",
+        "departamento": "Cauca",
+        "codigo": "19318"
+    },
+    {
+        "ciduad": "GUAPOTÁ",
+        "departamento": "Santander",
+        "codigo": "68322"
+    },
+    {
+        "ciduad": "GUARANDA",
+        "departamento": "Sucre",
+        "codigo": "70265"
+    },
+    {
+        "ciduad": "GUARNE",
+        "departamento": "Antioquia",
+        "codigo": "05318"
+    },
+    {
+        "ciduad": "GUASCA",
+        "departamento": "Cundinamarca",
+        "codigo": "25322"
+    },
+    {
+        "ciduad": "GUATAPE",
+        "departamento": "Antioquia",
+        "codigo": "05321"
+    },
+    {
+        "ciduad": "GUATAQUÍ",
+        "departamento": "Cundinamarca",
+        "codigo": "25324"
+    },
+    {
+        "ciduad": "GUATAVITA",
+        "departamento": "Cundinamarca",
+        "codigo": "25326"
+    },
+    {
+        "ciduad": "GUATEQUE",
+        "departamento": "Boyacá",
+        "codigo": "15322"
+    },
+    {
+        "ciduad": "GUÁTICA",
+        "departamento": "Risaralda",
+        "codigo": "66318"
+    },
+    {
+        "ciduad": "GUAVATÁ",
+        "departamento": "Santander",
+        "codigo": "68324"
+    },
+    {
+        "ciduad": "GUAYABAL DE SIQUIMA",
+        "departamento": "Cundinamarca",
+        "codigo": "25328"
+    },
+    {
+        "ciduad": "GUAYABETAL",
+        "departamento": "Cundinamarca",
+        "codigo": "25335"
+    },
+    {
+        "ciduad": "GUAYATÁ",
+        "departamento": "Boyacá",
+        "codigo": "15325"
+    },
+    {
+        "ciduad": "GÜEPSA",
+        "departamento": "Santander",
+        "codigo": "68327"
+    },
+    {
+        "ciduad": "GÜICÁN",
+        "departamento": "Boyacá",
+        "codigo": "15332"
+    },
+    {
+        "ciduad": "GUTIÉRREZ",
+        "departamento": "Cundinamarca",
+        "codigo": "25339"
+    },
+    {
+        "ciduad": "HACARÍ",
+        "departamento": "Norte de Santander",
+        "codigo": "54344"
+    },
+    {
+        "ciduad": "HATILLO DE LOBA",
+        "departamento": "Bolívar",
+        "codigo": "13300"
+    },
+    {
+        "ciduad": "HATO",
+        "departamento": "Santander",
+        "codigo": "68344"
+    },
+    {
+        "ciduad": "HATO COROZAL",
+        "departamento": "Casanare",
+        "codigo": "85125"
+    },
+    {
+        "ciduad": "HATONUEVO",
+        "departamento": "La Guajira",
+        "codigo": "44378"
+    },
+    {
+        "ciduad": "HELICONIA",
+        "departamento": "Antioquia",
+        "codigo": "05347"
+    },
+    {
+        "ciduad": "HERRÁN",
+        "departamento": "Norte de Santander",
+        "codigo": "54347"
+    },
+    {
+        "ciduad": "HERVEO",
+        "departamento": "Tolima",
+        "codigo": "73347"
+    },
+    {
+        "ciduad": "HISPANIA",
+        "departamento": "Antioquia",
+        "codigo": "05353"
+    },
+    {
+        "ciduad": "HOBO",
+        "departamento": "Huila",
+        "codigo": "41349"
+    },
+    {
+        "ciduad": "HONDA",
+        "departamento": "Tolima",
+        "codigo": "73349"
+    },
+    {
+        "ciduad": "IBAGUÉ",
+        "departamento": "Tolima",
+        "codigo": "73001"
+    },
+    {
+        "ciduad": "ICONONZO",
+        "departamento": "Tolima",
+        "codigo": "73352"
+    },
+    {
+        "ciduad": "ILES",
+        "departamento": "Nariño",
+        "codigo": "52352"
+    },
+    {
+        "ciduad": "IMUÉS",
+        "departamento": "Nariño",
+        "codigo": "52354"
+    },
+    {
+        "ciduad": "INÍRIDA",
+        "departamento": "Guainía",
+        "codigo": "94001"
+    },
+    {
+        "ciduad": "INZÁ",
+        "departamento": "Cauca",
+        "codigo": "19355"
+    },
+    {
+        "ciduad": "IPIALES",
+        "departamento": "Nariño",
+        "codigo": "52356"
+    },
+    {
+        "ciduad": "IQUIRA",
+        "departamento": "Huila",
+        "codigo": "41357"
+    },
+    {
+        "ciduad": "ISNOS",
+        "departamento": "Huila",
+        "codigo": "41359"
+    },
+    {
+        "ciduad": "ISTMINA",
+        "departamento": "Chocó",
+        "codigo": "27361"
+    },
+    {
+        "ciduad": "ITAGUI",
+        "departamento": "Antioquia",
+        "codigo": "05360"
+    },
+    {
+        "ciduad": "ITUANGO",
+        "departamento": "Antioquia",
+        "codigo": "05361"
+    },
+    {
+        "ciduad": "IZA",
+        "departamento": "Boyacá",
+        "codigo": "15362"
+    },
+    {
+        "ciduad": "JAMBALÓ",
+        "departamento": "Cauca",
+        "codigo": "19364"
+    },
+    {
+        "ciduad": "JAMUNDÍ",
+        "departamento": "Valle del Cauca",
+        "codigo": "76364"
+    },
+    {
+        "ciduad": "JARDÍN",
+        "departamento": "Antioquia",
+        "codigo": "05364"
+    },
+    {
+        "ciduad": "JENESANO",
+        "departamento": "Boyacá",
+        "codigo": "15367"
+    },
+    {
+        "ciduad": "JERICÓ",
+        "departamento": "Antioquia",
+        "codigo": "05368"
+    },
+    {
+        "ciduad": "JERICÓ",
+        "departamento": "Boyacá",
+        "codigo": "15368"
+    },
+    {
+        "ciduad": "JERUSALÉN",
+        "departamento": "Cundinamarca",
+        "codigo": "25368"
+    },
+    {
+        "ciduad": "JESÚS MARÍA",
+        "departamento": "Santander",
+        "codigo": "68368"
+    },
+    {
+        "ciduad": "JORDÁN",
+        "departamento": "Santander",
+        "codigo": "68370"
+    },
+    {
+        "ciduad": "JUAN DE ACOSTA",
+        "departamento": "Atlántico",
+        "codigo": "08372"
+    },
+    {
+        "ciduad": "JUNÍN",
+        "departamento": "Cundinamarca",
+        "codigo": "25372"
+    },
+    {
+        "ciduad": "JURADÓ",
+        "departamento": "Chocó",
+        "codigo": "27372"
+    },
+    {
+        "ciduad": "LA APARTADA",
+        "departamento": "Córdoba",
+        "codigo": "23350"
+    },
+    {
+        "ciduad": "LA ARGENTINA",
+        "departamento": "Huila",
+        "codigo": "41378"
+    },
+    {
+        "ciduad": "LA BELLEZA",
+        "departamento": "Santander",
+        "codigo": "68377"
+    },
+    {
+        "ciduad": "LA CALERA",
+        "departamento": "Cundinamarca",
+        "codigo": "25377"
+    },
+    {
+        "ciduad": "LA CAPILLA",
+        "departamento": "Boyacá",
+        "codigo": "15380"
+    },
+    {
+        "ciduad": "LA CEJA",
+        "departamento": "Antioquia",
+        "codigo": "05376"
+    },
+    {
+        "ciduad": "LA CELIA",
+        "departamento": "Risaralda",
+        "codigo": "66383"
+    },
+    {
+        "ciduad": "LA CHORRERA",
+        "departamento": "Amazonas",
+        "codigo": "91405"
+    },
+    {
+        "ciduad": "LA CRUZ",
+        "departamento": "Nariño",
+        "codigo": "52378"
+    },
+    {
+        "ciduad": "LA CUMBRE",
+        "departamento": "Valle del Cauca",
+        "codigo": "76377"
+    },
+    {
+        "ciduad": "LA DORADA",
+        "departamento": "Caldas",
+        "codigo": "17380"
+    },
+    {
+        "ciduad": "LA ESPERANZA",
+        "departamento": "Norte de Santander",
+        "codigo": "54385"
+    },
+    {
+        "ciduad": "LA ESTRELLA",
+        "departamento": "Antioquia",
+        "codigo": "05380"
+    },
+    {
+        "ciduad": "LA FLORIDA",
+        "departamento": "Nariño",
+        "codigo": "52381"
+    },
+    {
+        "ciduad": "LA GLORIA",
+        "departamento": "Cesar",
+        "codigo": "20383"
+    },
+    {
+        "ciduad": "LA GUADALUPE",
+        "departamento": "Guainía",
+        "codigo": "94885"
+    },
+    {
+        "ciduad": "LA JAGUA DE IBIRICO",
+        "departamento": "Cesar",
+        "codigo": "20400"
+    },
+    {
+        "ciduad": "LA JAGUA DEL PILAR",
+        "departamento": "La Guajira",
+        "codigo": "44420"
+    },
+    {
+        "ciduad": "LA LLANADA",
+        "departamento": "Nariño",
+        "codigo": "52385"
+    },
+    {
+        "ciduad": "LA MACARENA",
+        "departamento": "Meta",
+        "codigo": "50350"
+    },
+    {
+        "ciduad": "LA MERCED",
+        "departamento": "Caldas",
+        "codigo": "17388"
+    },
+    {
+        "ciduad": "LA MESA",
+        "departamento": "Cundinamarca",
+        "codigo": "25386"
+    },
+    {
+        "ciduad": "LA MONTAÑITA",
+        "departamento": "Caquetá",
+        "codigo": "18410"
+    },
+    {
+        "ciduad": "LA PALMA",
+        "departamento": "Cundinamarca",
+        "codigo": "25394"
+    },
+    {
+        "ciduad": "LA PAZ",
+        "departamento": "Cesar",
+        "codigo": "20621"
+    },
+    {
+        "ciduad": "LA PAZ",
+        "departamento": "Santander",
+        "codigo": "68397"
+    },
+    {
+        "ciduad": "LA PEDRERA",
+        "departamento": "Amazonas",
+        "codigo": "91407"
+    },
+    {
+        "ciduad": "LA PEÑA",
+        "departamento": "Cundinamarca",
+        "codigo": "25398"
+    },
+    {
+        "ciduad": "LA PINTADA",
+        "departamento": "Antioquia",
+        "codigo": "05390"
+    },
+    {
+        "ciduad": "LA PLATA",
+        "departamento": "Huila",
+        "codigo": "41396"
+    },
+    {
+        "ciduad": "LA PLAYA",
+        "departamento": "Norte de Santander",
+        "codigo": "54398"
+    },
+    {
+        "ciduad": "LA PRIMAVERA",
+        "departamento": "Vichada",
+        "codigo": "99524"
+    },
+    {
+        "ciduad": "LA SALINA",
+        "departamento": "Casanare",
+        "codigo": "85136"
+    },
+    {
+        "ciduad": "LA SIERRA",
+        "departamento": "Cauca",
+        "codigo": "19392"
+    },
+    {
+        "ciduad": "LA TEBAIDA",
+        "departamento": "Quindio",
+        "codigo": "63401"
+    },
+    {
+        "ciduad": "LA TOLA",
+        "departamento": "Nariño",
+        "codigo": "52390"
+    },
+    {
+        "ciduad": "LA UNIÓN",
+        "departamento": "Antioquia",
+        "codigo": "05400"
+    },
+    {
+        "ciduad": "LA UNIÓN",
+        "departamento": "Nariño",
+        "codigo": "52399"
+    },
+    {
+        "ciduad": "LA UNIÓN",
+        "departamento": "Sucre",
+        "codigo": "70400"
+    },
+    {
+        "ciduad": "LA UNIÓN",
+        "departamento": "Valle del Cauca",
+        "codigo": "76400"
+    },
+    {
+        "ciduad": "LA UVITA",
+        "departamento": "Boyacá",
+        "codigo": "15403"
+    },
+    {
+        "ciduad": "LA VEGA",
+        "departamento": "Cauca",
+        "codigo": "19397"
+    },
+    {
+        "ciduad": "LA VEGA",
+        "departamento": "Cundinamarca",
+        "codigo": "25402"
+    },
+    {
+        "ciduad": "LA VICTORIA",
+        "departamento": "Boyacá",
+        "codigo": "15401"
+    },
+    {
+        "ciduad": "LA VICTORIA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76403"
+    },
+    {
+        "ciduad": "LA VICTORIA",
+        "departamento": "Amazonas",
+        "codigo": "91430"
+    },
+    {
+        "ciduad": "LA VIRGINIA",
+        "departamento": "Risaralda",
+        "codigo": "66400"
+    },
+    {
+        "ciduad": "LABATECA",
+        "departamento": "Norte de Santander",
+        "codigo": "54377"
+    },
+    {
+        "ciduad": "LABRANZAGRANDE",
+        "departamento": "Boyacá",
+        "codigo": "15377"
+    },
+    {
+        "ciduad": "LANDÁZURI",
+        "departamento": "Santander",
+        "codigo": "68385"
+    },
+    {
+        "ciduad": "LEBRÍJA",
+        "departamento": "Santander",
+        "codigo": "68406"
+    },
+    {
+        "ciduad": "LEGUÍZAMO",
+        "departamento": "Putumayo",
+        "codigo": "86573"
+    },
+    {
+        "ciduad": "LEIVA",
+        "departamento": "Nariño",
+        "codigo": "52405"
+    },
+    {
+        "ciduad": "LEJANÍAS",
+        "departamento": "Meta",
+        "codigo": "50400"
+    },
+    {
+        "ciduad": "LENGUAZAQUE",
+        "departamento": "Cundinamarca",
+        "codigo": "25407"
+    },
+    {
+        "ciduad": "LÉRIDA",
+        "departamento": "Tolima",
+        "codigo": "73408"
+    },
+    {
+        "ciduad": "LETICIA",
+        "departamento": "Amazonas",
+        "codigo": "91001"
+    },
+    {
+        "ciduad": "LÍBANO",
+        "departamento": "Tolima",
+        "codigo": "73411"
+    },
+    {
+        "ciduad": "LIBORINA",
+        "departamento": "Antioquia",
+        "codigo": "05411"
+    },
+    {
+        "ciduad": "LINARES",
+        "departamento": "Nariño",
+        "codigo": "52411"
+    },
+    {
+        "ciduad": "LLORÓ",
+        "departamento": "Chocó",
+        "codigo": "27413"
+    },
+    {
+        "ciduad": "LÓPEZ",
+        "departamento": "Cauca",
+        "codigo": "19418"
+    },
+    {
+        "ciduad": "LORICA",
+        "departamento": "Córdoba",
+        "codigo": "23417"
+    },
+    {
+        "ciduad": "LOS ANDES",
+        "departamento": "Nariño",
+        "codigo": "52418"
+    },
+    {
+        "ciduad": "LOS CÓRDOBAS",
+        "departamento": "Córdoba",
+        "codigo": "23419"
+    },
+    {
+        "ciduad": "LOS PALMITOS",
+        "departamento": "Sucre",
+        "codigo": "70418"
+    },
+    {
+        "ciduad": "LOS PATIOS",
+        "departamento": "Norte de Santander",
+        "codigo": "54405"
+    },
+    {
+        "ciduad": "LOS SANTOS",
+        "departamento": "Santander",
+        "codigo": "68418"
+    },
+    {
+        "ciduad": "LOURDES",
+        "departamento": "Norte de Santander",
+        "codigo": "54418"
+    },
+    {
+        "ciduad": "LURUACO",
+        "departamento": "Atlántico",
+        "codigo": "08421"
+    },
+    {
+        "ciduad": "MACANAL",
+        "departamento": "Boyacá",
+        "codigo": "15425"
+    },
+    {
+        "ciduad": "MACARAVITA",
+        "departamento": "Santander",
+        "codigo": "68425"
+    },
+    {
+        "ciduad": "MACEO",
+        "departamento": "Antioquia",
+        "codigo": "05425"
+    },
+    {
+        "ciduad": "MACHETA",
+        "departamento": "Cundinamarca",
+        "codigo": "25426"
+    },
+    {
+        "ciduad": "MADRID",
+        "departamento": "Cundinamarca",
+        "codigo": "25430"
+    },
+    {
+        "ciduad": "MAGANGUÉ",
+        "departamento": "Bolívar",
+        "codigo": "13430"
+    },
+    {
+        "ciduad": "MAGÜI",
+        "departamento": "Nariño",
+        "codigo": "52427"
+    },
+    {
+        "ciduad": "MAHATES",
+        "departamento": "Bolívar",
+        "codigo": "13433"
+    },
+    {
+        "ciduad": "MAICAO",
+        "departamento": "La Guajira",
+        "codigo": "44430"
+    },
+    {
+        "ciduad": "MAJAGUAL",
+        "departamento": "Sucre",
+        "codigo": "70429"
+    },
+    {
+        "ciduad": "MÁLAGA",
+        "departamento": "Santander",
+        "codigo": "68432"
+    },
+    {
+        "ciduad": "MALAMBO",
+        "departamento": "Atlántico",
+        "codigo": "08433"
+    },
+    {
+        "ciduad": "MALLAMA",
+        "departamento": "Nariño",
+        "codigo": "52435"
+    },
+    {
+        "ciduad": "MANATÍ",
+        "departamento": "Atlántico",
+        "codigo": "08436"
+    },
+    {
+        "ciduad": "MANAURE",
+        "departamento": "Cesar",
+        "codigo": "20443"
+    },
+    {
+        "ciduad": "MANAURE",
+        "departamento": "La Guajira",
+        "codigo": "44560"
+    },
+    {
+        "ciduad": "MANÍ",
+        "departamento": "Casanare",
+        "codigo": "85139"
+    },
+    {
+        "ciduad": "MANIZALES",
+        "departamento": "Caldas",
+        "codigo": "17001"
+    },
+    {
+        "ciduad": "MANTA",
+        "departamento": "Cundinamarca",
+        "codigo": "25436"
+    },
+    {
+        "ciduad": "MANZANARES",
+        "departamento": "Caldas",
+        "codigo": "17433"
+    },
+    {
+        "ciduad": "MAPIRIPÁN",
+        "departamento": "Meta",
+        "codigo": "50325"
+    },
+    {
+        "ciduad": "MAPIRIPANA",
+        "departamento": "Guainía",
+        "codigo": "94663"
+    },
+    {
+        "ciduad": "MARGARITA",
+        "departamento": "Bolívar",
+        "codigo": "13440"
+    },
+    {
+        "ciduad": "MARÍA LA BAJA",
+        "departamento": "Bolívar",
+        "codigo": "13442"
+    },
+    {
+        "ciduad": "MARINILLA",
+        "departamento": "Antioquia",
+        "codigo": "05440"
+    },
+    {
+        "ciduad": "MARIPÍ",
+        "departamento": "Boyacá",
+        "codigo": "15442"
+    },
+    {
+        "ciduad": "MARIQUITA",
+        "departamento": "Tolima",
+        "codigo": "73443"
+    },
+    {
+        "ciduad": "MARMATO",
+        "departamento": "Caldas",
+        "codigo": "17442"
+    },
+    {
+        "ciduad": "MARQUETALIA",
+        "departamento": "Caldas",
+        "codigo": "17444"
+    },
+    {
+        "ciduad": "MARSELLA",
+        "departamento": "Risaralda",
+        "codigo": "66440"
+    },
+    {
+        "ciduad": "MARULANDA",
+        "departamento": "Caldas",
+        "codigo": "17446"
+    },
+    {
+        "ciduad": "MATANZA",
+        "departamento": "Santander",
+        "codigo": "68444"
+    },
+    {
+        "ciduad": "MEDELLÍN",
+        "departamento": "Antioquia",
+        "codigo": "05001"
+    },
+    {
+        "ciduad": "MEDINA",
+        "departamento": "Cundinamarca",
+        "codigo": "25438"
+    },
+    {
+        "ciduad": "MEDIO ATRATO",
+        "departamento": "Chocó",
+        "codigo": "27425"
+    },
+    {
+        "ciduad": "MEDIO BAUDÓ",
+        "departamento": "Chocó",
+        "codigo": "27430"
+    },
+    {
+        "ciduad": "MEDIO SAN JUAN",
+        "departamento": "Chocó",
+        "codigo": "27450"
+    },
+    {
+        "ciduad": "MELGAR",
+        "departamento": "Tolima",
+        "codigo": "73449"
+    },
+    {
+        "ciduad": "MERCADERES",
+        "departamento": "Cauca",
+        "codigo": "19450"
+    },
+    {
+        "ciduad": "MESETAS",
+        "departamento": "Meta",
+        "codigo": "50330"
+    },
+    {
+        "ciduad": "MILÁN",
+        "departamento": "Caquetá",
+        "codigo": "18460"
+    },
+    {
+        "ciduad": "MIRAFLORES",
+        "departamento": "Boyacá",
+        "codigo": "15455"
+    },
+    {
+        "ciduad": "MIRAFLORES",
+        "departamento": "Guaviare",
+        "codigo": "95200"
+    },
+    {
+        "ciduad": "MIRANDA",
+        "departamento": "Cauca",
+        "codigo": "19455"
+    },
+    {
+        "ciduad": "MIRITI - PARANÁ",
+        "departamento": "Amazonas",
+        "codigo": "91460"
+    },
+    {
+        "ciduad": "MISTRATÓ",
+        "departamento": "Risaralda",
+        "codigo": "66456"
+    },
+    {
+        "ciduad": "MITÚ",
+        "departamento": "Vaupés",
+        "codigo": "97001"
+    },
+    {
+        "ciduad": "MOCOA",
+        "departamento": "Putumayo",
+        "codigo": "86001"
+    },
+    {
+        "ciduad": "MOGOTES",
+        "departamento": "Santander",
+        "codigo": "68464"
+    },
+    {
+        "ciduad": "MOLAGAVITA",
+        "departamento": "Santander",
+        "codigo": "68468"
+    },
+    {
+        "ciduad": "MOMIL",
+        "departamento": "Córdoba",
+        "codigo": "23464"
+    },
+    {
+        "ciduad": "MOMPÓS",
+        "departamento": "Bolívar",
+        "codigo": "13468"
+    },
+    {
+        "ciduad": "MONGUA",
+        "departamento": "Boyacá",
+        "codigo": "15464"
+    },
+    {
+        "ciduad": "MONGUÍ",
+        "departamento": "Boyacá",
+        "codigo": "15466"
+    },
+    {
+        "ciduad": "MONIQUIRÁ",
+        "departamento": "Boyacá",
+        "codigo": "15469"
+    },
+    {
+        "ciduad": "MONTEBELLO",
+        "departamento": "Antioquia",
+        "codigo": "05467"
+    },
+    {
+        "ciduad": "MONTECRISTO",
+        "departamento": "Bolívar",
+        "codigo": "13458"
+    },
+    {
+        "ciduad": "MONTELÍBANO",
+        "departamento": "Córdoba",
+        "codigo": "23466"
+    },
+    {
+        "ciduad": "MONTENEGRO",
+        "departamento": "Quindio",
+        "codigo": "63470"
+    },
+    {
+        "ciduad": "MONTERÍA",
+        "departamento": "Córdoba",
+        "codigo": "23001"
+    },
+    {
+        "ciduad": "MONTERREY",
+        "departamento": "Casanare",
+        "codigo": "85162"
+    },
+    {
+        "ciduad": "MOÑITOS",
+        "departamento": "Córdoba",
+        "codigo": "23500"
+    },
+    {
+        "ciduad": "MORALES",
+        "departamento": "Bolívar",
+        "codigo": "13473"
+    },
+    {
+        "ciduad": "MORALES",
+        "departamento": "Cauca",
+        "codigo": "19473"
+    },
+    {
+        "ciduad": "MORELIA",
+        "departamento": "Caquetá",
+        "codigo": "18479"
+    },
+    {
+        "ciduad": "MORICHAL",
+        "departamento": "Guainía",
+        "codigo": "94888"
+    },
+    {
+        "ciduad": "MORROA",
+        "departamento": "Sucre",
+        "codigo": "70473"
+    },
+    {
+        "ciduad": "MOSQUERA",
+        "departamento": "Cundinamarca",
+        "codigo": "25473"
+    },
+    {
+        "ciduad": "MOSQUERA",
+        "departamento": "Nariño",
+        "codigo": "52473"
+    },
+    {
+        "ciduad": "MOTAVITA",
+        "departamento": "Boyacá",
+        "codigo": "15476"
+    },
+    {
+        "ciduad": "MURILLO",
+        "departamento": "Tolima",
+        "codigo": "73461"
+    },
+    {
+        "ciduad": "MURINDÓ",
+        "departamento": "Antioquia",
+        "codigo": "05475"
+    },
+    {
+        "ciduad": "MUTATÁ",
+        "departamento": "Antioquia",
+        "codigo": "05480"
+    },
+    {
+        "ciduad": "MUTISCUA",
+        "departamento": "Norte de Santander",
+        "codigo": "54480"
+    },
+    {
+        "ciduad": "MUZO",
+        "departamento": "Boyacá",
+        "codigo": "15480"
+    },
+    {
+        "ciduad": "NARIÑO",
+        "departamento": "Antioquia",
+        "codigo": "05483"
+    },
+    {
+        "ciduad": "NARIÑO",
+        "departamento": "Cundinamarca",
+        "codigo": "25483"
+    },
+    {
+        "ciduad": "NARIÑO",
+        "departamento": "Nariño",
+        "codigo": "52480"
+    },
+    {
+        "ciduad": "NÁTAGA",
+        "departamento": "Huila",
+        "codigo": "41483"
+    },
+    {
+        "ciduad": "NATAGAIMA",
+        "departamento": "Tolima",
+        "codigo": "73483"
+    },
+    {
+        "ciduad": "NECHÍ",
+        "departamento": "Antioquia",
+        "codigo": "05495"
+    },
+    {
+        "ciduad": "NECOCLÍ",
+        "departamento": "Antioquia",
+        "codigo": "05490"
+    },
+    {
+        "ciduad": "NEIRA",
+        "departamento": "Caldas",
+        "codigo": "17486"
+    },
+    {
+        "ciduad": "NEIVA",
+        "departamento": "Huila",
+        "codigo": "41001"
+    },
+    {
+        "ciduad": "NEMOCÓN",
+        "departamento": "Cundinamarca",
+        "codigo": "25486"
+    },
+    {
+        "ciduad": "NILO",
+        "departamento": "Cundinamarca",
+        "codigo": "25488"
+    },
+    {
+        "ciduad": "NIMAIMA",
+        "departamento": "Cundinamarca",
+        "codigo": "25489"
+    },
+    {
+        "ciduad": "NOBSA",
+        "departamento": "Boyacá",
+        "codigo": "15491"
+    },
+    {
+        "ciduad": "NOCAIMA",
+        "departamento": "Cundinamarca",
+        "codigo": "25491"
+    },
+    {
+        "ciduad": "NORCASIA",
+        "departamento": "Caldas",
+        "codigo": "17495"
+    },
+    {
+        "ciduad": "NÓVITA",
+        "departamento": "Chocó",
+        "codigo": "27491"
+    },
+    {
+        "ciduad": "NUEVA GRANADA",
+        "departamento": "Magdalena",
+        "codigo": "47460"
+    },
+    {
+        "ciduad": "NUEVO COLÓN",
+        "departamento": "Boyacá",
+        "codigo": "15494"
+    },
+    {
+        "ciduad": "NUNCHÍA",
+        "departamento": "Casanare",
+        "codigo": "85225"
+    },
+    {
+        "ciduad": "NUQUÍ",
+        "departamento": "Chocó",
+        "codigo": "27495"
+    },
+    {
+        "ciduad": "OBANDO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76497"
+    },
+    {
+        "ciduad": "OCAMONTE",
+        "departamento": "Santander",
+        "codigo": "68498"
+    },
+    {
+        "ciduad": "OCAÑA",
+        "departamento": "Norte de Santander",
+        "codigo": "54498"
+    },
+    {
+        "ciduad": "OIBA",
+        "departamento": "Santander",
+        "codigo": "68500"
+    },
+    {
+        "ciduad": "OICATÁ",
+        "departamento": "Boyacá",
+        "codigo": "15500"
+    },
+    {
+        "ciduad": "OLAYA",
+        "departamento": "Antioquia",
+        "codigo": "05501"
+    },
+    {
+        "ciduad": "OLAYA HERRERA",
+        "departamento": "Nariño",
+        "codigo": "52490"
+    },
+    {
+        "ciduad": "ONZAGA",
+        "departamento": "Santander",
+        "codigo": "68502"
+    },
+    {
+        "ciduad": "OPORAPA",
+        "departamento": "Huila",
+        "codigo": "41503"
+    },
+    {
+        "ciduad": "ORITO",
+        "departamento": "Putumayo",
+        "codigo": "86320"
+    },
+    {
+        "ciduad": "OROCUÉ",
+        "departamento": "Casanare",
+        "codigo": "85230"
+    },
+    {
+        "ciduad": "ORTEGA",
+        "departamento": "Tolima",
+        "codigo": "73504"
+    },
+    {
+        "ciduad": "OSPINA",
+        "departamento": "Nariño",
+        "codigo": "52506"
+    },
+    {
+        "ciduad": "OTANCHE",
+        "departamento": "Boyacá",
+        "codigo": "15507"
+    },
+    {
+        "ciduad": "OVEJAS",
+        "departamento": "Sucre",
+        "codigo": "70508"
+    },
+    {
+        "ciduad": "PACHAVITA",
+        "departamento": "Boyacá",
+        "codigo": "15511"
+    },
+    {
+        "ciduad": "PACHO",
+        "departamento": "Cundinamarca",
+        "codigo": "25513"
+    },
+    {
+        "ciduad": "PACOA",
+        "departamento": "Vaupés",
+        "codigo": "97511"
+    },
+    {
+        "ciduad": "PÁCORA",
+        "departamento": "Caldas",
+        "codigo": "17513"
+    },
+    {
+        "ciduad": "PADILLA",
+        "departamento": "Cauca",
+        "codigo": "19513"
+    },
+    {
+        "ciduad": "PAEZ",
+        "departamento": "Cauca",
+        "codigo": "19517"
+    },
+    {
+        "ciduad": "PÁEZ",
+        "departamento": "Boyacá",
+        "codigo": "15514"
+    },
+    {
+        "ciduad": "PAICOL",
+        "departamento": "Huila",
+        "codigo": "41518"
+    },
+    {
+        "ciduad": "PAILITAS",
+        "departamento": "Cesar",
+        "codigo": "20517"
+    },
+    {
+        "ciduad": "PAIME",
+        "departamento": "Cundinamarca",
+        "codigo": "25518"
+    },
+    {
+        "ciduad": "PAIPA",
+        "departamento": "Boyacá",
+        "codigo": "15516"
+    },
+    {
+        "ciduad": "PAJARITO",
+        "departamento": "Boyacá",
+        "codigo": "15518"
+    },
+    {
+        "ciduad": "PALERMO",
+        "departamento": "Huila",
+        "codigo": "41524"
+    },
+    {
+        "ciduad": "PALESTINA",
+        "departamento": "Caldas",
+        "codigo": "17524"
+    },
+    {
+        "ciduad": "PALESTINA",
+        "departamento": "Huila",
+        "codigo": "41530"
+    },
+    {
+        "ciduad": "PALMAR",
+        "departamento": "Santander",
+        "codigo": "68522"
+    },
+    {
+        "ciduad": "PALMAR DE VARELA",
+        "departamento": "Atlántico",
+        "codigo": "08520"
+    },
+    {
+        "ciduad": "PALMAS DEL SOCORRO",
+        "departamento": "Santander",
+        "codigo": "68524"
+    },
+    {
+        "ciduad": "PALMIRA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76520"
+    },
+    {
+        "ciduad": "PALMITO",
+        "departamento": "Sucre",
+        "codigo": "70523"
+    },
+    {
+        "ciduad": "PALOCABILDO",
+        "departamento": "Tolima",
+        "codigo": "73520"
+    },
+    {
+        "ciduad": "PAMPLONA",
+        "departamento": "Norte de Santander",
+        "codigo": "54518"
+    },
+    {
+        "ciduad": "PAMPLONITA",
+        "departamento": "Norte de Santander",
+        "codigo": "54520"
+    },
+    {
+        "ciduad": "PANA PANA",
+        "departamento": "Guainía",
+        "codigo": "94887"
+    },
+    {
+        "ciduad": "PANDI",
+        "departamento": "Cundinamarca",
+        "codigo": "25524"
+    },
+    {
+        "ciduad": "PANQUEBA",
+        "departamento": "Boyacá",
+        "codigo": "15522"
+    },
+    {
+        "ciduad": "PAPUNAUA",
+        "departamento": "Vaupés",
+        "codigo": "97777"
+    },
+    {
+        "ciduad": "PÁRAMO",
+        "departamento": "Santander",
+        "codigo": "68533"
+    },
+    {
+        "ciduad": "PARATEBUENO",
+        "departamento": "Cundinamarca",
+        "codigo": "25530"
+    },
+    {
+        "ciduad": "PASCA",
+        "departamento": "Cundinamarca",
+        "codigo": "25535"
+    },
+    {
+        "ciduad": "PASTO",
+        "departamento": "Nariño",
+        "codigo": "52001"
+    },
+    {
+        "ciduad": "PATÍA",
+        "departamento": "Cauca",
+        "codigo": "19532"
+    },
+    {
+        "ciduad": "PAUNA",
+        "departamento": "Boyacá",
+        "codigo": "15531"
+    },
+    {
+        "ciduad": "PAYA",
+        "departamento": "Boyacá",
+        "codigo": "15533"
+    },
+    {
+        "ciduad": "PAZ DE ARIPORO",
+        "departamento": "Casanare",
+        "codigo": "85250"
+    },
+    {
+        "ciduad": "PAZ DE RÍO",
+        "departamento": "Boyacá",
+        "codigo": "15537"
+    },
+    {
+        "ciduad": "PEDRAZA",
+        "departamento": "Magdalena",
+        "codigo": "47541"
+    },
+    {
+        "ciduad": "PELAYA",
+        "departamento": "Cesar",
+        "codigo": "20550"
+    },
+    {
+        "ciduad": "PENSILVANIA",
+        "departamento": "Caldas",
+        "codigo": "17541"
+    },
+    {
+        "ciduad": "PEÑOL",
+        "departamento": "Antioquia",
+        "codigo": "05541"
+    },
+    {
+        "ciduad": "PEQUE",
+        "departamento": "Antioquia",
+        "codigo": "05543"
+    },
+    {
+        "ciduad": "PEREIRA",
+        "departamento": "Risaralda",
+        "codigo": "66001"
+    },
+    {
+        "ciduad": "PESCA",
+        "departamento": "Boyacá",
+        "codigo": "15542"
+    },
+    {
+        "ciduad": "PIAMONTE",
+        "departamento": "Cauca",
+        "codigo": "19533"
+    },
+    {
+        "ciduad": "PIEDECUESTA",
+        "departamento": "Santander",
+        "codigo": "68547"
+    },
+    {
+        "ciduad": "PIEDRAS",
+        "departamento": "Tolima",
+        "codigo": "73547"
+    },
+    {
+        "ciduad": "PIENDAMÓ",
+        "departamento": "Cauca",
+        "codigo": "19548"
+    },
+    {
+        "ciduad": "PIJAO",
+        "departamento": "Quindio",
+        "codigo": "63548"
+    },
+    {
+        "ciduad": "PIJIÑO DEL CARMEN",
+        "departamento": "Magdalena",
+        "codigo": "47545"
+    },
+    {
+        "ciduad": "PINCHOTE",
+        "departamento": "Santander",
+        "codigo": "68549"
+    },
+    {
+        "ciduad": "PINILLOS",
+        "departamento": "Bolívar",
+        "codigo": "13549"
+    },
+    {
+        "ciduad": "PIOJÓ",
+        "departamento": "Atlántico",
+        "codigo": "08549"
+    },
+    {
+        "ciduad": "PISBA",
+        "departamento": "Boyacá",
+        "codigo": "15550"
+    },
+    {
+        "ciduad": "PITAL",
+        "departamento": "Huila",
+        "codigo": "41548"
+    },
+    {
+        "ciduad": "PITALITO",
+        "departamento": "Huila",
+        "codigo": "41551"
+    },
+    {
+        "ciduad": "PIVIJAY",
+        "departamento": "Magdalena",
+        "codigo": "47551"
+    },
+    {
+        "ciduad": "PLANADAS",
+        "departamento": "Tolima",
+        "codigo": "73555"
+    },
+    {
+        "ciduad": "PLANETA RICA",
+        "departamento": "Córdoba",
+        "codigo": "23555"
+    },
+    {
+        "ciduad": "PLATO",
+        "departamento": "Magdalena",
+        "codigo": "47555"
+    },
+    {
+        "ciduad": "POLICARPA",
+        "departamento": "Nariño",
+        "codigo": "52540"
+    },
+    {
+        "ciduad": "POLONUEVO",
+        "departamento": "Atlántico",
+        "codigo": "08558"
+    },
+    {
+        "ciduad": "PONEDERA",
+        "departamento": "Atlántico",
+        "codigo": "08560"
+    },
+    {
+        "ciduad": "POPAYÁN",
+        "departamento": "Cauca",
+        "codigo": "19001"
+    },
+    {
+        "ciduad": "PORE",
+        "departamento": "Casanare",
+        "codigo": "85263"
+    },
+    {
+        "ciduad": "POTOSÍ",
+        "departamento": "Nariño",
+        "codigo": "52560"
+    },
+    {
+        "ciduad": "PRADERA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76563"
+    },
+    {
+        "ciduad": "PRADO",
+        "departamento": "Tolima",
+        "codigo": "73563"
+    },
+    {
+        "ciduad": "PROVIDENCIA",
+        "departamento": "Nariño",
+        "codigo": "52565"
+    },
+    {
+        "ciduad": "PROVIDENCIA",
+        "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
+        "codigo": "88564"
+    },
+    {
+        "ciduad": "PUEBLO BELLO",
+        "departamento": "Cesar",
+        "codigo": "20570"
+    },
+    {
+        "ciduad": "PUEBLO NUEVO",
+        "departamento": "Córdoba",
+        "codigo": "23570"
+    },
+    {
+        "ciduad": "PUEBLO RICO",
+        "departamento": "Risaralda",
+        "codigo": "66572"
+    },
+    {
+        "ciduad": "PUEBLORRICO",
+        "departamento": "Antioquia",
+        "codigo": "05576"
+    },
+    {
+        "ciduad": "PUEBLOVIEJO",
+        "departamento": "Magdalena",
+        "codigo": "47570"
+    },
+    {
+        "ciduad": "PUENTE NACIONAL",
+        "departamento": "Santander",
+        "codigo": "68572"
+    },
+    {
+        "ciduad": "PUERRES",
+        "departamento": "Nariño",
+        "codigo": "52573"
+    },
+    {
+        "ciduad": "PUERTO ALEGRÍA",
+        "departamento": "Amazonas",
+        "codigo": "91530"
+    },
+    {
+        "ciduad": "PUERTO ARICA",
+        "departamento": "Amazonas",
+        "codigo": "91536"
+    },
+    {
+        "ciduad": "PUERTO ASÍS",
+        "departamento": "Putumayo",
+        "codigo": "86568"
+    },
+    {
+        "ciduad": "PUERTO BERRÍO",
+        "departamento": "Antioquia",
+        "codigo": "05579"
+    },
+    {
+        "ciduad": "PUERTO BOYACÁ",
+        "departamento": "Boyacá",
+        "codigo": "15572"
+    },
+    {
+        "ciduad": "PUERTO CAICEDO",
+        "departamento": "Putumayo",
+        "codigo": "86569"
+    },
+    {
+        "ciduad": "PUERTO CARREÑO",
+        "departamento": "Vichada",
+        "codigo": "99001"
+    },
+    {
+        "ciduad": "PUERTO COLOMBIA",
+        "departamento": "Atlántico",
+        "codigo": "08573"
+    },
+    {
+        "ciduad": "PUERTO COLOMBIA",
+        "departamento": "Guainía",
+        "codigo": "94884"
+    },
+    {
+        "ciduad": "PUERTO CONCORDIA",
+        "departamento": "Meta",
+        "codigo": "50450"
+    },
+    {
+        "ciduad": "PUERTO ESCONDIDO",
+        "departamento": "Córdoba",
+        "codigo": "23574"
+    },
+    {
+        "ciduad": "PUERTO GAITÁN",
+        "departamento": "Meta",
+        "codigo": "50568"
+    },
+    {
+        "ciduad": "PUERTO GUZMÁN",
+        "departamento": "Putumayo",
+        "codigo": "86571"
+    },
+    {
+        "ciduad": "PUERTO LIBERTADOR",
+        "departamento": "Córdoba",
+        "codigo": "23580"
+    },
+    {
+        "ciduad": "PUERTO LLERAS",
+        "departamento": "Meta",
+        "codigo": "50577"
+    },
+    {
+        "ciduad": "PUERTO LÓPEZ",
+        "departamento": "Meta",
+        "codigo": "50573"
+    },
+    {
+        "ciduad": "PUERTO NARE",
+        "departamento": "Antioquia",
+        "codigo": "05585"
+    },
+    {
+        "ciduad": "PUERTO NARIÑO",
+        "departamento": "Amazonas",
+        "codigo": "91540"
+    },
+    {
+        "ciduad": "PUERTO PARRA",
+        "departamento": "Santander",
+        "codigo": "68573"
+    },
+    {
+        "ciduad": "PUERTO RICO",
+        "departamento": "Caquetá",
+        "codigo": "18592"
+    },
+    {
+        "ciduad": "PUERTO RICO",
+        "departamento": "Meta",
+        "codigo": "50590"
+    },
+    {
+        "ciduad": "PUERTO RONDÓN",
+        "departamento": "Arauca",
+        "codigo": "81591"
+    },
+    {
+        "ciduad": "PUERTO SALGAR",
+        "departamento": "Cundinamarca",
+        "codigo": "25572"
+    },
+    {
+        "ciduad": "PUERTO SANTANDER",
+        "departamento": "Norte de Santander",
+        "codigo": "54553"
+    },
+    {
+        "ciduad": "PUERTO SANTANDER",
+        "departamento": "Amazonas",
+        "codigo": "91669"
+    },
+    {
+        "ciduad": "PUERTO TEJADA",
+        "departamento": "Cauca",
+        "codigo": "19573"
+    },
+    {
+        "ciduad": "PUERTO TRIUNFO",
+        "departamento": "Antioquia",
+        "codigo": "05591"
+    },
+    {
+        "ciduad": "PUERTO WILCHES",
+        "departamento": "Santander",
+        "codigo": "68575"
+    },
+    {
+        "ciduad": "PULÍ",
+        "departamento": "Cundinamarca",
+        "codigo": "25580"
+    },
+    {
+        "ciduad": "PUPIALES",
+        "departamento": "Nariño",
+        "codigo": "52585"
+    },
+    {
+        "ciduad": "PURACÉ",
+        "departamento": "Cauca",
+        "codigo": "19585"
+    },
+    {
+        "ciduad": "PURIFICACIÓN",
+        "departamento": "Tolima",
+        "codigo": "73585"
+    },
+    {
+        "ciduad": "PURÍSIMA",
+        "departamento": "Córdoba",
+        "codigo": "23586"
+    },
+    {
+        "ciduad": "QUEBRADANEGRA",
+        "departamento": "Cundinamarca",
+        "codigo": "25592"
+    },
+    {
+        "ciduad": "QUETAME",
+        "departamento": "Cundinamarca",
+        "codigo": "25594"
+    },
+    {
+        "ciduad": "QUIBDÓ",
+        "departamento": "Chocó",
+        "codigo": "27001"
+    },
+    {
+        "ciduad": "QUIMBAYA",
+        "departamento": "Quindio",
+        "codigo": "63594"
+    },
+    {
+        "ciduad": "QUINCHÍA",
+        "departamento": "Risaralda",
+        "codigo": "66594"
+    },
+    {
+        "ciduad": "QUÍPAMA",
+        "departamento": "Boyacá",
+        "codigo": "15580"
+    },
+    {
+        "ciduad": "QUIPILE",
+        "departamento": "Cundinamarca",
+        "codigo": "25596"
+    },
+    {
+        "ciduad": "RAGONVALIA",
+        "departamento": "Norte de Santander",
+        "codigo": "54599"
+    },
+    {
+        "ciduad": "RAMIRIQUÍ",
+        "departamento": "Boyacá",
+        "codigo": "15599"
+    },
+    {
+        "ciduad": "RÁQUIRA",
+        "departamento": "Boyacá",
+        "codigo": "15600"
+    },
+    {
+        "ciduad": "RECETOR",
+        "departamento": "Casanare",
+        "codigo": "85279"
+    },
+    {
+        "ciduad": "REGIDOR",
+        "departamento": "Bolívar",
+        "codigo": "13580"
+    },
+    {
+        "ciduad": "REMEDIOS",
+        "departamento": "Antioquia",
+        "codigo": "05604"
+    },
+    {
+        "ciduad": "REMOLINO",
+        "departamento": "Magdalena",
+        "codigo": "47605"
+    },
+    {
+        "ciduad": "REPELÓN",
+        "departamento": "Atlántico",
+        "codigo": "08606"
+    },
+    {
+        "ciduad": "RESTREPO",
+        "departamento": "Meta",
+        "codigo": "50606"
+    },
+    {
+        "ciduad": "RESTREPO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76606"
+    },
+    {
+        "ciduad": "RETIRO",
+        "departamento": "Antioquia",
+        "codigo": "05607"
+    },
+    {
+        "ciduad": "RICAURTE",
+        "departamento": "Cundinamarca",
+        "codigo": "25612"
+    },
+    {
+        "ciduad": "RICAURTE",
+        "departamento": "Nariño",
+        "codigo": "52612"
+    },
+    {
+        "ciduad": "RÍO DE ORO",
+        "departamento": "Cesar",
+        "codigo": "20614"
+    },
+    {
+        "ciduad": "RÍO IRO",
+        "departamento": "Chocó",
+        "codigo": "27580"
+    },
+    {
+        "ciduad": "RÍO QUITO",
+        "departamento": "Chocó",
+        "codigo": "27600"
+    },
+    {
+        "ciduad": "RÍO VIEJO",
+        "departamento": "Bolívar",
+        "codigo": "13600"
+    },
+    {
+        "ciduad": "RIOBLANCO",
+        "departamento": "Tolima",
+        "codigo": "73616"
+    },
+    {
+        "ciduad": "RIOFRÍO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76616"
+    },
+    {
+        "ciduad": "RIOHACHA",
+        "departamento": "La Guajira",
+        "codigo": "44001"
+    },
+    {
+        "ciduad": "RIONEGRO",
+        "departamento": "Antioquia",
+        "codigo": "05615"
+    },
+    {
+        "ciduad": "RIONEGRO",
+        "departamento": "Santander",
+        "codigo": "68615"
+    },
+    {
+        "ciduad": "RIOSUCIO",
+        "departamento": "Caldas",
+        "codigo": "17614"
+    },
+    {
+        "ciduad": "RIOSUCIO",
+        "departamento": "Chocó",
+        "codigo": "27615"
+    },
+    {
+        "ciduad": "RISARALDA",
+        "departamento": "Caldas",
+        "codigo": "17616"
+    },
+    {
+        "ciduad": "RIVERA",
+        "departamento": "Huila",
+        "codigo": "41615"
+    },
+    {
+        "ciduad": "ROBERTO PAYÁN",
+        "departamento": "Nariño",
+        "codigo": "52621"
+    },
+    {
+        "ciduad": "ROLDANILLO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76622"
+    },
+    {
+        "ciduad": "RONCESVALLES",
+        "departamento": "Tolima",
+        "codigo": "73622"
+    },
+    {
+        "ciduad": "RONDÓN",
+        "departamento": "Boyacá",
+        "codigo": "15621"
+    },
+    {
+        "ciduad": "ROSAS",
+        "departamento": "Cauca",
+        "codigo": "19622"
+    },
+    {
+        "ciduad": "ROVIRA",
+        "departamento": "Tolima",
+        "codigo": "73624"
+    },
+    {
+        "ciduad": "SABANA DE TORRES",
+        "departamento": "Santander",
+        "codigo": "68655"
+    },
+    {
+        "ciduad": "SABANAGRANDE",
+        "departamento": "Atlántico",
+        "codigo": "08634"
+    },
+    {
+        "ciduad": "SABANALARGA",
+        "departamento": "Antioquia",
+        "codigo": "05628"
+    },
+    {
+        "ciduad": "SABANALARGA",
+        "departamento": "Atlántico",
+        "codigo": "08638"
+    },
+    {
+        "ciduad": "SABANALARGA",
+        "departamento": "Casanare",
+        "codigo": "85300"
+    },
+    {
+        "ciduad": "SABANAS DE SAN ANGEL",
+        "departamento": "Magdalena",
+        "codigo": "47660"
+    },
+    {
+        "ciduad": "SABANETA",
+        "departamento": "Antioquia",
+        "codigo": "05631"
+    },
+    {
+        "ciduad": "SABOYÁ",
+        "departamento": "Boyacá",
+        "codigo": "15632"
+    },
+    {
+        "ciduad": "SÁCAMA",
+        "departamento": "Casanare",
+        "codigo": "85315"
+    },
+    {
+        "ciduad": "SÁCHICA",
+        "departamento": "Boyacá",
+        "codigo": "15638"
+    },
+    {
+        "ciduad": "SAHAGÚN",
+        "departamento": "Córdoba",
+        "codigo": "23660"
+    },
+    {
+        "ciduad": "SALADOBLANCO",
+        "departamento": "Huila",
+        "codigo": "41660"
+    },
+    {
+        "ciduad": "SALAMINA",
+        "departamento": "Caldas",
+        "codigo": "17653"
+    },
+    {
+        "ciduad": "SALAMINA",
+        "departamento": "Magdalena",
+        "codigo": "47675"
+    },
+    {
+        "ciduad": "SALAZAR",
+        "departamento": "Norte de Santander",
+        "codigo": "54660"
+    },
+    {
+        "ciduad": "SALDAÑA",
+        "departamento": "Tolima",
+        "codigo": "73671"
+    },
+    {
+        "ciduad": "SALENTO",
+        "departamento": "Quindio",
+        "codigo": "63690"
+    },
+    {
+        "ciduad": "SALGAR",
+        "departamento": "Antioquia",
+        "codigo": "05642"
+    },
+    {
+        "ciduad": "SAMACÁ",
+        "departamento": "Boyacá",
+        "codigo": "15646"
+    },
+    {
+        "ciduad": "SAMANÁ",
+        "departamento": "Caldas",
+        "codigo": "17662"
+    },
+    {
+        "ciduad": "SAMANIEGO",
+        "departamento": "Nariño",
+        "codigo": "52678"
+    },
+    {
+        "ciduad": "SAMPUÉS",
+        "departamento": "Sucre",
+        "codigo": "70670"
+    },
+    {
+        "ciduad": "SAN AGUSTÍN",
+        "departamento": "Huila",
+        "codigo": "41668"
+    },
+    {
+        "ciduad": "SAN ALBERTO",
+        "departamento": "Cesar",
+        "codigo": "20710"
+    },
+    {
+        "ciduad": "SAN ANDRÉS",
+        "departamento": "Antioquia",
+        "codigo": "05647"
+    },
+    {
+        "ciduad": "SAN ANDRÉS",
+        "departamento": "Santander",
+        "codigo": "68669"
+    },
+    {
+        "ciduad": "SAN ANDRÉS",
+        "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
+        "codigo": "88001"
+    },
+    {
+        "ciduad": "SAN ANDRÉS SOTAVENTO",
+        "departamento": "Córdoba",
+        "codigo": "23670"
+    },
+    {
+        "ciduad": "SAN ANTERO",
+        "departamento": "Córdoba",
+        "codigo": "23672"
+    },
+    {
+        "ciduad": "SAN ANTONIO",
+        "departamento": "Tolima",
+        "codigo": "73675"
+    },
+    {
+        "ciduad": "SAN ANTONIO DEL TEQUENDAMA",
+        "departamento": "Cundinamarca",
+        "codigo": "25645"
+    },
+    {
+        "ciduad": "SAN BENITO",
+        "departamento": "Santander",
+        "codigo": "68673"
+    },
+    {
+        "ciduad": "SAN BENITO ABAD",
+        "departamento": "Sucre",
+        "codigo": "70678"
+    },
+    {
+        "ciduad": "SAN BERNARDO",
+        "departamento": "Cundinamarca",
+        "codigo": "25649"
+    },
+    {
+        "ciduad": "SAN BERNARDO",
+        "departamento": "Nariño",
+        "codigo": "52685"
+    },
+    {
+        "ciduad": "SAN BERNARDO DEL VIENTO",
+        "departamento": "Córdoba",
+        "codigo": "23675"
+    },
+    {
+        "ciduad": "SAN CALIXTO",
+        "departamento": "Norte de Santander",
+        "codigo": "54670"
+    },
+    {
+        "ciduad": "SAN CARLOS",
+        "departamento": "Antioquia",
+        "codigo": "05649"
+    },
+    {
+        "ciduad": "SAN CARLOS",
+        "departamento": "Córdoba",
+        "codigo": "23678"
+    },
+    {
+        "ciduad": "SAN CARLOS DE GUAROA",
+        "departamento": "Meta",
+        "codigo": "50680"
+    },
+    {
+        "ciduad": "SAN CAYETANO",
+        "departamento": "Cundinamarca",
+        "codigo": "25653"
+    },
+    {
+        "ciduad": "SAN CAYETANO",
+        "departamento": "Norte de Santander",
+        "codigo": "54673"
+    },
+    {
+        "ciduad": "SAN CRISTÓBAL",
+        "departamento": "Bolívar",
+        "codigo": "13620"
+    },
+    {
+        "ciduad": "SAN DIEGO",
+        "departamento": "Cesar",
+        "codigo": "20750"
+    },
+    {
+        "ciduad": "SAN EDUARDO",
+        "departamento": "Boyacá",
+        "codigo": "15660"
+    },
+    {
+        "ciduad": "SAN ESTANISLAO",
+        "departamento": "Bolívar",
+        "codigo": "13647"
+    },
+    {
+        "ciduad": "SAN FELIPE",
+        "departamento": "Guainía",
+        "codigo": "94883"
+    },
+    {
+        "ciduad": "SAN FERNANDO",
+        "departamento": "Bolívar",
+        "codigo": "13650"
+    },
+    {
+        "ciduad": "SAN FRANCISCO",
+        "departamento": "Antioquia",
+        "codigo": "05652"
+    },
+    {
+        "ciduad": "SAN FRANCISCO",
+        "departamento": "Cundinamarca",
+        "codigo": "25658"
+    },
+    {
+        "ciduad": "SAN FRANCISCO",
+        "departamento": "Putumayo",
+        "codigo": "86755"
+    },
+    {
+        "ciduad": "SAN GIL",
+        "departamento": "Santander",
+        "codigo": "68679"
+    },
+    {
+        "ciduad": "SAN JACINTO",
+        "departamento": "Bolívar",
+        "codigo": "13654"
+    },
+    {
+        "ciduad": "SAN JACINTO DEL CAUCA",
+        "departamento": "Bolívar",
+        "codigo": "13655"
+    },
+    {
+        "ciduad": "SAN JERÓNIMO",
+        "departamento": "Antioquia",
+        "codigo": "05656"
+    },
+    {
+        "ciduad": "SAN JOAQUÍN",
+        "departamento": "Santander",
+        "codigo": "68682"
+    },
+    {
+        "ciduad": "SAN JOSÉ",
+        "departamento": "Caldas",
+        "codigo": "17665"
+    },
+    {
+        "ciduad": "SAN JOSÉ DE LA MONTAÑA",
+        "departamento": "Antioquia",
+        "codigo": "05658"
+    },
+    {
+        "ciduad": "SAN JOSÉ DE MIRANDA",
+        "departamento": "Santander",
+        "codigo": "68684"
+    },
+    {
+        "ciduad": "SAN JOSÉ DE PARE",
+        "departamento": "Boyacá",
+        "codigo": "15664"
+    },
+    {
+        "ciduad": "SAN JOSÉ DEL FRAGUA",
+        "departamento": "Caquetá",
+        "codigo": "18610"
+    },
+    {
+        "ciduad": "SAN JOSÉ DEL GUAVIARE",
+        "departamento": "Guaviare",
+        "codigo": "95001"
+    },
+    {
+        "ciduad": "SAN JOSÉ DEL PALMAR",
+        "departamento": "Chocó",
+        "codigo": "27660"
+    },
+    {
+        "ciduad": "SAN JUAN DE ARAMA",
+        "departamento": "Meta",
+        "codigo": "50683"
+    },
+    {
+        "ciduad": "SAN JUAN DE BETULIA",
+        "departamento": "Sucre",
+        "codigo": "70702"
+    },
+    {
+        "ciduad": "SAN JUAN DE RÍO SECO",
+        "departamento": "Cundinamarca",
+        "codigo": "25662"
+    },
+    {
+        "ciduad": "SAN JUAN DE URABÁ",
+        "departamento": "Antioquia",
+        "codigo": "05659"
+    },
+    {
+        "ciduad": "SAN JUAN DEL CESAR",
+        "departamento": "La Guajira",
+        "codigo": "44650"
+    },
+    {
+        "ciduad": "SAN JUAN NEPOMUCENO",
+        "departamento": "Bolívar",
+        "codigo": "13657"
+    },
+    {
+        "ciduad": "SAN JUANITO",
+        "departamento": "Meta",
+        "codigo": "50686"
+    },
+    {
+        "ciduad": "SAN LORENZO",
+        "departamento": "Nariño",
+        "codigo": "52687"
+    },
+    {
+        "ciduad": "SAN LUIS",
+        "departamento": "Antioquia",
+        "codigo": "05660"
+    },
+    {
+        "ciduad": "SAN LUIS",
+        "departamento": "Tolima",
+        "codigo": "73678"
+    },
+    {
+        "ciduad": "SAN LUIS DE GACENO",
+        "departamento": "Boyacá",
+        "codigo": "15667"
+    },
+    {
+        "ciduad": "SAN LUIS DE PALENQUE",
+        "departamento": "Casanare",
+        "codigo": "85325"
+    },
+    {
+        "ciduad": "SAN MARCOS",
+        "departamento": "Sucre",
+        "codigo": "70708"
+    },
+    {
+        "ciduad": "SAN MARTÍN",
+        "departamento": "Cesar",
+        "codigo": "20770"
+    },
+    {
+        "ciduad": "SAN MARTÍN",
+        "departamento": "Meta",
+        "codigo": "50689"
+    },
+    {
+        "ciduad": "SAN MARTÍN DE LOBA",
+        "departamento": "Bolívar",
+        "codigo": "13667"
+    },
+    {
+        "ciduad": "SAN MATEO",
+        "departamento": "Boyacá",
+        "codigo": "15673"
+    },
+    {
+        "ciduad": "SAN MIGUEL",
+        "departamento": "Santander",
+        "codigo": "68686"
+    },
+    {
+        "ciduad": "SAN MIGUEL",
+        "departamento": "Putumayo",
+        "codigo": "86757"
+    },
+    {
+        "ciduad": "SAN MIGUEL DE SEMA",
+        "departamento": "Boyacá",
+        "codigo": "15676"
+    },
+    {
+        "ciduad": "SAN ONOFRE",
+        "departamento": "Sucre",
+        "codigo": "70713"
+    },
+    {
+        "ciduad": "SAN PABLO",
+        "departamento": "Bolívar",
+        "codigo": "13670"
+    },
+    {
+        "ciduad": "SAN PABLO",
+        "departamento": "Nariño",
+        "codigo": "52693"
+    },
+    {
+        "ciduad": "SAN PABLO DE BORBUR",
+        "departamento": "Boyacá",
+        "codigo": "15681"
+    },
+    {
+        "ciduad": "SAN PEDRO",
+        "departamento": "Antioquia",
+        "codigo": "05664"
+    },
+    {
+        "ciduad": "SAN PEDRO",
+        "departamento": "Sucre",
+        "codigo": "70717"
+    },
+    {
+        "ciduad": "SAN PEDRO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76670"
+    },
+    {
+        "ciduad": "SAN PEDRO DE CARTAGO",
+        "departamento": "Nariño",
+        "codigo": "52694"
+    },
+    {
+        "ciduad": "SAN PEDRO DE URABA",
+        "departamento": "Antioquia",
+        "codigo": "05665"
+    },
+    {
+        "ciduad": "SAN PELAYO",
+        "departamento": "Córdoba",
+        "codigo": "23686"
+    },
+    {
+        "ciduad": "SAN RAFAEL",
+        "departamento": "Antioquia",
+        "codigo": "05667"
+    },
+    {
+        "ciduad": "SAN ROQUE",
+        "departamento": "Antioquia",
+        "codigo": "05670"
+    },
+    {
+        "ciduad": "SAN SEBASTIÁN",
+        "departamento": "Cauca",
+        "codigo": "19693"
+    },
+    {
+        "ciduad": "SAN SEBASTIÁN DE BUENAVISTA",
+        "departamento": "Magdalena",
+        "codigo": "47692"
+    },
+    {
+        "ciduad": "SAN VICENTE",
+        "departamento": "Antioquia",
+        "codigo": "05674"
+    },
+    {
+        "ciduad": "SAN VICENTE DE CHUCURÍ",
+        "departamento": "Santander",
+        "codigo": "68689"
+    },
+    {
+        "ciduad": "SAN VICENTE DEL CAGUÁN",
+        "departamento": "Caquetá",
+        "codigo": "18753"
+    },
+    {
+        "ciduad": "SAN ZENÓN",
+        "departamento": "Magdalena",
+        "codigo": "47703"
+    },
+    {
+        "ciduad": "SANDONÁ",
+        "departamento": "Nariño",
+        "codigo": "52683"
+    },
+    {
+        "ciduad": "SANTA ANA",
+        "departamento": "Magdalena",
+        "codigo": "47707"
+    },
+    {
+        "ciduad": "SANTA BÁRBARA",
+        "departamento": "Antioquia",
+        "codigo": "05679"
+    },
+    {
+        "ciduad": "SANTA BÁRBARA",
+        "departamento": "Nariño",
+        "codigo": "52696"
+    },
+    {
+        "ciduad": "SANTA BÁRBARA",
+        "departamento": "Santander",
+        "codigo": "68705"
+    },
+    {
+        "ciduad": "SANTA BÁRBARA DE PINTO",
+        "departamento": "Magdalena",
+        "codigo": "47720"
+    },
+    {
+        "ciduad": "SANTA CATALINA",
+        "departamento": "Bolívar",
+        "codigo": "13673"
+    },
+    {
+        "ciduad": "SANTA HELENA DEL OPÓN",
+        "departamento": "Santander",
+        "codigo": "68720"
+    },
+    {
+        "ciduad": "SANTA ISABEL",
+        "departamento": "Tolima",
+        "codigo": "73686"
+    },
+    {
+        "ciduad": "SANTA LUCÍA",
+        "departamento": "Atlántico",
+        "codigo": "08675"
+    },
+    {
+        "ciduad": "SANTA MARÍA",
+        "departamento": "Boyacá",
+        "codigo": "15690"
+    },
+    {
+        "ciduad": "SANTA MARÍA",
+        "departamento": "Huila",
+        "codigo": "41676"
+    },
+    {
+        "ciduad": "SANTA MARTA",
+        "departamento": "Magdalena",
+        "codigo": "47001"
+    },
+    {
+        "ciduad": "SANTA ROSA",
+        "departamento": "Bolívar",
+        "codigo": "13683"
+    },
+    {
+        "ciduad": "SANTA ROSA",
+        "departamento": "Cauca",
+        "codigo": "19701"
+    },
+    {
+        "ciduad": "SANTA ROSA DE CABAL",
+        "departamento": "Risaralda",
+        "codigo": "66682"
+    },
+    {
+        "ciduad": "SANTA ROSA DE OSOS",
+        "departamento": "Antioquia",
+        "codigo": "05686"
+    },
+    {
+        "ciduad": "SANTA ROSA DE VITERBO",
+        "departamento": "Boyacá",
+        "codigo": "15693"
+    },
+    {
+        "ciduad": "SANTA ROSA DEL SUR",
+        "departamento": "Bolívar",
+        "codigo": "13688"
+    },
+    {
+        "ciduad": "SANTA ROSALÍA",
+        "departamento": "Vichada",
+        "codigo": "99624"
+    },
+    {
+        "ciduad": "SANTA SOFÍA",
+        "departamento": "Boyacá",
+        "codigo": "15696"
+    },
+    {
+        "ciduad": "SANTACRUZ",
+        "departamento": "Nariño",
+        "codigo": "52699"
+    },
+    {
+        "ciduad": "SANTAFÉ DE ANTIOQUIA",
+        "departamento": "Antioquia",
+        "codigo": "05042"
+    },
+    {
+        "ciduad": "SANTANA",
+        "departamento": "Boyacá",
+        "codigo": "15686"
+    },
+    {
+        "ciduad": "SANTANDER DE QUILICHAO",
+        "departamento": "Cauca",
+        "codigo": "19698"
+    },
+    {
+        "ciduad": "SANTIAGO",
+        "departamento": "Norte de Santander",
+        "codigo": "54680"
+    },
+    {
+        "ciduad": "SANTIAGO",
+        "departamento": "Putumayo",
+        "codigo": "86760"
+    },
+    {
+        "ciduad": "SANTIAGO DE TOLÚ",
+        "departamento": "Sucre",
+        "codigo": "70820"
+    },
+    {
+        "ciduad": "SANTO DOMINGO",
+        "departamento": "Antioquia",
+        "codigo": "05690"
+    },
+    {
+        "ciduad": "SANTO TOMÁS",
+        "departamento": "Atlántico",
+        "codigo": "08685"
+    },
+    {
+        "ciduad": "SANTUARIO",
+        "departamento": "Risaralda",
+        "codigo": "66687"
+    },
+    {
+        "ciduad": "SAPUYES",
+        "departamento": "Nariño",
+        "codigo": "52720"
+    },
+    {
+        "ciduad": "SARAVENA",
+        "departamento": "Arauca",
+        "codigo": "81736"
+    },
+    {
+        "ciduad": "SARDINATA",
+        "departamento": "Norte de Santander",
+        "codigo": "54720"
+    },
+    {
+        "ciduad": "SASAIMA",
+        "departamento": "Cundinamarca",
+        "codigo": "25718"
+    },
+    {
+        "ciduad": "SATIVANORTE",
+        "departamento": "Boyacá",
+        "codigo": "15720"
+    },
+    {
+        "ciduad": "SATIVASUR",
+        "departamento": "Boyacá",
+        "codigo": "15723"
+    },
+    {
+        "ciduad": "SEGOVIA",
+        "departamento": "Antioquia",
+        "codigo": "05736"
+    },
+    {
+        "ciduad": "SESQUILÉ",
+        "departamento": "Cundinamarca",
+        "codigo": "25736"
+    },
+    {
+        "ciduad": "SEVILLA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76736"
+    },
+    {
+        "ciduad": "SIACHOQUE",
+        "departamento": "Boyacá",
+        "codigo": "15740"
+    },
+    {
+        "ciduad": "SIBATÉ",
+        "departamento": "Cundinamarca",
+        "codigo": "25740"
+    },
+    {
+        "ciduad": "SIBUNDOY",
+        "departamento": "Putumayo",
+        "codigo": "86749"
+    },
+    {
+        "ciduad": "SILOS",
+        "departamento": "Norte de Santander",
+        "codigo": "54743"
+    },
+    {
+        "ciduad": "SILVANIA",
+        "departamento": "Cundinamarca",
+        "codigo": "25743"
+    },
+    {
+        "ciduad": "SILVIA",
+        "departamento": "Cauca",
+        "codigo": "19743"
+    },
+    {
+        "ciduad": "SIMACOTA",
+        "departamento": "Santander",
+        "codigo": "68745"
+    },
+    {
+        "ciduad": "SIMIJACA",
+        "departamento": "Cundinamarca",
+        "codigo": "25745"
+    },
+    {
+        "ciduad": "SIMITÍ",
+        "departamento": "Bolívar",
+        "codigo": "13744"
+    },
+    {
+        "ciduad": "SINCÉ",
+        "departamento": "Sucre",
+        "codigo": "70742"
+    },
+    {
+        "ciduad": "SINCELEJO",
+        "departamento": "Sucre",
+        "codigo": "70001"
+    },
+    {
+        "ciduad": "SIPÍ",
+        "departamento": "Chocó",
+        "codigo": "27745"
+    },
+    {
+        "ciduad": "SITIONUEVO",
+        "departamento": "Magdalena",
+        "codigo": "47745"
+    },
+    {
+        "ciduad": "SOACHA",
+        "departamento": "Cundinamarca",
+        "codigo": "25754"
+    },
+    {
+        "ciduad": "SOATÁ",
+        "departamento": "Boyacá",
+        "codigo": "15753"
+    },
+    {
+        "ciduad": "SOCHA",
+        "departamento": "Boyacá",
+        "codigo": "15757"
+    },
+    {
+        "ciduad": "SOCORRO",
+        "departamento": "Santander",
+        "codigo": "68755"
+    },
+    {
+        "ciduad": "SOCOTÁ",
+        "departamento": "Boyacá",
+        "codigo": "15755"
+    },
+    {
+        "ciduad": "SOGAMOSO",
+        "departamento": "Boyacá",
+        "codigo": "15759"
+    },
+    {
+        "ciduad": "SOLANO",
+        "departamento": "Caquetá",
+        "codigo": "18756"
+    },
+    {
+        "ciduad": "SOLEDAD",
+        "departamento": "Atlántico",
+        "codigo": "08758"
+    },
+    {
+        "ciduad": "SOLITA",
+        "departamento": "Caquetá",
+        "codigo": "18785"
+    },
+    {
+        "ciduad": "SOMONDOCO",
+        "departamento": "Boyacá",
+        "codigo": "15761"
+    },
+    {
+        "ciduad": "SONSON",
+        "departamento": "Antioquia",
+        "codigo": "05756"
+    },
+    {
+        "ciduad": "SOPETRÁN",
+        "departamento": "Antioquia",
+        "codigo": "05761"
+    },
+    {
+        "ciduad": "SOPLAVIENTO",
+        "departamento": "Bolívar",
+        "codigo": "13760"
+    },
+    {
+        "ciduad": "SOPÓ",
+        "departamento": "Cundinamarca",
+        "codigo": "25758"
+    },
+    {
+        "ciduad": "SORA",
+        "departamento": "Boyacá",
+        "codigo": "15762"
+    },
+    {
+        "ciduad": "SORACÁ",
+        "departamento": "Boyacá",
+        "codigo": "15764"
+    },
+    {
+        "ciduad": "SOTAQUIRÁ",
+        "departamento": "Boyacá",
+        "codigo": "15763"
+    },
+    {
+        "ciduad": "SOTARA",
+        "departamento": "Cauca",
+        "codigo": "19760"
+    },
+    {
+        "ciduad": "SUAITA",
+        "departamento": "Santander",
+        "codigo": "68770"
+    },
+    {
+        "ciduad": "SUAN",
+        "departamento": "Atlántico",
+        "codigo": "08770"
+    },
+    {
+        "ciduad": "SUÁREZ",
+        "departamento": "Cauca",
+        "codigo": "19780"
+    },
+    {
+        "ciduad": "SUÁREZ",
+        "departamento": "Tolima",
+        "codigo": "73770"
+    },
+    {
+        "ciduad": "SUAZA",
+        "departamento": "Huila",
+        "codigo": "41770"
+    },
+    {
+        "ciduad": "SUBACHOQUE",
+        "departamento": "Cundinamarca",
+        "codigo": "25769"
+    },
+    {
+        "ciduad": "SUCRE",
+        "departamento": "Cauca",
+        "codigo": "19785"
+    },
+    {
+        "ciduad": "SUCRE",
+        "departamento": "Santander",
+        "codigo": "68773"
+    },
+    {
+        "ciduad": "SUCRE",
+        "departamento": "Sucre",
+        "codigo": "70771"
+    },
+    {
+        "ciduad": "SUESCA",
+        "departamento": "Cundinamarca",
+        "codigo": "25772"
+    },
+    {
+        "ciduad": "SUPATÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25777"
+    },
+    {
+        "ciduad": "SUPÍA",
+        "departamento": "Caldas",
+        "codigo": "17777"
+    },
+    {
+        "ciduad": "SURATÁ",
+        "departamento": "Santander",
+        "codigo": "68780"
+    },
+    {
+        "ciduad": "SUSA",
+        "departamento": "Cundinamarca",
+        "codigo": "25779"
+    },
+    {
+        "ciduad": "SUSACÓN",
+        "departamento": "Boyacá",
+        "codigo": "15774"
+    },
+    {
+        "ciduad": "SUTAMARCHÁN",
+        "departamento": "Boyacá",
+        "codigo": "15776"
+    },
+    {
+        "ciduad": "SUTATAUSA",
+        "departamento": "Cundinamarca",
+        "codigo": "25781"
+    },
+    {
+        "ciduad": "SUTATENZA",
+        "departamento": "Boyacá",
+        "codigo": "15778"
+    },
+    {
+        "ciduad": "TABIO",
+        "departamento": "Cundinamarca",
+        "codigo": "25785"
+    },
+    {
+        "ciduad": "TADÓ",
+        "departamento": "Chocó",
+        "codigo": "27787"
+    },
+    {
+        "ciduad": "TALAIGUA NUEVO",
+        "departamento": "Bolívar",
+        "codigo": "13780"
+    },
+    {
+        "ciduad": "TAMALAMEQUE",
+        "departamento": "Cesar",
+        "codigo": "20787"
+    },
+    {
+        "ciduad": "TÁMARA",
+        "departamento": "Casanare",
+        "codigo": "85400"
+    },
+    {
+        "ciduad": "TAME",
+        "departamento": "Arauca",
+        "codigo": "81794"
+    },
+    {
+        "ciduad": "TÁMESIS",
+        "departamento": "Antioquia",
+        "codigo": "05789"
+    },
+    {
+        "ciduad": "TAMINANGO",
+        "departamento": "Nariño",
+        "codigo": "52786"
+    },
+    {
+        "ciduad": "TANGUA",
+        "departamento": "Nariño",
+        "codigo": "52788"
+    },
+    {
+        "ciduad": "TARAIRA",
+        "departamento": "Vaupés",
+        "codigo": "97666"
+    },
+    {
+        "ciduad": "TARAPACÁ",
+        "departamento": "Amazonas",
+        "codigo": "91798"
+    },
+    {
+        "ciduad": "TARAZÁ",
+        "departamento": "Antioquia",
+        "codigo": "05790"
+    },
+    {
+        "ciduad": "TARQUI",
+        "departamento": "Huila",
+        "codigo": "41791"
+    },
+    {
+        "ciduad": "TARSO",
+        "departamento": "Antioquia",
+        "codigo": "05792"
+    },
+    {
+        "ciduad": "TASCO",
+        "departamento": "Boyacá",
+        "codigo": "15790"
+    },
+    {
+        "ciduad": "TAURAMENA",
+        "departamento": "Casanare",
+        "codigo": "85410"
+    },
+    {
+        "ciduad": "TAUSA",
+        "departamento": "Cundinamarca",
+        "codigo": "25793"
+    },
+    {
+        "ciduad": "TELLO",
+        "departamento": "Huila",
+        "codigo": "41799"
+    },
+    {
+        "ciduad": "TENA",
+        "departamento": "Cundinamarca",
+        "codigo": "25797"
+    },
+    {
+        "ciduad": "TENERIFE",
+        "departamento": "Magdalena",
+        "codigo": "47798"
+    },
+    {
+        "ciduad": "TENJO",
+        "departamento": "Cundinamarca",
+        "codigo": "25799"
+    },
+    {
+        "ciduad": "TENZA",
+        "departamento": "Boyacá",
+        "codigo": "15798"
+    },
+    {
+        "ciduad": "TEORAMA",
+        "departamento": "Norte de Santander",
+        "codigo": "54800"
+    },
+    {
+        "ciduad": "TERUEL",
+        "departamento": "Huila",
+        "codigo": "41801"
+    },
+    {
+        "ciduad": "TESALIA",
+        "departamento": "Huila",
+        "codigo": "41797"
+    },
+    {
+        "ciduad": "TIBACUY",
+        "departamento": "Cundinamarca",
+        "codigo": "25805"
+    },
+    {
+        "ciduad": "TIBANÁ",
+        "departamento": "Boyacá",
+        "codigo": "15804"
+    },
+    {
+        "ciduad": "TIBASOSA",
+        "departamento": "Boyacá",
+        "codigo": "15806"
+    },
+    {
+        "ciduad": "TIBIRITA",
+        "departamento": "Cundinamarca",
+        "codigo": "25807"
+    },
+    {
+        "ciduad": "TIBÚ",
+        "departamento": "Norte de Santander",
+        "codigo": "54810"
+    },
+    {
+        "ciduad": "TIERRALTA",
+        "departamento": "Córdoba",
+        "codigo": "23807"
+    },
+    {
+        "ciduad": "TIMANÁ",
+        "departamento": "Huila",
+        "codigo": "41807"
+    },
+    {
+        "ciduad": "TIMBÍO",
+        "departamento": "Cauca",
+        "codigo": "19807"
+    },
+    {
+        "ciduad": "TIMBIQUÍ",
+        "departamento": "Cauca",
+        "codigo": "19809"
+    },
+    {
+        "ciduad": "TINJACÁ",
+        "departamento": "Boyacá",
+        "codigo": "15808"
+    },
+    {
+        "ciduad": "TIPACOQUE",
+        "departamento": "Boyacá",
+        "codigo": "15810"
+    },
+    {
+        "ciduad": "TIQUISIO",
+        "departamento": "Bolívar",
+        "codigo": "13810"
+    },
+    {
+        "ciduad": "TITIRIBÍ",
+        "departamento": "Antioquia",
+        "codigo": "05809"
+    },
+    {
+        "ciduad": "TOCA",
+        "departamento": "Boyacá",
+        "codigo": "15814"
+    },
+    {
+        "ciduad": "TOCAIMA",
+        "departamento": "Cundinamarca",
+        "codigo": "25815"
+    },
+    {
+        "ciduad": "TOCANCIPÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25817"
+    },
+    {
+        "ciduad": "TOGÜÍ",
+        "departamento": "Boyacá",
+        "codigo": "15816"
+    },
+    {
+        "ciduad": "TOLEDO",
+        "departamento": "Antioquia",
+        "codigo": "05819"
+    },
+    {
+        "ciduad": "TOLEDO",
+        "departamento": "Norte de Santander",
+        "codigo": "54820"
+    },
+    {
+        "ciduad": "TOLÚ VIEJO",
+        "departamento": "Sucre",
+        "codigo": "70823"
+    },
+    {
+        "ciduad": "TONA",
+        "departamento": "Santander",
+        "codigo": "68820"
+    },
+    {
+        "ciduad": "TÓPAGA",
+        "departamento": "Boyacá",
+        "codigo": "15820"
+    },
+    {
+        "ciduad": "TOPAIPÍ",
+        "departamento": "Cundinamarca",
+        "codigo": "25823"
+    },
+    {
+        "ciduad": "TORIBIO",
+        "departamento": "Cauca",
+        "codigo": "19821"
+    },
+    {
+        "ciduad": "TORO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76823"
+    },
+    {
+        "ciduad": "TOTA",
+        "departamento": "Boyacá",
+        "codigo": "15822"
+    },
+    {
+        "ciduad": "TOTORÓ",
+        "departamento": "Cauca",
+        "codigo": "19824"
+    },
+    {
+        "ciduad": "TRINIDAD",
+        "departamento": "Casanare",
+        "codigo": "85430"
+    },
+    {
+        "ciduad": "TRUJILLO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76828"
+    },
+    {
+        "ciduad": "TUBARÁ",
+        "departamento": "Atlántico",
+        "codigo": "08832"
+    },
+    {
+        "ciduad": "TULUÁ",
+        "departamento": "Valle del Cauca",
+        "codigo": "76834"
+    },
+    {
+        "ciduad": "TUMACO",
+        "departamento": "Nariño",
+        "codigo": "52835"
+    },
+    {
+        "ciduad": "TUNJA",
+        "departamento": "Boyacá",
+        "codigo": "15001"
+    },
+    {
+        "ciduad": "TUNUNGUÁ",
+        "departamento": "Boyacá",
+        "codigo": "15832"
+    },
+    {
+        "ciduad": "TÚQUERRES",
+        "departamento": "Nariño",
+        "codigo": "52838"
+    },
+    {
+        "ciduad": "TURBACO",
+        "departamento": "Bolívar",
+        "codigo": "13836"
+    },
+    {
+        "ciduad": "TURBANÁ",
+        "departamento": "Bolívar",
+        "codigo": "13838"
+    },
+    {
+        "ciduad": "TURBO",
+        "departamento": "Antioquia",
+        "codigo": "05837"
+    },
+    {
+        "ciduad": "TURMEQUÉ",
+        "departamento": "Boyacá",
+        "codigo": "15835"
+    },
+    {
+        "ciduad": "TUTA",
+        "departamento": "Boyacá",
+        "codigo": "15837"
+    },
+    {
+        "ciduad": "TUTAZÁ",
+        "departamento": "Boyacá",
+        "codigo": "15839"
+    },
+    {
+        "ciduad": "UBALÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25839"
+    },
+    {
+        "ciduad": "UBAQUE",
+        "departamento": "Cundinamarca",
+        "codigo": "25841"
+    },
+    {
+        "ciduad": "ULLOA",
+        "departamento": "Valle del Cauca",
+        "codigo": "76845"
+    },
+    {
+        "ciduad": "UMBITA",
+        "departamento": "Boyacá",
+        "codigo": "15842"
+    },
+    {
+        "ciduad": "UNE",
+        "departamento": "Cundinamarca",
+        "codigo": "25845"
+    },
+    {
+        "ciduad": "UNGUÍA",
+        "departamento": "Chocó",
+        "codigo": "27800"
+    },
+    {
+        "ciduad": "UNIÓN PANAMERICANA",
+        "departamento": "Chocó",
+        "codigo": "27810"
+    },
+    {
+        "ciduad": "URAMITA",
+        "departamento": "Antioquia",
+        "codigo": "05842"
+    },
+    {
+        "ciduad": "URIBE",
+        "departamento": "Meta",
+        "codigo": "50370"
+    },
+    {
+        "ciduad": "URIBIA",
+        "departamento": "La Guajira",
+        "codigo": "44847"
+    },
+    {
+        "ciduad": "URRAO",
+        "departamento": "Antioquia",
+        "codigo": "05847"
+    },
+    {
+        "ciduad": "URUMITA",
+        "departamento": "La Guajira",
+        "codigo": "44855"
+    },
+    {
+        "ciduad": "USIACURÍ",
+        "departamento": "Atlántico",
+        "codigo": "08849"
+    },
+    {
+        "ciduad": "ÚTICA",
+        "departamento": "Cundinamarca",
+        "codigo": "25851"
+    },
+    {
+        "ciduad": "VALDIVIA",
+        "departamento": "Antioquia",
+        "codigo": "05854"
+    },
+    {
+        "ciduad": "VALENCIA",
+        "departamento": "Córdoba",
+        "codigo": "23855"
+    },
+    {
+        "ciduad": "VALLE DE SAN JOSÉ",
+        "departamento": "Santander",
+        "codigo": "68855"
+    },
+    {
+        "ciduad": "VALLE DE SAN JUAN",
+        "departamento": "Tolima",
+        "codigo": "73854"
+    },
+    {
+        "ciduad": "VALLE DEL GUAMUEZ",
+        "departamento": "Putumayo",
+        "codigo": "86865"
+    },
+    {
+        "ciduad": "VALLEDUPAR",
+        "departamento": "Cesar",
+        "codigo": "20001"
+    },
+    {
+        "ciduad": "VALPARAÍSO",
+        "departamento": "Antioquia",
+        "codigo": "05856"
+    },
+    {
+        "ciduad": "VALPARAÍSO",
+        "departamento": "Caquetá",
+        "codigo": "18860"
+    },
+    {
+        "ciduad": "VEGACHÍ",
+        "departamento": "Antioquia",
+        "codigo": "05858"
+    },
+    {
+        "ciduad": "VÉLEZ",
+        "departamento": "Santander",
+        "codigo": "68861"
+    },
+    {
+        "ciduad": "VENADILLO",
+        "departamento": "Tolima",
+        "codigo": "73861"
+    },
+    {
+        "ciduad": "VENECIA",
+        "departamento": "Antioquia",
+        "codigo": "05861"
+    },
+    {
+        "ciduad": "VENECIA",
+        "departamento": "Cundinamarca",
+        "codigo": "25506"
+    },
+    {
+        "ciduad": "VENTAQUEMADA",
+        "departamento": "Boyacá",
+        "codigo": "15861"
+    },
+    {
+        "ciduad": "VERGARA",
+        "departamento": "Cundinamarca",
+        "codigo": "25862"
+    },
+    {
+        "ciduad": "VERSALLES",
+        "departamento": "Valle del Cauca",
+        "codigo": "76863"
+    },
+    {
+        "ciduad": "VETAS",
+        "departamento": "Santander",
+        "codigo": "68867"
+    },
+    {
+        "ciduad": "VIANÍ",
+        "departamento": "Cundinamarca",
+        "codigo": "25867"
+    },
+    {
+        "ciduad": "VICTORIA",
+        "departamento": "Caldas",
+        "codigo": "17867"
+    },
+    {
+        "ciduad": "VIGÍA DEL FUERTE",
+        "departamento": "Antioquia",
+        "codigo": "05873"
+    },
+    {
+        "ciduad": "VIJES",
+        "departamento": "Valle del Cauca",
+        "codigo": "76869"
+    },
+    {
+        "ciduad": "VILLA CARO",
+        "departamento": "Norte de Santander",
+        "codigo": "54871"
+    },
+    {
+        "ciduad": "VILLA DE LEYVA",
+        "departamento": "Boyacá",
+        "codigo": "15407"
+    },
+    {
+        "ciduad": "VILLA DE SAN DIEGO DE UBATE",
+        "departamento": "Cundinamarca",
+        "codigo": "25843"
+    },
+    {
+        "ciduad": "VILLA DEL ROSARIO",
+        "departamento": "Norte de Santander",
+        "codigo": "54874"
+    },
+    {
+        "ciduad": "VILLA RICA",
+        "departamento": "Cauca",
+        "codigo": "19845"
+    },
+    {
+        "ciduad": "VILLAGARZÓN",
+        "departamento": "Putumayo",
+        "codigo": "86885"
+    },
+    {
+        "ciduad": "VILLAGÓMEZ",
+        "departamento": "Cundinamarca",
+        "codigo": "25871"
+    },
+    {
+        "ciduad": "VILLAHERMOSA",
+        "departamento": "Tolima",
+        "codigo": "73870"
+    },
+    {
+        "ciduad": "VILLAMARÍA",
+        "departamento": "Caldas",
+        "codigo": "17873"
+    },
+    {
+        "ciduad": "VILLANUEVA",
+        "departamento": "Bolívar",
+        "codigo": "13873"
+    },
+    {
+        "ciduad": "VILLANUEVA",
+        "departamento": "La Guajira",
+        "codigo": "44874"
+    },
+    {
+        "ciduad": "VILLANUEVA",
+        "departamento": "Santander",
+        "codigo": "68872"
+    },
+    {
+        "ciduad": "VILLANUEVA",
+        "departamento": "Casanare",
+        "codigo": "85440"
+    },
+    {
+        "ciduad": "VILLAPINZÓN",
+        "departamento": "Cundinamarca",
+        "codigo": "25873"
+    },
+    {
+        "ciduad": "VILLARRICA",
+        "departamento": "Tolima",
+        "codigo": "73873"
+    },
+    {
+        "ciduad": "VILLAVICENCIO",
+        "departamento": "Meta",
+        "codigo": "50001"
+    },
+    {
+        "ciduad": "VILLAVIEJA",
+        "departamento": "Huila",
+        "codigo": "41872"
+    },
+    {
+        "ciduad": "VILLETA",
+        "departamento": "Cundinamarca",
+        "codigo": "25875"
+    },
+    {
+        "ciduad": "VIOTÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25878"
+    },
+    {
+        "ciduad": "VIRACACHÁ",
+        "departamento": "Boyacá",
+        "codigo": "15879"
+    },
+    {
+        "ciduad": "VISTAHERMOSA",
+        "departamento": "Meta",
+        "codigo": "50711"
+    },
+    {
+        "ciduad": "VITERBO",
+        "departamento": "Caldas",
+        "codigo": "17877"
+    },
+    {
+        "ciduad": "YACOPÍ",
+        "departamento": "Cundinamarca",
+        "codigo": "25885"
+    },
+    {
+        "ciduad": "YACUANQUER",
+        "departamento": "Nariño",
+        "codigo": "52885"
+    },
+    {
+        "ciduad": "YAGUARÁ",
+        "departamento": "Huila",
+        "codigo": "41885"
+    },
+    {
+        "ciduad": "YALÍ",
+        "departamento": "Antioquia",
+        "codigo": "05885"
+    },
+    {
+        "ciduad": "YARUMAL",
+        "departamento": "Antioquia",
+        "codigo": "05887"
+    },
+    {
+        "ciduad": "YAVARATÉ",
+        "departamento": "Vaupés",
+        "codigo": "97889"
+    },
+    {
+        "ciduad": "YOLOMBÓ",
+        "departamento": "Antioquia",
+        "codigo": "05890"
+    },
+    {
+        "ciduad": "YONDÓ",
+        "departamento": "Antioquia",
+        "codigo": "05893"
+    },
+    {
+        "ciduad": "YOPAL",
+        "departamento": "Casanare",
+        "codigo": "85001"
+    },
+    {
+        "ciduad": "YOTOCO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76890"
+    },
+    {
+        "ciduad": "YUMBO",
+        "departamento": "Valle del Cauca",
+        "codigo": "76892"
+    },
+    {
+        "ciduad": "ZAMBRANO",
+        "departamento": "Bolívar",
+        "codigo": "13894"
+    },
+    {
+        "ciduad": "ZAPATOCA",
+        "departamento": "Santander",
+        "codigo": "68895"
+    },
+    {
+        "ciduad": "ZAPAYÁN",
+        "departamento": "Magdalena",
+        "codigo": "47960"
+    },
+    {
+        "ciduad": "ZARAGOZA",
+        "departamento": "Antioquia",
+        "codigo": "05895"
+    },
+    {
+        "ciduad": "ZARZAL",
+        "departamento": "Valle del Cauca",
+        "codigo": "76895"
+    },
+    {
+        "ciduad": "ZETAQUIRA",
+        "departamento": "Boyacá",
+        "codigo": "15897"
+    },
+    {
+        "ciduad": "ZIPACÓN",
+        "departamento": "Cundinamarca",
+        "codigo": "25898"
+    },
+    {
+        "ciduad": "ZIPAQUIRÁ",
+        "departamento": "Cundinamarca",
+        "codigo": "25899"
+    },
+    {
+        "ciduad": "ZONA BANANERA",
+        "departamento": "Magdalena",
+        "codigo": "47980"
+    }
+]

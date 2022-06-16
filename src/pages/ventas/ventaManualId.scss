@@ -1,0 +1,230 @@
+.formularioNewVenta {
+    div {
+        input, select, label {
+            margin: 1rem 0;
+            text-align: center;
+        }
+    }
+}
+.custom_selecr_ventaid {
+    select {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 40px;
+        appearance: normal;
+        cursor: pointer;
+    }
+}
+.modal_content_custom {
+    max-width: 60rem;
+    .modal-content {
+        .modal-header {
+            .modal-title{
+                font-size: xx-large;
+                text-align: center;
+                strong {
+                    color: #f00;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+.custom_imputs_modal {
+    table {
+        width: 100%;
+        tr {
+           td {
+                padding: 0 .3rem;
+           }
+        }
+    }
+
+}
+.custom_imputs_modal > table > tr  {
+   td {
+       input {
+           padding: 1.6rem;
+       }
+
+       select {
+           border: 1px solid #ccc;
+           padding: 1rem;
+           border-radius: 40px;
+           cursor: pointer;
+       }
+   }
+}
+.mensajesCont__div {
+    font-size: 1.4rem;
+    padding: 1rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    .mensajesCont {
+             background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            position: relative;
+            padding: .8rem;
+            border-radius: 50px;
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+            span {
+                font-size: 1.3rem;
+                position: absolute;
+                top: -1rem;
+                right: -.5rem;
+                background-color: #f00;
+                padding: 2px 10px;
+                border-radius: 100%;
+
+                animation: push .6s ease-in-out alternate infinite;
+            }
+
+            @keyframes push {
+                0% {transform: scale(.9);}
+                100% {transform: scale(1.2);}
+            }
+        }
+
+        .mensajesCont:hover {
+            background-color: #f00;
+        }
+}
+
+// Seccion adicional 
+.grid_adicionales_shopify {
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2rem;
+    
+}
+
+.guia_contenedor_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    .grid_datos_envio_pri {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.botonoes_guias_generar {
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.icon_close_modal_guia {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    svg {
+        font-size: 4rem;
+    }
+}
+.inico_generar_guia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    .selectt {
+        border: 1px solid #ccc;
+        appearance: auto ;
+        select {
+            padding: 1rem 3rem;
+                font-size: 2rem !important;
+                text-align: center;
+            }
+    }
+    
+}
+.grid_datos_contraentrega {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+
+    input {
+        text-align: center;
+    }
+}
+ .rotulo_tcc_guia_generada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    h1 {font-size: 5rem;
+        color: #f00;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    p {
+        color: rgb(41, 41, 41);
+        font-size: 2.1rem;
+        margin: 1rem; 
+    }
+    .mensaje_tcc {
+            color: rgb(19, 68, 4);
+            text-align: justify;
+        }
+    a {
+        text-decoration: underline;
+        color: rgb(216, 104, 104);
+        font-size: 2rem;
+    }
+ }
+.rotulo_no_generado_guia {
+    padding: 1rem 15rem;
+    h1 {
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+.boton_generar_guia_tcc {
+    background-color: #1f0 !important;
+    color: #fff !important;
+    text-align: center;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.confirmar_ciudad_guia_div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 3rem;
+
+    h1 {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .select_div_confirmar {
+        padding: 1rem 3rem;
+        margin: 2rem 0;
+
+    }
+    
+}
