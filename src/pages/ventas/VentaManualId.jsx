@@ -259,6 +259,7 @@ function VentaManualId(){
       obtenerCliente();
       setTimeout(() => {
         setAlerta({});
+        obtenerCliente();
       }, 2000);
     } catch (error) {
       console.log(error);
