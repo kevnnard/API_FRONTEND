@@ -83,6 +83,7 @@ function VentaManualId(){
   const [altoPaquete, setAltoPaquete] = useState("");
   const [anchoPaquete, setAnchoPaquete] = useState("");
   const [PesoVolumen, setPesoVolumen] = useState("");
+  const [observaciontcc, setObservacionTcc] = useState("");
   
   // recepcion datos DE TCC 
   const [tcc, setTcc] = useState({});
@@ -108,6 +109,7 @@ function VentaManualId(){
          }/dashboard/ventas-shopify/prueba/${id}`,
          {
            metodo_envio_tcc,
+           observaciontcc,
            kilosReales,
            largoPaquete,
            altoPaquete,
@@ -972,6 +974,9 @@ function VentaManualId(){
                                             Paqueteria - Contraentega
                                           </option>
                                         </select>
+                                      </div>
+                                      <div>
+                                        <input type="text" value={observaciontcc} onChange={(e) => setObservacionTcc(e.target.value)} />
                                       </div>
                                     </div>
                                     {metodo_envio_tcc == "paqueteriaPaga" ||
