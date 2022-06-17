@@ -49,7 +49,7 @@ function NavVentas() {
               </NavLink>
             </li>
           </ul>
-          {auth.role === "VENTA" || auth.role === "ADMIN" ? (
+          {auth.role === "VENTA" || auth.role === "SERVICIO" || auth.role === "ADMIN" ? (
             <li>
               <NavLink
                 to={`/dashboard/ventas-manuales/new/${auth._id}`}
