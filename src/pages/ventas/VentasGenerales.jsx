@@ -191,7 +191,7 @@ function VentasGenerale() {
                         ? { background: "#ff0", color: "#000" }
                         : { background: "#f00", color: "#fff" } &&
                           item.estado_pedido == "enviado"
-                        ? { background: "#1f0", color: "#fff" }
+                        ? { background: "#1f0", color: "#000" }
                         : { background: "#f00", color: "#fff" } &&
                           item.estado_pedido == "cancelado"
                         ? { background: "#ccc", color: "#000" }
@@ -279,7 +279,7 @@ function VentasGenerale() {
                     ? { background: "#ff0", color: "#000" }
                     : { background: "#f00", color: "#fff" } &&
                       ventaProvicional.data.estado_pedido == "enviado"
-                    ? { background: "#1f0", color: "#fff" }
+                    ? { background: "#1f0", color: "#000" }
                     : { background: "#f00", color: "#fff" } &&
                       ventaProvicional.data.estado_pedido == "cancelado"
                     ? { background: "#ccc", color: "#000" }
