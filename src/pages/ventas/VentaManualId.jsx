@@ -976,7 +976,7 @@ function VentaManualId(){
                                         </select>
                                       </div>
                                       <div>
-                                        <input type="text" value={observaciontcc} onChange={(e) => setObservacionTcc(e.target.value)} />
+                                        <input placeholder="Ingresa observacion" type="text" value={observaciontcc} onChange={(e) => setObservacionTcc(e.target.value)} />
                                       </div>
                                     </div>
                                     {metodo_envio_tcc == "paqueteriaPaga" ||

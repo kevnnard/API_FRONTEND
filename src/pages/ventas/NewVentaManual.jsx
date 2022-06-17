@@ -562,7 +562,7 @@ function NewVentaManual() {
                 <th>talla</th>
                 <th>CANTIDAD</th>
                 <th>precio por unidad</th>
-                <th>% Descuento por unidad </th>
+                <th>p Valor final por unidad </th>
                 <th>Accion</th>
               </tr>
               {productoState == true
@@ -600,7 +600,15 @@ function NewVentaManual() {
                         {item.precioVenta == null ? (
                           <p>Aun no tiene descuento</p>
                         ) : (
-                          <>{item.precioVenta} %</>
+                          <>
+                            {" "}
+                            {"$" +
+                              Intl.NumberFormat("es-ES", {
+                                style: "currency",
+                                currency: "COP",
+                                minimumFractionDigits: 0,
+                              }).format(item.precioVenta)}
+                          </>
                         )}
                       </td>
                       <td>
