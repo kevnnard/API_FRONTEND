@@ -373,7 +373,7 @@ function NewVentaManual() {
                 Selecciona la ciudad
               </option>
               {dataDane.map((item) => (
-                <option value={item.codigo}>
+                <option value={item.ciduad}>
                   {item.ciduad} - {item.departamento}
                 </option>
               ))}
@@ -452,7 +452,7 @@ function NewVentaManual() {
                 Elige una ciudad destino
               </option>
               {dataDane.map((item) => (
-                <option value={item.codigo}>
+                <option value={item.ciduad}>
                   {item.ciduad} - {item.departamento}
                 </option>
               ))}

@@ -95,10 +95,11 @@ function VentaManualId(){
   const params = useParams();
   const { id } = params;
 
+  const [ciudad_envio_verr, setCiudadEnvioVerr] = useState("");
+  
   useEffect(() => {
     obtenerCliente();
   }, []);
-
 
   const handleGenerarGuiaTcc = async (e) => {
     e.preventDefault();
@@ -309,14 +310,16 @@ function VentaManualId(){
     e.preventDefault();
     const confirmar = confirm("Seguro quieres borrar El Articulo ?");
     const result = venta.data.productos.find((vent) => vent.sku == producto);
+    console.log(result)
     const sku = result._id;
+    const skuS = result.id_shopify;
     if (confirmar) {
       try {
-        await axios.put(
+       const {data} =  await axios.put(
           `${
             import.meta.env.VITE_BACKEND_URL
           }/dashboard/ventas-manuales/delete/producto/${id}`,
-          { sku }
+          { sku, skuS }
         );
         obtenerCliente();
         setProducto("");
@@ -419,7 +422,6 @@ function VentaManualId(){
         }/dashboard/ventas-manuales/edit/mensajes/cont/${id}`;
         const { data } = await axios.get(url);
         setMensajesCont(data);
-        
       } catch (error) {
         console.log(error)
       }
@@ -977,7 +979,14 @@ function VentaManualId(){
                                         </select>
                                       </div>
                                       <div>
-                                        <input placeholder="Ingresa observacion" type="text" value={observaciontcc} onChange={(e) => setObservacionTcc(e.target.value)} />
+                                        <input
+                                          placeholder="Ingresa observacion"
+                                          type="text"
+                                          value={observaciontcc}
+                                          onChange={(e) =>
+                                            setObservacionTcc(e.target.value)
+                                          }
+                                        />
                                       </div>
                                     </div>
                                     {metodo_envio_tcc == "paqueteriaPaga" ||
@@ -1338,7 +1347,11 @@ function VentaManualId(){
                                   style: "currency",
                                   currency: "COP",
                                   minimumFractionDigits: 0,
-                                }).format(item.precioVentaConDescuento)}
+                                }).format(
+                                  item.precioVenta
+                                    ? item.precioVenta
+                                    : item.precioVentaConDescuento
+                                )}
                             </td>
                           ) : (
                             <td>
@@ -1359,181 +1372,166 @@ function VentaManualId(){
                           ) : (
                             ""
                           )}
-                          {venta.data.tienda == "Shopify" ? (
-                            ""
-                          ) : (
-                            <>
-                              {item.porcentajeDescuento != 0 ? (
-                                <td>
-                                  {auth.role === "SERVICIO" ||
-                                  auth.role === "ADMIN" ? (
-                                    <button
-                                      style={{
-                                        background: "#0f1",
-                                        color: "#fff",
-                                        padding: "5px",
-                                      }}
-                                      type="button"
-                                      className="btn btn-primary"
-                                      data-bs-toggle="modal"
-                                      data-bs-target="#exampleModall"
-                                      onMouseEnter={(e) =>
-                                        setProducto(item.sku)
-                                      }
-                                      onClick={handleSearchProducto}
-                                    >
-                                      Editar precio
-                                    </button>
-                                  ) : null}
+                          <>
+                            <td>
+                              {auth.role === "SERVICIO" ||
+                              auth.role === "ADMIN" ? (
+                                <button
+                                  style={{
+                                    background: "#0f1",
+                                    color: "#fff",
+                                    padding: "5px",
+                                  }}
+                                  type="button"
+                                  className="btn btn-primary"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#exampleModall"
+                                  onMouseEnter={(e) => setProducto(item.sku)}
+                                  onClick={handleSearchProducto}
+                                >
+                                  Editar precio
+                                </button>
+                              ) : null}
 
-                                  {productoProvicional == "" ? (
-                                    ""
-                                  ) : (
-                                    <>
-                                      {/* <!-- Modal --> */}
-                                      <div
-                                        style={{ color: "#000" }}
-                                        className="modal fade"
-                                        id="exampleModall"
-                                        tabindex="-1"
-                                        aria-labelledby="exampleModalLabel"
-                                        aria-hidden="true"
-                                      >
-                                        <div className="modal-dialog-centered modal-dialog">
-                                          <div className="modal-content">
-                                            <div className="modal-header flex_modal_custom">
-                                              <h1
-                                                style={{
-                                                  fontSize: "2rem",
-                                                  fontWeight: "bold",
-                                                }}
-                                                className="modal-title"
-                                                id="exampleModalLabel"
-                                              >
-                                                {productoProvicional.nombre}
-                                              </h1>
-                                              <p>
-                                                {" "}
-                                                SKU:{" "}
-                                                <strong>
-                                                  {productoProvicional.sku}
-                                                </strong>{" "}
-                                              </p>
-                                              <div>
-                                                <img
-                                                  width={250}
-                                                  src={productoProvicional.img}
-                                                  alt=""
-                                                />
-                                              </div>
-                                            </div>
-                                            <div className="modal-body">
-                                              <table>
-                                                <tr>
-                                                  <th>Cantidad</th>
-                                                  <th>precio/unidad</th>
-                                                  <th>valor final /unidad</th>
-                                                </tr>
-                                                <tr>
-                                                  <td>
-                                                    <input
-                                                      placeholder="Ingresa un valor"
-                                                      type="number"
-                                                      value={
-                                                        cantidadS == undefined
-                                                          ? ""
-                                                          : cantidadS
-                                                      }
-                                                      onChange={(e) =>
-                                                        setCantidad(
-                                                          e.target.value
-                                                        )
-                                                      }
-                                                    />
-                                                  </td>
-                                                  <td>
-                                                    {"$" +
-                                                      Intl.NumberFormat(
-                                                        "es-ES",
-                                                        {
-                                                          style: "currency",
-                                                          currency: "COP",
-                                                          minimumFractionDigits: 0,
-                                                        }
-                                                      ).format(
-                                                        productoProvicional.precio
-                                                      )}
-                                                  </td>
-                                                  <td>
-                                                    <input
-                                                      placeholder="Ingresa un valor"
-                                                      type="number"
-                                                      value={
-                                                        precioVenta == undefined
-                                                          ? ""
-                                                          : precioVenta
-                                                      }
-                                                      onChange={(e) =>
-                                                        setPrecioVenta(
-                                                          e.target.value
-                                                        )
-                                                      }
-                                                    />
-                                                  </td>
-                                                </tr>
-                                              </table>
-                                            </div>
-                                            <div className="modal-footer">
-                                              {btnprovicional == false ? (
-                                                <>
-                                                  <input
-                                                    className="btnn"
-                                                    style={{
-                                                      backgroundColor: "#1f0",
-                                                      color: "#fff",
-                                                      background:
-                                                        "#222d32 !important",
-                                                      margin: "1rem auto",
-                                                    }}
-                                                    type="button"
-                                                    value={`ACTUALIZAR PRODUCTO`}
-                                                    onClick={
-                                                      handleActualizarProductoo
-                                                    }
-                                                  />
-                                                </>
-                                              ) : (
-                                                <>
-                                                  <button
-                                                    className="btnn"
-                                                    style={{
-                                                      color: "#fff",
-                                                      background: "#f00",
-                                                      margin: "1rem auto",
-                                                    }}
-                                                    type="button"
-                                                    data-bs-dismiss="modal"
-                                                    onClick={handleCerrarr}
-                                                  >
-                                                    Cerrar Producto
-                                                  </button>
-                                                </>
-                                              )}
-                                              {msg && (
-                                                <Alerta alerta={alerta} />
-                                              )}
-                                            </div>
+                              {productoProvicional == "" ? (
+                                ""
+                              ) : (
+                                <>
+                                  {/* <!-- Modal --> */}
+                                  <div
+                                    style={{ color: "#000" }}
+                                    className="modal fade"
+                                    id="exampleModall"
+                                    tabindex="-1"
+                                    aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true"
+                                  >
+                                    <div className="modal-dialog-centered modal-dialog">
+                                      <div className="modal-content">
+                                        <div className="modal-header flex_modal_custom">
+                                          <h1
+                                            style={{
+                                              fontSize: "2rem",
+                                              fontWeight: "bold",
+                                            }}
+                                            className="modal-title"
+                                            id="exampleModalLabel"
+                                          >
+                                            {productoProvicional.nombre}
+                                          </h1>
+                                          <p>
+                                            {" "}
+                                            SKU:{" "}
+                                            <strong>
+                                              {productoProvicional.sku}
+                                            </strong>{" "}
+                                          </p>
+                                          <div>
+                                            <img
+                                              width={250}
+                                              src={productoProvicional.img}
+                                              alt=""
+                                            />
                                           </div>
                                         </div>
+                                        <div className="modal-body">
+                                          <table>
+                                            <tr>
+                                              <th>Cantidad</th>
+                                              <th>precio/unidad</th>
+                                              <th>valor final /unidad</th>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <input
+                                                  placeholder="Ingresa un valor"
+                                                  type="number"
+                                                  value={
+                                                    cantidadS == undefined
+                                                      ? ""
+                                                      : cantidadS
+                                                  }
+                                                  onChange={(e) =>
+                                                    setCantidad(e.target.value)
+                                                  }
+                                                />
+                                              </td>
+                                              <td>
+                                                {"$" +
+                                                  Intl.NumberFormat("es-ES", {
+                                                    style: "currency",
+                                                    currency: "COP",
+                                                    minimumFractionDigits: 0,
+                                                  }).format(
+                                                    productoProvicional.precio
+                                                      ? productoProvicional.precio
+                                                      : productoProvicional.precioVentaShopify
+                                                  )}
+                                              </td>
+                                              <td>
+                                                <input
+                                                  placeholder="Ingresa un valor"
+                                                  type="number"
+                                                  value={
+                                                    precioVenta == undefined
+                                                      ? ""
+                                                      : precioVenta
+                                                  }
+                                                  onChange={(e) =>
+                                                    setPrecioVenta(
+                                                      e.target.value
+                                                    )
+                                                  }
+                                                />
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </div>
+                                        <div className="modal-footer">
+                                          {btnprovicional == false ? (
+                                            <>
+                                              <input
+                                                className="btnn"
+                                                style={{
+                                                  backgroundColor: "#1f0",
+                                                  color: "#fff",
+                                                  background:
+                                                    "#222d32 !important",
+                                                  margin: "1rem auto",
+                                                }}
+                                                type="button"
+                                                value={`ACTUALIZAR PRODUCTO`}
+                                                onClick={
+                                                  handleActualizarProductoo
+                                                }
+                                              />
+                                            </>
+                                          ) : (
+                                            <>
+                                              <button
+                                                className="btnn"
+                                                style={{
+                                                  color: "#fff",
+                                                  background: "#f00",
+                                                  margin: "1rem auto",
+                                                }}
+                                                type="button"
+                                                data-bs-dismiss="modal"
+                                                onClick={handleCerrarr}
+                                              >
+                                                Cerrar Producto
+                                              </button>
+                                            </>
+                                          )}
+                                          {msg && <Alerta alerta={alerta} />}
+                                        </div>
                                       </div>
-                                    </>
-                                  )}
-                                </td>
-                              ) : (
-                                ""
+                                    </div>
+                                  </div>
+                                </>
                               )}
-                            </>
-                          )}
+                            </td>
+                          </>
                           <td>
                             {confirmProducto == true ? (
                               ""
@@ -1609,7 +1607,7 @@ function VentaManualId(){
                                                   <>
                                                     <th>Precio Comparacion</th>
                                                     <th>precio por unidad</th>
-                                                    <th>Precio a descontar</th>
+                                                    {/* <th>Precio a descontar</th> */}
                                                   </>
                                                 ) : (
                                                   <>
@@ -1617,7 +1615,9 @@ function VentaManualId(){
                                                   </>
                                                 )}
                                                 <th>Cantidad</th>
-                                                <th>precio total </th>
+                                                <th>
+                                                  precio final / unidades{" "}
+                                                </th>
                                                 {estado_pedidoo ==
                                                   "solicitado" ||
                                                 venta.data.estado_pedido ==
@@ -1661,10 +1661,12 @@ function VentaManualId(){
                                                             minimumFractionDigits: 0,
                                                           }
                                                         ).format(
-                                                          productoProvicional.precioVentaShopify
+                                                          productoProvicional.precio
+                                                            ? productoProvicional.precio
+                                                            : productoProvicional.precioVentaShopify
                                                         )}
                                                     </td>
-                                                    <td>
+                                                    {/* <td>
                                                       {"$" +
                                                         Intl.NumberFormat(
                                                           "es-ES",
@@ -1676,7 +1678,7 @@ function VentaManualId(){
                                                         ).format(
                                                           productoProvicional.porcentajeDescuento
                                                         )}
-                                                    </td>
+                                                    </td> */}
                                                     <td>
                                                       {
                                                         productoProvicional.cantidadS
@@ -1693,7 +1695,9 @@ function VentaManualId(){
                                                             minimumFractionDigits: 0,
                                                           }
                                                         ).format(
-                                                          productoProvicional.precioVentaConDescuento
+                                                          productoProvicional.precioVenta
+                                                            ? productoProvicional.precioVenta
+                                                            : productoProvicional.precioVentaConDescuento
                                                         )}
                                                     </td>
                                                   </>
