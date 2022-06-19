@@ -131,7 +131,7 @@ function VentasGenerale() {
           <input
             placeholder="BUSCAR POR # VENTA"
             value={ventaN}
-            onChange={(e) => setventaN(e.target.value)}
+            onChange={(e) => setventaN(e.target.value.trim())}
           />
           <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
         </div>
@@ -191,19 +191,25 @@ function VentasGenerale() {
                         ? { background: "#ff0", color: "#000" }
                         : { background: "#f00", color: "#fff" } &&
                           item.estado_pedido == "enviado"
-                        ? { background: "#1f0", color: "#000" }
+                        ? { background: "#0a0", color: "#000" }
                         : { background: "#f00", color: "#fff" } &&
                           item.estado_pedido == "cancelado"
-                        ? { background: "#ccc", color: "#000" }
+                        ? { background: "#777", color: "#fff" }
                         : { background: "#f00", color: "#fff" } &&
                           item.estado_pedido == "fallido"
-                        ? { background: "#ccc", color: "#000" }
+                        ? { background: "#777", color: "#fff" }
                         : { background: "#f00", color: "#fff" } &&
                           item.estado_pedido == "novedad"
-                        ? { background: "#f91", color: "#FFF" }
+                        ? { background: "#ff8000", color: "#fff" }
                         : { background: "#f00", color: "#fff" } &&
                           item.estado_pedido == "cambio"
-                        ? { background: "#09a", color: "#FFF" }
+                        ? { background: "#00f", color: "#FFF" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "facturar"
+                        ? { background: "#4b3629", color: "#FFF" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "finalizado"
+                        ? { background: "#000000", color: "#fff" }
                         : { background: "#f00", color: "#fff" }
                     }
                     key={item._id}
@@ -249,7 +255,7 @@ function VentasGenerale() {
                               style: "currency",
                               currency: "COP",
                               minimumFractionDigits: 0,
-                            }).format(item.precio)}
+                            }).format(item.ventaTotalSac)}
                         </>
                       )}
                     </td>
@@ -279,19 +285,25 @@ function VentasGenerale() {
                     ? { background: "#ff0", color: "#000" }
                     : { background: "#f00", color: "#fff" } &&
                       ventaProvicional.data.estado_pedido == "enviado"
-                    ? { background: "#1f0", color: "#000" }
+                    ? { background: "#0a0", color: "#000" }
                     : { background: "#f00", color: "#fff" } &&
                       ventaProvicional.data.estado_pedido == "cancelado"
-                    ? { background: "#ccc", color: "#000" }
+                    ? { background: "#777", color: "#fff" }
                     : { background: "#f00", color: "#fff" } &&
                       ventaProvicional.data.estado_pedido == "fallido"
-                    ? { background: "#ccc", color: "#000" }
+                    ? { background: "#777", color: "#fff" }
                     : { background: "#f00", color: "#fff" } &&
                       ventaProvicional.data.estado_pedido == "novedad"
-                    ? { background: "#f91", color: "#FFF" }
+                    ? { background: "#ff8000", color: "#fff" }
                     : { background: "#f00", color: "#fff" } &&
                       ventaProvicional.data.estado_pedido == "cambio"
-                    ? { background: "#09a", color: "#FFF" }
+                    ? { background: "#00f", color: "#FFF" }
+                    : { background: "#f00", color: "#fff" } &&
+                      ventaProvicional.data.estado_pedido == "facturar"
+                    ? { background: "#4b3629", color: "#FFF" }
+                    : { background: "#f00", color: "#fff" } &&
+                      ventaProvicional.data.estado_pedido == "finalizado"
+                    ? { background: "#000000", color: "#fff" }
                     : { background: "#f00", color: "#fff" }
                 }
                 key={ventaProvicional.data._id}
@@ -345,7 +357,7 @@ function VentasGenerale() {
                           style: "currency",
                           currency: "COP",
                           minimumFractionDigits: 0,
-                        }).format(ventaProvicional.data.precio)}
+                        }).format(ventaProvicional.data.ventaTotalSac)}
                     </>
                   )}
                 </td>

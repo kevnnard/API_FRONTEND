@@ -46,6 +46,7 @@ function VentaManualId(){
   const [departamento_envio, setDepartamento_envio] = useState("");
   const [direccion_envio, setDireccion_envio] = useState("");
   const [indicaciones_envio, setIndicaciones_envio] = useState("");
+  const [email_envio, setEmailEnvio] = useState("");
 
   const [btnprovicional_envio, setbtnprovicional_envio] = useState(false);
 
@@ -95,7 +96,6 @@ function VentaManualId(){
   const params = useParams();
   const { id } = params;
 
-  const [ciudad_envio_verr, setCiudadEnvioVerr] = useState("");
   
   useEffect(() => {
     obtenerCliente();
@@ -165,6 +165,7 @@ function VentaManualId(){
           departamento_envio,
           direccion_envio,
           indicaciones_envio,
+          email_envio,
         }
       );
       setAlerta({
@@ -176,6 +177,7 @@ function VentaManualId(){
       setDepartamento_envio("");
       setDireccion_envio("");
       setIndicaciones_envio("");
+      setEmailEnvio("");
       setbtnprovicional_envio(true);
       obtenerCliente();
 
@@ -377,10 +379,10 @@ function VentaManualId(){
             { nuPedidoSho }
           );
          setAlerta({ msg: data.msg });
-         navigate("/dashboard/ventas-manuales/despachos");
          setTimeout(() => { 
            setAlerta({});
-        }, 4000);
+           navigate("/dashboard/ventas-manuales/despachos");
+        }, 2000);
         } catch (error) {
           console.log(error);
         }
@@ -395,10 +397,10 @@ function VentaManualId(){
             { numeroVenta }
           );
            setAlerta({ msg: data.msg });
-           navigate("/dashboard/ventas-manuales/despachos");
            setTimeout(() => {
              setAlerta({});
-           }, 4000);
+              navigate("/dashboard/ventas-manuales/despachos");
+           }, 2000);
           } catch (error) {
             console.log(error)
           }
@@ -690,6 +692,16 @@ function VentaManualId(){
                                 }
                               />
                             </td>
+                            <td>
+                              <input
+                                type="email"
+                                value={email_envio}
+                                placeholder="Email"
+                                onChange={(e) =>
+                                  setEmailEnvio(e.target.value)
+                                }
+                              />
+                            </td>
                           </tr>
                         </table>
                       </div>
@@ -849,8 +861,11 @@ function VentaManualId(){
                 >
                   <option value="pendiente">Pendiente</option>
                   <option value="solicitado">Solicitado </option>
+                  <option value="enviado">Enviado</option>
+                  <option value="facturar">Por Facturar</option>
+                  <option value="finalizado">Finalizado</option>
+                  <option value="" disabled></option>
                   <option value="novedad">Novedad </option>
-                  <option value="enviado">Enviado </option>
                   <option value="cambio">Cambio </option>
                   <option value="cancelado">Venta Cancelada </option>
                   <option value="fallido">Venta Fallida </option>

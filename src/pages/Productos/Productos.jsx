@@ -89,28 +89,31 @@ function Productos() {
   }, []);
 
   const buscarProducto = async () => {
-    try {
-      const { data } = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/dashboard/producto/sku`,
-        {
-          skubusqueda,
-          nombrebusqueda
-        }
-      );
-      setProductoState(false);
-      setProductos({});
-      setProductoProvicional({ data });
-      setProductoProvicionalState(true);
-      setAlerta({
-        msg: data.msg,
-        error: data.error,
-      });
-      setTimeout(() => {
-        setAlerta({});
-      }, 3000);
-    } catch (error) {
-      console.log(error);
+    if ([skubusqueda, nombrebusqueda].includes == "") {
+      return setAlerta({msg: "Ingresa el numero de orden o nombre para buscar", error: true})
     }
+      try {
+        const { data } = await axios.post(
+          `${import.meta.env.VITE_BACKEND_URL}/dashboard/producto/sku`,
+          {
+            skubusqueda,
+            nombrebusqueda,
+          }
+        );
+        setProductoState(false);
+        setProductos({});
+        setProductoProvicional({ data });
+        setProductoProvicionalState(true);
+        setAlerta({
+          msg: data.msg,
+          error: data.error,
+        });
+        setTimeout(() => {
+          setAlerta({});
+        }, 3000);
+      } catch (error) {
+        console.log(error);
+      }
   };
 
   const ontenerProductos = async () => {
@@ -233,7 +236,7 @@ function Productos() {
           <input
             placeholder="Buscar por sku"
             value={skubusqueda}
-            onChange={(e) => setSkuBusqueda(e.target.value)}
+            onChange={(e) => setSkuBusqueda(e.target.value.trim())}
           />
           <SearchIcon className="icon" onClick={buscarProducto} />
         </div>
@@ -241,7 +244,7 @@ function Productos() {
           <input
             placeholder="Buscar por nombre"
             value={nombrebusqueda}
-            onChange={(e) => setNombreBusqueda(e.target.value)}
+            onChange={(e) => setNombreBusqueda(e.target.value.trim())}
           />
           <SearchIcon className="icon" onClick={buscarProducto} />
         </div>

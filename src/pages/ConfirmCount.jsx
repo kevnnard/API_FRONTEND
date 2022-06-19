@@ -41,11 +41,11 @@ function ConfirmCount() {
       </div>
       <div>
         {cuentaConfirmada && (
-          <nav className="lg:flex lg:justify-left">
-            <Link
-              className="block text-white my-5 text-m text-center"
-              to="/"
-            >
+          <nav
+            style={{ background: "#000", color: "#FFF", padding: "3rem" }}
+            className="lg:flex lg:justify-left"
+          >
+            <Link className="block text-white my-5 text-m text-center" to="/">
               Iniciar Sesion
             </Link>
           </nav>

@@ -27,16 +27,10 @@ function VentasManuales() {
    // paginacion de productos
   const [page, setPage] = useState(1);
 
-console.log(ventaProvicional)
   const handlePage = async (event, value) => {
     setPage(value);
     obtenerVentasManuales();
   };
-
-
-  useEffect(() => {
-    obtenerVentasManuales();
-  }, []);
   
   const ontenerventasShopify = async () => {
     try {
@@ -52,18 +46,17 @@ console.log(ventaProvicional)
     
   };
 
-
   const obtenerVentasManuales = async () => {
      try {
        const { data } = await axios.post(
          `${
            import.meta.env.VITE_BACKEND_URL
-         }/dashboard/ventas-manuales`,
+         }/dashboard/ventas-manuales/pendientes`,
          {
-           page
+           page,
          }
        );
-       setventas({ data });
+       setventas(data);
        setVentas(true);
       } catch (error) {
       console.log(error);
@@ -88,6 +81,7 @@ console.log(ventaProvicional)
             ventaN,
           }
         );
+        console.log(data)
         if (data.error == true) {
           setAlerta({msg: data.msg,  error: true})
           setTimeout(() => {
@@ -114,10 +108,15 @@ console.log(ventaProvicional)
      }
   };
 
+  
+  useEffect(() => {
+    obtenerVentasManuales();
+  }, []);
+
 
   let i = 0;
   if (ventass) {
-      for (i in ventas.data.docs) {
+      for (i in ventas.docs) {
        if (i.estado_pedido == "enviado") {
         break
        } else {
@@ -144,15 +143,16 @@ console.log(ventaProvicional)
                 fontSize: "2.2rem",
               }}
             >
-              {/* {i} */}
+              {i}
             </span>
           </h1>
           <div className="buscar_productos">
             <div>
               <input
+                trim
                 placeholder="BUSCAR POR # VENTA"
                 value={ventaN}
-                onChange={(e) => setventaN(e.target.value)}
+                onChange={(e) => setventaN(e.target.value.trim())}
               />
               <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
             </div>
@@ -178,9 +178,9 @@ console.log(ventaProvicional)
             <div className="paginate_productos">
               <Stack spacing={1}>
                 <Pagination
-                  count={ventas.data.totalPages}
+                  count={ventas.totalPages}
                   variant="outlined"
-                  page={ventas.data.page}
+                  page={ventas.page}
                   color="secondary"
                   onChange={handlePage}
                   hideNextButton
@@ -204,90 +204,78 @@ console.log(ventaProvicional)
                 <th>Accion</th>
               </thead>
               {ventass == true
-                ? ventas.data.docs.map((item) => (
+                ? ventas.docs.map((item) => (
                     <>
-                      {item.estado_pedido == "novedad" ? (
-                        ""
-                      ) : "" || item.estado_pedido == "enviado" ? (
-                        ""
-                      ) : "" || item.estado_pedido == "cancelado" ? (
-                        ""
-                      ) : "" || item.estado_pedido == "fallido" ? (
-                        ""
-                      ) : "" || item.estado_pedido == "cambio" ? (
-                        ""
-                      ) : (
-                        <tr
-                          style={
-                            item.estado_pedido == "solicitado"
-                              ? { background: "#ff0", color: "#000" }
-                              : { background: "#f00", color: "#fff" }
-                          }
-                          key={item._id}
-                        >
-                          <td>{cont++}</td>
+                      <tr
+                        style={
+                          item.estado_pedido == "pendiente"
+                            ? { background: "#f00", color: "#fff" }
+                            : { background: "#ff0", color: "#000" }
+                        }
+                        key={item._id}
+                      >
+                        <td>{cont++}</td>
+                        {item.tienda == "Shopify" ? (
+                          <td>
+                            {new Date(item.fechaShopify).toLocaleDateString()} A
+                            las{" "}
+                            {new Date(item.fechaShopify).toLocaleTimeString()}
+                          </td>
+                        ) : (
+                          <td>
+                            {new Date(item.fecha).toLocaleDateString()} A las{" "}
+                            {new Date(item.fecha).toLocaleTimeString()}
+                          </td>
+                        )}
+                        <td>{`${item.nuVenta}`}</td>
+                        <td>{item.cliente.nombre}</td>
+                        <td>{item.cliente.ciudad}</td>
+                        <td>{item.cliente.telefono}</td>
+                        <td>
+                          {item.pago.metodo_pago == "Cash on Delivery (COD)"
+                            ? "Pago Contra entrega"
+                            : item.pago.metodo_pago &&
+                              item.pago.metodo_pago ==
+                                "addi stating payment app"
+                            ? "Credito Addi"
+                            : item.pago.metodo_pago}
+                        </td>
+                        <td>
                           {item.tienda == "Shopify" ? (
-                            <td>
-                              {new Date(item.fechaShopify).toLocaleDateString()}{" "}
-                              A las{" "}
-                              {new Date(item.fechaShopify).toLocaleTimeString()}
-                            </td>
+                            <>
+                              {"$" +
+                                Intl.NumberFormat("es-ES", {
+                                  style: "currency",
+                                  currency: "COP",
+                                  minimumFractionDigits: 0,
+                                }).format(item.ventaTotalShopify)}
+                            </>
                           ) : (
-                            <td>
-                              {new Date(item.fecha).toLocaleDateString()} A las{" "}
-                              {new Date(item.fecha).toLocaleTimeString()}
-                            </td>
+                            <>
+                              {"$" +
+                                Intl.NumberFormat("es-ES", {
+                                  style: "currency",
+                                  currency: "COP",
+                                  minimumFractionDigits: 0,
+                                }).format(item.ventaTotalSac)}
+                            </>
                           )}
-                          <td>{`${item.nuVenta}`}</td>
-                          <td>{item.cliente.nombre}</td>
-                          <td>{item.cliente.ciudad}</td>
-                          <td>{item.cliente.telefono}</td>
-                          <td>
-                            {item.pago.metodo_pago == "Cash on Delivery (COD)"
-                              ? "Pago Contra entrega"
-                              : item.pago.metodo_pago &&
-                                item.pago.metodo_pago ==
-                                  "addi stating payment app"
-                              ? "Credito Addi"
-                              : item.pago.metodo_pago}
-                          </td>
-                          <td>
-                            {item.tienda == "Shopify" ? (
-                              <>
-                                {"$" +
-                                  Intl.NumberFormat("es-ES", {
-                                    style: "currency",
-                                    currency: "COP",
-                                    minimumFractionDigits: 0,
-                                  }).format(item.ventaTotalShopify)}
-                              </>
-                            ) : (
-                              <>
-                                {"$" +
-                                  Intl.NumberFormat("es-ES", {
-                                    style: "currency",
-                                    currency: "COP",
-                                    minimumFractionDigits: 0,
-                                  }).format(item.productos.precio)}
-                              </>
-                            )}
-                          </td>
-                          <td>
-                            <Link
-                              style={{
-                                fontSize: "1rem",
-                                background: "#fff",
-                                color: "#000",
-                                padding: "5px",
-                                borderRadius: "5px",
-                              }}
-                              to={`/dashboard/ventas-manuales/${item._id}`}
-                            >
-                              Editar
-                            </Link>
-                          </td>
-                        </tr>
-                      )}
+                        </td>
+                        <td>
+                          <Link
+                            style={{
+                              fontSize: "1rem",
+                              background: "#fff",
+                              color: "#000",
+                              padding: "5px",
+                              borderRadius: "5px",
+                            }}
+                            to={`/dashboard/ventas-manuales/${item._id}`}
+                          >
+                            Editar
+                          </Link>
+                        </td>
+                      </tr>
                     </>
                   ))
                 : null}
@@ -299,19 +287,25 @@ console.log(ventaProvicional)
                         ? { background: "#ff0", color: "#000" }
                         : { background: "#f00", color: "#fff" } &&
                           ventaProvicional.data.estado_pedido == "enviado"
-                        ? { background: "#1f0", color: "#fff" }
+                        ? { background: "#0a0", color: "#000" }
                         : { background: "#f00", color: "#fff" } &&
                           ventaProvicional.data.estado_pedido == "cancelado"
-                        ? { background: "#ccc", color: "#000" }
+                        ? { background: "#777", color: "#fff" }
                         : { background: "#f00", color: "#fff" } &&
                           ventaProvicional.data.estado_pedido == "fallido"
-                        ? { background: "#ccc", color: "#000" }
+                        ? { background: "#777", color: "#fff" }
                         : { background: "#f00", color: "#fff" } &&
                           ventaProvicional.data.estado_pedido == "novedad"
-                        ? { background: "#f91", color: "#FFF" }
+                        ? { background: "#ff8000", color: "#fff" }
                         : { background: "#f00", color: "#fff" } &&
                           ventaProvicional.data.estado_pedido == "cambio"
-                        ? { background: "#09a", color: "#FFF" }
+                        ? { background: "#00f", color: "#FFF" }
+                        : { background: "#f00", color: "#fff" } &&
+                          ventaProvicional.data.estado_pedido == "facturar"
+                        ? { background: "#4b3629", color: "#FFF" }
+                        : { background: "#f00", color: "#fff" } &&
+                          ventaProvicional.data.estado_pedido == "finalizado"
+                        ? { background: "#000000", color: "#fff" }
                         : { background: "#f00", color: "#fff" }
                     }
                     key={ventaProvicional.data._id}
@@ -369,7 +363,7 @@ console.log(ventaProvicional)
                               style: "currency",
                               currency: "COP",
                               minimumFractionDigits: 0,
-                            }).format(ventaProvicional.data.precio)}
+                            }).format(ventaProvicional.data.ventaTotalSac)}
                         </>
                       )}
                     </td>
@@ -395,9 +389,9 @@ console.log(ventaProvicional)
               <div className="paginate_productos">
                 <Stack spacing={1}>
                   <Pagination
-                    count={ventas.data.totalPages}
+                    count={ventas.totalPages}
                     variant="outlined"
-                    page={ventas.data.page}
+                    page={ventas.page}
                     color="secondary"
                     onChange={handlePage}
                     hideNextButton

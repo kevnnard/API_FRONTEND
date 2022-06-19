@@ -75,9 +75,14 @@ const Navbar = () => {
     <div className="navbar">
       <div className="wrapper">
         <div className="wrapper__logos">
+          {/* <img
+            width={50}
+            src={darkMode ? "/img/logo1B.png" : "/img/logo2N.png"}
+          /> */}
+          
           <img
-            width={200}
-            src={darkMode ? "/img/isoB.png" : "/img/logo2N.png"}
+            width={50}
+            src={darkMode ? "/img/gruporB.png" : "/img/gruporN.png"}
           />
         </div>
 
@@ -97,12 +102,15 @@ const Navbar = () => {
             <ListOutlinedIcon className="icon" />
           </div> */}
           <div className="item">
-            <img
-              src={darkMode ? "/img/logo1B.png" : "/img/logo2N.png"}
+            {/* <img 
+              width={20}
+              src={darkMode ?  "/img/gruporB.png" : "/img/gruporN.png"}
               alt=""
               className="avatar"
-            />
-            <span style={{fontWeight: "bold", textTransform: "uppercase"}}>{auth.nombre}</span>
+            /> */}
+            <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
+              {auth.nombre}
+            </span>
           </div>
         </div>
       </div>

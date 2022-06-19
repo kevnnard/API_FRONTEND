@@ -37,11 +37,11 @@ function LostPassword() {
     <main className="container mx-auto p-5 md:flex md:justify-center">
       <div className="md:w-2/3 lg:w-2/5">
         <div className="flex p-2">
-          <a href="https://www.foxracing.com.co/" target="_blank">
-            <img width="100%" src="/img/isoB.png" alt="" />
+          <a href="https://replays.com.co/" target="_blank">
+            <img width="100%" src="/img/gruporN.png" alt="" />
           </a>
           <a href="https://www.foxracing.com.co/" target="_blank">
-            <img width="100%" src="/img/isoB.png" alt="" />
+            <img width="100%" src="/img/isoN.png" alt="" />
           </a>
         </div>
         <h1 className="text-3xl text-center capitalize">Recupera tu acceso</h1>

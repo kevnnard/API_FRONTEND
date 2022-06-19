@@ -5,6 +5,7 @@ import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
 import ReportProblemRoundedIcon from "@mui/icons-material/ReportProblemRounded";
 import Inventory2RoundedIcon from "@mui/icons-material/Inventory2Rounded";
 import AddShoppingCartRoundedIcon from "@mui/icons-material/AddShoppingCartRounded";
+import PointOfSaleRoundedIcon from "@mui/icons-material/PointOfSaleRounded";
 
 function NavVentas() {
 
@@ -21,7 +22,7 @@ function NavVentas() {
                   className="btnn"
                   to="/dashboard/ventas-manuales/despachos"
                 >
-                  Bandeja de entrada{"   "}
+                  Despachos{"   "}
                   <ChatRoundedIcon />
                 </NavLink>
               </li>
@@ -38,6 +39,17 @@ function NavVentas() {
                 </NavLink>
               </li>
             ) : null}
+            {auth.role === "DESPACHO" || auth.role === "ADMIN" ? (
+              <li>
+                <NavLink
+                  className="btnn"
+                  to="/dashboard/ventas-manuales/facturacion"
+                >
+                  Por Facturar{"   "}
+                  <PointOfSaleRoundedIcon />
+                </NavLink>
+              </li>
+            ) : null}
             <li>
               <NavLink
                 className="btnn"
@@ -49,7 +61,9 @@ function NavVentas() {
               </NavLink>
             </li>
           </ul>
-          {auth.role === "VENTA" || auth.role === "SERVICIO" || auth.role === "ADMIN" ? (
+          {auth.role === "VENTA" ||
+          auth.role === "SERVICIO" ||
+          auth.role === "ADMIN" ? (
             <li>
               <NavLink
                 to={`/dashboard/ventas-manuales/new/${auth._id}`}

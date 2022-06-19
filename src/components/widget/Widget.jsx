@@ -4,18 +4,21 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import { Link } from "react-router-dom";
 
-const Widget = ({ type }) => {
+
+const Widget = ({ type, cantidad, ventaTotal }) => {
   let data;
 
   //temporary
-  const amount = 100;
+  const amount = cantidad;
+  const ventaT = ventaTotal;
   const diff = 20;
 
   switch (type) {
     case "user":
       data = {
-        title: "USERS",
+        title: "CLIENTES TOTALES",
         isMoney: false,
         link: "See all users",
         icon: (
@@ -31,9 +34,13 @@ const Widget = ({ type }) => {
       break;
     case "order":
       data = {
-        title: "ORDERS",
+        title: "ORDENES TOTALES",
         isMoney: false,
-        link: "View all orders",
+        link: (
+          <Link to="/dashboard/ventas-manuales/generales">
+            Ver Todas Las ordenes
+          </Link>
+        ),
         icon: (
           <ShoppingCartOutlinedIcon
             className="icon"
@@ -47,9 +54,9 @@ const Widget = ({ type }) => {
       break;
     case "earning":
       data = {
-        title: "EARNINGS",
+        title: "VENTAS TOTALES",
         isMoney: true,
-        link: "View net earnings",
+        link: "",
         icon: (
           <MonetizationOnOutlinedIcon
             className="icon"
@@ -83,7 +90,18 @@ const Widget = ({ type }) => {
       <div className="left">
         <span className="title">{data.title}</span>
         <span className="counter">
-          {data.isMoney && "$"} {amount}
+          {" "}
+          {amount || (
+            <>
+              {" "}
+              {"$" +
+                Intl.NumberFormat("es-ES", {
+                  style: "currency",
+                  currency: "COP",
+                  minimumFractionDigits: 0,
+                }).format(ventaT)}
+            </>
+          )}
         </span>
         <span className="link">{data.link}</span>
       </div>

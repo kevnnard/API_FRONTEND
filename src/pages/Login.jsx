@@ -47,11 +47,14 @@ function Login() {
       {auth.confirm ? (
         navigate("/dashboard")
       ) : (
-        <main style={{height: '100vh'}} className="md:flex md:justify-center align-items-center">
+        <main
+          style={{ height: "100vh" }}
+          className="md:flex md:justify-center align-items-center"
+        >
           <div className="md:w-2/3 lg:w-1/3">
             <div className="flex mt-5 p-5">
-              <a href="https://www.foxracing.com.co/" target="_blank">
-                <img width="100%" src="/img/isoN.png" alt="" />
+              <a href="https://replays.com.co/" target="_blank">
+                <img width="100%" src="/img/gruporN.png" alt="" />
               </a>
               <a href="https://www.foxracing.com.co/" target="_blank">
                 <img width="100%" src="/img/isoN.png" alt="" />
@@ -113,7 +116,7 @@ function Login() {
             <div className="text-center font-bold p-4">
               <p>Todos los derechos reservados Grupo-R S.A.S.©</p>
               <div className="flex justify-center align-items-center font-bold p-4">
-                <h3>APP GRUPO R</h3>
+                <h3>GRUPO R APP </h3>
                 <img width="5% " src="/img/logo1B.png" />
               </div>
             </div>

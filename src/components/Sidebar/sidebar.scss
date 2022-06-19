@@ -12,6 +12,7 @@
   position: fixed;
   height: 100vh;
   top: 2rem;
+  z-index: 9;
   background-color: #222d32;
   color: #fff;
   transition: all 1s ease-in-out;
@@ -88,4 +89,24 @@
           }
       }
   }
+}
+.online_status_user {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 0 0;
+  text-transform: capitalize;
+  .icon {
+    color: #1f0;
+    animation: online .9s ease-in-out alternate infinite ;
+    margin-right: .5rem;
+  }
+
+    @keyframes online {
+      0% {
+        transform: scale(.9);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
 }

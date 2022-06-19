@@ -22,6 +22,7 @@ import VentaManualId from './pages/ventas/VentaManualId';
 import NewVentaManual from './pages/ventas/NewVentaManual';
 import Novedades from './pages/ventas/Novedades';
 import VentasGenerale from './pages/ventas/VentasGenerales';
+import Facturacion from './pages/ventas/Facturacion';
 // import List from './pages/list/List';
 
 
@@ -57,8 +58,9 @@ function App() {
               <Route path="productos" element={<Productos />} />
 
               <Route path="ventas-manuales">
-                <Route path='despachos' element={<VentasManuales />} />
+                <Route path="despachos" element={<VentasManuales />} />
                 <Route path="novedades" element={<Novedades />} />
+                <Route path="facturacion" element={<Facturacion />} />
                 <Route path="generales" element={<VentasGenerale />} />
                 <Route path="new/:id" element={<NewVentaManual />} />
                 <Route path=":id" element={<VentaManualId />} />

@@ -213,26 +213,173 @@ function NewVentaManual() {
       ].includes("")
     ) {
       setAlerta({
-        msg: "Todos los campos son obligatorios",
+        msg: "Rellena Todos los campos",
         error: true,
       });
-      return;
-    }
-    if (cedula.length <= 7) {
-      setAlerta({
-        msg: "Las cedula o nit es muy corta almenos de 8 caracteres",
-        error: true,
-      });
-      return;
-    }
-    if (cedula.length >= 12) {
-      setAlerta({
-        msg: "Las cedula o nit es muy larga maximo de 11 caracteres",
-        error: true,
-      });
-      return;
-    } else {
-      setAlerta({});
+      setTimeout(() => {
+        setAlerta({});
+      }, 3000);
+       if (tienda.length == 0) {
+         setAlerta({
+           msg: "Elige una tienda para la venta",
+           error: true,
+         });
+         return;
+       }
+      if (cedula.length <= 7) {
+        setAlerta({
+          msg: "Las cedula o nit es muy corta almenos de 8 caracteres",
+          error: true,
+        });
+        return;
+      }
+      if (cedula.length >= 12) {
+        setAlerta({
+          msg: "Las cedula o nit es muy larga maximo de 11 caracteres",
+          error: true,
+        });
+        return;
+      }
+      if (nombre.length == 0) {
+        setAlerta({
+          msg: "Ingresa el nombre Completo",
+          error: true,
+        });
+        return;
+      }
+      if (departamento.length == 0) {
+        setAlerta({
+          msg: "Ingresa el departamento del cliente",
+          error: true,
+        });
+      }
+      if (ciudad.length == 0) {
+        setAlerta({
+          msg: "Ingresa la ciudad del cliente",
+          error: true,
+        });
+        return;
+      } 
+      if (direccion.length <= 6) {
+        setAlerta({
+          msg: "Ingresa una direccion del cliente valida",
+          error: true,
+        });
+        return;
+      } 
+      if (email.length <= 6) {
+        setAlerta({
+          msg: "Ingresa un Correo Elictronico del cliente valido",
+          error: true,
+        });
+        return;
+      }
+      if (telefono.length <= 6) {
+        setAlerta({
+          msg: "Ingresa un Telefono del cliente valido",
+          error: true,
+        });
+        return;
+      }
+       if (destinatario_envio.length <= 7) {
+         setAlerta({
+           msg: "Las cedula o nit del destinatario es muy corta almenos de 8 caracteres",
+           error: true,
+         });
+         return;
+       }
+       if (destinatario_envio.length >= 12) {
+         setAlerta({
+           msg: "Las cedula o nit del destinatario es muy larga maximo de 11 caracteres",
+           error: true,
+         });
+         return;
+       }
+        if (telefono_envio.length <= 6) {
+          setAlerta({
+            msg: "Ingresa un Telefono del destinatario valido",
+            error: true,
+          });
+          return;
+        } 
+         if (departamento_envio.length == 0) {
+           setAlerta({
+             msg: "Ingresa el departamento del destinatario",
+             error: true,
+           });
+         }
+         if (ciudad_envio.length == 0) {
+           setAlerta({
+             msg: "Ingresa la ciudad del destinatario",
+             error: true,
+           });
+           return;
+         } 
+          if (direccion_envio.length <= 6) {
+            setAlerta({
+              msg: "Ingresa una direccion del destinatario valida",
+              error: true,
+            });
+            return;
+          }
+           if (indicaciones_envio.length <= 3) {
+             setAlerta({
+               msg: "Ingresa Indicaciones para el envio",
+               error: true,
+             });
+             return;
+           }
+           if (metodo_pago.length == 0) {
+             setAlerta({
+               msg: "Seleccione un metodo de pago ",
+               error: true,
+             });
+             return;
+           }
+            if (referencia_pago.length == 0) {
+              setAlerta({
+                msg: "Ingrese una referencia de Pago ",
+                error: true,
+              });
+              return;
+            }
+            if (estado_pago.length == 0) {
+              setAlerta({
+                msg: "Seleccione el estado del pago",
+                error: true,
+              });
+              return;
+            }
+            if (productos.length == []) {
+              setAlerta({
+                msg: "Ingrese Productos para generar una venta",
+                error: true,
+              });
+              return;
+            }
+            if (cantidadS.length == 0) {
+              setAlerta({
+                msg: "Ingrese una cantidad para el producto",
+                error: true,
+              });
+              return;
+            } 
+            if (precioVenta.length == 0) {
+              setAlerta({
+                msg: "Ingrese un valor de venta al producto ",
+                error: true,
+              });
+              return;
+            } 
+             if (msgg.length <= 5) {
+               setAlerta({
+                 msg: "Ingrese un mensaje Valido para la venta",
+                 error: true,
+               });
+               return;
+             } else {
+               setAlerta({});
+             }
     }
     try {
       const { data } = await axios.post(
@@ -292,7 +439,7 @@ function NewVentaManual() {
         setTimeout(() => {
           setAlerta({});
           navigate('/dashboard/ventas-manuales/generales')
-        }, 5000);
+        }, 2000);
       }
     } catch (error) {
       setAlerta({

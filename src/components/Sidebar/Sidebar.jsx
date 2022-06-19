@@ -12,6 +12,7 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import CircleRoundedIcon from "@mui/icons-material/CircleRounded";
 import AnnouncementIcon from "@mui/icons-material/Announcement";
 import MenuIcon from "@mui/icons-material/Menu";
 import clsx from "clsx";
@@ -64,23 +65,39 @@ const Sidebar = () => {
           />
           <div className={class__change} id="sidebar">
             <div className="center">
+              <br />
+              <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
+                {auth.nombre}
+                <p className="online_status_user">
+                  {" "}
+                  <CircleRoundedIcon className="icon " /> Online
+                </p>
+              </span>
               <ul>
                 <p className="title">Inicio</p>
                 <li>
                   <DashboardIcon className="icon" />
-                  <Link className={class__change} to="/dashboard">
+                  <Link
+                    onClick={handleClick}
+                    className={class__change}
+                    to="/dashboard"
+                  >
                     <span>Panel de inicio</span>
                   </Link>
                 </li>
                 <p className="title">Tienda online</p>
-                <Link to="productos" style={{ textDecoration: "none" }}>
+                <Link
+                  onClick={handleClick}
+                  to="productos"
+                  style={{ textDecoration: "none" }}
+                >
                   <li>
                     <StoreIcon className="icon" />
                     <span>Productos</span>
                   </li>
                 </Link>
                 {auth.role === "DESPACHO" || auth.role === "ADMIN" ? (
-                  <Link to="ventas-manuales/despachos">
+                  <Link onClick={handleClick} to="ventas-manuales/despachos">
                     <li>
                       <LocalShippingIcon className="icon" />
                       <span>Despachos</span>
@@ -88,7 +105,7 @@ const Sidebar = () => {
                   </Link>
                 ) : null}
                 {auth.role === "VENTA" || auth.role === "ADMIN" ? (
-                  <Link to="ventas-manuales/generales">
+                  <Link onClick={handleClick} to="ventas-manuales/generales">
                     <li>
                       <CreditCardIcon className="icon" />
                       <span>Ventas</span>
@@ -96,7 +113,7 @@ const Sidebar = () => {
                   </Link>
                 ) : null}
                 {auth.role === "SERVICIO" || auth.role === "ADMIN" ? (
-                  <Link to="ventas-manuales/novedades">
+                  <Link onClick={handleClick} to="ventas-manuales/novedades">
                     <li>
                       <AnnouncementIcon className="icon" />
                       <span>Novedades</span>
@@ -130,7 +147,11 @@ const Sidebar = () => {
                 </li> */}
                 <p className="title">Usuario</p>
                 {auth.role === "ADMIN" ? (
-                  <Link to="users/signup" style={{ textDecoration: "none" }}>
+                  <Link
+                    onClick={handleClick}
+                    to="users/signup"
+                    style={{ textDecoration: "none" }}
+                  >
                     <li>
                       <PersonOutlineIcon className="icon" />
                       <span>Crear usuario</span>
@@ -140,7 +161,11 @@ const Sidebar = () => {
                   ""
                 )}
                 {auth.role === "ADMIN" ? (
-                  <Link to="users" style={{ textDecoration: "none" }}>
+                  <Link
+                    onClick={handleClick}
+                    to="users"
+                    style={{ textDecoration: "none" }}
+                  >
                     <li>
                       <PersonOutlineIcon className="icon" />
                       <span>Todos los usuarios</span>
@@ -151,7 +176,7 @@ const Sidebar = () => {
                 )}
                 <li>
                   <AccountCircleOutlinedIcon className="icon" />
-                  <Link to="perfil">
+                  <Link onClick={handleClick} to="perfil">
                     <span>Mi perfil</span>
                   </Link>
                 </li>
@@ -163,7 +188,7 @@ const Sidebar = () => {
                 </li>
               </ul>
             </div>
-            <div className="bottom">
+            {/* <div className="bottom">
               <div
                 className="colorOption"
                 onClick={() => dispatch({ type: "LIGHT" })}
@@ -172,12 +197,10 @@ const Sidebar = () => {
                 className="colorOption"
                 onClick={() => dispatch({ type: "DARK" })}
               ></div>
-            </div>
+            </div> */}
           </div>
         </>
-      ) : (
-        "CARGANDO"
-      )}
+      ) : null}
     </>
   );
 };
