@@ -17,18 +17,20 @@ function VentasGenerale() {
   const [ventaN, setventaN] = useState("");
   const [ventaProvicional, setVentaProvicional] = useState([]);
   const [ventaProvicionalState, setVentaProvicionalState] = useState(false);
+
+  // obtener vetas por estado de pedido
+  const [ventasEstado, setVentasEstado] = useState("");
+
   // Alerta de mensaje
   const [alerta, setAlerta] = useState({});
 
   // paginacion de productos
   const [page, setPage] = useState(1);
 
-
   const handlePage = async (event, value) => {
     setPage(value);
     obtenerVentasManuales();
   };
-
 
   useEffect(() => {
     obtenerVentasManuales();
@@ -53,6 +55,26 @@ function VentasGenerale() {
       setVentas(false);
     }
   };
+
+  const obtenerVentasManualesEstado = async () => {
+    try {
+      const { data } = await axios.post(
+        `${
+          import.meta.env.VITE_BACKEND_URL
+        }/dashboard/ventas-manuales/pendientes/estado`,
+        {
+          page,
+          ventasEstado,
+        }
+      );
+      setventas({data});
+      setVentas(true);
+    } catch (error) {
+      console.log(error);
+      setVentas(false);
+    }
+  };
+
 
   const obtenerVentaPorNumero = async (e) => {
     try {
@@ -129,15 +151,33 @@ function VentasGenerale() {
       <div className="buscar_productos">
         <div>
           <input
-            placeholder="BUSCAR POR # VENTA"
+            placeholder="BUSCAR POR NUMERO DE VENTA"
             value={ventaN}
             onChange={(e) => setventaN(e.target.value.trim())}
           />
           <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
         </div>
-        <div>
-          {/* <input placeholder="BUSCAR POR # CEDULA" />
-          <SearchIcon className="icon" onClick={obtenerVentaPorNumero} /> */}
+        <div className="filtar_estado_pedidos_despachos select">
+          <select
+            name=""
+            id=""
+            onChange={(e) => setVentasEstado(e.target.value)}
+            onClickCapture={obtenerVentasManualesEstado}
+          >
+            <option selected value="" disabled>
+              Filtrar por estado de pedido
+            </option>
+            <option value="pendiente">Pendiente</option>
+            <option value="solicitado">Solicitado </option>
+            <option value="enviado">Enviado</option>
+            <option value="facturar">Por Facturar</option>
+            <option value="finalizado">Finalizado</option>
+            <option value="" disabled></option>
+            <option value="novedad">Novedad </option>
+            <option value="cambio">Cambio </option>
+            <option value="cancelado">Venta Cancelada </option>
+            <option value="fallido">Venta Fallida </option>
+          </select>
         </div>
         <div>
           {/* <input placeholder="BUSCAR POR # VENTA" />
