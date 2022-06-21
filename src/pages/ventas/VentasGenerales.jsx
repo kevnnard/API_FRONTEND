@@ -185,19 +185,19 @@ function VentasGenerale() {
             <option value="fallido">Venta Fallida </option>
           </select>
         </div>
+        {/* <div>
+          <input placeholder="BUSCAR POR # VENTA" />
+          <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
+        </div> */}
         <div>
-          {/* <input placeholder="BUSCAR POR # VENTA" />
-          <SearchIcon className="icon" onClick={obtenerVentaPorNumero} /> */}
+          <button
+            className="btnn"
+            style={{ background: "#f00", color: "#fff"}}
+            onClick={actualizar}
+          >
+            ACtualizar Bandeja
+          </button>
         </div>
-      </div>
-      <div className="buscar_productos">
-        <button
-          className="btnn"
-          style={{ background: "#f00", color: "#fff" }}
-          onClick={actualizar}
-        >
-          ACtualizar Bandeja
-        </button>
       </div>
       <main className="main_pri_ventas">
         {ventass == true ? (

@@ -198,19 +198,20 @@ function VentasManuales() {
                 <option value="solicitado">Solicitado</option>
               </select>
             </div>
+
+            {/* <div>
+              <input placeholder="BUSCAR POR # CEDULA" />
+          <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
+            </div> */}
             <div>
-              {/* <input placeholder="BUSCAR POR # CEDULA" />
-          <SearchIcon className="icon" onClick={obtenerVentaPorNumero} /> */}
+              <button
+                className="btnn"
+                style={{ background: "#f00", color: "#fff" }}
+                onClick={ontenerventasShopify}
+              >
+                ACtualizar Bandeja
+              </button>
             </div>
-          </div>
-          <div className="buscar_productos">
-            <button
-              className="btnn"
-              style={{ background: "#f00", color: "#fff" }}
-              onClick={ontenerventasShopify}
-            >
-              ACtualizar Bandeja
-            </button>
           </div>
           {ventass == true ? (
             <div className="paginate_productos">
