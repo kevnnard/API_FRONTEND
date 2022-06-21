@@ -34,6 +34,7 @@ function VentasGenerale() {
      obtenerVentasManuales();
    } else {
      setPage2(value);
+     obtenerVentasManualesEstado();
    }
   };
 

@@ -33,11 +33,12 @@ function VentasManuales() {
   const [page2, setPage2] = useState(1);
 
   const handlePage = async (event, value) => {
-    if(setPage) {
+    if (ventasEstado === "") {
       setPage(value);
-        obtenerVentasManuales();
+      obtenerVentasManuales();
     } else {
-        setPage2(value);
+      setPage2(value);
+      obtenerVentasManualesEstado();
     }
   };
   
