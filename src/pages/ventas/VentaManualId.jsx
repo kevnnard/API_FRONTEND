@@ -513,7 +513,7 @@ function VentaManualId(){
                   name="email"
                   value={
                     venta.data.cliente.email == null
-                      ? "Solicitar al cliente "
+                      ? "Solicitar al cliente"
                       : venta.data.cliente.email
                   }
                 />
@@ -697,9 +697,7 @@ function VentaManualId(){
                                 type="email"
                                 value={email_envio}
                                 placeholder="Email"
-                                onChange={(e) =>
-                                  setEmailEnvio(e.target.value)
-                                }
+                                onChange={(e) => setEmailEnvio(e.target.value)}
                               />
                             </td>
                           </tr>
@@ -750,6 +748,9 @@ function VentaManualId(){
                   value={
                     venta.data.pago.metodo_pago == "Cash on Delivery (COD)"
                       ? "Contra Entrega"
+                      : venta.data.pago.metodo_pago &&
+                    venta.data.pago.metodo_pago == "addi stating payment app"
+                      ? "Credito Addi"
                       : venta.data.pago.metodo_pago
                   }
                 />
@@ -760,8 +761,8 @@ function VentaManualId(){
                   type="text"
                   name="referencia_pago"
                   value={
-                    venta.data.pago.referencia_pago == ""
-                      ? "Pendiente de pago"
+                    venta.data.pago.referencia_pago == null
+                      ? "Sin referencia de pago"
                       : venta.data.pago.referencia_pago
                   }
                 />
@@ -774,6 +775,9 @@ function VentaManualId(){
                   value={
                     venta.data.pago.estado_pago == "pending"
                       ? "Pendiente"
+                      : venta.data.pago.estado_pago &&
+                        venta.data.pago.estado_pago == "paid"
+                      ? "Completado"
                       : venta.data.pago.estado_pago
                   }
                 />
