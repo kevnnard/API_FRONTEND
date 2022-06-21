@@ -30,10 +30,15 @@ function VentasManuales() {
 
    // paginacion de productos
   const [page, setPage] = useState(1);
+  const [page2, setPage2] = useState(1);
 
   const handlePage = async (event, value) => {
-    setPage(value);
-    obtenerVentasManuales();
+    if(setPage) {
+      setPage(value);
+        obtenerVentasManuales();
+    } else {
+        setPage2(value);
+    }
   };
   
   const ontenerventasShopify = async () => {
@@ -75,7 +80,7 @@ function VentasManuales() {
           import.meta.env.VITE_BACKEND_URL
         }/dashboard/ventas-manuales/pendientes/estado`,
         {
-          page,
+          page2,
           ventasEstado,
         }
       );
@@ -212,7 +217,7 @@ function VentasManuales() {
                 <Pagination
                   count={ventas.totalPages}
                   variant="outlined"
-                  page={ventas.page}
+                  page={ventas.page ? ventas.page : ventas.page2}
                   color="secondary"
                   onChange={handlePage}
                   hideNextButton
@@ -423,7 +428,7 @@ function VentasManuales() {
                   <Pagination
                     count={ventas.totalPages}
                     variant="outlined"
-                    page={ventas.page}
+                    page={ventas.page ? ventas.page : ventas.page2}
                     color="secondary"
                     onChange={handlePage}
                     hideNextButton

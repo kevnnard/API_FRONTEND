@@ -26,10 +26,15 @@ function VentasGenerale() {
 
   // paginacion de productos
   const [page, setPage] = useState(1);
+  const [page2, setPage2] = useState(1);
 
   const handlePage = async (event, value) => {
-    setPage(value);
-    obtenerVentasManuales();
+   if (ventasEstado === "") {
+     setPage(value);
+     obtenerVentasManuales();
+   } else {
+     setPage2(value);
+   }
   };
 
   useEffect(() => {
@@ -63,7 +68,7 @@ function VentasGenerale() {
           import.meta.env.VITE_BACKEND_URL
         }/dashboard/ventas-manuales/pendientes/estado`,
         {
-          page,
+          page2,
           ventasEstado,
         }
       );
@@ -200,7 +205,7 @@ function VentasGenerale() {
               <Pagination
                 count={ventas.data.totalPages}
                 variant="outlined"
-                page={ventas.data.page}
+                page={ventas.page ? ventas.page : ventas.page2}
                 color="secondary"
                 onChange={handlePage}
                 hideNextButton
@@ -425,7 +430,7 @@ function VentasGenerale() {
               <Pagination
                 count={ventas.data.totalPages}
                 variant="outlined"
-                page={ventas.data.page}
+                page={ventas.page ? ventas.page : ventas.page2}
                 color="secondary"
                 onChange={handlePage}
                 hideNextButton
