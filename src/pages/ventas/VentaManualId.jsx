@@ -96,7 +96,6 @@ function VentaManualId(){
   const params = useParams();
   const { id } = params;
 
-  
   useEffect(() => {
     obtenerCliente();
   }, []);
@@ -447,6 +446,9 @@ function VentaManualId(){
               style={{ color: "#f00" }}
             >{`#${venta.data.nuVenta}`}</strong>
           </h2>
+          <h3 className="asesor_veta_sac">
+            Pedido Creado Por: <span>{venta.data.asesor ? venta.data.asesor : " Shopify"}</span>
+          </h3>
         </>
       ) : null}
       <main className=" md:flex md:justify-center">
@@ -749,7 +751,8 @@ function VentaManualId(){
                     venta.data.pago.metodo_pago == "Cash on Delivery (COD)"
                       ? "Contra Entrega"
                       : venta.data.pago.metodo_pago &&
-                    venta.data.pago.metodo_pago == "addi stating payment app"
+                        venta.data.pago.metodo_pago ==
+                          "addi stating payment app"
                       ? "Credito Addi"
                       : venta.data.pago.metodo_pago
                   }

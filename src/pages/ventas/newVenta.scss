@@ -395,3 +395,27 @@ label {
     display: flex;
     flex-direction: column;
 }
+.modal_nuPeido_neventa {
+background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.04);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.04);
+    h1 {
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+        span{
+            color: #f00;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 1rem;
+        }
+    }
+}

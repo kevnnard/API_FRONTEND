@@ -180,7 +180,7 @@ function VentasManuales() {
                 trim
                 placeholder="BUSCAR POR NUMERO DE VENTA"
                 value={ventaN}
-                onChange={(e) => setventaN(e.target.value.trim())}
+                onChange={(e) => setventaN(e.target.value.trim().toUpperCase())}
               />
               <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
             </div>

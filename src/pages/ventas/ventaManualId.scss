@@ -277,3 +277,15 @@
         }
     }
 }
+.asesor_veta_sac {
+    position: absolute;
+    top: 7rem;
+    margin: 1.7rem 3rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    span{
+        color: #f00;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

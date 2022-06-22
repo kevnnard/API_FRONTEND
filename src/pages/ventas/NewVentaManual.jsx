@@ -6,7 +6,18 @@ import NavVentas from "./NavVentas";
 import "./newVenta.scss";
 import dataDane from "./json/ciudades.json";
 import dataDane2 from "./json/departamentos.json"; 
+import Modal from "@mui/material/Modal";
+
+
 function NewVentaManual() {
+  //Modal 
+  const[open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false)
+    setPedidoNuRes("");
+    navigate("/dashboard/ventas-manuales/generales");
+  };
+  const [pedidoNuRes, setPedidoNuRes] = useState("");
   //
   //datos cliente
   const [cedula, setCedula] = useState();
@@ -411,6 +422,8 @@ function NewVentaManual() {
         }
       );
       if (data) {
+        setOpen(true);
+        setPedidoNuRes(data.venta);
         setProductoState(false);
         setNombre("");
         setCedula("");
@@ -434,12 +447,11 @@ function NewVentaManual() {
         setEstado_pago("");
         setMsg("");
         setAlerta({
-          msg: "Venta Sac creada con exito",
+          msg: `Venta Sac creada con exito`,
         });
         setTimeout(() => {
           setAlerta({});
-          navigate('/dashboard/ventas-manuales/generales')
-        }, 2000);
+        }, 5000);
       }
     } catch (error) {
       setAlerta({
@@ -455,6 +467,20 @@ function NewVentaManual() {
   return (
     <>
       <NavVentas />
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <div className="modal_nuPeido_neventa">
+          {pedidoNuRes ? (
+            <h1>
+              Pedido: <span>{pedidoNuRes}</span>
+            </h1>
+          ) : null}
+        </div>
+      </Modal>
       <h2 style={{ fontSize: "3rem", padding: "2rem", textAlign: "center" }}>
         Nuevo pedido <strong style={{ color: "#f00" }}>{`#SAC`}</strong>
       </h2>
