@@ -204,13 +204,15 @@ function VentasManuales() {
           <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
             </div> */}
             <div>
-              <button
+             {auth.role === "ADMIN" 
+             ?  <button
                 className="btnn"
                 style={{ background: "#f00", color: "#fff" }}
                 onClick={ontenerventasShopify}
               >
                 ACtualizar Bandeja
               </button>
+              : null}
             </div>
           </div>
           {ventass == true ? (
