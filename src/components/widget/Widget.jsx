@@ -7,11 +7,11 @@ import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlin
 import { Link } from "react-router-dom";
 
 
-const Widget = ({ type, cantidad, ventaTotal }) => {
+const Widget = ({ type, cantidad, ventaTotal, clientes }) => {
   let data;
 
   //temporary
-  const amount = cantidad;
+  const amount = cantidad || clientes;
   const ventaT = ventaTotal;
   const diff = 20;
 
@@ -20,13 +20,13 @@ const Widget = ({ type, cantidad, ventaTotal }) => {
       data = {
         title: "CLIENTES TOTALES",
         isMoney: false,
-        link: "See all users",
+        link: null,
         icon: (
           <PersonOutlinedIcon
             className="icon"
             style={{
-              color: "crimson",
-              backgroundColor: "rgba(255, 0, 0, 0.2)",
+              color: "#f21",
+              backgroundColor: "rgba(200, 0, 110, .4)",
             }}
           />
         ),

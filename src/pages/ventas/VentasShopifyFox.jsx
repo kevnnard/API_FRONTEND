@@ -16,7 +16,6 @@ function VentasShopifyFox() {
       const { data } = await axios.get(url);
       setventas({ data });
       setVentas(true);
-      console.log(data)
     } catch (error) {
       setVentas(false);
     }
