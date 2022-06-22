@@ -203,16 +203,14 @@ function VentasManuales() {
               <input placeholder="BUSCAR POR # CEDULA" />
           <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
             </div> */}
-            <div>
-             {auth.role === "ADMIN" 
-             ?  <button
+            <div> 
+              <button
                 className="btnn"
                 style={{ background: "#f00", color: "#fff" }}
                 onClick={ontenerventasShopify}
               >
                 ACtualizar Bandeja
               </button>
-              : null}
             </div>
           </div>
           {ventass == true ? (
