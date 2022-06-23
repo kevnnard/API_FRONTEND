@@ -481,7 +481,7 @@ function VentaManualId(){
                   value={venta.data.cliente.nombre}
                 />
               </div>
-              <div>
+              {/* <div>
                 <label>Departamento</label>
                 <input
                   type="text"
@@ -498,7 +498,7 @@ function VentaManualId(){
                   id="departamento"
                   value={venta.data.cliente.ciudad}
                 />
-              </div>
+              </div> */}
               {/* <div>
                 <label>Direccion</label>
                 <input
