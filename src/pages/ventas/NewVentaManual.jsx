@@ -1,5 +1,5 @@
 import axios from "axios";
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import {  useNavigate, useParams } from "react-router-dom";
 import Alerta from "../../components/Alerta";
 import NavVentas from "./NavVentas";
@@ -7,6 +7,7 @@ import "./newVenta.scss";
 import dataDane from "./json/ciudades.json";
 import dataDane2 from "./json/departamentos.json"; 
 import Modal from "@mui/material/Modal";
+import io from "socket.io-client";
 
 
 function NewVentaManual() {
@@ -463,6 +464,7 @@ function NewVentaManual() {
     
   };
 
+ 
   const { msg } = alerta;
   return (
     <>

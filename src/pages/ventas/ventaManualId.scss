@@ -1,11 +1,15 @@
 .formularioNewVenta {
     div {
-        input, select, label {
+
+        input,
+        select,
+        label {
             margin: 1rem 0;
             text-align: center;
         }
     }
 }
+
 .custom_selecr_ventaid {
     select {
         border: 1px solid #ccc;
@@ -16,13 +20,16 @@
         cursor: pointer;
     }
 }
+
 .modal_content_custom {
     max-width: 60rem;
+
     .modal-content {
         .modal-header {
-            .modal-title{
+            .modal-title {
                 font-size: xx-large;
                 text-align: center;
+
                 strong {
                     color: #f00;
                     font-weight: bold;
@@ -32,31 +39,35 @@
         }
     }
 }
+
 .custom_imputs_modal {
     table {
         width: 100%;
+
         tr {
-           td {
+            td {
                 padding: 0 .3rem;
-           }
+            }
         }
     }
 
 }
-.custom_imputs_modal > table > tr  {
-   td {
-       input {
-           padding: 1.6rem;
-       }
 
-       select {
-           border: 1px solid #ccc;
-           padding: 1rem;
-           border-radius: 40px;
-           cursor: pointer;
-       }
-   }
+.custom_imputs_modal>table>tr {
+    td {
+        input {
+            padding: 1.6rem;
+        }
+
+        select {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+    }
 }
+
 .mensajesCont__div {
     font-size: 1.4rem;
     padding: 1rem;
@@ -65,35 +76,42 @@
     right: 2rem;
     display: flex;
     flex-direction: row-reverse;
+
     .mensajesCont {
-             background-color: rgb(0, 0, 0);
-            color: rgb(255, 255, 255);
-            position: relative;
-            padding: .8rem;
-            border-radius: 50px;
-            transition: all .5s ease-in-out;
-            cursor: pointer;
-            span {
-                font-size: 1.3rem;
-                position: absolute;
-                top: -1rem;
-                right: -.5rem;
-                background-color: #f00;
-                padding: 2px 10px;
-                border-radius: 100%;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        position: relative;
+        padding: .8rem;
+        border-radius: 50px;
+        transition: all .5s ease-in-out;
+        cursor: pointer;
 
-                animation: push .6s ease-in-out alternate infinite;
-            }
-
-            @keyframes push {
-                0% {transform: scale(.9);}
-                100% {transform: scale(1.2);}
-            }
-        }
-
-        .mensajesCont:hover {
+        span {
+            font-size: 1.3rem;
+            position: absolute;
+            top: -1rem;
+            right: -.5rem;
             background-color: #f00;
+            padding: 2px 10px;
+            border-radius: 100%;
+
+            animation: push .6s ease-in-out alternate infinite;
         }
+
+        @keyframes push {
+            0% {
+                transform: scale(.9);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .mensajesCont:hover {
+        background-color: #f00;
+    }
 }
 
 // Seccion adicional 
@@ -104,7 +122,7 @@
     justify-content: center;
     align-items: flex-end;
     gap: 2rem;
-    
+
 }
 
 .guia_contenedor_grid {
@@ -130,32 +148,38 @@
     justify-content: center;
     align-items: center;
 }
+
 .icon_close_modal_guia {
     cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
+
     svg {
         font-size: 4rem;
     }
 }
+
 .inico_generar_guia {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     width: 100%;
+
     .selectt {
         border: 1px solid #ccc;
-        appearance: auto ;
+        appearance: auto;
+
         select {
             padding: 1rem 3rem;
-                font-size: 2rem !important;
-                text-align: center;
-            }
+            font-size: 2rem !important;
+            text-align: center;
+        }
     }
-    
+
 }
+
 .grid_datos_contraentrega {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -167,40 +191,48 @@
         text-align: center;
     }
 }
- .rotulo_tcc_guia_generada {
+
+.rotulo_tcc_guia_generada {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
 
-    h1 {font-size: 5rem;
+    h1 {
+        font-size: 5rem;
         color: #f00;
         font-weight: bold;
         text-decoration: none;
     }
+
     p {
         color: rgb(41, 41, 41);
         font-size: 2.1rem;
-        margin: 1rem; 
+        margin: 1rem;
     }
+
     .mensaje_tcc {
-            color: rgb(19, 68, 4);
-            text-align: justify;
-        }
+        color: rgb(19, 68, 4);
+        text-align: justify;
+    }
+
     a {
         text-decoration: underline;
         color: rgb(216, 104, 104);
         font-size: 2rem;
     }
- }
+}
+
 .rotulo_no_generado_guia {
     padding: 1rem 15rem;
+
     h1 {
         text-decoration: none;
         font-weight: bold;
     }
 }
+
 .boton_generar_guia_tcc {
     background-color: #1f0 !important;
     color: #fff !important;
@@ -209,7 +241,7 @@
     width: 100%;
 }
 
-.confirmar_ciudad_guia_div{
+.confirmar_ciudad_guia_div {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -221,13 +253,15 @@
         text-decoration: none;
         font-weight: bold;
     }
+
     .select_div_confirmar {
         padding: 1rem 3rem;
         margin: 2rem 0;
 
     }
-    
+
 }
+
 .envio_datos_finales {
     grid-column: 3 / 5;
     grid-row: 10 / 15;
@@ -240,6 +274,7 @@
     height: 100%;
     width: 100%;
     position: relative;
+
     h1 {
         width: max-content;
         font-weight: bold;
@@ -258,6 +293,7 @@
         }
     }
 }
+
 .total_venta_sumatoria {
     display: flex;
     justify-items: center;
@@ -267,6 +303,7 @@
     div {
         border: 1px solid #ccc;
         padding: 2rem;
+
         h2 {
             font-size: 2rem;
 
@@ -277,15 +314,52 @@
         }
     }
 }
+
 .asesor_veta_sac {
     position: absolute;
     top: 7rem;
     margin: 1.7rem 3rem;
     padding: 1rem;
     border: 1px solid #ccc;
-    span{
+
+    span {
         color: #f00;
         font-weight: bold;
         text-transform: uppercase;
+    }
+}
+
+.usuarios_editando_pedido {
+    z-index: 100;
+    padding: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.61);
+    -webkit-box-shadow: 0px 2px 23px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 23px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modalBoxx {
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 80%;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.04);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(233, 71, 71, 0.04);
+    h1 {
+        font-weight: bold;
+        font-size: 5rem;
+        text-align: center;
+        text-transform: uppercase;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

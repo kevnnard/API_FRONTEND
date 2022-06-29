@@ -8,6 +8,7 @@ import Alerta from "../../components/Alerta";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import useAuth from "../../hooks/useAuth";
+import io from 'socket.io-client'
 
 function VentasManuales() {
   const auth = useAuth();
@@ -136,9 +137,13 @@ function VentasManuales() {
      }
   };
 
-  
+  let socket;
   useEffect(() => {
     obtenerVentasManuales();
+  }, []);
+
+  useEffect(() => {
+    socket = io(import.meta.env.VITE_BACKEND_URL);
   }, []);
 
 

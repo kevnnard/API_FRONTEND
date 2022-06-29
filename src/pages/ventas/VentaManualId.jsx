@@ -14,6 +14,7 @@ import Typography from "@mui/material/Typography";
 import GuiaBogo from "./GuiaBogo";
 import dataDane from "./json/ciudades.json";
 import dataDane2 from "./json/departamentos.json"; 
+import io from "socket.io-client";
 
 function VentaManualId(){
 
@@ -29,6 +30,11 @@ function VentaManualId(){
       setTcc({});
       setEstadoTcc(false);
       setCiudadCambioFcs(false)
+    };
+    const [open3, setOpen3] = useState(false);
+    const handleOpen3 = () => setOpen3(true);
+    const handleClose3 = () => {
+      setOpen3(false);
     };
 
  // cambio de ciudad si es venta fcs para generar guia de Tcc 
@@ -89,6 +95,10 @@ function VentaManualId(){
   // recepcion datos DE TCC 
   const [tcc, setTcc] = useState({});
   const [estadoTcc, setEstadoTcc] = useState(false);
+
+  // Usuario editando un pedido 
+  const [usuariosPedidoId, setUsuariosPedidoId] = useState("");
+
   // alerta
   const [alerta, setAlerta] = useState({});
 
@@ -96,9 +106,6 @@ function VentaManualId(){
   const params = useParams();
   const { id } = params;
 
-  useEffect(() => {
-    obtenerCliente();
-  }, []);
 
   const handleGenerarGuiaTcc = async (e) => {
     e.preventDefault();
@@ -431,7 +438,31 @@ function VentaManualId(){
       setVentas(false);
     }
   };
+   
+    
+   let socket = io();
+    
+   useEffect(() => {
+    obtenerCliente();
+    socket = io(import.meta.env.VITE_BACKEND_URL);
+    socket.emit("edicion", { id, auth });
+   }, [])
 
+   useEffect(() => {
+     socket.on("usuario", ({ usuario }) => {
+       if (usuario != true) {
+         setUsuariosPedidoId(usuario);
+         handleOpen3(true);
+         return;
+       } else {
+         setAlerta({ msg: msg, error: true });
+         return;
+       }
+     });
+   }, []);
+   
+ 
+ 
   const { msg } = alerta;
   return (
     <>
@@ -447,7 +478,8 @@ function VentaManualId(){
             >{`#${venta.data.nuVenta}`}</strong>
           </h2>
           <h3 className="asesor_veta_sac">
-            Pedido Creado Por: <span>{venta.data.asesor ? venta.data.asesor : " Shopify"}</span>
+            Pedido Creado Por:{" "}
+            <span>{venta.data.asesor ? venta.data.asesor : " Shopify"}</span>
           </h3>
         </>
       ) : null}
@@ -1237,6 +1269,17 @@ function VentaManualId(){
               ) : (
                 ""
               )}
+              {/* QUIEN ESTA VIENDO EL PEIDO O EDITANDO */}
+              <Modal
+                width="100%"
+                open={open3}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <div className="modalBoxx">
+                  <h1>¡"{usuariosPedidoId}" entro a editar el pedido!</h1>
+                </div>
+              </Modal>
               <hr style={{ gridColumn: " 1 / 5" }} />
 
               <div id="mensajesPendientes"></div>
