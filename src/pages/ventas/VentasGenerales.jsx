@@ -151,7 +151,7 @@ function VentasGenerale() {
             fontSize: "2.2rem",
           }}
         >
-          {ventas.data.totalDocs}
+          {ventas.totalDocs}
         </span>
       </h1>
       <div className="buscar_productos">
