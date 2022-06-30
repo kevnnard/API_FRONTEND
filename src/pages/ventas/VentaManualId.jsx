@@ -900,6 +900,7 @@ function VentaManualId(){
                 >
                   <option value="pendiente">Pendiente</option>
                   <option value="solicitado">Solicitado </option>
+                  <option value="parcial">Por Completar </option>
                   <option value="enviado">Enviado</option>
                   <option value="facturar">Por Facturar</option>
                   <option value="finalizado">Finalizado</option>

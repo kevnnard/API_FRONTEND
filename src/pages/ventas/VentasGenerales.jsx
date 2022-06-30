@@ -151,7 +151,7 @@ function VentasGenerale() {
             fontSize: "2.2rem",
           }}
         >
-          {i}
+          {ventas.data.totalDocs}
         </span>
       </h1>
       <div className="buscar_productos">
@@ -175,6 +175,7 @@ function VentasGenerale() {
             </option>
             <option value="pendiente">Pendiente</option>
             <option value="solicitado">Solicitado </option>
+            <option value="parcial">Por Completar </option>
             <option value="enviado">Enviado</option>
             <option value="facturar">Por Facturar</option>
             <option value="finalizado">Finalizado</option>
@@ -192,7 +193,7 @@ function VentasGenerale() {
         <div>
           <button
             className="btnn"
-            style={{ background: "#f00", color: "#fff"}}
+            style={{ background: "#f00", color: "#fff" }}
             onClick={actualizar}
           >
             ACtualizar Bandeja
@@ -234,10 +235,13 @@ function VentasGenerale() {
                   <tr
                     style={
                       item.estado_pedido == "solicitado"
-                        ? { background: "#ff0", color: "#000" }
+                        ? { background: "#e1e114", color: "#000" }
                         : { background: "#f00", color: "#fff" } &&
                           item.estado_pedido == "enviado"
-                        ? { background: "#0a0", color: "#000" }
+                        ? { background: "#006400", color: "#000" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "parcial"
+                        ? { background: "#aed3e3", color: "#000" }
                         : { background: "#f00", color: "#fff" } &&
                           item.estado_pedido == "cancelado"
                         ? { background: "#777", color: "#fff" }
@@ -328,10 +332,13 @@ function VentasGenerale() {
               <tr
                 style={
                   ventaProvicional.data.estado_pedido == "solicitado"
-                    ? { background: "#ff0", color: "#000" }
+                    ? { background: "#e1e114", color: "#000" }
                     : { background: "#f00", color: "#fff" } &&
                       ventaProvicional.data.estado_pedido == "enviado"
-                    ? { background: "#0a0", color: "#000" }
+                    ? { background: "#006400", color: "#000" }
+                    : { background: "#f00", color: "#fff" } &&
+                      ventaProvicional.data.estado_pedido == "parcial"
+                    ? { background: "#aed3e3", color: "#000" }
                     : { background: "#f00", color: "#fff" } &&
                       ventaProvicional.data.estado_pedido == "cancelado"
                     ? { background: "#777", color: "#fff" }

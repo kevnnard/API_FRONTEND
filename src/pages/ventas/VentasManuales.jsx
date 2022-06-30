@@ -176,7 +176,7 @@ function VentasManuales() {
                 fontSize: "2.2rem",
               }}
             >
-              {i}
+              {ventas.totalDocs}
             </span>
           </h1>
           <div className="buscar_productos">
@@ -200,6 +200,7 @@ function VentasManuales() {
                   Filtrar por estado de pedido
                 </option>
                 <option value="pendiente">Pendiente</option>
+                <option value="parcial">Por Completar</option>
                 <option value="solicitado">Solicitado</option>
               </select>
             </div>
@@ -208,7 +209,7 @@ function VentasManuales() {
               <input placeholder="BUSCAR POR # CEDULA" />
           <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
             </div> */}
-            <div> 
+            <div>
               <button
                 className="btnn"
                 style={{ background: "#f00", color: "#fff" }}
@@ -254,6 +255,9 @@ function VentasManuales() {
                         style={
                           item.estado_pedido == "pendiente"
                             ? { background: "#f00", color: "#fff" }
+                            : { background: "#ff0", color: "#000" } &&
+                              item.estado_pedido == "parcial"
+                            ? { background: "#aed3e3", color: "#000" }
                             : { background: "#ff0", color: "#000" }
                         }
                         key={item._id}
@@ -328,10 +332,13 @@ function VentasManuales() {
                   <tr
                     style={
                       ventaProvicional.data.estado_pedido == "solicitado"
-                        ? { background: "#ff0", color: "#000" }
+                        ? { background: "#e1e114", color: "#000" }
                         : { background: "#f00", color: "#fff" } &&
                           ventaProvicional.data.estado_pedido == "enviado"
-                        ? { background: "#0a0", color: "#000" }
+                        ? { background: "#006400", color: "#000" }
+                        : { background: "#f00", color: "#fff" } &&
+                          ventaProvicional.data.estado_pedido == "parcial"
+                        ? { background: "#aed3e3", color: "#000" }
                         : { background: "#f00", color: "#fff" } &&
                           ventaProvicional.data.estado_pedido == "cancelado"
                         ? { background: "#777", color: "#fff" }

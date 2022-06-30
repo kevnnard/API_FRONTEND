@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import NavVentas from "./NavVentas";
 import useAuth from "../../hooks/useAuth";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 
 function Facturacion() {
   // auth
@@ -12,13 +14,28 @@ function Facturacion() {
   //ventas Sac
   const [ventas, setventas] = useState({});
   const [ventass, setVentas] = useState(false);
+  // paginacion de productos
+  const [page, setPage] = useState(1);
+
+  const handlePage = async (event, value) => {
+    if (ventasEstado === "") {
+      setPage(value);
+      obtenerVentasManuales();
+    }
+  };
+
 
   const obtenerVentasManuales = async () => {
     try {
-      const url = `${
-        import.meta.env.VITE_BACKEND_URL
-      }/dashboard/ventas-manuales/facturacion`;
-      const { data } = await axios.post(url);
+       const { data } = await axios.post(
+         `${
+           import.meta.env.VITE_BACKEND_URL
+         }/dashboard/ventas-manuales/facturacion`,
+         {
+           page,
+         }
+       );
+       console.log(data)
       setventas(data);
       setVentas(true);
     } catch (error) {
@@ -62,7 +79,7 @@ function Facturacion() {
                 fontSize: "2.2rem",
               }}
             >
-              {i}
+              {ventas.totalDocs}
             </span>
           </h1>
           {/* <div className="buscar_ventas">
@@ -80,6 +97,22 @@ function Facturacion() {
             </button>
           </div>
           <main className="main_pri_ventas">
+            {ventass == true ? (
+              <div className="paginate_productos">
+                <Stack spacing={1}>
+                  <Pagination
+                    count={ventas.totalPages}
+                    variant="outlined"
+                    page={ventas.page}
+                    color="secondary"
+                    onChange={handlePage}
+                    hideNextButton
+                  />
+                </Stack>
+              </div>
+            ) : (
+              ""
+            )}
             <table>
               <thead>
                 <th>#</th>
@@ -93,7 +126,7 @@ function Facturacion() {
                 <th>Accion</th>
               </thead>
               {ventass == true
-                ? ventas.map((item) => (
+                ? ventas.docs.map((item) => (
                     <>
                       <tr
                         style={{ background: "#4b3629", color: "#fff" }}
@@ -165,6 +198,22 @@ function Facturacion() {
                   ))
                 : null}
             </table>
+            {ventass == true ? (
+              <div className="paginate_productos">
+                <Stack spacing={1}>
+                  <Pagination
+                    count={ventas.totalPages}
+                    variant="outlined"
+                    page={ventas.page}
+                    color="secondary"
+                    onChange={handlePage}
+                    hideNextButton
+                  />
+                </Stack>
+              </div>
+            ) : (
+              ""
+            )}
           </main>
         </>
       ) : (
