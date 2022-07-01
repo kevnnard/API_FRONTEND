@@ -23,6 +23,7 @@ import NewVentaManual from './pages/ventas/NewVentaManual';
 import Novedades from './pages/ventas/Novedades';
 import VentasGenerale from './pages/ventas/VentasGenerales';
 import Facturacion from './pages/ventas/Facturacion';
+import VentasPorUsuario from './pages/Estadisticas/VentasPorUsuario';
 // import List from './pages/list/List';
 
 
@@ -66,7 +67,12 @@ function App() {
                 <Route path=":id" element={<VentaManualId />} />
               </Route>
 
-              <Route path="ventas-shopifyFox" element={<VentasShopifyFox />} />
+              <Route path="estadisticas">
+                <Route path="ventas-usuario" element={<VentasPorUsuario />} />
+              </Route>
+
+
+              {/* <Route path="ventas-shopifyFox" element={<VentasShopifyFox />} /> */}
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

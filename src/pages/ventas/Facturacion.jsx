@@ -35,7 +35,6 @@ function Facturacion() {
            page,
          }
        );
-       console.log(data)
       setventas(data);
       setVentas(true);
     } catch (error) {

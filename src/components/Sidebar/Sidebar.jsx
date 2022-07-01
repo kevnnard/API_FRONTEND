@@ -120,6 +120,21 @@ const Sidebar = () => {
                     </li>
                   </Link>
                 ) : null}
+                {auth.role === "ADMIN" ? (
+                  <>
+                    <p className="title">Estadisticas</p>
+                    <li>
+                      <PsychologyOutlinedIcon className="icon" />
+                      <Link
+                        onClick={handleClick}
+                        className={class__change}
+                        to="/dashboard/estadisticas/ventas-usuario"
+                      >
+                        <span>Ventas por usuario</span>
+                      </Link>
+                    </li>
+                  </>
+                ) : null}
                 {/* <li>
                   <LocalShippingIcon className="icon" />
                   <span>Envios</span>
