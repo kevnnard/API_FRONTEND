@@ -15,21 +15,23 @@ const Chart2 = ({ aspect, title, ventasCont }) => {
   const [ventas, setVentas] = useState([]);
   const [ventasEstado, setVentasEstado] = useState(false);
   
+
+  console.log(ventas)
  const ventasAsesor = [
    {
-     name: ventasCont.asesor1.nombre,
-     total: ventasCont.asesor1.cont,
-     ventas: ventasCont.asesor1.total,
+     name: ventas.asesor1.nombre,
+     total: ventas.asesor1.cont,
+     ventas: ventas.asesor1.total,
    },
    {
-     name: ventasCont.asesor2.nombre,
-     total: ventasCont.asesor2.cont,
-     ventas: ventasCont.asesor2.total,
+     name: ventas.asesor2.nombre,
+     total: ventas.asesor2.cont,
+     ventas: ventas.asesor2.total,
    },
    {
-     name: ventasCont.asesor3.nombre,
-     total: ventasCont.asesor3.cont,
-     ventas: ventasCont.asesor3.total,
+     name: ventas.asesor3.nombre,
+     total: ventas.asesor3.cont,
+     ventas: ventas.asesor3.total,
    },
  ];
 
