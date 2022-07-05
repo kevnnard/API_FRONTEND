@@ -11,8 +11,9 @@ const Widget = ({ type, cantidad, ventaTotal, clientes }) => {
   let data;
 
   //temporary
-  const amount = cantidad || clientes;
+  const amount = cantidad ;
   const ventaT = ventaTotal;
+  const ventaB = ventaTotal / 1.19;
   const diff = 20;
 
   switch (type) {
@@ -30,6 +31,7 @@ const Widget = ({ type, cantidad, ventaTotal, clientes }) => {
             }}
           />
         ),
+        counter: clientes
       };
       break;
     case "order":
@@ -50,6 +52,7 @@ const Widget = ({ type, cantidad, ventaTotal, clientes }) => {
             }}
           />
         ),
+        counter: amount,
       };
       break;
     case "earning":
@@ -63,13 +66,19 @@ const Widget = ({ type, cantidad, ventaTotal, clientes }) => {
             style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
           />
         ),
+        counter: ("$" +
+                  Intl.NumberFormat("es-ES", {
+                    style: "currency",
+                    currency: "COP",
+                    minimumFractionDigits: 0,
+                  }).format(ventaT))
       };
       break;
     case "balance":
       data = {
-        title: "BALANCE",
+        title: "Venta Neta ( SIN IVA )",
         isMoney: true,
-        link: "See details",
+        link: "Ver detalles",
         icon: (
           <AccountBalanceWalletOutlinedIcon
             className="icon"
@@ -79,6 +88,13 @@ const Widget = ({ type, cantidad, ventaTotal, clientes }) => {
             }}
           />
         ),
+        counter:
+          "$" +
+          Intl.NumberFormat("es-ES", {
+            style: "currency",
+            currency: "COP",
+            minimumFractionDigits: 0,
+          }).format(ventaB),
       };
       break;
     default:
@@ -89,20 +105,7 @@ const Widget = ({ type, cantidad, ventaTotal, clientes }) => {
     <div className="widget">
       <div className="left">
         <span className="title">{data.title}</span>
-        <span className="counter">
-          {" "}
-          {amount || (
-            <>
-              {" "}
-              {"$" +
-                Intl.NumberFormat("es-ES", {
-                  style: "currency",
-                  currency: "COP",
-                  minimumFractionDigits: 0,
-                }).format(ventaT)}
-            </>
-          )}
-        </span>
+        <span className="counter">{data.counter}</span>
         <span className="link">{data.link}</span>
       </div>
       <div className="right">

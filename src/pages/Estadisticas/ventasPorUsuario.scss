@@ -1,21 +1,12 @@
-.flex_ventasSac {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.ventalTotalSac_component {
+.VENTAS_SAC {
     text-align: center;
-    h1 {
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 3rem;
-        color: #f00000;
-    }
-    p {
-        font-size: 2rem;
-        color: #003;
-        font-weight: bold;
-    }
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #e95e5e;
+    text-decoration: underline;
+    font-size: 4rem;
+    margin-top: 3rem;
+
 }
 .button_excel {
     display: flex;

@@ -3,11 +3,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Chart2 from "../../components/chart/Chart2";
 import ReactHTMLTableToExcel from "react-html-table-to-excel";
+import Widget from "../../components/widget/Widget";
 
 function VentasPorUsuario() {
-  //info para chart
-  const [ventasUsuario, setVentasUsuario] = useState([]);
-
   //datos para excel y demas erssatdisticas
   const [ventas, setVentas] = useState([]);
   const [ventasState, setVentasState] = useState(false);
@@ -34,21 +32,14 @@ function VentasPorUsuario() {
   return (
     <>
       <main>
-        <div className="flex_ventasSac">
-          <div className="ventalTotalSac_component">
-            <h1>Venta total SAC</h1>
-            <p>
-              {"$" +
-                Intl.NumberFormat("es-ES", {
-                  style: "currency",
-                  currency: "COP",
-                  minimumFractionDigits: 0,
-                }).format(ventaTotalSac)}
-            </p>
-          </div>
-          <div className="ventalTotalSac_component">
-            <h1>Pedidos totales SAC</h1>
-            <p>{ventasCount}</p>
+        <h1 className="VENTAS_SAC">Ventas SAC</h1>
+        <div className="home">
+          <div className="homeContainer">
+            <div className="widgets">
+              <Widget type="order" cantidad={ventasCount} />
+              <Widget type="earning" ventaTotal={ventaTotalSac} />
+              <Widget type="balance" ventaTotal={ventaTotalSac} />
+            </div>
           </div>
         </div>
         <div id="table" className="excel_export_file">
@@ -129,11 +120,6 @@ function VentasPorUsuario() {
             </table>
           </div>
         </div>
-        <Chart2
-          dataa={ventasUsuario}
-          title="Ventas por Usuario"
-          aspect={2 / 1}
-        />
       </main>
     </>
   );
