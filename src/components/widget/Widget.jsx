@@ -57,7 +57,7 @@ const Widget = ({ type, cantidad, ventaTotal, clientes }) => {
       break;
     case "earning":
       data = {
-        title: "VENTAS TOTALES",
+        title: "VENTAS TOTALES ( CON IVA )",
         isMoney: true,
         link: "",
         icon: (
@@ -76,7 +76,7 @@ const Widget = ({ type, cantidad, ventaTotal, clientes }) => {
       break;
     case "balance":
       data = {
-        title: "Venta Neta ( SIN IVA )",
+        title: "VENTA TOTAL NETA  ( SIN IVA )",
         isMoney: true,
         link: "Ver detalles",
         icon: (

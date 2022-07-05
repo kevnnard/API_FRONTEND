@@ -130,7 +130,7 @@ const Sidebar = () => {
                         className={class__change}
                         to="/dashboard/estadisticas/ventas-usuario"
                       >
-                        <span>Ventas por usuario</span>
+                        <span>Ventas SAC</span>
                       </Link>
                     </li>
                   </>

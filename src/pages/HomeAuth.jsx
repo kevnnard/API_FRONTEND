@@ -40,29 +40,13 @@ function HomeAuth() {
   const obtenerVentasManuales = async () => {
     try {
       const { data } = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/dashboard/ventas-manuales`
+        `${import.meta.env.VITE_BACKEND_URL}/dashboard/estadisticas/home`
       );
-      setCantidadVentasTotales(data.totalDocs);
-      let totall = 0;
-      let sac = 0;
-      let fcs = 0;
-      let re = 0;
-      const totalSac = data.docs.map((item) => {
-        totall = totall + (item.ventaTotalSac + item.ventaTotalShopify);
-        if(item.tipoVenta == "SAC") {
-          sac = sac + item.ventaTotalSac;
-        }
-        if (item.tipoVenta == "FCS") {
-          fcs = fcs + item.ventaTotalShopify;
-        }
-        if (item.tipoVenta == "RE") {
-          re = re + item.ventaTotalShopify;
-        }
-      });
-      setVentasSac(sac);
-      setVentasFcs(fcs);
-      setVentasRe(re);
-      setVentasTotales(totall);
+      setCantidadVentasTotales(data.cont);
+      setVentasSac(data.sac);
+      setVentasFcs(data.fcs);
+      setVentasRe(data.re);
+      setVentasTotales(data.total);
       try {
         const url = `${
           import.meta.env.VITE_BACKEND_URL
@@ -136,7 +120,7 @@ function HomeAuth() {
             <Widget type="user" clientes={clientesTotales} />
             <Widget type="order" cantidad={cantidadVentasTotales} />
             <Widget type="earning" ventaTotal={VentasTotales} />
-            <Widget type="balance" />
+            <Widget type="balance" ventaTotal={VentasTotales} />
           </div>
           <div className="charts">
             <Modal
