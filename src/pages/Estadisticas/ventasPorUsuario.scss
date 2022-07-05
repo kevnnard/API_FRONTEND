@@ -17,3 +17,17 @@
         font-weight: bold;
     }
 }
+.button_excel {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+
+    .xls-button {
+        background-color: #f00000;
+        color: #fff;
+        border-radius: 15px;
+        padding: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Chart2 from "../../components/chart/Chart2";
 import { CSVLink, CSVDownload } from "react-csv";
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 function VentasPorUsuario() {
   //info para chart
@@ -10,51 +11,23 @@ function VentasPorUsuario() {
 
   //datos para excel y demas erssatdisticas
   const [ventas, setVentas] = useState([]);
+  const [ventasState, setVentasState] = useState(false);
   const [ventaTotalSac, setVentaTotalSac] = useState(0);
   const [ventasCount, setVentasCount] = useState(0);
 
   useEffect(() => {
     obtenerVentasAsesor();
   }, []);
-
-  console.log(ventas);
   const obtenerVentasAsesor = async () => {
     try {
       const url = `${
         import.meta.env.VITE_BACKEND_URL
       }/dashboard/estadisticas/ventasasesor`;
       const { data } = await axios.get(url);
-      setVentas(JSON.stringify(data.ventas));
+      setVentas(data.ventas);
       setVentasCount(data.count);
       setVentaTotalSac(data.total);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const descargarDatos = async () => {
-    try {
-      let headersList = {
-        Authorization: "Token 4fe96228497bce7104f6643c36bb1a02b0efd651",
-      };
-
-      let bodyContent = new FormData();
-      bodyContent.append(
-        "infile",
-        `[ { "cliente": { "idcliente": "62b390a9d043da042622d35a", "nombre": "juan", "cedula": "1022436162", "ciudad": "BOGOTÁ", "departamento": "BOGOTÁ, D.C.", "direccion": "calle 48 a sur # 88c 80", "email": "londonokevin9@gmail.com", "telefono": "3133019492" }, "datos_envio": { "destinatario_envio": "51821900", "telefono_envio": "3133019492", "ciudad_envio": "11001", "departamento_envio": "BOGOTÁ, D.C.", "direccion_envio": "calle 48 a sur # 88c 80", "indicaciones_envio": "CASA 88" }, "pago": { "metodo_pago": "contra_entrega", "referencia_pago": "contra entrega", "estado_pago": "pendiente" }, "_id": "62bb849b4fc2de774c859d00", "estado_pedido": "facturar", "fecha": "2022-06-28T22:44:28.262Z", "ventaTotalShopify": 0, "ventaTotalSac": 125900, "cupon_descuento": [], "productos": [ { "_id": "62a9dd08e89757d8191b9829", "img": "https://cdn.shopify.com/s/files/1/0264/9161/7361/products/28150_017_2_1800x1800.jpg?v=1639456336", "sku": "28150-017-S", "nombre": "JERSEY FOX 180 PERIL", "color": "negro", "talla": "S", "cantidadS": 1, "precio": 179900, "precioCosto": 89900, "precioVenta": 125900, "precioComparacionShopify": 0, "precioVentaShopify": 0, "precioVentaConDescuento": 0 } ], "mensajes": [], "historial": [], "nuVenta": "SAC1005", "tipoVenta": "SAC", "tienda": "FOX", "asesor": "kevin londoño", "__v": 0 }, { "cliente": { "idcliente": null, "nombre": "Kevin Londoño ", "cedula": "1022436169", "ciudad": "BOGOTÁ", "departamento": "BOGOTÁ, D.C.", "direccion": "calle 48 a sur # 88c 80", "email": "londonokevin9@gmail.com", "telefono": "3133019492" }, "datos_envio": { "destinatario_envio": "1022436162", "telefono_envio": "3133019492", "ciudad_envio": "BOGOTÁ", "departamento_envio": "BOGOTÁ, D.C.", "direccion_envio": "calle 48 a sur # 88c 80", "indicaciones_envio": "casa 88" }, "pago": { "metodo_pago": "contra_entrega", "referencia_pago": "contra entrega", "estado_pago": "pendiente" }, "_id": "62bca4ecf7d0b0de8dca7751", "estado_pedido": "parcial", "fecha": "2022-06-29T15:02:03.097Z", "ventaTotalShopify": 0, "ventaTotalSac": 129000, "cupon_descuento": [], "productos": [ { "_id": "62a9dd08e89757d8191b9829", "img": "https://cdn.shopify.com/s/files/1/0264/9161/7361/products/28150_017_2_1800x1800.jpg?v=1639456336", "sku": "28150-017-S", "nombre": "JERSEY FOX 180 PERIL", "color": "negro", "talla": "S", "cantidadS": 1, "precio": 179900, "precioCosto": 89900, "precioVenta": 129000, "precioComparacionShopify": 0, "precioVentaShopify": 0, "precioVentaConDescuento": 0 } ], "mensajes": [], "historial": [], "nuVenta": "SAC1006", "tipoVenta": "SAC", "tienda": "FOX", "asesor": "Desarrollo_GrupoR", "__v": 0 }, { "cliente": { "idcliente": "62b390a9d043da042622d35a", "nombre": "kevin londoño ", "cedula": "1022436162", "ciudad": "BOGOTÁ", "departamento": "BOGOTÁ, D.C.", "direccion": "calle 48 a sur # 88c 80", "email": "londonokevin9@gmail.com", "telefono": "3133019492" }, "datos_envio": { "destinatario_envio": "51821900", "telefono_envio": "3133019492", "ciudad_envio": "BOGOTÁ", "departamento_envio": "BOGOTÁ, D.C.", "direccion_envio": "calle 48 a sur # 88c 80", "indicaciones_envio": "CASA 88" }, "pago": { "metodo_pago": "contra_entrega", "referencia_pago": "contra entrega", "estado_pago": "pendiente" }, "_id": "62bf6a333cc50aabf7aae298", "estado_pedido": "pendiente", "fecha": "2022-07-01T21:40:34.783Z", "ventaTotalShopify": 0, "ventaTotalSac": 150000, "cupon_descuento": [], "productos": [ { "_id": "62a9dd08e89757d8191b9829", "img": "https://cdn.shopify.com/s/files/1/0264/9161/7361/products/28150_017_2_1800x1800.jpg?v=1639456336", "sku": "28150-017-S", "nombre": "JERSEY FOX 180 PERIL", "color": "negro", "talla": "S", "cantidadS": 1, "precio": 179900, "precioCosto": 89900, "precioVenta": 150000, "precioComparacionShopify": 0, "precioVentaShopify": 0, "precioVentaConDescuento": 0 } ], "mensajes": [], "historial": [], "nuVenta": "SAC1008", "tipoVenta": "SAC", "tienda": "FOX", "asesor": "Desarrollo_GrupoR", "__v": 0 } ]`
-      );
-
-      fetch("https://www.convertcsv.io/api/v1/json2csv?xlsx=1", {
-        method: "POST",
-        body: bodyContent,
-        headers: headersList,
-      })
-        .then(function (response) {
-          return response.text();
-        })
-        .then(function (data) {
-          console.log(data);
-        });
+      setVentasState(true);
     } catch (error) {
       console.log(error);
     }
@@ -80,8 +53,85 @@ function VentasPorUsuario() {
           </div>
         </div>
         <div id="table" className="excel_export_file">
-          <CSVLink data={ventas}>Descargar excel</CSVLink>
-          <button onClick={descargarDatos}>Descargar Datos</button>
+          {/* <CSVLink data={ventas}>Descargar excel</CSVLink> */}
+          <div className="button_excel">
+            <ReactHTMLTableToExcel
+              id="test-table-xls-button"
+              className="xls-button"
+              table="table-to-xls"
+              filename="Ventas_SAC"
+              sheet="ventas_SAC"
+              buttonText="Descargar datos"
+              type="button"
+            />
+            <table id="table-to-xls" hidden>
+              <thead>
+                <tr>
+                  <th># Orden</th>
+                  <th>Tienda</th>
+                  <th>cliente - nombre</th>
+                  <th>cliente - Cedula</th>
+                  <th>cliente - Ciudad</th>
+                  <th>cliente - departamento</th>
+                  <th>cliente - Direccion</th>
+                  <th>cliente - email</th>
+                  <th>cliente - Telefono</th>
+                  <th>Productos - Nombre</th>
+                  <th>Productos - Sku</th>
+                  <th>Productos - Color</th>
+                  <th>Productos - Talla</th>
+                  <th>Productos - Cantidad</th>
+                  <th>Productos - Prrecio</th>
+                  <th>Productos - Precio Venta</th>
+                  <th>Productos - Precio Costo</th>
+                  <th>Productos - Utilidad Neta</th>
+                  <th>Pago - Metodo de pago</th>
+                  <th>Pago - Estado del pago</th>
+                  <th>Envio - Metodo de envio</th>
+                  <th>Estado Pedido</th>
+                  <th>Asesor</th>
+                  <th>Fecha De Venta</th>
+                </tr>
+              </thead>
+              {ventasState == true
+                ? ventas.map((item) =>
+                    item.productos.map((i) => (
+                      <tr key={i._id}>
+                        <td>{item.nuVenta}</td>
+                        <td>{item.tienda}</td>
+                        <td>{item.cliente.nombre}</td>
+                        <td>{item.cliente.cedula}</td>
+                        <td>{item.cliente.ciudad}</td>
+                        <td>{item.cliente.departamento}</td>
+                        <td>{item.cliente.direccion}</td>
+                        <td>{item.cliente.email}</td>
+                        <td>{item.cliente.telefono}</td>
+                        <td>{i.nombre}</td>
+                        <td>{i.sku}</td>
+                        <td>{i.color}</td>
+                        <td>{i.talla}</td>
+                        <td>{i.cantidadS}</td>
+                        <td>{i.precio}</td>
+                        <td>{i.precioVenta}</td>
+                        <td>{i.precioCosto}</td>
+                        <td>
+                          {Math.round(i.precioVenta / 1.19) - i.precioCosto}
+                        </td>
+                        <td>{item.pago.metodo_pago}</td>
+                        <td>{item.pago.estado_pago}</td>
+                        <td>{item.envio_pedido}</td>
+                        <td>{item.estado_pedido}</td>
+                        <td>{item.asesor}</td>
+                        <td>
+                          {new Date(item.fecha).toLocaleDateString()} A las{" "}
+                          {new Date(item.fecha).toLocaleTimeString()}
+                        </td>
+                      </tr>
+                    ))
+                  )
+                : null}
+            </table>
+          </div>
         </div>
         <Chart2
           dataa={ventasUsuario}
