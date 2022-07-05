@@ -8,7 +8,7 @@ import Widget from "../../components/widget/Widget";
 function VentasPorUsuario() {
   //datos para excel y demas erssatdisticas
   const [ventas, setVentas] = useState([]);
-  const [ventasAsesor, setVentasAsesor] = useState({})
+  const [ventasAsesor, setVentasAsesor] = useState()
   const [ventasState, setVentasState] = useState(false);
   const [ventaTotalSac, setVentaTotalSac] = useState(0);
   const [ventasCount, setVentasCount] = useState(0);

@@ -12,29 +12,9 @@ import {
 } from "recharts";
 
 const Chart2 = ({ aspect, title, ventasCont }) => {
-  const [ventas, setVentas] = useState([]);
+  const [ventas, setVentas] = useState([])
   const [ventasEstado, setVentasEstado] = useState(false);
   
-
-  console.log(ventas)
- const ventasAsesor = [
-   {
-     name: ventas.asesor1.nombre,
-     total: ventas.asesor1.cont,
-     ventas: ventas.asesor1.total,
-   },
-   {
-     name: ventas.asesor2.nombre,
-     total: ventas.asesor2.cont,
-     ventas: ventas.asesor2.total,
-   },
-   {
-     name: ventas.asesor3.nombre,
-     total: ventas.asesor3.cont,
-     ventas: ventas.asesor3.total,
-   },
- ];
-
   setTimeout(() => {
     setVentas(ventasCont);
     setVentasEstado(true);
@@ -59,7 +39,7 @@ const Chart2 = ({ aspect, title, ventasCont }) => {
               <BarChart
                 width={730}
                 height={300}
-                data={ventasAsesor}
+                data={ventas}
                 margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
               >
                 <defs>
