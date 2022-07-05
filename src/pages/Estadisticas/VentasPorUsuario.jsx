@@ -1,3 +1,4 @@
+import "./ventasPorUsuario.scss"
 import axios from "axios";
 import { useEffect, useState } from "react"
 import Chart2 from "../../components/chart/Chart2";
@@ -5,6 +6,7 @@ import Chart2 from "../../components/chart/Chart2";
 function VentasPorUsuario() {
 
   const [ventasUsuario, setVentasUsuario] = useState([]);
+  const [ventaTotalSac, setVentaTotalSac] = useState(0);
 
     useEffect(() => {
       obtenerVentasAsesor();
@@ -16,7 +18,8 @@ function VentasPorUsuario() {
         import.meta.env.VITE_BACKEND_URL
       }/dashboard/estadisticas/ventasasesor`;
       const { data } = await axios.get(url);
-      setVentasUsuario(data);
+      setVentaTotalSac(data);
+      console.log(data)
     } catch (error) {
       console.log(error);
     }
@@ -25,6 +28,17 @@ function VentasPorUsuario() {
   return (
     <>
       <main>
+        <div className="ventalTotalSac_component">
+          <h1>Venta total SAC</h1>
+          <p>
+            {"$" +
+              Intl.NumberFormat("es-ES", {
+                style: "currency",
+                currency: "COP",
+                minimumFractionDigits: 0,
+              }).format(ventaTotalSac.total)}
+          </p>
+        </div>
         <Chart2
           dataa={ventasUsuario}
           title="Ventas por Usuario"
