@@ -2,7 +2,6 @@ import "./ventasPorUsuario.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Chart2 from "../../components/chart/Chart2";
-import { CSVLink, CSVDownload } from "react-csv";
 import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 function VentasPorUsuario() {
@@ -53,7 +52,6 @@ function VentasPorUsuario() {
           </div>
         </div>
         <div id="table" className="excel_export_file">
-          {/* <CSVLink data={ventas}>Descargar excel</CSVLink> */}
           <div className="button_excel">
             <ReactHTMLTableToExcel
               id="test-table-xls-button"
@@ -87,7 +85,6 @@ function VentasPorUsuario() {
                   <th>Productos - Utilidad Neta</th>
                   <th>Pago - Metodo de pago</th>
                   <th>Pago - Estado del pago</th>
-                  <th>Envio - Metodo de envio</th>
                   <th>Estado Pedido</th>
                   <th>Asesor</th>
                   <th>Fecha De Venta</th>
@@ -119,7 +116,6 @@ function VentasPorUsuario() {
                         </td>
                         <td>{item.pago.metodo_pago}</td>
                         <td>{item.pago.estado_pago}</td>
-                        <td>{item.envio_pedido}</td>
                         <td>{item.estado_pedido}</td>
                         <td>{item.asesor}</td>
                         <td>
