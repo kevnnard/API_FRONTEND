@@ -8,6 +8,7 @@ import Widget from "../../components/widget/Widget";
 function VentasPorUsuario() {
   //datos para excel y demas erssatdisticas
   const [ventas, setVentas] = useState([]);
+  const [ventasAsesor, setVentasAsesor] = useState({})
   const [ventasState, setVentasState] = useState(false);
   const [ventaTotalSac, setVentaTotalSac] = useState(0);
   const [ventasCount, setVentasCount] = useState(0);
@@ -24,6 +25,7 @@ function VentasPorUsuario() {
       setVentas(data.ventas);
       setVentasCount(data.count);
       setVentaTotalSac(data.total);
+      setVentasAsesor(data.ventasCont);
       setVentasState(true);
     } catch (error) {
       console.log(error);
@@ -42,6 +44,11 @@ function VentasPorUsuario() {
             </div>
           </div>
         </div>
+        <Chart2
+          ventasCont={ventasAsesor}
+          title="Ventas por Asesor"
+          aspect={2 / 1}
+        />
         <div id="table" className="excel_export_file">
           <div className="button_excel">
             <ReactHTMLTableToExcel
