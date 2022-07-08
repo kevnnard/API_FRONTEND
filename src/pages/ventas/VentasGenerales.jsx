@@ -59,6 +59,8 @@ function VentasGenerale() {
           page,
         }
       );
+      setVentasSkusState(false);
+      setVentasSKUList({});
       setVentaProvicionalState(false);
       setVentaProvicional({});
       setventas({ data });
@@ -80,6 +82,8 @@ function VentasGenerale() {
           ventasEstado,
         }
       );
+      setVentasSkusState(false);
+      setVentasSKUList({});
       setVentaProvicionalState(false);
       setVentaProvicional({});
       setventas({ data });
@@ -112,6 +116,8 @@ function VentasGenerale() {
             setAlerta({});
           }, 3000);
         } else {
+          setVentasSkusState(false);
+          setVentasSKUList({});
           setVentas(false);
           setventas({});
           setVentaProvicional({ data });
@@ -143,6 +149,8 @@ function VentasGenerale() {
       );
       setVentas(false);
       setventas({});
+      setVentaProvicionalState(false);
+      setVentaProvicional({});
       setVentaSku("");
       setVentasSKUList({data});
       setVentasSkusState(true);
@@ -151,15 +159,10 @@ function VentasGenerale() {
     }
   };
 
-  console.log(ventasSKUlist)
   let i = 0;
-  if (ventass) {
-    for (i in ventas.data.docs) {
-      if (i.estado_pedido == "enviado") {
-        break;
-      } else {
+  if (ventasSkusState) {
+    for (i in ventasSKUlist.data) {
         i++;
-      }
     }
   }
 
@@ -179,7 +182,7 @@ function VentasGenerale() {
             fontSize: "2.2rem",
           }}
         >
-          {ventas.totalDocs}
+          {ventass == true ? ventas.data.totalDocs : i}
         </span>
       </h1>
       <div className="buscar_productos">
