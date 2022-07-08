@@ -388,11 +388,11 @@ function Productos() {
         <button className="btnn" onClick={ontenerProductos}>
           Ver todos los productos <UnarchiveRounded />
         </button>
-        {auth.role === "ADMIN"
-        ? <button className="btnn" onClick={handleOpen2}>
-          Subir Archivo <UnarchiveRounded />
-        </button>
-        : null}
+        {auth.role === "ADMIN" ? (
+          <button className="btnn" onClick={handleOpen2}>
+            Subir Archivo <UnarchiveRounded />
+          </button>
+        ) : null}
         <Modal
           open={open2}
           onClose={handleClose2}
@@ -424,6 +424,7 @@ function Productos() {
                       </button>
                     ) : (
                       <button
+                        style={{ background: "#000" }}
                         className="btnn"
                         type="button"
                         {...getRootProps()}
