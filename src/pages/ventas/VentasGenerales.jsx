@@ -18,6 +18,11 @@ function VentasGenerale() {
   const [ventaProvicional, setVentaProvicional] = useState([]);
   const [ventaProvicionalState, setVentaProvicionalState] = useState(false);
 
+  //obtener ventas por sku
+  const [ventaSku, setVentaSku] = useState("");
+  const [ventasSKUlist, setVentasSKUList] = useState({});
+  const [ventasSkusState, setVentasSkusState] = useState(false);
+
   // obtener vetas por estado de pedido
   const [ventasEstado, setVentasEstado] = useState("");
 
@@ -29,13 +34,13 @@ function VentasGenerale() {
   const [page2, setPage2] = useState(1);
 
   const handlePage = async (event, value) => {
-   if (ventasEstado === "") {
-     setPage(value);
-     obtenerVentasManuales();
-   } else {
-     setPage2(value);
-     obtenerVentasManualesEstado();
-   }
+    if (ventasEstado === "") {
+      setPage(value);
+      obtenerVentasManuales();
+    } else {
+      setPage2(value);
+      obtenerVentasManualesEstado();
+    }
   };
 
   useEffect(() => {
@@ -54,6 +59,8 @@ function VentasGenerale() {
           page,
         }
       );
+      setVentaProvicionalState(false);
+      setVentaProvicional({});
       setventas({ data });
       setVentas(true);
     } catch (error) {
@@ -73,14 +80,15 @@ function VentasGenerale() {
           ventasEstado,
         }
       );
-      setventas({data});
+      setVentaProvicionalState(false);
+      setVentaProvicional({});
+      setventas({ data });
       setVentas(true);
     } catch (error) {
       console.log(error);
       setVentas(false);
     }
   };
-
 
   const obtenerVentaPorNumero = async (e) => {
     try {
@@ -124,6 +132,26 @@ function VentasGenerale() {
     }
   };
 
+  const obtenerVentasPorSku = async (e) => {
+    e.preventDefault();
+    try {
+      const { data } = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/dashboard/ventas-manuales/sku`,
+        {
+          ventaSku,
+        }
+      );
+      setVentas(false);
+      setventas({});
+      setVentaSku("");
+      setVentasSKUList({data});
+      setVentasSkusState(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log(ventasSKUlist)
   let i = 0;
   if (ventass) {
     for (i in ventas.data.docs) {
@@ -190,7 +218,7 @@ function VentasGenerale() {
           <input placeholder="BUSCAR POR # VENTA" />
           <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
         </div> */}
-        <div>
+        {/* <div>
           <button
             className="btnn"
             style={{ background: "#f00", color: "#fff" }}
@@ -198,6 +226,14 @@ function VentasGenerale() {
           >
             ACtualizar Bandeja
           </button>
+        </div> */}
+        <div>
+          <input
+            placeholder="BUSCAR VENTAS POR SKU"
+            value={ventaSku}
+            onChange={(e) => setVentaSku(e.target.value.trim().toUpperCase())}
+          />
+          <SearchIcon className="icon" onClick={obtenerVentasPorSku} />
         </div>
       </div>
       <main className="main_pri_ventas">
@@ -231,6 +267,104 @@ function VentasGenerale() {
           </thead>
           {ventass == true
             ? ventas.data.docs.map((item) => (
+                <>
+                  <tr
+                    style={
+                      item.estado_pedido == "solicitado"
+                        ? { background: "rgba(255, 255, 0, .5)", color: "#000" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "enviado"
+                        ? { background: "#006400", color: "#000" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "parcial"
+                        ? { background: "#aed3e3", color: "#000" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "cancelado"
+                        ? { background: "#777", color: "#fff" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "fallido"
+                        ? { background: "#777", color: "#fff" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "novedad"
+                        ? { background: "#ff8000", color: "#fff" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "cambio"
+                        ? { background: "#00f", color: "#FFF" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "facturar"
+                        ? { background: "#4b3629", color: "#FFF" }
+                        : { background: "#f00", color: "#fff" } &&
+                          item.estado_pedido == "finalizado"
+                        ? { background: "#000000", color: "#fff" }
+                        : { background: "#f00", color: "#fff" }
+                    }
+                    key={item._id}
+                  >
+                    <td>{cont++}</td>
+                    {item.tienda == "Shopify" ? (
+                      <td>
+                        {new Date(item.fechaShopify).toLocaleDateString()} A las{" "}
+                        {new Date(item.fechaShopify).toLocaleTimeString()}
+                      </td>
+                    ) : (
+                      <td>
+                        {new Date(item.fecha).toLocaleDateString()} A las{" "}
+                        {new Date(item.fecha).toLocaleTimeString()}
+                      </td>
+                    )}
+                    <td>{`${item.nuVenta}`}</td>
+                    <td>{item.cliente.nombre}</td>
+                    <td>{item.cliente.ciudad}</td>
+                    <td>{item.cliente.telefono}</td>
+                    <td>
+                      {item.pago.metodo_pago == "Cash on Delivery (COD)"
+                        ? "Pago Contra entrega"
+                        : item.pago.metodo_pago &&
+                          item.pago.metodo_pago == "addi stating payment app"
+                        ? "Credito Addi"
+                        : item.pago.metodo_pago}
+                    </td>
+                    <td>
+                      {item.tienda == "Shopify" ? (
+                        <>
+                          {"$" +
+                            Intl.NumberFormat("es-ES", {
+                              style: "currency",
+                              currency: "COP",
+                              minimumFractionDigits: 0,
+                            }).format(item.ventaTotalShopify)}
+                        </>
+                      ) : (
+                        <>
+                          {"$" +
+                            Intl.NumberFormat("es-ES", {
+                              style: "currency",
+                              currency: "COP",
+                              minimumFractionDigits: 0,
+                            }).format(item.ventaTotalSac)}
+                        </>
+                      )}
+                    </td>
+                    <td>
+                      <Link
+                        style={{
+                          fontSize: "1rem",
+                          background: "#fff",
+                          color: "#000",
+                          padding: "5px",
+                          borderRadius: "5px",
+                        }}
+                        to={`/dashboard/ventas-manuales/${item._id}`}
+                      >
+                        Editar
+                      </Link>
+                    </td>
+                  </tr>
+                </>
+              ))
+            : null}
+          {ventasSkusState == true
+            ? ventasSKUlist.data.map((item) => (
                 <>
                   <tr
                     style={

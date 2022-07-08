@@ -58,11 +58,11 @@ const Sidebar = () => {
     <>
       {ventass == true ? (
         <>
-          <MenuIcon
+          {/* <MenuIcon
             onClick={handleClick}
             style={{ fontSize: "2.8rem" }}
             className="menu_desk"
-          />
+          /> */}
           <div className={class__change} id="sidebar">
             <div className="center">
               <br />
