@@ -23,6 +23,7 @@
     "react-export-excel": "^0.5.3",
     "react-html-table-to-excel": "^2.0.0",
     "react-html-table-to-excel_xlsx": "^2.0.2",
+    "react-papaparse": "^4.0.2",
     "react-router-dom": "^6.2.2",
     "recharts": "^2.1.9",
     "sass": "^1.49.9",

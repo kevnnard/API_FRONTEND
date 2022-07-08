@@ -235,7 +235,7 @@ function VentasGenerale() {
                   <tr
                     style={
                       item.estado_pedido == "solicitado"
-                        ? { background: "#e1e114", color: "#000" }
+                        ? { background: "rgba(255, 255, 0, .5)", color: "#000" }
                         : { background: "#f00", color: "#fff" } &&
                           item.estado_pedido == "enviado"
                         ? { background: "#006400", color: "#000" }
@@ -332,7 +332,7 @@ function VentasGenerale() {
               <tr
                 style={
                   ventaProvicional.data.estado_pedido == "solicitado"
-                    ? { background: "#e1e114", color: "#000" }
+                    ? { background: "rgba(255, 255, 0, .5)", color: "#000" }
                     : { background: "#f00", color: "#fff" } &&
                       ventaProvicional.data.estado_pedido == "enviado"
                     ? { background: "#006400", color: "#000" }

@@ -1,6 +1,7 @@
 import "./productos.scss"
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
+import { useCSVReader } from "react-papaparse";
 import { useEffect, useState } from "react";
 import AddBoxRoundedIcon from "@mui/icons-material/AddBoxRounded";
 import UnarchiveRounded from "@mui/icons-material/UnarchiveRounded";
@@ -11,8 +12,10 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { useNavigate } from "react-router-dom";
 
-
 function Productos() {
+  //file
+   const { CSVReader } = useCSVReader();
+   const [productosFile, setProductosFile] = useState([]);
   // auth 
    const { auth } = useAuth();
    const navigate = useNavigate();
@@ -210,19 +213,18 @@ function Productos() {
       console.log(error);
     }
   };
-
   const handleSubmitFile = async (e) => {
     e.preventDefault();
-
-    const a = JSON.stringify(archivo[0]);
-    const f = new FormData();
-
     const { data } = await axios.post(
       `${import.meta.env.VITE_BACKEND_URL}/dashboard/productos/new/file`,
-      f
+      {productosFile}
     );
+     setAlerta({ msg: data.msg });
+    setTimeout(() => {
+      handleClose2();
+      setAlerta({});
+    }, 3000);
 
-    console.log(f.append("files", archivo));
   };
 
   const { msg } = alerta;
@@ -254,11 +256,11 @@ function Productos() {
         </div>
       </div>
       <div className="agregar_productos">
-        {auth.role === "ADMIN"
-        ? <button onClick={handleOpen} className="btnn">
-          Agregar Producto <AddBoxRoundedIcon />
-        </button>
-        : null}
+        {auth.role === "ADMIN" ? (
+          <button onClick={handleOpen} className="btnn">
+            Agregar Producto <AddBoxRoundedIcon />
+          </button>
+        ) : null}
         <Modal
           open={open}
           onClose={handleClose}
@@ -355,7 +357,12 @@ function Productos() {
 
               {btnProducto == false ? (
                 <input
-                  style={{ background:"#1f0", color: "#fff", gridColumn: "2 / 3", margin: "2rem" }}
+                  style={{
+                    background: "#1f0",
+                    color: "#fff",
+                    gridColumn: "2 / 3",
+                    margin: "2rem",
+                  }}
                   type="button"
                   className="btnn"
                   value="Subir Producto"
@@ -381,53 +388,64 @@ function Productos() {
         <button className="btnn" onClick={ontenerProductos}>
           Ver todos los productos <UnarchiveRounded />
         </button>
-        {/* <button className="btnn" onClick={handleOpen2}>
+        {auth.role === "ADMIN"
+        ? <button className="btnn" onClick={handleOpen2}>
           Subir Archivo <UnarchiveRounded />
-        </button> */}
+        </button>
+        : null}
         <Modal
           open={open2}
           onClose={handleClose2}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <div className="modalBox">
+          <div className="modalBoxxx">
             <h1>Agregar Archivo de productos</h1>
-            <form action="POST">
-              <input
-                style={{
-                  color: "#fff",
-                  gridColumn: "2 / 3",
-                  margin: "1rem auto",
-                }}
-                type="file"
-                name="files"
-                onChange={(e) => setArchivo(e.target.files)}
-                placeholder="Sube tu archivo"
-              />
-
-              {btnProducto == false ? (
-                <input
-                  style={{ color: "#fff", gridColumn: "2 / 3", margin: "2rem" }}
-                  type="button"
-                  className="btnn"
-                  value="Subir Archivo"
-                  onClick={handleSubmitFile}
-                />
-              ) : (
-                <input
-                  onClick={handleClose2}
-                  style={{
-                    color: "#fff",
-                    background: "#f00",
-                    gridColumn: "2 / 3",
-                    margin: "2rem",
-                  }}
-                  type="button"
-                  className="btnn"
-                  value="Cerrar"
-                />
+            <CSVReader
+              onUploadAccepted={(results) => {
+                setProductosFile(results);
+              }}
+            >
+              {({
+                getRootProps,
+                acceptedFile,
+                ProgressBar,
+                getRemoveFileProps,
+              }) => (
+                <>
+                  <div className="modal_box_producto_file">
+                    {acceptedFile ? (
+                      <button
+                        style={{ backgroundColor: "#f00" }}
+                        className="btnn"
+                        {...getRemoveFileProps()}
+                      >
+                        Borrar Archivo
+                      </button>
+                    ) : (
+                      <button
+                        className="btnn"
+                        type="button"
+                        {...getRootProps()}
+                      >
+                        Subir Archivo
+                      </button>
+                    )}
+                    <div className="nombre_archivo_csv">
+                      {acceptedFile && acceptedFile.name}
+                    </div>
+                    <ProgressBar />
+                    <br />
+                    <br />
+                    {acceptedFile ? (
+                      <button className="btnn" onClick={handleSubmitFile}>
+                        Subir Archivo al api <UnarchiveRounded />
+                      </button>
+                    ) : null}
+                  </div>
+                </>
               )}
-            </form>
+            </CSVReader>
           </div>
         </Modal>
       </div>
@@ -453,8 +471,6 @@ function Productos() {
               <th>#</th>
               <th>imagen</th>
               <th>nombre</th>
-              <th>idFox</th>
-              <th>Plu</th>
               <th>Sku</th>
               <th>Talla</th>
               <th>Cantidad</th>
@@ -462,7 +478,6 @@ function Productos() {
               <th>Categoria</th>
               <th>genero</th>
               <th>Articulo</th>
-              <th>Color</th>
               <th>Precio</th>
             </tr>
             {productoState
@@ -476,8 +491,6 @@ function Productos() {
                       <img width={50} src={item.img} />
                     </td>
                     <td>{item.nombre}</td>
-                    <td>{item.idvariante}</td>
-                    <td>{item.plu}</td>
                     <td>{item.sku}</td>
                     <td>{item.talla}</td>
                     <td>{item.cantidad}</td>
@@ -485,7 +498,6 @@ function Productos() {
                     <td>{item.categoria}</td>
                     <td>{item.genero}</td>
                     <td>{item.articulo}</td>
-                    <td>{item.color}</td>
                     <td>
                       {"$" +
                         Intl.NumberFormat("es-ES", {

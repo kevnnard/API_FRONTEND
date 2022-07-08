@@ -382,16 +382,7 @@ function NewVentaManual() {
                 error: true,
               });
               return;
-            } 
-             if (msgg.length <= 5) {
-               setAlerta({
-                 msg: "Ingrese un mensaje Valido para la venta",
-                 error: true,
-               });
-               return;
-             } else {
-               setAlerta({});
-             }
+            }
     }
     try {
       const { data } = await axios.post(

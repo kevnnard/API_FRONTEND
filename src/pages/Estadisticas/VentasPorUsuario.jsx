@@ -44,11 +44,11 @@ function VentasPorUsuario() {
             </div>
           </div>
         </div>
-        <Chart2
+        {/* <Chart2
           ventasCont={ventasAsesor}
           title="Ventas por Asesor"
           aspect={2 / 1}
-        />
+        /> */}
         <div id="table" className="excel_export_file">
           <div className="button_excel">
             <ReactHTMLTableToExcel
