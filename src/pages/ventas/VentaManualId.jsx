@@ -13,31 +13,31 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import GuiaBogo from "./GuiaBogo";
 import dataDane from "./json/ciudades.json";
-import dataDane2 from "./json/departamentos.json"; 
+import dataDane2 from "./json/departamentos.json";
 import io from "socket.io-client";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
-function VentaManualId(){
-
+function VentaManualId() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
     setOpen(false);
   };
-    const [open2, setOpen2] = useState(false);
-    const handleOpen2 = () => setOpen2(true);
-    const handleClose2 = () => {
-      setOpen2(false);
-      setTcc({});
-      setEstadoTcc(false);
-      setCiudadCambioFcs(false)
-    };
-    const [open3, setOpen3] = useState(false);
-    const handleOpen3 = () => setOpen3(true);
-    const handleClose3 = () => {
-      setOpen3(false);
-    };
+  const [open2, setOpen2] = useState(false);
+  const handleOpen2 = () => setOpen2(true);
+  const handleClose2 = () => {
+    setOpen2(false);
+    setTcc({});
+    setEstadoTcc(false);
+    setCiudadCambioFcs(false);
+  };
+  const [open3, setOpen3] = useState(false);
+  const handleOpen3 = () => setOpen3(true);
+  const handleClose3 = () => {
+    setOpen3(false);
+  };
 
- // cambio de ciudad si es venta fcs para generar guia de Tcc 
+  // cambio de ciudad si es venta fcs para generar guia de Tcc
   const [ciudadCambioFcs, setCiudadCambioFcs] = useState(false);
   // navigate other place
   const navigate = useNavigate();
@@ -71,19 +71,20 @@ function VentaManualId(){
 
   // etsado para boton de confirmacion de producto provicional
   const [btnprovicional, setbtnprovicional] = useState(false);
-  // obtener datos producto y camiar esatdo de solicitado 
+  // obtener datos producto y camiar esatdo de solicitado
   const [solicitadooa, setSolicitadooa] = useState("");
 
-  // datros para el envio 
+  // datros para el envio
   const [numeroGuia, setNumeroGuia] = useState("");
   const [transportadora, setTransportadora] = useState("");
+  const [nuFactura, setNuFactura] = useState("");
 
   // agregar mas comentarios COMENTARIOS
   const { auth } = useAuth();
   const [msgg, setMsg] = useState("");
   const [mensajesCont, setMensajesCont] = useState();
 
-  // Enviar datos de guia si es requerido 
+  // Enviar datos de guia si es requerido
   const [metodo_envio_tcc, setMetodo_envio_tcc] = useState("");
   const [kilosReales, setKilosReales] = useState("");
   const [largoPaquete, setLargoPaquete] = useState("");
@@ -91,12 +92,12 @@ function VentaManualId(){
   const [anchoPaquete, setAnchoPaquete] = useState("");
   const [PesoVolumen, setPesoVolumen] = useState("");
   const [observaciontcc, setObservacionTcc] = useState("");
-  
-  // recepcion datos DE TCC 
+
+  // recepcion datos DE TCC
   const [tcc, setTcc] = useState({});
   const [estadoTcc, setEstadoTcc] = useState(false);
 
-  // Usuario editando un pedido 
+  // Usuario editando un pedido
   const [usuariosPedidoId, setUsuariosPedidoId] = useState("");
 
   // alerta
@@ -106,55 +107,57 @@ function VentaManualId(){
   const params = useParams();
   const { id } = params;
 
-
   const handleGenerarGuiaTcc = async (e) => {
     e.preventDefault();
-     try {
-       const { data } = await axios.post(
-         `${
-           import.meta.env.VITE_BACKEND_URL
-         }/dashboard/ventas-shopify/prueba/${id}`,
-         {
-           metodo_envio_tcc,
-           observaciontcc,
-           kilosReales,
-           largoPaquete,
-           altoPaquete,
-           anchoPaquete,
-           PesoVolumen,
-         }
-       );
-       setTcc(data);
-       setEstadoTcc(true)
-       setAlerta({ msg: "Guia creada con exito, siga la url para imprimir la guia"});
-       setBtnGenerarGuia(false);
-       setTimeout(() => {
+    try {
+      const { data } = await axios.post(
+        `${
+          import.meta.env.VITE_BACKEND_URL
+        }/dashboard/ventas-shopify/prueba/${id}`,
+        {
+          metodo_envio_tcc,
+          observaciontcc,
+          kilosReales,
+          largoPaquete,
+          altoPaquete,
+          anchoPaquete,
+          PesoVolumen,
+        }
+      );
+      setTcc(data);
+      setEstadoTcc(true);
+      setAlerta({
+        msg: "Guia creada con exito, siga la url para imprimir la guia",
+      });
+      setBtnGenerarGuia(false);
+      setTimeout(() => {
         setAlerta({});
-       }, 3000);
-     } catch (error) {
-       console.log(error);
-     }
+      }, 3000);
+    } catch (error) {
+      console.log(error);
+    }
   };
   const handleMensaje = async (e) => {
     try {
-     const {data} = await axios.put(
-       `${
-         import.meta.env.VITE_BACKEND_URL
-       }/dashboard/ventas-manuales/edit/mensajes/${id}`,
-       {
-         auth, msgg
-       }
-     );
+      const { data } = await axios.put(
+        `${
+          import.meta.env.VITE_BACKEND_URL
+        }/dashboard/ventas-manuales/edit/mensajes/${id}`,
+        {
+          auth,
+          msgg,
+        }
+      );
 
-     setMensajesCont(data.mensajesCont);
-     setAlerta({msg: data.msg , error: data.error });
-     setMsg("");
-     obtenerCliente("");
-     setTimeout(() => {
-      setAlerta({});
-     }, 3000);
+      setMensajesCont(data.mensajesCont);
+      setAlerta({ msg: data.msg, error: data.error });
+      setMsg("");
+      obtenerCliente("");
+      setTimeout(() => {
+        setAlerta({});
+      }, 3000);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
   const handleChange_envio = async (e) => {
@@ -197,7 +200,7 @@ function VentaManualId(){
   const handleCerrarEnvio = async (e) => {
     e.preventDefault();
     setbtnprovicional_envio(false);
-    setCiudadCambioFcs(true)
+    setCiudadCambioFcs(true);
   };
 
   const handleActualizarProductoo = async (e) => {
@@ -256,15 +259,16 @@ function VentaManualId(){
         `${
           import.meta.env.VITE_BACKEND_URL
         }/dashboard/ventas-manuales/edit/${id}`,
-        { sku, solicitadooa, numeroGuia, transportadora }
+        { sku, solicitadooa, numeroGuia, transportadora , nuFactura}
       );
       setAlerta({
         msg: "Producto Actualizado con exito",
       });
-      setbtnprovicional(true);
       setSolicitadooa("");
+      setbtnprovicional(true);
       setNumeroGuia("");
       setTransportadora("");
+      setNuFactura("");
       obtenerCliente();
       setTimeout(() => {
         setAlerta({});
@@ -318,12 +322,12 @@ function VentaManualId(){
     e.preventDefault();
     const confirmar = confirm("Seguro quieres borrar El Articulo ?");
     const result = venta.data.productos.find((vent) => vent.sku == producto);
-    console.log(result)
+    console.log(result);
     const sku = result._id;
     const skuS = result.id_shopify;
     if (confirmar) {
       try {
-       const {data} =  await axios.put(
+        const { data } = await axios.put(
           `${
             import.meta.env.VITE_BACKEND_URL
           }/dashboard/ventas-manuales/delete/producto/${id}`,
@@ -375,41 +379,41 @@ function VentaManualId(){
   const terminarPedido = async (e) => {
     e.preventDefault();
     // AQUI DEBE CAMBIAR EL ESATDO DE ENVIO EN SHOPIFY y demas PEDIDOS
-    if( venta.data.tienda == "Shopify") {
-        try {
-          const nuPedidoSho = venta.data.nuOrdenShopify;
-          const { data } = await axios.post(
-            `${
-              import.meta.env.VITE_BACKEND_URL
-            }/dashboard/ventas-shopify/enviar/${id}`,
-            { nuPedidoSho }
-          );
-         setAlerta({ msg: data.msg });
-         setTimeout(() => { 
-           setAlerta({});
-           navigate("/dashboard/ventas-manuales/despachos");
+    if (venta.data.tienda == "Shopify") {
+      try {
+        const nuPedidoSho = venta.data.nuOrdenShopify;
+        const { data } = await axios.post(
+          `${
+            import.meta.env.VITE_BACKEND_URL
+          }/dashboard/ventas-shopify/enviar/${id}`,
+          { nuPedidoSho }
+        );
+        setAlerta({ msg: data.msg });
+        setTimeout(() => {
+          setAlerta({});
+          navigate("/dashboard/ventas-manuales/despachos");
         }, 2000);
-        } catch (error) {
-          console.log(error);
-        }
+      } catch (error) {
+        console.log(error);
+      }
     }
-    if( venta.data.tienda != "Shopify") {
+    if (venta.data.tienda != "Shopify") {
       try {
         const numeroVenta = venta.data.nuVenta;
-          const { data } = await axios.post(
-            `${
-              import.meta.env.VITE_BACKEND_URL
-            }/dashboard/ventas-manuales/enviar/pedido/${id}`,
-            { numeroVenta }
-          );
-           setAlerta({ msg: data.msg });
-           setTimeout(() => {
-             setAlerta({});
-              navigate("/dashboard/ventas-manuales/despachos");
-           }, 2000);
-          } catch (error) {
-            console.log(error)
-          }
+        const { data } = await axios.post(
+          `${
+            import.meta.env.VITE_BACKEND_URL
+          }/dashboard/ventas-manuales/enviar/pedido/${id}`,
+          { numeroVenta }
+        );
+        setAlerta({ msg: data.msg });
+        setTimeout(() => {
+          setAlerta({});
+          navigate("/dashboard/ventas-manuales/despachos");
+        }, 2000);
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       return;
     }
@@ -426,43 +430,40 @@ function VentaManualId(){
 
       try {
         const url = `${
-        import.meta.env.VITE_BACKEND_URL
+          import.meta.env.VITE_BACKEND_URL
         }/dashboard/ventas-manuales/edit/mensajes/cont/${id}`;
         const { data } = await axios.get(url);
         setMensajesCont(data);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     } catch (error) {
       console.log(error);
       setVentas(false);
     }
   };
-   
-    
-   let socket = io();
-    
-   useEffect(() => {
+
+  let socket = io();
+
+  useEffect(() => {
     obtenerCliente();
     socket = io(import.meta.env.VITE_BACKEND_URL);
     socket.emit("edicion", { id, auth });
-   }, [])
+  }, []);
 
-   useEffect(() => {
-     socket.on("usuario", ({ usuario }) => {
-       if (usuario != true) {
-         setUsuariosPedidoId(usuario);
-         handleOpen3(true);
-         return;
-       } else {
-         setAlerta({ msg: msg, error: true });
-         return;
-       }
-     });
-   }, []);
-   
- 
- 
+  useEffect(() => {
+    socket.on("usuario", ({ usuario }) => {
+      if (usuario != true) {
+        setUsuariosPedidoId(usuario);
+        handleOpen3(true);
+        return;
+      } else {
+        setAlerta({ msg: msg, error: true });
+        return;
+      }
+    });
+  }, []);
+
   const { msg } = alerta;
   return (
     <>
@@ -612,7 +613,28 @@ function VentaManualId(){
                   value={venta.data.datos_envio.indicaciones_envio}
                 />
               </div>
-
+              <CopyToClipboard
+                text={`${venta.data.cliente.nombre}
+${venta.data.datos_envio.destinatario_envio}
+${venta.data.cliente.email}
+${venta.data.datos_envio.telefono_envio}
+${venta.data.datos_envio.ciudad_envio}
+${venta.data.datos_envio.departamento_envio}
+${venta.data.datos_envio.direccion_envio}
+${venta.data.datos_envio.indicaciones_envio}
+`}
+              >
+                <button
+                  style={{ color: "#fff", background: "#0f1" }}
+                  type="button"
+                  className="btnn"
+                  onClick={() =>
+                    setAlerta({ msg: "¡D A T O S - C O P I A D O S!" })
+                  }
+                >
+                  Copiar Datos
+                </button>
+              </CopyToClipboard>
               <div>
                 {/* <!-- Button trigger modkal --> */}
                 {auth.role === "SERVICIO" || auth.role === "ADMIN" ? (
@@ -699,11 +721,14 @@ function VentaManualId(){
                                 <option selected value="" disabled>
                                   Elige una ciudad
                                 </option>
-                                {dataDane.map((item) => (
-                                  <option value={item.codigo}>
-                                    {item.ciduad} - {item.departamento}
-                                  </option>
-                                ))}
+                                {dataDane.map((item) =>
+                                  departamento_envio ==
+                                  item.departamento.toUpperCase() ? (
+                                    <option value={item.ciduad}>
+                                      {item.ciduad}
+                                    </option>
+                                  ) : null
+                                )}
                               </select>
                             </td>
                             <td>
@@ -930,6 +955,14 @@ function VentaManualId(){
                         : "AUN NO SE A ENVIADO"}
                     </span>
                   </h2>
+                  <h2>
+                    #Factura:{" "}
+                    <span>
+                      {venta.data.envio_pedido
+                        ? venta.data.envio_pedido.numero_factura
+                        : "AUN NO SE A FACTURADO"}
+                    </span>
+                  </h2>
                 </div>
               </div>
               {msg && <Alerta alerta={alerta} />}
@@ -951,7 +984,39 @@ function VentaManualId(){
               ) : (
                 ""
               )}
-
+              {venta.data.estado_pedido == "facturar" ? (
+                <div className="gridProductos  main_pri_productos">
+                  <div className="botonoes_guias_generar">
+                    <div>
+                      <>
+                        <h2>#De Factura: </h2>
+                        <div className="grid_datos_envio_pri">
+                          <div>
+                            <input
+                              type="text"
+                              value={nuFactura}
+                              onChange={(e) => setNuFactura(e.target.value)}
+                            />
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          className="btnn"
+                          style={{
+                            margin: "auto",
+                            background: "#000",
+                            color: "#fff",
+                            width: "100%",
+                          }}
+                          onClick={handleActualizarProducto}
+                        >
+                          Actualizar
+                        </button>
+                      </>
+                    </div>
+                  </div>
+                </div>
+              ) : null}
               {venta.data.estado_pedido == "enviado" ? (
                 <>
                   <hr style={{ gridColumn: " 1 / 5" }} />

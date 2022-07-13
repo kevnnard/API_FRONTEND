@@ -51,6 +51,9 @@ function GuiaBogo({venta}) {
             <span>
               {venta.data.pago.metodo_pago == "Cash on Delivery (COD)"
                 ? "Contra Entrega"
+                : venta.data.pago.metodo_pago &&
+              venta.data.pago.metodo_pago == "addi stating payment app"
+                ? "Credito Addi"
                 : venta.data.pago.metodo_pago}
             </span>
           </p>
@@ -59,7 +62,9 @@ function GuiaBogo({venta}) {
             <span>
               {venta.data.pago.estado_pago == "pending"
                 ? "Pendiente"
-                : venta.data.pago.estado_pago}
+                : venta.data.pago.estado_pago == "paid"
+                ? "Completado"
+                : "Pendiente"}
             </span>
           </p>
           <br />
@@ -71,7 +76,12 @@ function GuiaBogo({venta}) {
             <span>
               {venta.data.tienda == "Shopify"
                 ? venta.data.pago.estado_pago == "pending"
-                  ? venta.data.ventaTotalShopify
+                  ? "$" +
+                    Intl.NumberFormat("es-ES", {
+                      style: "currency",
+                      currency: "COP",
+                      minimumFractionDigits: 0,
+                    }).format(venta.data.ventaTotalShopify)
                   : 0
                 : venta.data.pago.estado_pago == "pendiente"
                 ? "$" +

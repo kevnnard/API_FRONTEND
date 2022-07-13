@@ -72,6 +72,34 @@ function NewVentaManual() {
      setProductoProvicional(result);
    };
 
+   const handleClienteSearch = async (e) => {
+    e.preventDefault();
+    if(e.key === "Enter") {
+      const { data } = await axios.post(
+        `${
+          import.meta.env.VITE_BACKEND_URL
+        }/dashboard/ventas-manuales/cliente`,
+        { cedula }
+      );
+      if(data.error == true) {
+        setAlerta({msg: data.msg, error: data.error})
+        setNombre("");
+        setDepartamento("");
+        setCiudad("");
+        setDireccion("");
+        setEmail("");
+        setTelefono("");
+      } else {
+        setAlerta({});
+        setNombre(data.nombre);
+        setDepartamento(data.departamento);
+        setCiudad(data.ciudad);
+        setDireccion(data.direccion);
+        setEmail(data.email);
+        setTelefono(data.telefono);
+      }
+    }
+   };
 
    const handleActualizarProducto = async (e) => {
      e.preventDefault();
@@ -500,8 +528,9 @@ function NewVentaManual() {
               type="text"
               name="cedula"
               value={cedula}
-              placeholder="# Cedula o Nit"
+              placeholder="# Cedula o Nit - ENTER PARA BUSCAR"
               onChange={(e) => setCedula(e.target.value)}
+              onKeyUp={handleClienteSearch}
             />
           </div>
           <div>
@@ -538,11 +567,11 @@ function NewVentaManual() {
               <option selected value="" disabled>
                 Selecciona la ciudad
               </option>
-              {dataDane.map((item) => (
-                <option value={item.ciduad}>
-                  {item.ciduad} - {item.departamento}
-                </option>
-              ))}
+              {dataDane.map((item) =>
+                departamento == item.departamento.toUpperCase() ? (
+                  <option value={item.ciduad}>{item.ciduad}</option>
+                ) : null
+              )}
             </select>
           </div>
           <div>
@@ -617,11 +646,11 @@ function NewVentaManual() {
               <option selected value="" disabled>
                 Elige una ciudad destino
               </option>
-              {dataDane.map((item) => (
-                <option value={item.ciduad}>
-                  {item.ciduad} - {item.departamento}
-                </option>
-              ))}
+              {dataDane.map((item) =>
+                departamento_envio == item.departamento.toUpperCase() ? (
+                  <option value={item.ciduad}>{item.ciduad}</option>
+                ) : null
+              )}
             </select>
           </div>
           <div>

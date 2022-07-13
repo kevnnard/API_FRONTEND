@@ -25,6 +25,12 @@ function Productos() {
   const handleClose2 = () => {
     setOpen2(false);
   };
+
+   const [open3, setOpen3] = useState(false);
+   const handleOpen3 = () => setOpen3(true);
+   const handleClose3 = () => {
+     setOpen3(false);
+   };
   // datod para subir productos con archivo
   const [archivo, setArchivo] = useState(null);
 
@@ -52,6 +58,8 @@ function Productos() {
   const [alerta, setAlerta] = useState({});
 
   // Buscar Producto por sku
+
+
 
   const [skubusqueda, setSkuBusqueda] = useState("");
   const [nombrebusqueda, setNombreBusqueda] = useState("");
@@ -223,9 +231,23 @@ function Productos() {
     setTimeout(() => {
       handleClose2();
       setAlerta({});
+      window.location.reload(true);
     }, 3000);
-
   };
+
+    const handleSubmitFileActualizar = async (e) => {
+      e.preventDefault();
+      const { data } = await axios.put(
+        `${import.meta.env.VITE_BACKEND_URL}/dashboard/productos/put/file`,
+        { productosFile , auth }
+      );
+      setAlerta({ msg: data.msg });
+      setTimeout(() => {
+        handleClose2();
+        setAlerta({});
+        window.location.reload(true);
+      }, 3000);
+    };
 
   const { msg } = alerta;
   let cont = 0;
@@ -390,7 +412,7 @@ function Productos() {
         </button>
         {auth.role === "ADMIN" ? (
           <button className="btnn" onClick={handleOpen2}>
-            Subir Archivo <UnarchiveRounded />
+            Crear Productos <UnarchiveRounded />
           </button>
         ) : null}
         <Modal
@@ -403,6 +425,7 @@ function Productos() {
             <h1>Agregar Archivo de productos</h1>
             <CSVReader
               onUploadAccepted={(results) => {
+                setProductosFile([]);
                 setProductosFile(results);
               }}
             >
@@ -440,6 +463,71 @@ function Productos() {
                     <br />
                     {acceptedFile ? (
                       <button className="btnn" onClick={handleSubmitFile}>
+                        Subir Archivo al api <UnarchiveRounded />
+                      </button>
+                    ) : null}
+                  </div>
+                </>
+              )}
+            </CSVReader>
+          </div>
+        </Modal>
+        {auth.role === "ADMIN" ? (
+          <button className="btnn" onClick={handleOpen3}>
+            Actualizar productos <UnarchiveRounded />
+          </button>
+        ) : null}
+        <Modal
+          open={open3}
+          onClose={handleClose3}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <div className="modalBoxxx">
+            <h1>Actualizar productos</h1>
+            <CSVReader
+              onUploadAccepted={(results) => {
+                 setProductosFile([]);
+                setProductosFile(results);
+              }}
+            >
+              {({
+                getRootProps,
+                acceptedFile,
+                ProgressBar,
+                getRemoveFileProps,
+              }) => (
+                <>
+                  <div className="modal_box_producto_file">
+                    {acceptedFile ? (
+                      <button
+                        style={{ backgroundColor: "#f00" }}
+                        className="btnn"
+                        {...getRemoveFileProps()}
+                      >
+                        Borrar Archivo
+                      </button>
+                    ) : (
+                      <button
+                        style={{ background: "#000" }}
+                        className="btnn"
+                        type="button"
+                        {...getRootProps()}
+                      >
+                        Subir Archivo
+                      </button>
+                    )}
+                    <div className="nombre_archivo_csv">
+                      {acceptedFile && acceptedFile.name}
+                    </div>
+                    <ProgressBar />
+                    <br />
+                    <br />
+                    {acceptedFile ? (
+                      <button
+                        className="btnn"
+                        onClick={handleSubmitFileActualizar}
+                      >
                         Subir Archivo al api <UnarchiveRounded />
                       </button>
                     ) : null}
