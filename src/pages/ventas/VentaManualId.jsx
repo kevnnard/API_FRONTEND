@@ -1470,7 +1470,22 @@ ${venta.data.datos_envio.indicaciones_envio}
                           {/* <td>{item.plu}</td> */}
                           <td>{item.nombre}</td>
                           <td>{item.talla}</td>
-                          <td>{item.cantidadS}</td>
+                          <td
+                            style={
+                              item.cantidadS >= 2
+                                ? {
+                                    color: "#f10",
+                                    fontWeight: "bold",
+                                    fontSize: "2.2rem",
+                                  }
+                                : {
+                                    fontWeight: "bold",
+                                    fontSize: "2rem",
+                                  }
+                            }
+                          >
+                            {item.cantidadS}
+                          </td>
                           {venta.data.tienda == "Shopify" ? (
                             <td>
                               {"$" +
@@ -1810,7 +1825,23 @@ ${venta.data.datos_envio.indicaciones_envio}
                                                           productoProvicional.porcentajeDescuento
                                                         )}
                                                     </td> */}
-                                                    <td>
+                                                    <td
+                                                      style={
+                                                        item.cantidadS >= 2
+                                                          ? {
+                                                              color: "#f10",
+                                                              fontWeight:
+                                                                "bold",
+                                                              fontSize:
+                                                                "2.2rem",
+                                                            }
+                                                          : {
+                                                              fontWeight:
+                                                                "bold",
+                                                              fontSize: "2rem",
+                                                            }
+                                                      }
+                                                    >
                                                       {
                                                         productoProvicional.cantidadS
                                                       }
@@ -1852,7 +1883,23 @@ ${venta.data.datos_envio.indicaciones_envio}
                                                           productoProvicional.precio
                                                         )}
                                                     </td>
-                                                    <td>
+                                                    <td
+                                                      style={
+                                                        item.cantidadS >= 2
+                                                          ? {
+                                                              color: "#f10",
+                                                              fontWeight:
+                                                                "bold",
+                                                              fontSize:
+                                                                "2.2rem",
+                                                            }
+                                                          : {
+                                                              fontWeight:
+                                                                "bold",
+                                                              fontSize: "2rem",
+                                                            }
+                                                      }
+                                                    >
                                                       {
                                                         productoProvicional.cantidadS
                                                       }
