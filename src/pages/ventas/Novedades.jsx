@@ -1,11 +1,13 @@
 import "./ventas.scss";
 import axios from "axios";
+import moment from "moment";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import NavVentas from "./NavVentas";
 import useAuth from "../../hooks/useAuth";
 
 function Novedades() {
+  moment.locale();
   // auth
   const auth = useAuth();
   const navigate = useNavigate();
@@ -95,80 +97,75 @@ function Novedades() {
                 <th>Valor Total</th>
                 <th>Accion</th>
               </thead>
-              {ventass == true ? (
-                ventas.map((item) => (
-                  <>
-                    <tr
-                      style={
-                        item.estado_pedido == "novedad"
-                          ? { background: "#ff8000", color: "#fff" }
-                          : { background: "#00f", color: "#fff" }
-                      }
-                      key={item._id}
-                    >
-                      <td>{cont++}</td>
-                      {item.tienda == "Shopify" ? (
-                        <td>
-                          {new Date(item.fechaShopify).toLocaleDateString()} A
-                          las {new Date(item.fechaShopify).toLocaleTimeString()}
-                        </td>
-                      ) : (
-                        <td>
-                          {new Date(item.fecha).toLocaleDateString()} A las{" "}
-                          {new Date(item.fecha).toLocaleTimeString()}
-                        </td>
-                      )}
-                      <td>{`${item.nuVenta}`}</td>
-                      <td>{item.cliente.nombre}</td>
-                      <td>{item.cliente.ciudad}</td>
-                      <td>{item.cliente.telefono}</td>
-                      <td>
-                        {item.pago.metodo_pago == "Cash on Delivery (COD)"
-                          ? "Pago Contra entrega"
-                          : item.pago.metodo_pago &&
-                            item.pago.metodo_pago == "addi stating payment app"
-                          ? "Credito Addi"
-                          : item.pago.metodo_pago}
-                      </td>
-                      <td>
+              {ventass == true
+                ? ventas.map((item) => (
+                    <>
+                      <tr
+                        style={
+                          item.estado_pedido == "novedad"
+                            ? { background: "#ff8000", color: "#fff" }
+                            : { background: "#00f", color: "#fff" }
+                        }
+                        key={item._id}
+                      >
+                        <td>{cont++}</td>
                         {item.tienda == "Shopify" ? (
-                          <>
-                            {"$" +
-                              Intl.NumberFormat("es-ES", {
-                                style: "currency",
-                                currency: "COP",
-                                minimumFractionDigits: 0,
-                              }).format(item.ventaTotalShopify)}
-                          </>
+                          <td>{moment(item.fechaShopify).format("LLL")}</td>
                         ) : (
-                          <>
-                            {"$" +
-                              Intl.NumberFormat("es-ES", {
-                                style: "currency",
-                                currency: "COP",
-                                minimumFractionDigits: 0,
-                              }).format(item.precio)}
-                          </>
+                          <td>{moment(item.fecha).format("LLL")}</td>
                         )}
-                      </td>
-                      <td>
-                        <Link
-                          style={{
-                            fontSize: "1rem",
-                            background: "#fff",
-                            color: "#000",
-                            padding: "5px",
-                            borderRadius: "5px",
-                          }}
-                          to={`/dashboard/ventas-manuales/${item._id}`}
-                        >
-                          Editar
-                        </Link>
-                      </td>
-                    </tr>
-                  </>
-                ))
-              ) : null}
+                        <td>{`${item.nuVenta}`}</td>
+                        <td>{item.cliente.nombre}</td>
+                        <td>{item.cliente.ciudad}</td>
+                        <td>{item.cliente.telefono}</td>
+                        <td>
+                          {item.pago.metodo_pago == "Cash on Delivery (COD)"
+                            ? "Pago Contra entrega"
+                            : item.pago.metodo_pago &&
+                              item.pago.metodo_pago ==
+                                "addi stating payment app"
+                            ? "Credito Addi"
+                            : item.pago.metodo_pago}
+                        </td>
+                        <td>
+                          {item.tienda == "Shopify" ? (
+                            <>
+                              {"$" +
+                                Intl.NumberFormat("es-ES", {
+                                  style: "currency",
+                                  currency: "COP",
+                                  minimumFractionDigits: 0,
+                                }).format(item.ventaTotalShopify)}
+                            </>
+                          ) : (
+                            <>
+                              {"$" +
+                                Intl.NumberFormat("es-ES", {
+                                  style: "currency",
+                                  currency: "COP",
+                                  minimumFractionDigits: 0,
+                                }).format(item.precio)}
+                            </>
+                          )}
+                        </td>
+                        <td>
+                          <Link
+                            style={{
+                              fontSize: "1rem",
+                              background: "#fff",
+                              color: "#000",
+                              padding: "5px",
+                              borderRadius: "5px",
+                            }}
+                            to={`/dashboard/ventas-manuales/${item._id}`}
+                          >
+                            Editar
+                          </Link>
+                        </td>
+                      </tr>
+                    </>
+                  ))
+                : null}
             </table>
           </main>
         </>

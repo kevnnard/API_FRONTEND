@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -17,6 +17,8 @@
     "axios": "^0.26.0",
     "clsx": "^1.1.1",
     "json2csv": "^5.0.7",
+    "moment": "^2.29.4",
+    "notistack": "^2.0.5",
     "react": "^17.0.2",
     "react-circular-progressbar": "^2.0.4",
     "react-copy-to-clipboard": "^5.1.0",

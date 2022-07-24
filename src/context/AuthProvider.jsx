@@ -1,4 +1,5 @@
 import axios from "axios";
+import io from "socket.io-client";
 import { useState, useEffect, createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Alerta from "../components/Alerta";
@@ -7,14 +8,15 @@ const AuthContext = createContext();
 
 const AuthProvider = ({children}) => {
 
-    const [alerta, setAlerta] = useState({})
-    const [auth, setAuth] = useState({})
-    const [cargando, setCargando] = useState(true)
-    const [modalEliminarColaborador, setModalEliminarColaborador] = useState(false)
-    const [ userColaborador, setUserColaborador] = useState({})
+    const [alerta, setAlerta] = useState({});
+    const [auth, setAuth] = useState({});
+    const [cargando, setCargando] = useState(true);
+    const [modalEliminarColaborador, setModalEliminarColaborador] = useState(false);
+    const [ userColaborador, setUserColaborador] = useState({});
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
+    let socket;
     useEffect(() => {
         const autenticarUsuario = async () => {
             const token = localStorage.getItem("token");
@@ -33,8 +35,10 @@ const AuthProvider = ({children}) => {
                   config
                 );
                 setAuth(data)
-                setAlerta({})
+                setAlerta({});
                 // navigate('/dashboard')
+                socket = io(import.meta.env.VITE_BACKEND_URL);
+                socket.emit("online", { data });
             } catch (error) {
                 setAuth({})
                 navigate('/')
@@ -47,10 +51,10 @@ const AuthProvider = ({children}) => {
             setCargando(false)
             setAlerta({});
         }
-        autenticarUsuario()
+        autenticarUsuario();
+
     }, [])
 
-    
     const handleModlaEliminarColaborador = (usuario) => {
       setModalEliminarColaborador(!modalEliminarColaborador);
       setUserColaborador(usuario);
@@ -73,9 +77,11 @@ const AuthProvider = ({children}) => {
             setCargando(false)
         }
     }
-    const cerrarSesionAuth = () => {
-        setAuth({})
-    }
+
+    const cerrarSesionAuth = async () => {
+      setAuth({});
+    };
+
     const { msg } = alerta;
     return (
       <AuthContext.Provider

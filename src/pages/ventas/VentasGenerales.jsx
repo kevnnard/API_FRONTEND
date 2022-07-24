@@ -1,5 +1,6 @@
 import "./ventas.scss";
 import axios from "axios";
+import moment from "moment";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavVentas from "./NavVentas";
@@ -9,6 +10,7 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 
 function VentasGenerale() {
+  moment.locale();
   //ventas Sac
   const [ventas, setventas] = useState({});
   const [ventass, setVentas] = useState(false);
@@ -305,15 +307,9 @@ function VentasGenerale() {
                   >
                     <td>{cont++}</td>
                     {item.tienda == "Shopify" ? (
-                      <td>
-                        {new Date(item.fechaShopify).toLocaleDateString()} A las{" "}
-                        {new Date(item.fechaShopify).toLocaleTimeString()}
-                      </td>
+                      <td>{moment(item.fechaShopify).format("LLL")}</td>
                     ) : (
-                      <td>
-                        {new Date(item.fecha).toLocaleDateString()} A las{" "}
-                        {new Date(item.fecha).toLocaleTimeString()}
-                      </td>
+                      <td>{moment(item.fecha).format("LLL")}</td>
                     )}
                     <td>{`${item.nuVenta}`}</td>
                     <td>{item.cliente.nombre}</td>
@@ -403,15 +399,9 @@ function VentasGenerale() {
                   >
                     <td>{cont++}</td>
                     {item.tienda == "Shopify" ? (
-                      <td>
-                        {new Date(item.fechaShopify).toLocaleDateString()} A las{" "}
-                        {new Date(item.fechaShopify).toLocaleTimeString()}
-                      </td>
+                      <td>{moment(item.fechaShopify).format("LLL")}</td>
                     ) : (
-                      <td>
-                        {new Date(item.fecha).toLocaleDateString()} A las{" "}
-                        {new Date(item.fecha).toLocaleTimeString()}
-                      </td>
+                      <td>{moment(item.fecha).format("LLL")}</td>
                     )}
                     <td>{`${item.nuVenta}`}</td>
                     <td>{item.cliente.nombre}</td>
@@ -501,20 +491,10 @@ function VentasGenerale() {
                 <td>{cont++}</td>
                 {ventaProvicional.data.tienda == "Shopify" ? (
                   <td>
-                    {new Date(
-                      ventaProvicional.data.fechaShopify
-                    ).toLocaleDateString()}{" "}
-                    A las{" "}
-                    {new Date(
-                      ventaProvicional.data.fechaShopify
-                    ).toLocaleTimeString()}
+                    {moment(ventaProvicional.data.fechaShopify).format("LLL")}
                   </td>
                 ) : (
-                  <td>
-                    {new Date(ventaProvicional.data.fecha).toLocaleDateString()}{" "}
-                    A las{" "}
-                    {new Date(ventaProvicional.data.fecha).toLocaleTimeString()}
-                  </td>
+                  <td>{moment(ventaProvicional.data.fecha).format("LLL")}</td>
                 )}
                 <td>{`${ventaProvicional.data.nuVenta}`}</td>
                 <td>{ventaProvicional.data.cliente.nombre}</td>

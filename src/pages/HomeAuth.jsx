@@ -1,4 +1,5 @@
 import "./home.scss";
+import useAuth from "../hooks/useAuth";
 import Widget from "../components/widget/Widget";
 import Featured from "../components/featured/Featured";
 import Chart from "../components/chart/Chart";
@@ -7,9 +8,11 @@ import Alerta from "../components/Alerta";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Modal } from "@mui/material";
+import IntegrationNotistack from "../components/Online/CardOnline";
 
 function HomeAuth() {
   // Alerta
+  const { auth } = useAuth();
   const [alerta, setAlerta] = useState({});
   // Estadisticas de ventas totatles y pedidos totales
   const [cantidadVentasTotales, setCantidadVentasTotales] = useState(0);
@@ -80,7 +83,7 @@ function HomeAuth() {
         }/dashboard/estadisticas/metadia`;
         const { data } = await axios.get(url);
        if (data.error) {
-        setAlerta({msg: data.msg, error: data.error})
+        //setAlerta({msg: data.msg, error: data.error})
         return
        } else {
          setResultMetaDia(data.metaDia);
@@ -108,8 +111,6 @@ function HomeAuth() {
       console.log(error);
     }
   };
-
-
   const { msg } = alerta;
   return (
     <>

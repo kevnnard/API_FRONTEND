@@ -443,7 +443,7 @@ function VentaManualId() {
     }
   };
 
-  let socket = io();
+  let socket;
 
   useEffect(() => {
     obtenerCliente();

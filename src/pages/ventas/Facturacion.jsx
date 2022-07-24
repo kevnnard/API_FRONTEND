@@ -1,5 +1,6 @@
 import "./ventas.scss";
 import axios from "axios";
+import moment from "moment";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import NavVentas from "./NavVentas";
@@ -8,6 +9,7 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 
 function Facturacion() {
+  moment.locale();
   // auth
   const auth = useAuth();
   const navigate = useNavigate();
@@ -133,16 +135,9 @@ function Facturacion() {
                       >
                         <td>{cont++}</td>
                         {item.tienda == "Shopify" ? (
-                          <td>
-                            {new Date(item.fechaShopify).toLocaleDateString()} A
-                            las{" "}
-                            {new Date(item.fechaShopify).toLocaleTimeString()}
-                          </td>
+                          <td>{moment(item.fechaShopify).format("LLL")}</td>
                         ) : (
-                          <td>
-                            {new Date(item.fecha).toLocaleDateString()} A las{" "}
-                            {new Date(item.fecha).toLocaleTimeString()}
-                          </td>
+                          <td>{moment(item.fecha).format("LLL")}</td>
                         )}
                         <td>{`${item.nuVenta}`}</td>
                         <td>{item.cliente.nombre}</td>
