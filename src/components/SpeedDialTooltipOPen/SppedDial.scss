@@ -1,0 +1,26 @@
+.modall {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+    padding: 3rem;
+
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 5rem;
+
+    }
+    input {
+        text-align: center;
+    }
+    button {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        color: #fff !important;
+    }
+}

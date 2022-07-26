@@ -1,6 +1,6 @@
 import "./ventas.scss";
 import axios from "axios";
-import moment from "moment";
+import moment from "moment/min/moment-with-locales";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import NavVentas from "./NavVentas";
@@ -9,11 +9,11 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 
 function Facturacion() {
-  moment.locale();
+  moment.locale("es-us");
   // auth
   const auth = useAuth();
   const navigate = useNavigate();
-  //ventas Sac
+  //ventas Sac.us
   const [ventas, setventas] = useState({});
   const [ventass, setVentas] = useState(false);
   // paginacion de productos

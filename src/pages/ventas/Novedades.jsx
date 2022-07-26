@@ -1,13 +1,13 @@
 import "./ventas.scss";
 import axios from "axios";
-import moment from "moment";
+import moment from "moment/min/moment-with-locales";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import NavVentas from "./NavVentas";
 import useAuth from "../../hooks/useAuth";
 
 function Novedades() {
-  moment.locale();
+  moment.locale("es-us");
   // auth
   const auth = useAuth();
   const navigate = useNavigate();
@@ -87,26 +87,27 @@ function Novedades() {
           <main className="main_pri_ventas">
             <table>
               <thead>
-                <th>#</th>
-                <th>Fecha</th>
-                <th>venta</th>
-                <th>nombre</th>
-                <th>ciudad</th>
-                <th>Telefono</th>
-                <th>metodo de pago</th>
-                <th>Valor Total</th>
-                <th>Accion</th>
+                <tr>
+                  <th>#</th>
+                  <th>Fecha</th>
+                  <th>venta</th>
+                  <th>nombre</th>
+                  <th>ciudad</th>
+                  <th>Telefono</th>
+                  <th>metodo de pago</th>
+                  <th>Valor Total</th>
+                  <th>Accion</th>
+                </tr>
               </thead>
               {ventass == true
                 ? ventas.map((item) => (
-                    <>
+                    <tbody key={item._id}>
                       <tr
                         style={
                           item.estado_pedido == "novedad"
                             ? { background: "#ff8000", color: "#fff" }
                             : { background: "#00f", color: "#fff" }
                         }
-                        key={item._id}
                       >
                         <td>{cont++}</td>
                         {item.tienda == "Shopify" ? (
@@ -163,7 +164,7 @@ function Novedades() {
                           </Link>
                         </td>
                       </tr>
-                    </>
+                    </tbody>
                   ))
                 : null}
             </table>

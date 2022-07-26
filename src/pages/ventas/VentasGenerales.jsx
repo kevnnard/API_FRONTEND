@@ -1,6 +1,6 @@
 import "./ventas.scss";
 import axios from "axios";
-import moment from "moment";
+import moment from "moment/min/moment-with-locales";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavVentas from "./NavVentas";
@@ -10,7 +10,7 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 
 function VentasGenerale() {
-  moment.locale();
+  moment.locale("es-us");
   //ventas Sac
   const [ventas, setventas] = useState({});
   const [ventass, setVentas] = useState(false);

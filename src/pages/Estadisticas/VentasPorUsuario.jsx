@@ -2,7 +2,7 @@ import "./ventasPorUsuario.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Chart2 from "../../components/chart/Chart2";
-// import ReactHTMLTableToExcel from "react-html-table-to-excel";
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
 import Widget from "../../components/widget/Widget";
 
 function VentasPorUsuario() {
@@ -51,7 +51,7 @@ function VentasPorUsuario() {
         /> */}
         <div id="table" className="excel_export_file">
           <div className="button_excel">
-            {/* <ReactHTMLTableToExcel
+            <ReactHTMLTableToExcel
               id="test-table-xls-button"
               className="xls-button"
               table="table-to-xls"
@@ -59,7 +59,7 @@ function VentasPorUsuario() {
               sheet="ventas_SAC"
               buttonText="Descargar datos"
               type="button"
-            /> */}
+            />
             <table id="table-to-xls" hidden>
               <thead>
                 <tr>

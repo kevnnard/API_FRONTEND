@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./guiabogo.scss"
+import moment from "moment/min/moment-with-locales";
 
 function GuiaBogo({venta}) {
-
+  moment.locale("es-us")
  let totall = 0
  const total = venta.data.productos.map((e) => {
     totall = totall +  e.precioVenta
@@ -10,14 +11,12 @@ function GuiaBogo({venta}) {
   return (
     <>
       <div className="box_bogo_guia">
-        <h1>Fox Racing Colombia</h1>
+        <h1>{venta.data.tienda == "FOX" ? "Fox Racing " : "Replays "} Colombia</h1>
         <p className="nu_orden_box">
           Orden # {venta.data.nuVenta}
           <br />{" "}
           <span>
-            {" "}
-            {new Date(Date.now()).toLocaleDateString()} a las{" "}
-            {new Date(Date.now()).toLocaleTimeString()}
+            {moment().format("LLL")}
           </span>
         </p>
 
@@ -52,7 +51,7 @@ function GuiaBogo({venta}) {
               {venta.data.pago.metodo_pago == "Cash on Delivery (COD)"
                 ? "Contra Entrega"
                 : venta.data.pago.metodo_pago &&
-              venta.data.pago.metodo_pago == "addi stating payment app"
+                  venta.data.pago.metodo_pago == "addi stating payment app"
                 ? "Credito Addi"
                 : venta.data.pago.metodo_pago}
             </span>

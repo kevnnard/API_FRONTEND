@@ -272,16 +272,26 @@
     align-items: center;
     flex-direction: column;
     height: 100%;
-    width: 100%;
     position: relative;
-
+    width: 100%;
+    scroll-snap-type: y proximity;
     h1 {
+        user-select: none;
         width: max-content;
         font-weight: bold;
         text-transform: uppercase;
     }
 
+    small {
+        scroll-snap-align: top;
+        user-select: none;
+        color: #f00;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
     h2 {
+        
+        padding: .5rem 0;
         font-weight: bold;
         font-size: 1.8rem;
 
@@ -291,6 +301,15 @@
             text-transform: capitalize;
 
         }
+    }
+    div {
+        margin: 1rem 0;
+        height: 200px;
+        overflow: hidden;
+        overflow-y: scroll;
+        top: 0;
+        position: relative;
+        padding: 5%;
     }
 }
 

@@ -16,8 +16,22 @@ import dataDane from "./json/ciudades.json";
 import dataDane2 from "./json/departamentos.json";
 import io from "socket.io-client";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import moment from "moment/min/moment-with-locales";
+import Box from "@mui/material/Box";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import { Hidden } from "@mui/material";
 
 function VentaManualId() {
+  moment.locale("es-us");
+
+  const steps = [
+    "Select master blaster campaign settings",
+    "Create an ad group",
+    "Create an ad",
+  ];
+
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
@@ -122,6 +136,7 @@ function VentaManualId() {
           altoPaquete,
           anchoPaquete,
           PesoVolumen,
+          auth,
         }
       );
       setTcc(data);
@@ -175,6 +190,7 @@ function VentaManualId() {
           direccion_envio,
           indicaciones_envio,
           email_envio,
+          auth,
         }
       );
       setAlerta({
@@ -212,7 +228,7 @@ function VentaManualId() {
         `${
           import.meta.env.VITE_BACKEND_URL
         }/dashboard/ventas-manuales/edit/precio/${id}`,
-        { sku, cantidadS, precioVenta, cantidadP }
+        { sku, cantidadS, precioVenta, cantidadP, auth }
       );
       if (data.error == true) {
         setAlerta({
@@ -254,26 +270,55 @@ function VentaManualId() {
   const handleActualizarProducto = async (e) => {
     e.preventDefault();
     try {
-      const sku = productoProvicional.sku;
-      await axios.put(
-        `${
-          import.meta.env.VITE_BACKEND_URL
-        }/dashboard/ventas-manuales/edit/${id}`,
-        { sku, solicitadooa, numeroGuia, transportadora , nuFactura}
-      );
-      setAlerta({
-        msg: "Producto Actualizado con exito",
-      });
-      setSolicitadooa("");
-      setbtnprovicional(true);
-      setNumeroGuia("");
-      setTransportadora("");
-      setNuFactura("");
-      obtenerCliente();
-      setTimeout(() => {
-        setAlerta({});
+      if (numeroGuia && transportadora !== "") {
+        const sku = productoProvicional.sku;
+        await axios.put(
+          `${
+            import.meta.env.VITE_BACKEND_URL
+          }/dashboard/ventas-manuales/edit/${id}`,
+          { sku, solicitadooa, numeroGuia, transportadora, nuFactura, auth }
+        );
+        setAlerta({
+          msg: "Producto Actualizado con exito",
+        });
+        setSolicitadooa("");
+        setbtnprovicional(true);
+        setNumeroGuia("");
+        setTransportadora("");
+        setNuFactura("");
         obtenerCliente();
-      }, 2000);
+        setTimeout(() => {
+          setAlerta({});
+          obtenerCliente();
+        }, 2000);
+      }
+      else if(solicitadooa || nuFactura !== "") {
+        const sku = productoProvicional.sku;
+        await axios.put(
+          `${
+            import.meta.env.VITE_BACKEND_URL
+          }/dashboard/ventas-manuales/edit/${id}`,
+          { sku, solicitadooa, numeroGuia, transportadora, nuFactura, auth }
+        );
+        setAlerta({
+          msg: "Producto Actualizado con exito",
+        });
+        setSolicitadooa("");
+        setbtnprovicional(true);
+        setNumeroGuia("");
+        setTransportadora("");
+        setNuFactura("");
+        obtenerCliente();
+        setTimeout(() => {
+          setAlerta({});
+          obtenerCliente();
+        }, 2000);
+      } else {
+        setAlerta({
+          msg: "Debes rellenar el numero de guia y transportadora",
+          error: true,
+        });
+      }
     } catch (error) {
       console.log(error);
     }
@@ -302,7 +347,7 @@ function VentaManualId() {
         `${
           import.meta.env.VITE_BACKEND_URL
         }/dashboard/buscar/producto/put/${id}`,
-        { search }
+        { search, auth }
       );
       setAlerta({
         msg: data.msg,
@@ -331,7 +376,7 @@ function VentaManualId() {
           `${
             import.meta.env.VITE_BACKEND_URL
           }/dashboard/ventas-manuales/delete/producto/${id}`,
-          { sku, skuS }
+          { sku, skuS, auth }
         );
         obtenerCliente();
         setProducto("");
@@ -361,7 +406,7 @@ function VentaManualId() {
     try {
       const { data } = await axios.put(
         `${import.meta.env.VITE_BACKEND_URL}/dashboard/ventas-manuales/${id}`,
-        { estado_pedidoo }
+        { estado_pedidoo, auth }
       );
       setAlerta({
         msg: "Estado Actualizado",
@@ -386,7 +431,7 @@ function VentaManualId() {
           `${
             import.meta.env.VITE_BACKEND_URL
           }/dashboard/ventas-shopify/enviar/${id}`,
-          { nuPedidoSho }
+          { nuPedidoSho, auth }
         );
         setAlerta({ msg: data.msg });
         setTimeout(() => {
@@ -404,7 +449,7 @@ function VentaManualId() {
           `${
             import.meta.env.VITE_BACKEND_URL
           }/dashboard/ventas-manuales/enviar/pedido/${id}`,
-          { numeroVenta }
+          { numeroVenta, auth }
         );
         setAlerta({ msg: data.msg });
         setTimeout(() => {
@@ -464,6 +509,8 @@ function VentaManualId() {
     });
   }, []);
 
+  // Numero de Guias
+  let guiaNumber = 2;
   const { msg } = alerta;
   return (
     <>
@@ -938,9 +985,30 @@ ${venta.data.datos_envio.indicaciones_envio}
               </div>
               <div className="envio_datos_finales">
                 <h1>Datos de Envio finales: </h1>
-                <div>
+                <small
+                  style={{
+                    fontWeight: "bold",
+                    userSelect: "none",
+                    marginBottom: "1rem",
+                    color: "#f10",
+                  }}
+                >
+                  Puedes agregar mas de una GUIA y solo una FACTURA!
+                </small>
+                <>
                   <h2>
-                    #De guia:{" "}
+                    Numero de Factura:{" "}
+                    <span>
+                      {venta.data.envio_pedido
+                        ? venta.data.envio_pedido.numero_factura
+                        : "AUN NO SE A FACTURADO"}
+                    </span>
+                  </h2>
+                </>
+                <div>
+                  <small>Guia generada #{guiaNumber - 1}</small>
+                  <h2>
+                    Numero de guia:{" "}
                     <span>
                       {venta.data.envio_pedido
                         ? venta.data.envio_pedido.numGuia
@@ -948,21 +1016,31 @@ ${venta.data.datos_envio.indicaciones_envio}
                     </span>
                   </h2>
                   <h2>
-                    #Transportadora:{" "}
+                    Numero de Transportadora:{" "}
                     <span>
                       {venta.data.envio_pedido
                         ? venta.data.envio_pedido.transportadora
                         : "AUN NO SE A ENVIADO"}
                     </span>
                   </h2>
-                  <h2>
-                    #Factura:{" "}
-                    <span>
-                      {venta.data.envio_pedido
-                        ? venta.data.envio_pedido.numero_factura
-                        : "AUN NO SE A FACTURADO"}
-                    </span>
-                  </h2>
+                  {venta.data.envio_pedidoArray.map((item) => (
+                    <>
+                      <hr style={{ margin: "1rem 0" }} />
+                      <small>Guia generada #{guiaNumber++}</small>
+                      <h2>
+                        Numero de guia:{" "}
+                        <span>
+                          {item ? item.numGuia : "AUN NO SE A GENERADO"}
+                        </span>
+                      </h2>
+                      <h2>
+                        Numero de Transportadora:{" "}
+                        <span>
+                          {item ? item.transportadora : "AUN NO SE A ENVIADO"}
+                        </span>
+                      </h2>
+                    </>
+                  ))}
                 </div>
               </div>
               {msg && <Alerta alerta={alerta} />}
@@ -989,7 +1067,7 @@ ${venta.data.datos_envio.indicaciones_envio}
                   <div className="botonoes_guias_generar">
                     <div>
                       <>
-                        <h2>#De Factura: </h2>
+                        <h2>Numero de Factura: </h2>
                         <div className="grid_datos_envio_pri">
                           <div>
                             <input
@@ -1398,8 +1476,7 @@ ${venta.data.datos_envio.indicaciones_envio}
                             color="text.secondary"
                             gutterBottom
                           >
-                            {new Date(item.fecha_msg).toLocaleDateString()} a
-                            las {new Date(item.fecha_msg).toLocaleTimeString()}
+                            {moment(item.fecha_msg).calendar()}
                           </Typography>
                         </CardContent>
                       </Card>
@@ -2046,6 +2123,71 @@ ${venta.data.datos_envio.indicaciones_envio}
                       ))
                     : ""}
                 </table>
+              </div>
+              <div style={{ gridColumn: " 1 / 5" }}>
+                <h1
+                  style={{
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Historial de Cambios
+                </h1>
+                <Box
+                  sx={{
+                    width: "80%",
+                    margin: "auto",
+                    overflow: "hidden",
+                    overflowX: "scroll",
+                  }}
+                >
+                  <Stepper activeStep={100} alternativeLabel>
+                    {venta.data.historial.map((label) => (
+                      <Step key={label._id}>
+                        <StepLabel>
+                          <h2
+                            style={{
+                              position: "relative",
+                              height: "170px",
+                              fontSize: "1.5rem",
+                              display: "flex",
+                              flexDirection: "column",
+                            }}
+                          >
+                            <small
+                              style={{
+                                fontSize: "1.1rem",
+                                color: "#e66925",
+                                fontWeight: "bold",
+                                padding: "1rem 0",
+                              }}
+                            >
+                              - {label.autor}
+                            </small>
+                            "{label.razon}"
+                            <small
+                              style={{
+                                position: "absolute",
+                                left: "0",
+                                right: "0",
+                                bottom: "0",
+                                padding: "1rem ",
+                                fontSize: ".9rem",
+                                color: "#aaa",
+                                fontWeight: "bold",
+                              }}
+                            >
+                              {moment(label.fechaActualizada)
+                                .startOf("minute")
+                                .fromNow()}
+                            </small>
+                          </h2>
+                        </StepLabel>
+                      </Step>
+                    ))}
+                  </Stepper>
+                </Box>
               </div>
               {/* Boton enviar
               <input className="btnVenta" type="submit" value="Guardar venta" /> */}
