@@ -26,12 +26,6 @@ import { Hidden } from "@mui/material";
 function VentaManualId() {
   moment.locale("es-us");
 
-  const steps = [
-    "Select master blaster campaign settings",
-    "Create an ad group",
-    "Create an ad",
-  ];
-
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
@@ -1023,7 +1017,8 @@ ${venta.data.datos_envio.indicaciones_envio}
                         : "AUN NO SE A ENVIADO"}
                     </span>
                   </h2>
-                  {venta.data.envio_pedidoArray.map((item) => (
+                  {venta.data.envio_pedidoArray !== undefined
+                  ? venta.data.envio_pedidoArray.map((item) => (
                     <>
                       <hr style={{ margin: "1rem 0" }} />
                       <small>Guia generada #{guiaNumber++}</small>
@@ -1040,7 +1035,8 @@ ${venta.data.datos_envio.indicaciones_envio}
                         </span>
                       </h2>
                     </>
-                  ))}
+                  ))
+                : null}
                 </div>
               </div>
               {msg && <Alerta alerta={alerta} />}
@@ -2143,7 +2139,8 @@ ${venta.data.datos_envio.indicaciones_envio}
                   }}
                 >
                   <Stepper activeStep={100} alternativeLabel>
-                    {venta.data.historial.map((label) => (
+                    {venta.data.historial !== undefined 
+                    ? venta.data.historial.map((label) => (
                       <Step key={label._id}>
                         <StepLabel>
                           <h2
@@ -2185,7 +2182,8 @@ ${venta.data.datos_envio.indicaciones_envio}
                           </h2>
                         </StepLabel>
                       </Step>
-                    ))}
+                    ))
+                  : null}
                   </Stepper>
                 </Box>
               </div>
