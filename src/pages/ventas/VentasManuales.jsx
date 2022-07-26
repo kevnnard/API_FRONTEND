@@ -361,9 +361,9 @@ function VentasManuales() {
                   >
                     <td>{cont++}</td>
                     {ventaProvicional.data.tienda == "Shopify" ? (
-                      <td>{moment(ventaProvicional.fechaShopify).format("LLL")}</td>
+                      <td>{moment(ventaProvicional.data.fechaShopify).format("LLL")}</td>
                     ) : (
-                      <td>{moment(ventaProvicional.fecha).format("LLL")}</td>
+                      <td>{moment(ventaProvicional.data.fecha).format("LLL")}</td>
                     )}
                     <td>{`${ventaProvicional.data.nuVenta}`}</td>
                     <td>{ventaProvicional.data.cliente.nombre}</td>
