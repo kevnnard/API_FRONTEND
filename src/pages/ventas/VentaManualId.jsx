@@ -427,11 +427,19 @@ function VentaManualId() {
           }/dashboard/ventas-shopify/enviar/${id}`,
           { nuPedidoSho, auth }
         );
-        setAlerta({ msg: data.msg });
-        setTimeout(() => {
-          setAlerta({});
-          navigate("/dashboard/ventas-manuales/despachos");
-        }, 2000);
+        if(data.error === true) {
+          setAlerta({msg: data.msg, error: data.error});
+          setTimeout(() => {
+              setAlerta({});
+               navigate("/dashboard/ventas-manuales/despachos");
+          }, 7000);
+        } else {
+          setAlerta({ msg: data.msg });
+          setTimeout(() => {
+            setAlerta({});
+            navigate("/dashboard/ventas-manuales/despachos");
+          }, 2000);
+        }
       } catch (error) {
         console.log(error);
       }
@@ -1000,43 +1008,52 @@ ${venta.data.datos_envio.indicaciones_envio}
                   </h2>
                 </>
                 <div>
-                  <small>Guia generada #{guiaNumber - 1}</small>
-                  <h2>
-                    Numero de guia:{" "}
-                    <span>
-                      {venta.data.envio_pedido
-                        ? venta.data.envio_pedido.numGuia
-                        : "AUN NO SE A GENERADO"}
-                    </span>
-                  </h2>
-                  <h2>
-                    Numero de Transportadora:{" "}
-                    <span>
-                      {venta.data.envio_pedido
-                        ? venta.data.envio_pedido.transportadora
-                        : "AUN NO SE A ENVIADO"}
-                    </span>
-                  </h2>
                   {venta.data.envio_pedidoArray !== undefined
-                  ? venta.data.envio_pedidoArray.map((item) => (
+                    ? venta.data.envio_pedidoArray
+                        .map((item) => (
+                          <>
+                            <hr style={{ margin: "1rem 0" }} />
+                            <small>Guia generada #{guiaNumber++}</small>
+                            <h2>
+                              Numero de guia:{" "}
+                              <span>
+                                {item ? item.numGuia : "AUN NO SE A GENERADO"}
+                              </span>
+                            </h2>
+                            <h2>
+                              Numero de Transportadora:{" "}
+                              <span>
+                                {item
+                                  ? item.transportadora
+                                  : "AUN NO SE A ENVIADO"}
+                              </span>
+                            </h2>
+                          </>
+                        ))
+                        .reverse()
+                    : null}
+                  {venta.data.envio_pedido == undefined ? null 
+                  : venta.data.envio_pedido.numGuia == undefined ? null : (
                     <>
-                      <hr style={{ margin: "1rem 0" }} />
-                      <small>Guia generada #{guiaNumber++}</small>
+                      <small>Guia generada #{(guiaNumber = 1)}</small>
                       <h2>
                         Numero de guia:{" "}
                         <span>
-                          {item ? item.numGuia : "AUN NO SE A GENERADO"}
+                          {venta.data.envio_pedido
+                            ? venta.data.envio_pedido.numGuia
+                            : "AUN NO SE A GENERADO"}
                         </span>
                       </h2>
                       <h2>
                         Numero de Transportadora:{" "}
                         <span>
-                          {item ? item.transportadora : "AUN NO SE A ENVIADO"}
+                          {venta.data.envio_pedido
+                            ? venta.data.envio_pedido.transportadora
+                            : "AUN NO SE A ENVIADO"}
                         </span>
                       </h2>
                     </>
-                  ))
-                : null}
+                  )}
                 </div>
               </div>
               {msg && <Alerta alerta={alerta} />}
@@ -1388,9 +1405,7 @@ ${venta.data.datos_envio.indicaciones_envio}
                     </div>
                     {/* HASTA AQUI */}
                   </div>{" "}
-                  {venta.data.envio_pedido == undefined ? (
-                    ""
-                  ) : (
+                  {venta.data.envio_pedidoArray[0] === undefined ? null : (
                     <div style={{ gridColumn: "2 / 4" }}>
                       <button
                         onClick={terminarPedido}
@@ -2139,51 +2154,51 @@ ${venta.data.datos_envio.indicaciones_envio}
                   }}
                 >
                   <Stepper activeStep={100} alternativeLabel>
-                    {venta.data.historial !== undefined 
-                    ? venta.data.historial.map((label) => (
-                      <Step key={label._id}>
-                        <StepLabel>
-                          <h2
-                            style={{
-                              position: "relative",
-                              height: "170px",
-                              fontSize: "1.5rem",
-                              display: "flex",
-                              flexDirection: "column",
-                            }}
-                          >
-                            <small
-                              style={{
-                                fontSize: "1.1rem",
-                                color: "#e66925",
-                                fontWeight: "bold",
-                                padding: "1rem 0",
-                              }}
-                            >
-                              - {label.autor}
-                            </small>
-                            "{label.razon}"
-                            <small
-                              style={{
-                                position: "absolute",
-                                left: "0",
-                                right: "0",
-                                bottom: "0",
-                                padding: "1rem ",
-                                fontSize: ".9rem",
-                                color: "#aaa",
-                                fontWeight: "bold",
-                              }}
-                            >
-                              {moment(label.fechaActualizada)
-                                .startOf("minute")
-                                .fromNow()}
-                            </small>
-                          </h2>
-                        </StepLabel>
-                      </Step>
-                    ))
-                  : null}
+                    {venta.data.historial !== undefined
+                      ? venta.data.historial.map((label) => (
+                          <Step key={label._id}>
+                            <StepLabel>
+                              <h2
+                                style={{
+                                  position: "relative",
+                                  height: "170px",
+                                  fontSize: "1.5rem",
+                                  display: "flex",
+                                  flexDirection: "column",
+                                }}
+                              >
+                                <small
+                                  style={{
+                                    fontSize: "1.1rem",
+                                    color: "#e66925",
+                                    fontWeight: "bold",
+                                    padding: "1rem 0",
+                                  }}
+                                >
+                                  - {label.autor}
+                                </small>
+                                "{label.razon}"
+                                <small
+                                  style={{
+                                    position: "absolute",
+                                    left: "0",
+                                    right: "0",
+                                    bottom: "0",
+                                    padding: "1rem ",
+                                    fontSize: ".9rem",
+                                    color: "#aaa",
+                                    fontWeight: "bold",
+                                  }}
+                                >
+                                  {moment(label.fechaActualizada)
+                                    .startOf("minute")
+                                    .fromNow()}
+                                </small>
+                              </h2>
+                            </StepLabel>
+                          </Step>
+                        ))
+                      : null}
                   </Stepper>
                 </Box>
               </div>
