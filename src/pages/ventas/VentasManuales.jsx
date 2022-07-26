@@ -44,20 +44,6 @@ function VentasManuales() {
       obtenerVentasManualesEstado();
     }
   };
-  
-  const ontenerventasShopify = async () => {
-    try {
-      const url = `${
-      import.meta.env.VITE_BACKEND_URL
-      }/dashboard/ventas-shopify`;
-      axios.get(url).then(setTimeout(() => {
-        window.location.reload(true);
-      }, 2000));
-    } catch (error) {
-      setVentas(false);
-    }
-    
-  };
 
   const obtenerVentasManuales = async () => {
      try {
@@ -211,15 +197,6 @@ function VentasManuales() {
               <input placeholder="BUSCAR POR # CEDULA" />
           <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
             </div> */}
-            <div>
-              <button
-                className="btnn"
-                style={{ background: "#f00", color: "#fff" }}
-                onClick={ontenerventasShopify}
-              >
-                ACtualizar Bandeja
-              </button>
-            </div>
           </div>
           {ventass == true ? (
             <div className="paginate_productos">
