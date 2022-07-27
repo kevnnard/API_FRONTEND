@@ -10,6 +10,8 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import useAuth from "../../hooks/useAuth";
 import io from 'socket.io-client'
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 
 function VentasManuales() {
   moment.locale("es-us");
@@ -48,11 +50,12 @@ function VentasManuales() {
   const ontenerventasShopify = async () => {
     try {
       const url = `${
-      import.meta.env.VITE_BACKEND_URL
-      }/dashboard/ventas-shopify`;
-      axios.get(url).then(setTimeout(() => {
-        window.location.reload(true);
-      }, 2000));
+        import.meta.env.VITE_BACKEND_URL
+      }/dashboard/ventas-shopify/notify`;
+      axios.get(url)
+      .catch((error) => {
+        console.log(error)
+      });
     } catch (error) {
       setVentas(false);
     }
@@ -139,13 +142,30 @@ function VentasManuales() {
      }
   };
 
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleToggle = () => {
+    setOpen(!open);
+  };
   let socket;
   useEffect(() => {
     obtenerVentasManuales();
   }, []);
 
+
   useEffect(() => {
     socket = io(import.meta.env.VITE_BACKEND_URL);
+    socket.on("orders", ({ data}) => {
+      setVentas(false);
+      handleToggle();
+      ontenerventasShopify();
+       setTimeout(() => {
+         obtenerVentasManuales();
+         handleClose();
+       }, 6000);
+    });
   }, []);
 
 
@@ -167,6 +187,12 @@ function VentasManuales() {
       {auth.role === "DESPACHO" || "ADMIN" ? (
         <>
           <NavVentas />
+          <Backdrop
+            sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+            open={open}
+          >
+            <CircularProgress color="inherit" />
+          </Backdrop>
           {msg && <Alerta alerta={alerta} />}
           <h1 className="tit_pri_ventas">
             PEDIDOS PENDIENTES:{" "}
@@ -211,7 +237,7 @@ function VentasManuales() {
               <input placeholder="BUSCAR POR # CEDULA" />
           <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
             </div> */}
-            <div>
+            {/* <div>
               <button
                 className="btnn"
                 style={{ background: "#f00", color: "#fff" }}
@@ -219,7 +245,7 @@ function VentasManuales() {
               >
                 ACtualizar Bandeja
               </button>
-            </div>
+            </div> */}
           </div>
           {ventass == true ? (
             <div className="paginate_productos">
@@ -361,9 +387,15 @@ function VentasManuales() {
                   >
                     <td>{cont++}</td>
                     {ventaProvicional.data.tienda == "Shopify" ? (
-                      <td>{moment(ventaProvicional.data.fechaShopify).format("LLL")}</td>
+                      <td>
+                        {moment(ventaProvicional.data.fechaShopify).format(
+                          "LLL"
+                        )}
+                      </td>
                     ) : (
-                      <td>{moment(ventaProvicional.data.fecha).format("LLL")}</td>
+                      <td>
+                        {moment(ventaProvicional.data.fecha).format("LLL")}
+                      </td>
                     )}
                     <td>{`${ventaProvicional.data.nuVenta}`}</td>
                     <td>{ventaProvicional.data.cliente.nombre}</td>
