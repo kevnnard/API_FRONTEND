@@ -38,6 +38,7 @@ function UsersList() {
         setOnline({
           msgOnline: user,
           error: true,
+          message: "Esta en Linea"
         });
       }
     });
@@ -49,6 +50,7 @@ function UsersList() {
         setOnline({
           msgOnline: user,
           error: false,
+          message: "Esta fuera de Linea",
         });
       }
     });

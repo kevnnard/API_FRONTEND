@@ -6,6 +6,7 @@ function CardOnline({online}) {
 
   const [user, setUser] = useState("");
   const [userError, setUserError] = useState("")
+  const [mesagge, setMesagge] = useState("");
   const { enqueueSnackbar } = useSnackbar();
 
   // const handleClick = () => {
@@ -15,10 +16,9 @@ function CardOnline({online}) {
 
   const handleClickVariant = (variant) =>  {
     // variant could be success, error, warning, info, or default
-    enqueueSnackbar(
-      `${user}, ${userError? "esta en Linea" : "esta fuera de linea"}`,
-      { variant }
-    );
+    enqueueSnackbar(`${user}, ${userError ? `${mesagge}` : `${mesagge}`}`, {
+      variant,
+    });
   };
   
   useEffect(() => {
@@ -28,10 +28,12 @@ function CardOnline({online}) {
         if (userError == true) {
           setUser(online.msgOnline);
           setUserError(online.error);
+          setMesagge(online.mesagge);
           handleClickVariant("success");
         } else {
           setUser(online.msgOnline);
           setUserError(online.error);
+          setMesagge(online.mesagge);
           handleClickVariant("error");
         }
        }

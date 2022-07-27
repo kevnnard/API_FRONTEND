@@ -12,6 +12,7 @@ import useAuth from "../../hooks/useAuth";
 import io from 'socket.io-client'
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
+import CardOnline from "../../components/Online/CardOnline";
 
 function VentasManuales() {
   moment.locale("es-us");
@@ -30,12 +31,21 @@ function VentasManuales() {
   const [ventasEstado, setVentasEstado] = useState("");
 
   // Alerta de mensaje
+  const [online, setOnline] = useState({});
   const [alerta, setAlerta] = useState({});
-
 
    // paginacion de productos
   const [page, setPage] = useState(1);
   const [page2, setPage2] = useState(1);
+
+   const [open, setOpen] = useState(false);
+   const handleClose = () => {
+     setOpen(false);
+   };
+   const handleToggle = () => {
+     setOpen(!open);
+   };
+
 
   const handlePage = async (event, value) => {
     if (ventasEstado === "") {
@@ -48,7 +58,6 @@ function VentasManuales() {
   };
   
   const [buttonEstado, setButtonEstado] = useState(true);
-
   const ontenerventasShopify = async () => {
     try {
       handleToggle();
@@ -58,14 +67,19 @@ function VentasManuales() {
         handleClose();
       }, 7000);
       setTimeout(() => {
-        setButtonEstado(true)
-      }, 20000);
+        obtenerVentasManuales();
+      }, 30000);
+      setTimeout(() => {
+        setButtonEstado(true);
+      }, 60000);
       const url = `${
         import.meta.env.VITE_BACKEND_URL
       }/dashboard/ventas-shopify/notify`;
       axios.get(url).catch((error) => {
         console.log(error);
       });
+      console.log("ok");
+      return 
     } catch (error) {
       setVentas(false);
     }
@@ -102,7 +116,7 @@ function VentasManuales() {
         }
       );
       setventas(data);
-      setVentas(true)
+      setVentas(true);
     } catch (error) {
       console.log(error);
       setVentas(false);
@@ -152,15 +166,6 @@ function VentasManuales() {
      }
   };
 
-  const [open, setOpen] = useState(false);
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
-
   let socket;
   useEffect(() => {
     obtenerVentasManuales();
@@ -169,10 +174,14 @@ function VentasManuales() {
 
   useEffect(() => {
     socket = io(import.meta.env.VITE_BACKEND_URL);
-    socket.on("orders", ({ data}) => {
-      ontenerventasShopify();
+    socket.on("orders", (data) => {
+      setOnline({
+        msgOnline: data,
+        error: true,
+        mesagge: moment().calendar()
+      })
     });
-  }, []);
+  });
 
 
   let i = 0;
@@ -185,7 +194,7 @@ function VentasManuales() {
        }
     }
   }
-
+  const { msgOnline } = online;
   const { msg } = alerta;
   let cont = 1;
   return (
@@ -200,6 +209,7 @@ function VentasManuales() {
             <CircularProgress color="inherit" />
           </Backdrop>
           {msg && <Alerta alerta={alerta} />}
+          {msgOnline && <CardOnline online={online} />}
           <h1 className="tit_pri_ventas">
             PEDIDOS PENDIENTES:{" "}
             <span
@@ -243,17 +253,17 @@ function VentasManuales() {
               <input placeholder="BUSCAR POR # CEDULA" />
           <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
             </div> */}
-            {buttonEstado == true
-            ? <div>
-              <button
-                className="btnn"
-                style={{background: "#F00", color: "#FFF"}}
-                onClick={ontenerventasShopify}
-              >
-                ACtualizar Bandeja
-              </button>
-            </div>
-            : null}
+            {buttonEstado == true ? (
+              <div>
+                <button
+                  className="btnn"
+                  style={{ background: "#F00", color: "#FFF" }}
+                  onClick={ontenerventasShopify}
+                >
+                  ACtualizar Bandeja
+                </button>
+              </div>
+            ) : null}
           </div>
           {ventass == true ? (
             <div className="paginate_productos">

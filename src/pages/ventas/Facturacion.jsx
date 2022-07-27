@@ -7,6 +7,8 @@ import NavVentas from "./NavVentas";
 import useAuth from "../../hooks/useAuth";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 
 function Facturacion() {
   moment.locale("es-us");
@@ -25,10 +27,17 @@ function Facturacion() {
       obtenerVentasManuales();
     }
   };
-
+   const [open, setOpen] = useState(false);
+   const handleClose = () => {
+     setOpen(false);
+   };
+   const handleToggle = () => {
+     setOpen(!open);
+   };
 
   const obtenerVentasManuales = async () => {
     try {
+      handleToggle();
        const { data } = await axios.post(
          `${
            import.meta.env.VITE_BACKEND_URL
@@ -38,7 +47,10 @@ function Facturacion() {
          }
        );
       setventas(data);
-      setVentas(true);
+      setTimeout(() => {
+        handleClose();
+        setVentas(true);
+      }, 2000);
     } catch (error) {
       console.log(error);
       setVentas(false);
@@ -49,9 +61,6 @@ function Facturacion() {
     obtenerVentasManuales();
   }, []);
 
-  const actualizar = async () => {
-    window.location.reload(true);
-  };
 
   let i = 0;
   if (ventass) {
@@ -92,12 +101,18 @@ function Facturacion() {
             <button
               className="btnn"
               style={{ background: "#f00", color: "#fff" }}
-              onClick={actualizar}
+              onClick={obtenerVentasManuales}
             >
               ACtualizar Bandeja
             </button>
           </div>
           <main className="main_pri_ventas">
+            <Backdrop
+              sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+              open={open}
+            >
+              <CircularProgress color="inherit" />
+            </Backdrop>
             {ventass == true ? (
               <div className="paginate_productos">
                 <Stack spacing={1}>
