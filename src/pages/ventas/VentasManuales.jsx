@@ -78,8 +78,6 @@ function VentasManuales() {
       axios.get(url).catch((error) => {
         console.log(error);
       });
-      console.log("ok");
-      return 
     } catch (error) {
       setVentas(false);
     }
@@ -181,7 +179,7 @@ function VentasManuales() {
         mesagge: moment().calendar()
       })
     });
-  });
+  },[]);
 
 
   let i = 0;
