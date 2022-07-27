@@ -166,7 +166,7 @@ function VentasManuales() {
          handleClose();
        }, 6000);
     });
-  }, []);
+  });
 
 
   let i = 0;
@@ -237,7 +237,7 @@ function VentasManuales() {
               <input placeholder="BUSCAR POR # CEDULA" />
           <SearchIcon className="icon" onClick={obtenerVentaPorNumero} />
             </div> */}
-            {/* <div>
+            <div>
               <button
                 className="btnn"
                 style={{ background: "#f00", color: "#fff" }}
@@ -245,7 +245,7 @@ function VentasManuales() {
               >
                 ACtualizar Bandeja
               </button>
-            </div> */}
+            </div>
           </div>
           {ventass == true ? (
             <div className="paginate_productos">
