@@ -169,19 +169,6 @@ function VentasManuales() {
     obtenerVentasManuales();
   }, []);
 
-
-  useEffect(() => {
-    socket = io(import.meta.env.VITE_BACKEND_URL);
-    socket.on("orders", (data) => {
-      setOnline({
-        msgOnline: data,
-        error: true,
-        mesagge: moment().calendar()
-      })
-    });
-  },[]);
-
-
   let i = 0;
   if (ventass) {
       for (i in ventas.docs) {

@@ -11,6 +11,7 @@ import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import moment from "moment/min/moment-with-locales";
+import CardOnline from "../../components/Online/CardOnline";
 
 
 
@@ -32,7 +33,7 @@ const Navbar = () => {
    };
    
    
-
+  const [online, setOnline] = useState({});
 
   const { dispatch } = useContext(DarkModeContext);
   const { darkMode } = useContext(DarkModeContext);
@@ -56,7 +57,18 @@ const Navbar = () => {
         }
         obtenerNotifys();
       });
+      socket.on("orders", (data) => {
+        setOnline({
+          msgOnline: data,
+          error: true,
+          mesagge: moment().calendar(),
+        });
+        setTimeout(() => {
+          setOnline({});
+        }, 5000);
+      });
    }, []);
+
 
    const obtenerNotifys = async () => {
     try {
@@ -69,9 +81,11 @@ const Navbar = () => {
     }
    };
 
+  const { msgOnline } = online;
   let mensajeCont = 0;
   return (
     <div className="navbar">
+      {msgOnline && <CardOnline online={online} />}
       <div className="wrapper">
         <div className="wrapper__logos">
           {/* <img
@@ -148,7 +162,15 @@ const Navbar = () => {
             <ListOutlinedIcon className="icon" />
           </div> */}
           <div className="item">
-            <Avatar style={{background: "#000", fontWeight: "bold", textTransform: "uppercase" }}alt={auth.nombre} src="/bc" />
+            <Avatar
+              style={{
+                background: "#000",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
+              alt={auth.nombre}
+              src="/bc"
+            />
             <span style={{ fontWeight: "bold", textTransform: "uppercase" }}>
               {auth.nombre}
             </span>

@@ -53,7 +53,13 @@ const AuthProvider = ({children}) => {
         }
         autenticarUsuario();
 
+        if (window.location.reload) {
+          localStorage.removeItem("token");
+        } else {
+          console.log("oki");
+        }
     }, [])
+
 
     const handleModlaEliminarColaborador = (usuario) => {
       setModalEliminarColaborador(!modalEliminarColaborador);
