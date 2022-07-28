@@ -57,16 +57,6 @@ const Navbar = () => {
         }
         obtenerNotifys();
       });
-      socket.on("orders", (data) => {
-        setOnline({
-          msgOnline: data,
-          error: true,
-          mesagge: moment().calendar(),
-        });
-        setTimeout(() => {
-          setOnline({});
-        }, 5000);
-      });
    }, []);
 
 
