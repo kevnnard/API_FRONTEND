@@ -83,10 +83,10 @@ function HomeAuth() {
         }/dashboard/estadisticas/metadia`;
         const { data } = await axios.get(url);
        if (data.error) {
-        //setAlerta({msg: data.msg, error: data.error})
+        setAlerta({msg: data.msg, error: data.error})
         return
        } else {
-         setResultMetaDia(data.metaDia);
+         setResultMetaDia(data.metaDia.metaTotalDia);
          setAlerta({});
        }
       } catch (error) {

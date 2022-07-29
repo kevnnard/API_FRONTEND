@@ -1,7 +1,7 @@
 import "./chart.scss";
 import {
-  AreaChart,
-  Area,
+  BarChart,
+  Bar,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -22,7 +22,7 @@ const Chart = ({ aspect, title, sac, fcs, re }) => {
     <div className="chart">
       <div className="title">{title}</div>
       <ResponsiveContainer width="100%" aspect={aspect}>
-        <AreaChart
+        <BarChart
           width={730}
           height={300}
           data={data}
@@ -34,7 +34,7 @@ const Chart = ({ aspect, title, sac, fcs, re }) => {
               <stop offset="100%" stopColor="#8884d8" stopOpacity={0.3} />
             </linearGradient>
             <linearGradient id="Color2" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+              <stop offset="5%" stopColor="#82ca9d" stopOpacity={1} />
               <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
             </linearGradient>
           </defs>
@@ -42,7 +42,7 @@ const Chart = ({ aspect, title, sac, fcs, re }) => {
           <YAxis />
           <CartesianGrid strokeDasharray="2 3" className="chartGrid" />
           <Tooltip />
-          <Area
+          <Bar
             unit=" COP"
             type="monotone"
             dataKey="Total"
@@ -51,7 +51,7 @@ const Chart = ({ aspect, title, sac, fcs, re }) => {
             fillOpacity={1}
             fill="url(#Color1)"
           />
-        </AreaChart>
+        </BarChart>
       </ResponsiveContainer>
     </div>
   );

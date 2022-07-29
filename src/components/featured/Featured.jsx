@@ -18,6 +18,8 @@ const Featured = ({ metaDia, boton, ventaTotal }) => {
   mes = ("0" + mes).slice(-2);
   let formato1 = `${dia}-${mes}-${ano}`;
   const totaPercent = Math.round((100 * ventaTotal) / metaDia);
+
+  
   return (
     <div className="featured">
       <div className="top">
