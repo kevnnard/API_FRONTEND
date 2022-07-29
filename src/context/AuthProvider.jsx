@@ -52,7 +52,6 @@ const AuthProvider = ({children}) => {
             setAlerta({});
         }
         autenticarUsuario();
-
         if (window.location.reload) {
           localStorage.removeItem("token");
         } else {

@@ -20,7 +20,7 @@ function NavVentas() {
               <li>
                 <NavLink
                   className="btnn"
-                  to="/dashboard/ventas-manuales/despachos"
+                  to="/dashboard/ventas-manuales/despachos/B4bBb8b4749b"
                 >
                   Despachos{"   "}
                   <ChatRoundedIcon />

@@ -381,4 +381,12 @@
         justify-content: center;
         align-items: center;
     }
+    button {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 80%;
+        bottom: 0;
+        font-weight: bold;
+    }
 }

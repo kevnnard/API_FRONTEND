@@ -361,7 +361,6 @@ function VentaManualId() {
     e.preventDefault();
     const confirmar = confirm("Seguro quieres borrar El Articulo ?");
     const result = venta.data.productos.find((vent) => vent.sku == producto);
-    console.log(result);
     const sku = result._id;
     const skuS = result.id_shopify;
     if (confirmar) {
@@ -398,6 +397,8 @@ function VentaManualId() {
 
   const handleEstado = async () => {
     try {
+      socket = io(import.meta.env.VITE_BACKEND_URL);
+      socket.emit("ventaEstado", { id });
       const { data } = await axios.put(
         `${import.meta.env.VITE_BACKEND_URL}/dashboard/ventas-manuales/${id}`,
         { estado_pedidoo, auth }
@@ -494,9 +495,16 @@ function VentaManualId() {
 
   useEffect(() => {
     obtenerCliente();
-    socket = io(import.meta.env.VITE_BACKEND_URL);
-    socket.emit("edicion", { id, auth });
+     socket = io(import.meta.env.VITE_BACKEND_URL);
+     socket.emit("edicion", { id, auth });
   }, []);
+
+  const recargar = async () => {
+    setTimeout(() => {
+        navigate(`/dashboard/ventas-manuales`);
+        navigate(`/dashboard/ventas-manuales/${id}`);
+    }, 1);
+  };
 
   useEffect(() => {
     socket.on("usuario", ({ usuario }) => {
@@ -1433,6 +1441,13 @@ ${venta.data.datos_envio.indicaciones_envio}
               >
                 <div className="modalBoxx">
                   <h1>¡"{usuariosPedidoId}" entro a editar el pedido!</h1>
+                  <button
+                    onClick={recargar}
+                    style={{ background: "#000", color: "#fff" }}
+                    className="btnn"
+                  >
+                    Tomar pedido
+                  </button>
                 </div>
               </Modal>
               <hr style={{ gridColumn: " 1 / 5" }} />

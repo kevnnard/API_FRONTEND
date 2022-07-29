@@ -97,7 +97,10 @@ const Sidebar = () => {
                   </li>
                 </Link>
                 {auth.role === "DESPACHO" || auth.role === "ADMIN" ? (
-                  <Link onClick={handleClick} to="ventas-manuales/despachos">
+                  <Link
+                    onClick={handleClick}
+                    to="ventas-manuales/despachos/B4bBb8b4749b"
+                  >
                     <li>
                       <LocalShippingIcon className="icon" />
                       <span>Despachos</span>

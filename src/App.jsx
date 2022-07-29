@@ -60,7 +60,7 @@ function App() {
               <Route path="productos" element={<Productos />} />
 
               <Route path="ventas-manuales">
-                <Route path="despachos" element={<VentasManuales />} />
+                <Route path="despachos/:id" element={<VentasManuales />} />
                 <Route path="novedades" element={<Novedades />} />
                 <Route path="facturacion" element={<Facturacion />} />
                 <Route path="generales" element={<VentasGenerale />} />

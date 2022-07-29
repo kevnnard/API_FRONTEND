@@ -1,21 +1,24 @@
-import "./ventas.scss"
+import "./ventas.scss";
 import axios from "axios";
 import moment from "moment/min/moment-with-locales";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import NavVentas from "./NavVentas";
 import SearchIcon from "@mui/icons-material/Search";
 import Alerta from "../../components/Alerta";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import useAuth from "../../hooks/useAuth";
-import io from 'socket.io-client'
+import io from "socket.io-client";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 import CardOnline from "../../components/Online/CardOnline";
 
 function VentasManuales() {
   moment.locale("es-us");
+  const params = useParams();
+  const { id } = params;
+
   const auth = useAuth();
   const navigate = useNavigate();
   //ventas Sac
@@ -25,27 +28,27 @@ function VentasManuales() {
   //obtener venta por # de venta
   const [ventaN, setventaN] = useState("");
   const [ventaProvicional, setVentaProvicional] = useState([]);
-  const [ ventaProvicionalState, setVentaProvicionalState] = useState(false);
+  const [ventaProvicionalState, setVentaProvicionalState] = useState(false);
 
-  // obtener vetas por estado de pedido 
+  //
+  // obtener vetas por estado de pedido
   const [ventasEstado, setVentasEstado] = useState("");
 
   // Alerta de mensaje
   const [online, setOnline] = useState({});
   const [alerta, setAlerta] = useState({});
 
-   // paginacion de productos
+  // paginacion de productos
   const [page, setPage] = useState(1);
   const [page2, setPage2] = useState(1);
 
-   const [open, setOpen] = useState(false);
-   const handleClose = () => {
-     setOpen(false);
-   };
-   const handleToggle = () => {
-     setOpen(!open);
-   };
-
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleToggle = () => {
+    setOpen(!open);
+  };
 
   const handlePage = async (event, value) => {
     if (ventasEstado === "") {
@@ -56,47 +59,55 @@ function VentasManuales() {
       obtenerVentasManualesEstado();
     }
   };
-  
+
   const [buttonEstado, setButtonEstado] = useState(true);
   const ontenerventasShopify = async () => {
     try {
       handleToggle();
-      setButtonEstado(false)
+      setButtonEstado(false);
       setTimeout(() => {
         obtenerVentasManuales();
         handleClose();
       }, 7000);
       setTimeout(() => {
         obtenerVentasManuales();
+        setAlerta({});
+      }, 15000);
+      setTimeout(() => {
+        obtenerVentasManuales();
       }, 30000);
       setTimeout(() => {
+        obtenerVentasManuales();
         setButtonEstado(true);
       }, 60000);
+      setAlerta({
+        msg: "No recargue la pagina mientras se consulta",
+        error: true,
+      });
       const url = `${
         import.meta.env.VITE_BACKEND_URL
       }/dashboard/ventas-shopify/notify`;
-      axios.get(url).catch((error) => {
+      await axios.get(url).catch((error) => {
         console.log(error);
       });
     } catch (error) {
       setVentas(false);
     }
-    
   };
 
   const obtenerVentasManuales = async () => {
-     try {
-       const { data } = await axios.post(
-         `${
-           import.meta.env.VITE_BACKEND_URL
-         }/dashboard/ventas-manuales/pendientes`,
-         {
-           page,
-         }
-       );
-       setventas(data);
-       setVentas(true);
-      } catch (error) {
+    try {
+      const { data } = await axios.post(
+        `${
+          import.meta.env.VITE_BACKEND_URL
+        }/dashboard/ventas-manuales/pendientes/${id}`,
+        {
+          page,
+        }
+      );
+      setventas(data);
+      setVentas(true);
+    } catch (error) {
       console.log(error);
       setVentas(false);
     }
@@ -121,11 +132,10 @@ function VentasManuales() {
     }
   };
 
-
   const obtenerVentaPorNumero = async (e) => {
-     try {
-      if(ventaN == "") {
-        setAlerta({msg: "Escribe un numero para buscar", error: true}) 
+    try {
+      if (ventaN == "") {
+        setAlerta({ msg: "Escribe un numero para buscar", error: true });
         setTimeout(() => {
           setAlerta({});
         }, 3000);
@@ -139,44 +149,59 @@ function VentasManuales() {
           }
         );
         if (data.error == true) {
-          setAlerta({msg: data.msg,  error: true})
+          setAlerta({ msg: data.msg, error: true });
           setTimeout(() => {
             setAlerta({});
           }, 3000);
         } else {
-           setVentas(false);
-           setventas({});
-           setVentaProvicional({ data });
-           setVentaProvicionalState(true);
-           setventas("");
-           setventaN("");
-           setAlerta({
-             msg: data.msg,
-             error: data.error,
-           });
-           setTimeout(() => {
-             setAlerta({});
-           }, 3000);
+          setVentas(false);
+          setventas({});
+          setVentaProvicional({ data });
+          setVentaProvicionalState(true);
+          setventas("");
+          setventaN("");
+          setAlerta({
+            msg: data.msg,
+            error: data.error,
+          });
+          setTimeout(() => {
+            setAlerta({});
+          }, 3000);
         }
       }
-     } catch (error) {
-       console.log(error);
-     }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  let socket;
   useEffect(() => {
     obtenerVentasManuales();
   }, []);
 
+  let socket;
+  useEffect(() => {
+    socket = io(import.meta.env.VITE_BACKEND_URL);
+    socket.emit("despachos", { id, auth });
+  }, []);
+  useEffect(() => {
+    socket.on("userDespachos", ({ usuario }) => {
+      setButtonEstado(false);
+    });
+    socket.on("ventasEstadoChange", (data) => {
+      setTimeout(() => {
+        obtenerVentasManuales();
+      }, 100);
+    });
+  }, []);
+
   let i = 0;
   if (ventass) {
-      for (i in ventas.docs) {
-       if (i.estado_pedido == "enviado") {
-        break
-       } else {
-         i++
-       }
+    for (i in ventas.docs) {
+      if (i.estado_pedido == "enviado") {
+        break;
+      } else {
+        i++;
+      }
     }
   }
   const { msgOnline } = online;

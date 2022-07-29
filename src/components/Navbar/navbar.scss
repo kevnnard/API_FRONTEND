@@ -95,6 +95,7 @@
   }
   ul {
     li {
+      margin-right: 2rem;
       padding: 1rem;
       h4 {
         position: relative;
@@ -109,6 +110,16 @@
           font-size: 11px;
           color: #aaa;
         }
+      }
+      h3 {
+        position: relative;
+        top: -.8rem;
+        left: 3.5rem;
+      }
+      h6 {
+        position: relative;
+        top: -3rem;
+        left: 3.5rem;
       }
       p {
         position: relative;
