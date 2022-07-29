@@ -55,15 +55,10 @@ function HomeAuth() {
           import.meta.env.VITE_BACKEND_URL
         }/dashboard/estadisticas/ventatotalhoy`;
         const { data } = await axios.get(url);
-        let totall = 0;
-        let costo = 0;
-        const totalSac = data.map((item) => {
-          totall = totall + (item.ventaTotalSac + item.ventaTotalShopify);
-        });
         // const costoTotal = data.productos.map((item) => {
         //   costo = costo + item.precioCosto;
         // });
-        setVentasTotalesDia(totall);
+        setVentasTotalesDia(data);
         setCostoTotal(costo);
       } catch (error) {
         console.log(error);
