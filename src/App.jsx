@@ -17,7 +17,6 @@ import Perfil from './pages/Perfil';
 import UsersList from './pages/UsersList';
 import Productos from './pages/Productos/Productos';
 import VentasManuales from './pages/ventas/VentasManuales';
-import VentasShopifyFox from './pages/ventas/VentasShopifyFox';
 import VentaManualId from './pages/ventas/VentaManualId';
 import NewVentaManual from './pages/ventas/NewVentaManual';
 import Novedades from './pages/ventas/Novedades';
@@ -78,7 +77,6 @@ function App() {
                 <Route index element={<VentasMercadoLibre />} />
               </Route>
 
-              {/* <Route path="ventas-shopifyFox" element={<VentasShopifyFox />} /> */}
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

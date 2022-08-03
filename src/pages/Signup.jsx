@@ -141,8 +141,8 @@ function Signup() {
                   Contraseña
                 </label>
                 <input
-                  id="password"
-                  type="password"
+                  id="new-password"
+                  type="new-password"
                   placeholder='"El usuario podra cambiarla al iniciar sesion"'
                   className="text-black w-full mt-3 p-3 border rounded-xl bg-gray-50"
                   value={password}
