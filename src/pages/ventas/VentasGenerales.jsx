@@ -272,7 +272,7 @@ function VentasGenerale() {
           </thead>
           {ventass == true
             ? ventas.data.docs.map((item) => (
-                <>
+                <tbody>
                   <tr
                     style={
                       item.estado_pedido == "solicitado"
@@ -359,12 +359,12 @@ function VentasGenerale() {
                       </Link>
                     </td>
                   </tr>
-                </>
+                </tbody>
               ))
             : null}
           {ventasSkusState == true
             ? ventasSKUlist.data.map((item) => (
-                <>
+                <tbody>
                   <tr
                     style={
                       item.estado_pedido == "solicitado"
@@ -451,11 +451,11 @@ function VentasGenerale() {
                       </Link>
                     </td>
                   </tr>
-                </>
+                </tbody>
               ))
             : null}
           {ventaProvicionalState == true ? (
-            <>
+            <tbody>
               <tr
                 style={
                   ventaProvicional.data.estado_pedido == "solicitado"
@@ -546,7 +546,7 @@ function VentasGenerale() {
                   </Link>
                 </td>
               </tr>
-            </>
+            </tbody>
           ) : null}
         </table>
         {ventass == true ? (

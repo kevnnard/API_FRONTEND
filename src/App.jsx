@@ -51,7 +51,7 @@ function App() {
               />
             </Route>
 
-            <Route path="/dashboard" element={<RutaProtegida />}>
+            <Route path="dashboard" element={<RutaProtegida />}>
               <Route index element={<HomeAuth />} />
               <Route path="users" element={<UsersList />} />
               <Route path="users/signup" element={<Signup />} />

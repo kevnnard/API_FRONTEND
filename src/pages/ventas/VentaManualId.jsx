@@ -726,97 +726,101 @@ ${venta.data.datos_envio.indicaciones_envio}
                       </div>
                       <div className="modal-body custom_imputs_modal">
                         <table>
-                          <tr>
-                            <td>
-                              <input
-                                type="text"
-                                value={destinatario_envio}
-                                placeholder="# CC O NIT de destinatario"
-                                onChange={(e) =>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <input
+                                  type="text"
+                                  value={destinatario_envio}
+                                  placeholder="# CC O NIT de destinatario"
+                                  onChange={(e) =>
                                   setDestinatario_envio(e.target.value)
-                                }
-                              />
-                            </td>
-                            <td>
-                              <input
-                                type="number"
-                                value={telefono_envio}
-                                placeholder="# Telefono de destinatario"
-                                onChange={(e) =>
-                                  setTelefono_envio(e.target.value)
-                                }
-                              />
-                            </td>
-                            <td>
-                              <select
-                                name="departamento_envio"
-                                value={departamento_envio}
-                                onChange={(e) =>
-                                  setDepartamento_envio(e.target.value)
-                                }
-                              >
-                                <option selected value="" disabled>
-                                  Elige el departamento
-                                </option>
-                                {dataDane2.map((item) => (
-                                  <option value={item.departamento}>
-                                    {item.departamento}
+                                  }
+                                />
+                              </td>
+                              <td>
+                                <input
+                                  type="number"
+                                  value={telefono_envio}
+                                  placeholder="# Telefono de destinatario"
+                                  onChange={(e) =>
+                                    setTelefono_envio(e.target.value)
+                                  }
+                                />
+                              </td>
+                              <td>
+                                <select
+                                  name="departamento_envio"
+                                  value={departamento_envio}
+                                  onChange={(e) =>
+                                    setDepartamento_envio(e.target.value)
+                                  }
+                                >
+                                  <option selected value="" disabled>
+                                    Elige el departamento
                                   </option>
-                                ))}
-                              </select>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <select
-                                name="ciudad_envio"
-                                value={ciudad_envio}
-                                onChange={(e) =>
-                                  setCiudad_envio(e.target.value)
-                                }
-                              >
-                                <option selected value="" disabled>
-                                  Elige una ciudad
-                                </option>
-                                {dataDane.map((item) =>
-                                  departamento_envio ==
-                                  item.departamento.toUpperCase() ? (
-                                    <option value={item.ciduad}>
-                                      {item.ciduad}
+                                  {dataDane2.map((item) => (
+                                    <option value={item.departamento}>
+                                      {item.departamento}
                                     </option>
-                                  ) : null
-                                )}
-                              </select>
-                            </td>
-                            <td>
-                              <input
-                                type="text"
-                                value={direccion_envio}
-                                placeholder="Direccion exacta del destinatario"
-                                onChange={(e) =>
-                                  setDireccion_envio(e.target.value)
-                                }
-                              />
-                            </td>
-                            <td>
-                              <input
-                                type="text"
-                                value={indicaciones_envio}
-                                placeholder="Indicaciones exactas"
-                                onChange={(e) =>
-                                  setIndicaciones_envio(e.target.value)
-                                }
-                              />
-                            </td>
-                            <td>
-                              <input
-                                type="email"
-                                value={email_envio}
-                                placeholder="Email"
-                                onChange={(e) => setEmailEnvio(e.target.value)}
-                              />
-                            </td>
-                          </tr>
+                                  ))}
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <select
+                                  name="ciudad_envio"
+                                  value={ciudad_envio}
+                                  onChange={(e) =>
+                                    setCiudad_envio(e.target.value)
+                                  }
+                                >
+                                  <option selected value="" disabled>
+                                    Elige una ciudad
+                                  </option>
+                                  {dataDane.map((item) =>
+                                    departamento_envio ==
+                                    item.departamento.toUpperCase() ? (
+                                      <option value={item.ciduad}>
+                                        {item.ciduad}
+                                      </option>
+                                    ) : null
+                                  )}
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  value={direccion_envio}
+                                  placeholder="Direccion exacta del destinatario"
+                                  onChange={(e) =>
+                                    setDireccion_envio(e.target.value)
+                                  }
+                                />
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  value={indicaciones_envio}
+                                  placeholder="Indicaciones exactas"
+                                  onChange={(e) =>
+                                    setIndicaciones_envio(e.target.value)
+                                  }
+                                />
+                              </td>
+                              <td>
+                                <input
+                                  type="email"
+                                  value={email_envio}
+                                  placeholder="Email"
+                                  onChange={(e) =>
+                                    setEmailEnvio(e.target.value)
+                                  }
+                                />
+                              </td>
+                            </tr>
+                          </tbody>
                         </table>
                       </div>
                       <div className="modal-footer">
@@ -909,7 +913,7 @@ ${venta.data.datos_envio.indicaciones_envio}
                       {venta.data.cupon_descuento == ""
                         ? "No aplico un cupon"
                         : venta.data.cupon_descuento.map((item) => (
-                            <Card>
+                            <Card key={item.codigo_nombre}>
                               <CardContent>
                                 <Typography
                                   sx={{ fontSize: 25, fontWeight: "bold" }}
@@ -1020,7 +1024,7 @@ ${venta.data.datos_envio.indicaciones_envio}
                     ? venta.data.envio_pedidoArray
                         .map((item) => (
                           <>
-                            <hr style={{ margin: "1rem 0" }} />
+                            <hr key={item._id} style={{ margin: "1rem 0" }} />
                             <small>Guia generada #{guiaNumber++}</small>
                             <h2>
                               Numero de guia:{" "}
@@ -1040,8 +1044,8 @@ ${venta.data.datos_envio.indicaciones_envio}
                         ))
                         .reverse()
                     : null}
-                  {venta.data.envio_pedido == undefined ? null 
-                  : venta.data.envio_pedido.numGuia == undefined ? null : (
+                  {venta.data.envio_pedido == undefined ? null : venta.data
+                      .envio_pedido.numGuia == undefined ? null : (
                     <>
                       <small>Guia generada #{(guiaNumber = 1)}</small>
                       <h2>
@@ -1542,266 +1546,108 @@ ${venta.data.datos_envio.indicaciones_envio}
                 ) : null}
                 <label>Productos</label>
                 <table style={{ width: "100vh !important" }}>
-                  <tr className="tablla-ul-id">
-                    <th>IMG</th>
-                    <th>Sku</th>
-                    {/* <th>plu</th> */}
-                    <th>nombre</th>
-                    <th>talla</th>
-                    <th>CANTIDAD</th>
-                    <th>PRECIO FINAL / UNIDADES</th>
-                    {estado_pedidoo == "solicitado" ||
-                    venta.data.estado_pedido == "solicitado" ||
-                    venta.data.estado_pedido == "enviado" ? (
-                      <th>Solicitado :</th>
-                    ) : (
-                      ""
-                    )}
-                  </tr>
+                  <thead>
+                    <tr className="tablla-ul-id">
+                      <th>IMG</th>
+                      <th>Sku</th>
+                      {/* <th>plu</th> */}
+                      <th>nombre</th>
+                      <th>talla</th>
+                      <th>CANTIDAD</th>
+                      <th>PRECIO FINAL / UNIDADES</th>
+                      {estado_pedidoo == "solicitado" ||
+                      venta.data.estado_pedido == "solicitado" ||
+                      venta.data.estado_pedido == "enviado" ? (
+                        <th>Solicitado :</th>
+                      ) : (
+                        ""
+                      )}
+                    </tr>
+                  </thead>
                   {ventass == true
                     ? venta.data.productos.map((item) => (
-                        <tr className="tablla-ul-id" key={item._id}>
-                          <td>
-                            <img
-                              width={100}
-                              height={100}
-                              src={item.img}
-                              alt=""
-                            />
-                          </td>
-                          <td>{item.sku}</td>
-                          {/* <td>{item.plu}</td> */}
-                          <td>{item.nombre}</td>
-                          <td>{item.talla}</td>
-                          <td
-                            style={
-                              item.cantidadS >= 2
-                                ? {
-                                    color: "#f10",
-                                    fontWeight: "bold",
-                                    fontSize: "2.2rem",
-                                  }
-                                : {
-                                    fontWeight: "bold",
-                                    fontSize: "2rem",
-                                  }
-                            }
-                          >
-                            {item.cantidadS}
-                          </td>
-                          {venta.data.tienda == "Shopify" ? (
+                        <tbody>
+                          <tr className="tablla-ul-id" key={item._id}>
                             <td>
-                              {"$" +
-                                Intl.NumberFormat("es-ES", {
-                                  style: "currency",
-                                  currency: "COP",
-                                  minimumFractionDigits: 0,
-                                }).format(
-                                  item.precioVenta
-                                    ? item.precioVenta
-                                    : item.precioVentaConDescuento
-                                )}
+                              <img
+                                width={100}
+                                height={100}
+                                src={item.img}
+                                alt=""
+                              />
                             </td>
-                          ) : (
-                            <td>
-                              {item.precioVenta == undefined
-                                ? "Solicitar al asesor"
-                                : "$" +
+                            <td>{item.sku}</td>
+                            {/* <td>{item.plu}</td> */}
+                            <td>{item.nombre}</td>
+                            <td>{item.talla}</td>
+                            <td
+                              style={
+                                item.cantidadS >= 2
+                                  ? {
+                                      color: "#f10",
+                                      fontWeight: "bold",
+                                      fontSize: "2.2rem",
+                                    }
+                                  : {
+                                      fontWeight: "bold",
+                                      fontSize: "2rem",
+                                    }
+                              }
+                            >
+                              {item.cantidadS}
+                            </td>
+                            {venta.data.tienda == "Shopify" ? (
+                              <td>
+                                {"$" +
                                   Intl.NumberFormat("es-ES", {
                                     style: "currency",
                                     currency: "COP",
                                     minimumFractionDigits: 0,
-                                  }).format(item.precioVenta)}
-                            </td>
-                          )}
-                          {estado_pedidoo == "solicitado" ||
-                          venta.data.estado_pedido == "solicitado" ||
-                          venta.data.estado_pedido == "enviado" ? (
-                            <td>{item.solicitadoa}</td>
-                          ) : (
-                            ""
-                          )}
-                          <>
-                            <td>
-                              {auth.role === "SERVICIO" ||
-                              auth.role === "ADMIN" ? (
-                                <button
-                                  style={{
-                                    background: "#0f1",
-                                    color: "#fff",
-                                    padding: "5px",
-                                  }}
-                                  type="button"
-                                  className="btn btn-primary"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#exampleModall"
-                                  onMouseEnter={(e) => setProducto(item.sku)}
-                                  onClick={handleSearchProducto}
-                                >
-                                  Editar precio
-                                </button>
-                              ) : null}
-
-                              {productoProvicional == "" ? (
-                                ""
-                              ) : (
-                                <>
-                                  {/* <!-- Modal --> */}
-                                  <div
-                                    style={{ color: "#000" }}
-                                    className="modal fade"
-                                    id="exampleModall"
-                                    tabindex="-1"
-                                    aria-labelledby="exampleModalLabel"
-                                    aria-hidden="true"
-                                  >
-                                    <div className="modal-dialog-centered modal-dialog">
-                                      <div className="modal-content">
-                                        <div className="modal-header flex_modal_custom">
-                                          <h1
-                                            style={{
-                                              fontSize: "2rem",
-                                              fontWeight: "bold",
-                                            }}
-                                            className="modal-title"
-                                            id="exampleModalLabel"
-                                          >
-                                            {productoProvicional.nombre}
-                                          </h1>
-                                          <p>
-                                            {" "}
-                                            SKU:{" "}
-                                            <strong>
-                                              {productoProvicional.sku}
-                                            </strong>{" "}
-                                          </p>
-                                          <div>
-                                            <img
-                                              width={250}
-                                              src={productoProvicional.img}
-                                              alt=""
-                                            />
-                                          </div>
-                                        </div>
-                                        <div className="modal-body">
-                                          <table>
-                                            <tr>
-                                              <th>Cantidad</th>
-                                              <th>precio/unidad</th>
-                                              <th>valor final /unidad</th>
-                                            </tr>
-                                            <tr>
-                                              <td>
-                                                <input
-                                                  placeholder="Ingresa un valor"
-                                                  type="number"
-                                                  value={
-                                                    cantidadS == undefined
-                                                      ? ""
-                                                      : cantidadS
-                                                  }
-                                                  onChange={(e) =>
-                                                    setCantidad(e.target.value)
-                                                  }
-                                                />
-                                              </td>
-                                              <td>
-                                                {"$" +
-                                                  Intl.NumberFormat("es-ES", {
-                                                    style: "currency",
-                                                    currency: "COP",
-                                                    minimumFractionDigits: 0,
-                                                  }).format(
-                                                    productoProvicional.precio
-                                                      ? productoProvicional.precio
-                                                      : productoProvicional.precioVentaShopify
-                                                  )}
-                                              </td>
-                                              <td>
-                                                <input
-                                                  placeholder="Ingresa un valor"
-                                                  type="number"
-                                                  value={
-                                                    precioVenta == undefined
-                                                      ? ""
-                                                      : precioVenta
-                                                  }
-                                                  onChange={(e) =>
-                                                    setPrecioVenta(
-                                                      e.target.value
-                                                    )
-                                                  }
-                                                />
-                                              </td>
-                                            </tr>
-                                          </table>
-                                        </div>
-                                        <div className="modal-footer">
-                                          {btnprovicional == false ? (
-                                            <>
-                                              <input
-                                                className="btnn"
-                                                style={{
-                                                  backgroundColor: "#1f0",
-                                                  color: "#fff",
-                                                  background:
-                                                    "#222d32 !important",
-                                                  margin: "1rem auto",
-                                                }}
-                                                type="button"
-                                                value={`ACTUALIZAR PRODUCTO`}
-                                                onClick={
-                                                  handleActualizarProductoo
-                                                }
-                                              />
-                                            </>
-                                          ) : (
-                                            <>
-                                              <button
-                                                className="btnn"
-                                                style={{
-                                                  color: "#fff",
-                                                  background: "#f00",
-                                                  margin: "1rem auto",
-                                                }}
-                                                type="button"
-                                                data-bs-dismiss="modal"
-                                                onClick={handleCerrarr}
-                                              >
-                                                Cerrar Producto
-                                              </button>
-                                            </>
-                                          )}
-                                          {msg && <Alerta alerta={alerta} />}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </>
-                              )}
-                            </td>
-                          </>
-                          <td>
-                            {confirmProducto == true ? (
-                              ""
+                                  }).format(
+                                    item.precioVenta
+                                      ? item.precioVenta
+                                      : item.precioVentaConDescuento
+                                  )}
+                              </td>
                             ) : (
-                              <>
-                                {/* <!-- Button trigger modal --> */}
-                                <button
-                                  style={{
-                                    background: "#9af",
-                                    color: "#fff",
-                                    padding: "5px",
-                                  }}
-                                  type="button"
-                                  className="btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#exampleModal"
-                                  onMouseEnter={(e) => setProducto(item.sku)}
-                                  onClick={handleSearchProducto}
-                                >
-                                  Editar producto
-                                </button>
+                              <td>
+                                {item.precioVenta == undefined
+                                  ? "Solicitar al asesor"
+                                  : "$" +
+                                    Intl.NumberFormat("es-ES", {
+                                      style: "currency",
+                                      currency: "COP",
+                                      minimumFractionDigits: 0,
+                                    }).format(item.precioVenta)}
+                              </td>
+                            )}
+                            {estado_pedidoo == "solicitado" ||
+                            venta.data.estado_pedido == "solicitado" ||
+                            venta.data.estado_pedido == "enviado" ? (
+                              <td>{item.solicitadoa}</td>
+                            ) : (
+                              ""
+                            )}
+                            <>
+                              <td>
+                                {auth.role === "SERVICIO" ||
+                                auth.role === "ADMIN" ? (
+                                  <button
+                                    style={{
+                                      background: "#0f1",
+                                      color: "#fff",
+                                      padding: "5px",
+                                    }}
+                                    type="button"
+                                    className="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModall"
+                                    onMouseEnter={(e) => setProducto(item.sku)}
+                                    onClick={handleSearchProducto}
+                                  >
+                                    Editar precio
+                                  </button>
+                                ) : null}
 
                                 {productoProvicional == "" ? (
                                   ""
@@ -1811,12 +1657,12 @@ ${venta.data.datos_envio.indicaciones_envio}
                                     <div
                                       style={{ color: "#000" }}
                                       className="modal fade"
-                                      id="exampleModal"
+                                      id="exampleModall"
                                       tabindex="-1"
                                       aria-labelledby="exampleModalLabel"
                                       aria-hidden="true"
                                     >
-                                      <div className="modal-dialog-centered modal-dialog modal_content_custom">
+                                      <div className="modal-dialog-centered modal-dialog">
                                         <div className="modal-content">
                                           <div className="modal-header flex_modal_custom">
                                             <h1
@@ -1829,19 +1675,16 @@ ${venta.data.datos_envio.indicaciones_envio}
                                             >
                                               {productoProvicional.nombre}
                                             </h1>
-                                            <h3
-                                              style={{
-                                                fontSize: "1.3rem",
-                                              }}
-                                            >
+                                            <p>
+                                              {" "}
                                               SKU:{" "}
                                               <strong>
                                                 {productoProvicional.sku}
-                                              </strong>
-                                            </h3>
+                                              </strong>{" "}
+                                            </p>
                                             <div>
                                               <img
-                                                width={200}
+                                                width={250}
                                                 src={productoProvicional.img}
                                                 alt=""
                                               />
@@ -1850,234 +1693,55 @@ ${venta.data.datos_envio.indicaciones_envio}
                                           <div className="modal-body">
                                             <table>
                                               <tr>
-                                                <th>Talla</th>
-                                                {venta.data.tienda ==
-                                                "Shopify" ? (
-                                                  <>
-                                                    <th>Precio Comparacion</th>
-                                                    <th>precio por unidad</th>
-                                                    {/* <th>Precio a descontar</th> */}
-                                                  </>
-                                                ) : (
-                                                  <>
-                                                    <th>precio por unidad</th>
-                                                  </>
-                                                )}
                                                 <th>Cantidad</th>
-                                                <th>
-                                                  precio final / unidades{" "}
-                                                </th>
-                                                {estado_pedidoo ==
-                                                  "solicitado" ||
-                                                venta.data.estado_pedido ==
-                                                  "solicitado" ||
-                                                venta.data.estado_pedido ==
-                                                  "enviado" ? (
-                                                  <th>Solicitado :</th>
-                                                ) : (
-                                                  ""
-                                                )}
+                                                <th>precio/unidad</th>
+                                                <th>valor final /unidad</th>
                                               </tr>
                                               <tr>
-                                                {venta.data.tienda ==
-                                                "Shopify" ? (
-                                                  <>
-                                                    <td>
-                                                      {
-                                                        productoProvicional.talla
-                                                      }
-                                                    </td>
-                                                    <td>
-                                                      {"$" +
-                                                        Intl.NumberFormat(
-                                                          "es-ES",
-                                                          {
-                                                            style: "currency",
-                                                            currency: "COP",
-                                                            minimumFractionDigits: 0,
-                                                          }
-                                                        ).format(
-                                                          productoProvicional.precioComparacionShopify
-                                                        )}
-                                                    </td>
-                                                    <td>
-                                                      {"$" +
-                                                        Intl.NumberFormat(
-                                                          "es-ES",
-                                                          {
-                                                            style: "currency",
-                                                            currency: "COP",
-                                                            minimumFractionDigits: 0,
-                                                          }
-                                                        ).format(
-                                                          productoProvicional.precio
-                                                            ? productoProvicional.precio
-                                                            : productoProvicional.precioVentaShopify
-                                                        )}
-                                                    </td>
-                                                    {/* <td>
-                                                      {"$" +
-                                                        Intl.NumberFormat(
-                                                          "es-ES",
-                                                          {
-                                                            style: "currency",
-                                                            currency: "COP",
-                                                            minimumFractionDigits: 0,
-                                                          }
-                                                        ).format(
-                                                          productoProvicional.porcentajeDescuento
-                                                        )}
-                                                    </td> */}
-                                                    <td
-                                                      style={
-                                                        item.cantidadS >= 2
-                                                          ? {
-                                                              color: "#f10",
-                                                              fontWeight:
-                                                                "bold",
-                                                              fontSize:
-                                                                "2.2rem",
-                                                            }
-                                                          : {
-                                                              fontWeight:
-                                                                "bold",
-                                                              fontSize: "2rem",
-                                                            }
-                                                      }
-                                                    >
-                                                      {
-                                                        productoProvicional.cantidadS
-                                                      }
-                                                    </td>
-
-                                                    <td>
-                                                      {"$" +
-                                                        Intl.NumberFormat(
-                                                          "es-ES",
-                                                          {
-                                                            style: "currency",
-                                                            currency: "COP",
-                                                            minimumFractionDigits: 0,
-                                                          }
-                                                        ).format(
-                                                          productoProvicional.precioVenta
-                                                            ? productoProvicional.precioVenta
-                                                            : productoProvicional.precioVentaConDescuento
-                                                        )}
-                                                    </td>
-                                                  </>
-                                                ) : (
-                                                  <>
-                                                    <td>
-                                                      {
-                                                        productoProvicional.talla
-                                                      }
-                                                    </td>
-                                                    <td>
-                                                      {"$" +
-                                                        Intl.NumberFormat(
-                                                          "es-ES",
-                                                          {
-                                                            style: "currency",
-                                                            currency: "COP",
-                                                            minimumFractionDigits: 0,
-                                                          }
-                                                        ).format(
-                                                          productoProvicional.precio
-                                                        )}
-                                                    </td>
-                                                    <td
-                                                      style={
-                                                        item.cantidadS >= 2
-                                                          ? {
-                                                              color: "#f10",
-                                                              fontWeight:
-                                                                "bold",
-                                                              fontSize:
-                                                                "2.2rem",
-                                                            }
-                                                          : {
-                                                              fontWeight:
-                                                                "bold",
-                                                              fontSize: "2rem",
-                                                            }
-                                                      }
-                                                    >
-                                                      {
-                                                        productoProvicional.cantidadS
-                                                      }
-                                                    </td>
-
-                                                    <td>
-                                                      {"$" +
-                                                        Intl.NumberFormat(
-                                                          "es-ES",
-                                                          {
-                                                            style: "currency",
-                                                            currency: "COP",
-                                                            minimumFractionDigits: 0,
-                                                          }
-                                                        ).format(
-                                                          productoProvicional.precioVenta
-                                                        )}
-                                                    </td>
-                                                  </>
-                                                )}
-                                                {estado_pedidoo ==
-                                                  "solicitado" ||
-                                                venta.data.estado_pedido ==
-                                                  "solicitado" ||
-                                                venta.data.estado_pedido ==
-                                                  "enviado" ? (
-                                                  <td className="select">
-                                                    <select
-                                                      value={
-                                                        solicitadooa == ""
-                                                          ? productoProvicional.solicitadoa
-                                                          : solicitadooa
-                                                      }
-                                                      onChange={(e) =>
-                                                        setSolicitadooa(
-                                                          e.target.value
-                                                        )
-                                                      }
-                                                    >
-                                                      <option
-                                                        selected
-                                                        value=""
-                                                        disabled
-                                                      >
-                                                        Selecciona...
-                                                      </option>
-                                                      <option value="online">
-                                                        Tienda Online
-                                                      </option>
-                                                      <option value="foxplaza">
-                                                        Fox Plaza Central
-                                                      </option>
-                                                      <option value="fox_toberin">
-                                                        Fox Toberin
-                                                      </option>
-                                                      <option value="fox_neiva">
-                                                        Fox Neiva
-                                                      </option>
-                                                      <option value="ame1">
-                                                        Americas 1
-                                                      </option>
-                                                      <option value="ame3">
-                                                        Americas 3
-                                                      </option>
-                                                      <option value="ame5">
-                                                        Americas 5
-                                                      </option>
-                                                      <option value="ame6">
-                                                        Americas 6
-                                                      </option>
-                                                    </select>
-                                                  </td>
-                                                ) : (
-                                                  ""
-                                                )}
+                                                <td>
+                                                  <input
+                                                    placeholder="Ingresa un valor"
+                                                    type="number"
+                                                    value={
+                                                      cantidadS == undefined
+                                                        ? ""
+                                                        : cantidadS
+                                                    }
+                                                    onChange={(e) =>
+                                                      setCantidad(
+                                                        e.target.value
+                                                      )
+                                                    }
+                                                  />
+                                                </td>
+                                                <td>
+                                                  {"$" +
+                                                    Intl.NumberFormat("es-ES", {
+                                                      style: "currency",
+                                                      currency: "COP",
+                                                      minimumFractionDigits: 0,
+                                                    }).format(
+                                                      productoProvicional.precio
+                                                        ? productoProvicional.precio
+                                                        : productoProvicional.precioVentaShopify
+                                                    )}
+                                                </td>
+                                                <td>
+                                                  <input
+                                                    placeholder="Ingresa un valor"
+                                                    type="number"
+                                                    value={
+                                                      precioVenta == undefined
+                                                        ? ""
+                                                        : precioVenta
+                                                    }
+                                                    onChange={(e) =>
+                                                      setPrecioVenta(
+                                                        e.target.value
+                                                      )
+                                                    }
+                                                  />
+                                                </td>
                                               </tr>
                                             </table>
                                           </div>
@@ -2085,6 +1749,7 @@ ${venta.data.datos_envio.indicaciones_envio}
                                             {btnprovicional == false ? (
                                               <>
                                                 <input
+                                                  className="btnn"
                                                   style={{
                                                     backgroundColor: "#1f0",
                                                     color: "#fff",
@@ -2092,26 +1757,25 @@ ${venta.data.datos_envio.indicaciones_envio}
                                                       "#222d32 !important",
                                                     margin: "1rem auto",
                                                   }}
-                                                  className="btnn"
                                                   type="button"
                                                   value={`ACTUALIZAR PRODUCTO`}
                                                   onClick={
-                                                    handleActualizarProducto
+                                                    handleActualizarProductoo
                                                   }
                                                 />
                                               </>
                                             ) : (
                                               <>
                                                 <button
+                                                  className="btnn"
                                                   style={{
                                                     color: "#fff",
                                                     background: "#f00",
                                                     margin: "1rem auto",
                                                   }}
-                                                  className="btnn"
                                                   type="button"
                                                   data-bs-dismiss="modal"
-                                                  onClick={handleCerrar}
+                                                  onClick={handleCerrarr}
                                                 >
                                                   Cerrar Producto
                                                 </button>
@@ -2124,28 +1788,380 @@ ${venta.data.datos_envio.indicaciones_envio}
                                     </div>
                                   </>
                                 )}
-                              </>
-                            )}
-                          </td>
-                          <td>
-                            {auth.role === "SERVICIO" ||
-                            auth.role === "ADMIN" ? (
-                              <button
-                                style={{
-                                  background: "#f00",
-                                  color: "#fff",
-                                  padding: "5px",
-                                }}
-                                type="button"
-                                className="btn"
-                                onMouseEnter={(e) => setProducto(item.sku)}
-                                onClick={handleBorrarProducto}
-                              >
-                                Borrar producto
-                              </button>
-                            ) : null}
-                          </td>
-                        </tr>
+                              </td>
+                            </>
+                            <td>
+                              {confirmProducto == true ? (
+                                ""
+                              ) : (
+                                <>
+                                  {/* <!-- Button trigger modal --> */}
+                                  <button
+                                    style={{
+                                      background: "#9af",
+                                      color: "#fff",
+                                      padding: "5px",
+                                    }}
+                                    type="button"
+                                    className="btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"
+                                    onMouseEnter={(e) => setProducto(item.sku)}
+                                    onClick={handleSearchProducto}
+                                  >
+                                    Editar producto
+                                  </button>
+
+                                  {productoProvicional == "" ? (
+                                    ""
+                                  ) : (
+                                    <>
+                                      {/* <!-- Modal --> */}
+                                      <div
+                                        style={{ color: "#000" }}
+                                        className="modal fade"
+                                        id="exampleModal"
+                                        tabindex="-1"
+                                        aria-labelledby="exampleModalLabel"
+                                        aria-hidden="true"
+                                      >
+                                        <div className="modal-dialog-centered modal-dialog modal_content_custom">
+                                          <div className="modal-content">
+                                            <div className="modal-header flex_modal_custom">
+                                              <h1
+                                                style={{
+                                                  fontSize: "2rem",
+                                                  fontWeight: "bold",
+                                                }}
+                                                className="modal-title"
+                                                id="exampleModalLabel"
+                                              >
+                                                {productoProvicional.nombre}
+                                              </h1>
+                                              <h3
+                                                style={{
+                                                  fontSize: "1.3rem",
+                                                }}
+                                              >
+                                                SKU:{" "}
+                                                <strong>
+                                                  {productoProvicional.sku}
+                                                </strong>
+                                              </h3>
+                                              <div>
+                                                <img
+                                                  width={200}
+                                                  src={productoProvicional.img}
+                                                  alt=""
+                                                />
+                                              </div>
+                                            </div>
+                                            <div className="modal-body">
+                                              <table>
+                                                <tr>
+                                                  <th>Talla</th>
+                                                  {venta.data.tienda ==
+                                                  "Shopify" ? (
+                                                    <>
+                                                      <th>
+                                                        Precio Comparacion
+                                                      </th>
+                                                      <th>precio por unidad</th>
+                                                      {/* <th>Precio a descontar</th> */}
+                                                    </>
+                                                  ) : (
+                                                    <>
+                                                      <th>precio por unidad</th>
+                                                    </>
+                                                  )}
+                                                  <th>Cantidad</th>
+                                                  <th>
+                                                    precio final / unidades{" "}
+                                                  </th>
+                                                  {estado_pedidoo ==
+                                                    "solicitado" ||
+                                                  venta.data.estado_pedido ==
+                                                    "solicitado" ||
+                                                  venta.data.estado_pedido ==
+                                                    "enviado" ? (
+                                                    <th>Solicitado :</th>
+                                                  ) : (
+                                                    ""
+                                                  )}
+                                                </tr>
+                                                <tr>
+                                                  {venta.data.tienda ==
+                                                  "Shopify" ? (
+                                                    <>
+                                                      <td>
+                                                        {
+                                                          productoProvicional.talla
+                                                        }
+                                                      </td>
+                                                      <td>
+                                                        {"$" +
+                                                          Intl.NumberFormat(
+                                                            "es-ES",
+                                                            {
+                                                              style: "currency",
+                                                              currency: "COP",
+                                                              minimumFractionDigits: 0,
+                                                            }
+                                                          ).format(
+                                                            productoProvicional.precioComparacionShopify
+                                                          )}
+                                                      </td>
+                                                      <td>
+                                                        {"$" +
+                                                          Intl.NumberFormat(
+                                                            "es-ES",
+                                                            {
+                                                              style: "currency",
+                                                              currency: "COP",
+                                                              minimumFractionDigits: 0,
+                                                            }
+                                                          ).format(
+                                                            productoProvicional.precio
+                                                              ? productoProvicional.precio
+                                                              : productoProvicional.precioVentaShopify
+                                                          )}
+                                                      </td>
+                                                      {/* <td>
+                                                      {"$" +
+                                                        Intl.NumberFormat(
+                                                          "es-ES",
+                                                          {
+                                                            style: "currency",
+                                                            currency: "COP",
+                                                            minimumFractionDigits: 0,
+                                                          }
+                                                        ).format(
+                                                          productoProvicional.porcentajeDescuento
+                                                        )}
+                                                    </td> */}
+                                                      <td
+                                                        style={
+                                                          item.cantidadS >= 2
+                                                            ? {
+                                                                color: "#f10",
+                                                                fontWeight:
+                                                                  "bold",
+                                                                fontSize:
+                                                                  "2.2rem",
+                                                              }
+                                                            : {
+                                                                fontWeight:
+                                                                  "bold",
+                                                                fontSize:
+                                                                  "2rem",
+                                                              }
+                                                        }
+                                                      >
+                                                        {
+                                                          productoProvicional.cantidadS
+                                                        }
+                                                      </td>
+
+                                                      <td>
+                                                        {"$" +
+                                                          Intl.NumberFormat(
+                                                            "es-ES",
+                                                            {
+                                                              style: "currency",
+                                                              currency: "COP",
+                                                              minimumFractionDigits: 0,
+                                                            }
+                                                          ).format(
+                                                            productoProvicional.precioVenta
+                                                              ? productoProvicional.precioVenta
+                                                              : productoProvicional.precioVentaConDescuento
+                                                          )}
+                                                      </td>
+                                                    </>
+                                                  ) : (
+                                                    <>
+                                                      <td>
+                                                        {
+                                                          productoProvicional.talla
+                                                        }
+                                                      </td>
+                                                      <td>
+                                                        {"$" +
+                                                          Intl.NumberFormat(
+                                                            "es-ES",
+                                                            {
+                                                              style: "currency",
+                                                              currency: "COP",
+                                                              minimumFractionDigits: 0,
+                                                            }
+                                                          ).format(
+                                                            productoProvicional.precio
+                                                          )}
+                                                      </td>
+                                                      <td
+                                                        style={
+                                                          item.cantidadS >= 2
+                                                            ? {
+                                                                color: "#f10",
+                                                                fontWeight:
+                                                                  "bold",
+                                                                fontSize:
+                                                                  "2.2rem",
+                                                              }
+                                                            : {
+                                                                fontWeight:
+                                                                  "bold",
+                                                                fontSize:
+                                                                  "2rem",
+                                                              }
+                                                        }
+                                                      >
+                                                        {
+                                                          productoProvicional.cantidadS
+                                                        }
+                                                      </td>
+
+                                                      <td>
+                                                        {"$" +
+                                                          Intl.NumberFormat(
+                                                            "es-ES",
+                                                            {
+                                                              style: "currency",
+                                                              currency: "COP",
+                                                              minimumFractionDigits: 0,
+                                                            }
+                                                          ).format(
+                                                            productoProvicional.precioVenta
+                                                          )}
+                                                      </td>
+                                                    </>
+                                                  )}
+                                                  {estado_pedidoo ==
+                                                    "solicitado" ||
+                                                  venta.data.estado_pedido ==
+                                                    "solicitado" ||
+                                                  venta.data.estado_pedido ==
+                                                    "enviado" ? (
+                                                    <td className="select">
+                                                      <select
+                                                        value={
+                                                          solicitadooa == ""
+                                                            ? productoProvicional.solicitadoa
+                                                            : solicitadooa
+                                                        }
+                                                        onChange={(e) =>
+                                                          setSolicitadooa(
+                                                            e.target.value
+                                                          )
+                                                        }
+                                                      >
+                                                        <option
+                                                          selected
+                                                          value=""
+                                                          disabled
+                                                        >
+                                                          Selecciona...
+                                                        </option>
+                                                        <option value="online">
+                                                          Tienda Online
+                                                        </option>
+                                                        <option value="foxplaza">
+                                                          Fox Plaza Central
+                                                        </option>
+                                                        <option value="fox_toberin">
+                                                          Fox Toberin
+                                                        </option>
+                                                        <option value="fox_neiva">
+                                                          Fox Neiva
+                                                        </option>
+                                                        <option value="ame1">
+                                                          Americas 1
+                                                        </option>
+                                                        <option value="ame3">
+                                                          Americas 3
+                                                        </option>
+                                                        <option value="ame5">
+                                                          Americas 5
+                                                        </option>
+                                                        <option value="ame6">
+                                                          Americas 6
+                                                        </option>
+                                                      </select>
+                                                    </td>
+                                                  ) : (
+                                                    ""
+                                                  )}
+                                                </tr>
+                                              </table>
+                                            </div>
+                                            <div className="modal-footer">
+                                              {btnprovicional == false ? (
+                                                <>
+                                                  <input
+                                                    style={{
+                                                      backgroundColor: "#1f0",
+                                                      color: "#fff",
+                                                      background:
+                                                        "#222d32 !important",
+                                                      margin: "1rem auto",
+                                                    }}
+                                                    className="btnn"
+                                                    type="button"
+                                                    value={`ACTUALIZAR PRODUCTO`}
+                                                    onClick={
+                                                      handleActualizarProducto
+                                                    }
+                                                  />
+                                                </>
+                                              ) : (
+                                                <>
+                                                  <button
+                                                    style={{
+                                                      color: "#fff",
+                                                      background: "#f00",
+                                                      margin: "1rem auto",
+                                                    }}
+                                                    className="btnn"
+                                                    type="button"
+                                                    data-bs-dismiss="modal"
+                                                    onClick={handleCerrar}
+                                                  >
+                                                    Cerrar Producto
+                                                  </button>
+                                                </>
+                                              )}
+                                              {msg && (
+                                                <Alerta alerta={alerta} />
+                                              )}
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </>
+                                  )}
+                                </>
+                              )}
+                            </td>
+                            <td>
+                              {auth.role === "SERVICIO" ||
+                              auth.role === "ADMIN" ? (
+                                <button
+                                  style={{
+                                    background: "#f00",
+                                    color: "#fff",
+                                    padding: "5px",
+                                  }}
+                                  type="button"
+                                  className="btn"
+                                  onMouseEnter={(e) => setProducto(item.sku)}
+                                  onClick={handleBorrarProducto}
+                                >
+                                  Borrar producto
+                                </button>
+                              ) : null}
+                            </td>
+                          </tr>
+                        </tbody>
                       ))
                     : ""}
                 </table>

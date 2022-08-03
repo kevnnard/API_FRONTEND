@@ -143,7 +143,7 @@ function Facturacion() {
               </thead>
               {ventass == true
                 ? ventas.docs.map((item) => (
-                    <>
+                    <tbody>
                       <tr
                         style={{ background: "#4b3629", color: "#fff" }}
                         key={item._id}
@@ -203,7 +203,7 @@ function Facturacion() {
                           </Link>
                         </td>
                       </tr>
-                    </>
+                    </tbody>
                   ))
                 : null}
             </table>

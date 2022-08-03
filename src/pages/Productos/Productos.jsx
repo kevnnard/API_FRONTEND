@@ -31,8 +31,6 @@ function Productos() {
    const handleClose3 = () => {
      setOpen3(false);
    };
-  // datod para subir productos con archivo
-  const [archivo, setArchivo] = useState(null);
 
   //datos para crear producto individual
   const [img, setImg] = useState("");
@@ -487,7 +485,7 @@ function Productos() {
             <h1>Actualizar productos</h1>
             <CSVReader
               onUploadAccepted={(results) => {
-                 setProductosFile([]);
+                setProductosFile([]);
                 setProductosFile(results);
               }}
             >
@@ -555,7 +553,7 @@ function Productos() {
           ""
         )}
         <table>
-          <tbody>
+          <thead>
             <tr>
               <th>#</th>
               <th>imagen</th>
@@ -569,8 +567,10 @@ function Productos() {
               <th>Articulo</th>
               <th>Precio</th>
             </tr>
-            {productoState
-              ? productos.data.docs.map((item) => (
+          </thead>
+          {productoState
+            ? productos.data.docs.map((item) => (
+                <tbody>
                   <tr
                     className={item.cantidad <= 10 ? "pexistencias" : ""}
                     key={item._id}
@@ -596,9 +596,11 @@ function Productos() {
                         }).format(item.precio)}
                     </td>
                   </tr>
-                ))
-              : null}
-            {productoProvicionalState ? (
+                </tbody>
+              ))
+            : null}
+          {productoProvicionalState ? (
+            <tbody>
               <tr
                 className={
                   productoProvicional.data.cantidad <= 10 ? "pexistencias" : ""
@@ -628,10 +630,10 @@ function Productos() {
                     }).format(productoProvicional.data.precio)}
                 </td>
               </tr>
-            ) : (
-              ""
-            )}
-          </tbody>
+            </tbody>
+          ) : (
+            ""
+          )}
         </table>
         {productoState == true ? (
           <div className="paginate_productos">

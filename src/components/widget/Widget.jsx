@@ -7,7 +7,7 @@ import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlin
 import { Link } from "react-router-dom";
 
 
-const Widget = ({ type, cantidad, ventaTotal, clientes }) => {
+const Widget = ({ type, cantidad, ventaTotal, titulo, clientes }) => {
   let data;
 
   //temporary
@@ -57,7 +57,7 @@ const Widget = ({ type, cantidad, ventaTotal, clientes }) => {
       break;
     case "earning":
       data = {
-        title: "VENTAS TOTALES ( CON IVA )",
+        title: titulo,
         isMoney: true,
         link: "",
         icon: (

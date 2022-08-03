@@ -14,6 +14,7 @@ import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import CircleRoundedIcon from "@mui/icons-material/CircleRounded";
 import AnnouncementIcon from "@mui/icons-material/Announcement";
+import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import MenuIcon from "@mui/icons-material/Menu";
 import clsx from "clsx";
 import style from "./sidebar.module.scss";
@@ -137,7 +138,7 @@ const Sidebar = () => {
                       </Link>
                     </li>
                     <li>
-                      <PsychologyOutlinedIcon className="icon" />
+                      <GroupAddIcon className="icon" />
                       <Link
                         onClick={handleClick}
                         className={class__change}

@@ -104,7 +104,11 @@ function VentasPorUsuario() {
           <div className="homeContainer">
             <div className="widgets">
               <Widget type="order" cantidad={ventasCount} />
-              <Widget type="earning" ventaTotal={ventaTotalSac} />
+              <Widget
+                titulo="VENTAS TOTALES SAC"
+                type="earning"
+                ventaTotal={ventaTotalSac}
+              />
               <Widget type="balance" ventaTotal={ventaTotalSac} />
             </div>
           </div>
@@ -245,7 +249,11 @@ function VentasPorUsuario() {
           <div className="homeContainer">
             <div className="widgets">
               <Widget type="order" cantidad={ventasShopifyCount} />
-              <Widget type="earning" ventaTotal={totalShopify} />
+              <Widget
+                titulo="VENTAS TOTALES FCS"
+                type="earning"
+                ventaTotal={totalShopify}
+              />
               <Widget type="balance" ventaTotal={totalShopify} />
             </div>
           </div>

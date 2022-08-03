@@ -13,19 +13,19 @@ const List = () => {
   const [ventas, setventas] = useState({});
   const [ventass, setVentas] = useState(false);
 
-  useEffect(() => {
-    ontenerventas();
-  }, []);
-  const ontenerventas = async () => {
-    try {
-      const url = `${import.meta.env.VITE_BACKEND_URL}/dashboard`;
-      const { data } = await axios.get(url);
-      setventas({ data });
-      setVentas(true);
-    } catch (error) {
-      setVentas(false);
-    }
-  };
+  // useEffect(() => {
+  //   ontenerventas();
+  // }, []);
+  // const ontenerventas = async () => {
+  //   try {
+  //     const url = `${import.meta.env.VITE_BACKEND_URL}/dashboard`;
+  //     const { data } = await axios.get(url);
+  //     setventas({ data });
+  //     setVentas(true);
+  //   } catch (error) {
+  //     setVentas(false);
+  //   }
+  // };
   let cont = 1;
   return (
     <TableContainer component={Paper} className="table">

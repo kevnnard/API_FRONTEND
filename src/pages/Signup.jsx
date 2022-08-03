@@ -76,7 +76,7 @@ function Signup() {
             <form
               onSubmit={handleSubmit}
               className="my-3 bg-white shadow rounded-lg p-3"
-              enctype="multipart/form-data"
+              encType="multipart/form-data"
             >
               <div className="my-3">
                 <label
