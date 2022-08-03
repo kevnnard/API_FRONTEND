@@ -1,5 +1,5 @@
 import "./userlist.scss";
-import moment from "moment"
+import moment from "moment/min/moment-with-locales"
 import { useNavigate, useParams } from "react-router-dom";
 import io from "socket.io-client";
 import useAuth from "../hooks/useAuth";
@@ -14,7 +14,7 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 
 function UsersList() {
-  moment.locale();
+  moment.locale("es-us");
   const { auth } = useAuth();
   const { handleModlaEliminarColaborador, eliminarColaborador } = useAuth();
   const navigate = useNavigate();
@@ -187,13 +187,6 @@ const timeFormat = (date) => {
                     </Stack>
                   </td>
                   <td>
-                    {item.estadoOn ? (
-                      <div className="App" onClick={start}>
-                        <h1 className="timer">{timeFormat(diff)}</h1>
-                      </div>
-                    ) : (
-                      ""
-                    )}
                     {item.estadoOn
                       ? "Conectado, " + moment(item.timeOnline).calendar()
                       : "Desconectado, " + moment(item.timeOffline).calendar()}

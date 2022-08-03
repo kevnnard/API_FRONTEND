@@ -136,6 +136,16 @@ const Sidebar = () => {
                         <span>Ventas Generales</span>
                       </Link>
                     </li>
+                    <li>
+                      <PsychologyOutlinedIcon className="icon" />
+                      <Link
+                        onClick={handleClick}
+                        className={class__change}
+                        to="/dashboard/estadisticas/firmas"
+                      >
+                        <span>Firma de Clientes</span>
+                      </Link>
+                    </li>
                   </>
                 ) : null}
                 {/* <li>

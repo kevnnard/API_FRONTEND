@@ -59,7 +59,7 @@ function HomeAuth() {
         //   costo = costo + item.precioCosto;
         // });
         setVentasTotalesDia(data);
-        setCostoTotal(costo);
+        //setCostoTotal(costo);
       } catch (error) {
         console.log(error);
       }
@@ -72,21 +72,21 @@ function HomeAuth() {
       } catch (error) {
         console.log(error);
       }
-      try {
-        const url = `${
-          import.meta.env.VITE_BACKEND_URL
-        }/dashboard/estadisticas/metadia`;
-        const { data } = await axios.get(url);
-       if (data.error) {
-        setAlerta({msg: data.msg, error: data.error})
-        return
-       } else {
-         setResultMetaDia(data.metaDia.metaTotalDia);
-         setAlerta({});
-       }
-      } catch (error) {
-        console.log(error);
-      }
+      // try {
+      //   const url = `${
+      //     import.meta.env.VITE_BACKEND_URL
+      //   }/dashboard/estadisticas/metadia`;
+      //   const { data } = await axios.get(url);
+      //  if (data.error) {
+      //   setAlerta({msg: data.msg, error: data.error})
+      //   return
+      //  } else {
+      //    setResultMetaDia(data.metaDia.metaTotalDia);
+      //    setAlerta({});
+      //  }
+      // } catch (error) {
+      //   console.log(error);
+      // }
     } catch (error) {
       console.log(error);
     }
@@ -143,11 +143,11 @@ function HomeAuth() {
                 </div>
               </div>
             </Modal>
-            <Featured
+            {/* <Featured
               ventaTotal={VentasTotalesDia}
               boton={handleOpen}
               metaDia={resultMetaDia}
-            />
+            /> */}
             <Chart
               sac={ventasSac}
               fcs={ventasFcs}
