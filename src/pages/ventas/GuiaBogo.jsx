@@ -11,13 +11,15 @@ function GuiaBogo({venta}) {
   return (
     <>
       <div className="box_bogo_guia">
-        <h1>{venta.data.tienda == "FOX" ? "Fox Racing " : "Replays "} Colombia</h1>
+        <h1>
+          {venta.data.tipoVenta == "FCS" && "Fox Racing"}
+          {venta.data.tipoVenta == "RE" && "Replays"}
+          {venta.data.tienda == "FOX" && "Fox Racing"}
+          {venta.data.tienda == "Replays" && "Replays"} Colombia
+        </h1>
         <p className="nu_orden_box">
           Orden # {venta.data.nuVenta}
-          <br />{" "}
-          <span>
-            {moment().format("LLL")}
-          </span>
+          <br /> <span>{moment().format("LLL")}</span>
         </p>
 
         <div className="table_order_box_guia">
@@ -80,7 +82,7 @@ function GuiaBogo({venta}) {
                       style: "currency",
                       currency: "COP",
                       minimumFractionDigits: 0,
-                    }).format(venta.data.ventaTotalShopify)
+                    }).format(totall)
                   : 0
                 : venta.data.pago.estado_pago == "pendiente"
                 ? "$" +

@@ -109,7 +109,7 @@ function Novedades() {
                   <th>ciudad</th>
                   <th>Telefono</th>
                   <th>metodo de pago</th>
-                  <th>Valor Total</th>
+                  <th># Productos</th>
                   <th>Accion</th>
                 </tr>
               </thead>
@@ -142,27 +142,7 @@ function Novedades() {
                             ? "Credito Addi"
                             : item.pago.metodo_pago}
                         </td>
-                        <td>
-                          {item.tienda == "Shopify" ? (
-                            <>
-                              {"$" +
-                                Intl.NumberFormat("es-ES", {
-                                  style: "currency",
-                                  currency: "COP",
-                                  minimumFractionDigits: 0,
-                                }).format(item.ventaTotalShopify)}
-                            </>
-                          ) : (
-                            <>
-                              {"$" +
-                                Intl.NumberFormat("es-ES", {
-                                  style: "currency",
-                                  currency: "COP",
-                                  minimumFractionDigits: 0,
-                                }).format(item.precio)}
-                            </>
-                          )}
-                        </td>
+                        <td>{item.productos.length}</td>
                         <td>
                           <Link
                             style={{

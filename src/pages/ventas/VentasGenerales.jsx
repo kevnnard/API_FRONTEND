@@ -267,7 +267,7 @@ function VentasGenerale() {
             <th>ciudad</th>
             <th>Telefono</th>
             <th>metodo de pago</th>
-            <th>Valor Total</th>
+            <th># Productos</th>
             <th>Accion</th>
           </thead>
           {ventass == true
@@ -323,27 +323,7 @@ function VentasGenerale() {
                         ? "Credito Addi"
                         : item.pago.metodo_pago}
                     </td>
-                    <td>
-                      {item.tienda == "Shopify" ? (
-                        <>
-                          {"$" +
-                            Intl.NumberFormat("es-ES", {
-                              style: "currency",
-                              currency: "COP",
-                              minimumFractionDigits: 0,
-                            }).format(item.ventaTotalShopify)}
-                        </>
-                      ) : (
-                        <>
-                          {"$" +
-                            Intl.NumberFormat("es-ES", {
-                              style: "currency",
-                              currency: "COP",
-                              minimumFractionDigits: 0,
-                            }).format(item.ventaTotalSac)}
-                        </>
-                      )}
-                    </td>
+                    <td>{item.productos.length}</td>
                     <td>
                       <Link
                         style={{
@@ -415,27 +395,7 @@ function VentasGenerale() {
                         ? "Credito Addi"
                         : item.pago.metodo_pago}
                     </td>
-                    <td>
-                      {item.tienda == "Shopify" ? (
-                        <>
-                          {"$" +
-                            Intl.NumberFormat("es-ES", {
-                              style: "currency",
-                              currency: "COP",
-                              minimumFractionDigits: 0,
-                            }).format(item.ventaTotalShopify)}
-                        </>
-                      ) : (
-                        <>
-                          {"$" +
-                            Intl.NumberFormat("es-ES", {
-                              style: "currency",
-                              currency: "COP",
-                              minimumFractionDigits: 0,
-                            }).format(item.ventaTotalSac)}
-                        </>
-                      )}
-                    </td>
+                    <td>{item.productos.length}</td>
                     <td>
                       <Link
                         style={{
@@ -510,27 +470,7 @@ function VentasGenerale() {
                     ? "Credito Addi"
                     : ventaProvicional.data.pago.metodo_pago}
                 </td>
-                <td>
-                  {ventaProvicional.data.tienda == "Shopify" ? (
-                    <>
-                      {"$" +
-                        Intl.NumberFormat("es-ES", {
-                          style: "currency",
-                          currency: "COP",
-                          minimumFractionDigits: 0,
-                        }).format(ventaProvicional.data.ventaTotalShopify)}
-                    </>
-                  ) : (
-                    <>
-                      {"$" +
-                        Intl.NumberFormat("es-ES", {
-                          style: "currency",
-                          currency: "COP",
-                          minimumFractionDigits: 0,
-                        }).format(ventaProvicional.data.ventaTotalSac)}
-                    </>
-                  )}
-                </td>
+                <td>{ventaProvicional.data.productos.length}</td>
                 <td>
                   <Link
                     style={{

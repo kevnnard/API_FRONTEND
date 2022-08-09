@@ -21,7 +21,7 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import { Hidden } from "@mui/material";
+import CardOnline from "../../components/Online/CardOnline"
 
 function VentaManualId() {
   moment.locale("es-us");
@@ -110,6 +110,7 @@ function VentaManualId() {
 
   // alerta
   const [alerta, setAlerta] = useState({});
+  const [online, setOnline] = useState({});
 
   // parametros
   const params = useParams();
@@ -475,7 +476,6 @@ function VentaManualId() {
       const { data } = await axios.get(url);
       setventa({ data });
       setVentas(true);
-
       try {
         const url = `${
           import.meta.env.VITE_BACKEND_URL
@@ -496,7 +496,7 @@ function VentaManualId() {
   useEffect(() => {
     obtenerCliente();
      socket = io(import.meta.env.VITE_BACKEND_URL);
-     socket.emit("edicion", { id, auth });
+     socket.emit("edicion", { id, auth });  
   }, []);
 
   const recargar = async () => {
@@ -519,8 +519,16 @@ function VentaManualId() {
     });
   }, []);
 
+  const pedidosAntiguos = async () => {
+    setAlerta({
+        msg: "¡NO EDITE ESTE PEDIDO, Si quiere modificar este pedido, genere uno nuevo!",
+        error: true,
+    });
+  };
+   let totall = 0;
   // Numero de Guias
   let guiaNumber = 2;
+  const { msgOnline } = online;
   const { msg } = alerta;
   return (
     <>
@@ -535,6 +543,19 @@ function VentaManualId() {
               style={{ color: "#f00" }}
             >{`#${venta.data.nuVenta}`}</strong>
           </h2>
+          {venta.data.fechaShopify < "2022-08-09T24:59:59-00:00" ? (
+            <small className="fecha_caducidad_id">
+              "¡NO EDITE LOS PRODUCTOS, Si DEBE AGREGAR O BORRAR algun dato, genere
+              un nuevo PEDIDO!"
+              <small style={{color: "#ffe"}}> - Solo para lectura -</small>
+            </small>
+          ) : null}
+          {venta.data.fecha < "2022-08-09T24:59:59-00:00" ? (
+            <small className="fecha_caducidad_id">
+              "¡NO EDITE ESTE PEDIDO, Si quiere modificar este pedido, genere
+              uno nuevo!"{" "}
+            </small>
+          ) : null}
           <h3 className="asesor_veta_sac">
             Pedido Creado Por:{" "}
             <span>{venta.data.asesor ? venta.data.asesor : " Shopify"}</span>
@@ -542,9 +563,11 @@ function VentaManualId() {
         </>
       ) : null}
       <main className=" md:flex md:justify-center">
+        {msg && <Alerta alerta={alerta} />}
         <div className="container">
           {ventass ? (
             <form className="formularioNewVenta">
+              {msgOnline && <CardOnline online={online} />}
               <div>
                 <label>Tienda</label>
                 <input
@@ -734,7 +757,7 @@ ${venta.data.datos_envio.indicaciones_envio}
                                   value={destinatario_envio}
                                   placeholder="# CC O NIT de destinatario"
                                   onChange={(e) =>
-                                  setDestinatario_envio(e.target.value)
+                                    setDestinatario_envio(e.target.value)
                                   }
                                 />
                               </td>
@@ -2165,6 +2188,40 @@ ${venta.data.datos_envio.indicaciones_envio}
                       ))
                     : ""}
                 </table>
+              </div>
+              <div style={{ gridColumn: " 1 / 5" }}>
+                <h1
+                  style={{
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Total Venta:
+                </h1>
+                <div className="price_totall_id">
+                  <h2>
+                    Precio total:{" "}
+                    {ventass == true &&
+                      venta.data.productos.map((item) => {
+                        totall = totall + item.precioVenta;
+                      })}
+                    <span>
+                      {"$" +
+                        Intl.NumberFormat("es-ES", {
+                          style: "currency",
+                          currency: "COP",
+                          minimumFractionDigits: 0,
+                        }).format(totall)}
+                    </span>
+                  </h2>
+                  <h2>
+                    Cantidad total:{" "}
+                    <span>
+                      {ventass == true && venta.data.productos.length}
+                    </span>
+                  </h2>
+                </div>
               </div>
               <div style={{ gridColumn: " 1 / 5" }}>
                 <h1

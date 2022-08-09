@@ -194,6 +194,9 @@ function VentasManuales() {
     });
   }, []);
 
+  let total = 0;
+  let totall = 0;
+  
   let i = 0;
   if (ventass) {
     for (i in ventas.docs) {
@@ -301,7 +304,7 @@ function VentasManuales() {
                 <th>ciudad</th>
                 <th>Telefono</th>
                 <th>metodo de pago</th>
-                <th>Valor Total</th>
+                <th># productos</th>
                 <th>Accion</th>
               </thead>
               {ventass == true
@@ -340,27 +343,7 @@ function VentasManuales() {
                             ? "Credito Addi"
                             : item.pago.metodo_pago}
                         </td>
-                        <td>
-                          {item.tienda == "Shopify" ? (
-                            <>
-                              {"$" +
-                                Intl.NumberFormat("es-ES", {
-                                  style: "currency",
-                                  currency: "COP",
-                                  minimumFractionDigits: 0,
-                                }).format(item.ventaTotalShopify)}
-                            </>
-                          ) : (
-                            <>
-                              {"$" +
-                                Intl.NumberFormat("es-ES", {
-                                  style: "currency",
-                                  currency: "COP",
-                                  minimumFractionDigits: 0,
-                                }).format(item.ventaTotalSac)}
-                            </>
-                          )}
-                        </td>
+                        <td>{item.productos.length}</td>
                         <td>
                           <Link
                             style={{
@@ -439,27 +422,7 @@ function VentasManuales() {
                         ? "Credito Addi"
                         : ventaProvicional.data.pago.metodo_pago}
                     </td>
-                    <td>
-                      {ventaProvicional.data.tienda == "Shopify" ? (
-                        <>
-                          {"$" +
-                            Intl.NumberFormat("es-ES", {
-                              style: "currency",
-                              currency: "COP",
-                              minimumFractionDigits: 0,
-                            }).format(ventaProvicional.data.ventaTotalShopify)}
-                        </>
-                      ) : (
-                        <>
-                          {"$" +
-                            Intl.NumberFormat("es-ES", {
-                              style: "currency",
-                              currency: "COP",
-                              minimumFractionDigits: 0,
-                            }).format(ventaProvicional.data.ventaTotalSac)}
-                        </>
-                      )}
-                    </td>
+                    <td>{ventaProvicional.data.productos.length}</td>
                     <td>
                       <Link
                         style={{
