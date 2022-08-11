@@ -138,6 +138,16 @@ const Sidebar = () => {
                       </Link>
                     </li>
                     <li>
+                      <PsychologyOutlinedIcon className="icon" />
+                      <Link
+                        onClick={handleClick}
+                        className={class__change}
+                        to="/dashboard/estadisticas/clientes-pedidos"
+                      >
+                        <span>Clientes - Pedidos</span>
+                      </Link>
+                    </li>
+                    <li>
                       <GroupAddIcon className="icon" />
                       <Link
                         onClick={handleClick}

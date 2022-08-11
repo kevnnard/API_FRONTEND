@@ -52,11 +52,11 @@ const AuthProvider = ({children}) => {
             setAlerta({});
         }
         autenticarUsuario();
-        if (window.location.reload) {
-          localStorage.removeItem("token");
-        } else {
-          console.log("oki");
-        }
+        // if (window.location.reload) {
+        //   localStorage.removeItem("token");
+        // } else {
+        //   console.log("oki");
+        // }
     }, [])
 
 

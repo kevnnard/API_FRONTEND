@@ -22,10 +22,8 @@ function Facturacion() {
   const [page, setPage] = useState(1);
 
   const handlePage = async (event, value) => {
-    if (ventasEstado === "") {
       setPage(value);
       obtenerVentasManuales();
-    }
   };
    const [open, setOpen] = useState(false);
    const handleClose = () => {

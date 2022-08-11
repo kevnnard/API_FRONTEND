@@ -25,6 +25,7 @@ import Facturacion from './pages/ventas/Facturacion';
 import VentasPorUsuario from './pages/Estadisticas/VentasPorUsuario';
 import VentasMercadoLibre from './pages/ventas/VentasMercadoLibre';
 import Firmacliente from './pages/Estadisticas/FirmaCliente';
+import ClientesPedidos from './pages/Estadisticas/ClientesPedidos';
 // import List from './pages/list/List';
 
 
@@ -71,6 +72,7 @@ function App() {
               <Route path="estadisticas">
                 <Route path="ventas-usuario" element={<VentasPorUsuario />} />
                 <Route path="firmas" element={<Firmacliente />} />
+                <Route path='clientes-pedidos' element={<ClientesPedidos />} />
               </Route>
 
               <Route path="ventas-mercadoLibre">

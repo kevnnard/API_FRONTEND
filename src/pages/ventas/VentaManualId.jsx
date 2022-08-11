@@ -545,15 +545,16 @@ function VentaManualId() {
           </h2>
           {venta.data.fechaShopify < "2022-08-09T24:59:59-00:00" ? (
             <small className="fecha_caducidad_id">
-              "¡NO EDITE LOS PRODUCTOS, Si DEBE AGREGAR O BORRAR algun dato, genere
-              un nuevo PEDIDO!"
-              <small style={{color: "#ffe"}}> - Solo para lectura -</small>
+              "¡NO EDITE LOS PRODUCTOS, Si DEBE AGREGAR O BORRAR algun dato,
+              genere un nuevo PEDIDO!"
+              <small style={{ color: "#ffe" }}> - Solo para lectura -</small>
             </small>
           ) : null}
           {venta.data.fecha < "2022-08-09T24:59:59-00:00" ? (
             <small className="fecha_caducidad_id">
-              "¡NO EDITE ESTE PEDIDO, Si quiere modificar este pedido, genere
-              uno nuevo!"{" "}
+              "¡NO EDITE LOS PRODUCTOS, Si DEBE AGREGAR O BORRAR algun dato,
+              genere un nuevo PEDIDO!"
+              <small style={{ color: "#ffe" }}> - Solo para lectura -</small>
             </small>
           ) : null}
           <h3 className="asesor_veta_sac">
@@ -2085,29 +2086,59 @@ ${venta.data.datos_envio.indicaciones_envio}
                                                         >
                                                           Selecciona...
                                                         </option>
-                                                        <option value="online">
-                                                          Tienda Online
+                                                        <option value="ONLINE">
+                                                          TIENDA ONLINE
                                                         </option>
                                                         <option value="foxplaza">
-                                                          Fox Plaza Central
+                                                          FOX PLAZA CENTRAL
                                                         </option>
-                                                        <option value="fox_toberin">
-                                                          Fox Toberin
+                                                        <option value="FOX TOBERIN">
+                                                          FOX TOBERIN
                                                         </option>
-                                                        <option value="fox_neiva">
-                                                          Fox Neiva
+                                                        <option value="FOX NEIVA">
+                                                          FOX NEIVA
                                                         </option>
-                                                        <option value="ame1">
-                                                          Americas 1
+                                                        <option value="REPLAYS AMERICAS 1">
+                                                          REPLAYS AMERICAS 1
                                                         </option>
-                                                        <option value="ame3">
-                                                          Americas 3
+                                                        <option value="REPLAYS AMERICAS 3">
+                                                          REPLAYS AMERICAS 3
                                                         </option>
-                                                        <option value="ame5">
-                                                          Americas 5
+                                                        <option value="REPLAYS AMERICAS 5">
+                                                          REPLAYS AMERICAS 5
                                                         </option>
-                                                        <option value="ame6">
-                                                          Americas 6
+                                                        <option value="REPLAYS AMERICAS 6">
+                                                          REPLAYS AMERICAS 6
+                                                        </option>
+                                                        <option value="REPLAYS AMERICAS 11 OUTLET">
+                                                          REPLAYS AMERICAS 11 OUTLET
+                                                        </option>
+                                                        <option value="REPLAYS PLAZA CENTRAL 2">
+                                                          REPLAYS PLAZA CENTRAL 2
+                                                        </option>
+                                                        <option value="REPLAYS NUESTRO BOGOTA">
+                                                          REPLAYS NUESTRO BOGOTÁ
+                                                        </option>
+                                                        <option value="REPLAYS MULTIPLAZA">
+                                                          REPLAYS MULTIPLAZA
+                                                        </option>
+                                                        <option value="REPLAYS EDEN">
+                                                          REPLAYS EDEN
+                                                        </option>
+                                                        <option value="REPLAYS VILLA DEL RIO">
+                                                          REPLAYS VILLA DEL RIO
+                                                        </option>
+                                                        <option value="REPLAYS CALIMA">
+                                                          REPLAYS CALIMA
+                                                        </option>
+                                                        <option value="REPLAYS ANTARES">
+                                                          REPLAYS ANTARES
+                                                        </option>
+                                                        <option value="REPLAYS NEIVA">
+                                                          REPLAYS NEIVA
+                                                        </option>
+                                                        <option value="OTRO">
+                                                          OTRO
                                                         </option>
                                                       </select>
                                                     </td>
